@@ -1,0 +1,29 @@
+# Header
+menu:
+  首页 Main: /
+  归档 Archives: /archives
+  关于我 About Me: /about-me
+rss: /atom.xml
+
+# Content
+excerpt_link: 继续阅读 More
+fancybox: true
+
+# Sidebar
+sidebar: right
+widgets:
+- weibo
+- recent_posts
+- tagcloud
+- category
+#- tag
+- archive
+
+# Miscellaneous
+growing_analytics: b95fba2d6958fb5a
+cnzz_analytics: 1253167390
+favicon: /favicon.png
+twitter:
+google_plus:
+fb_admins:
+fb_app_id:

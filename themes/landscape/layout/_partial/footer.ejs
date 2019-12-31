@@ -1,0 +1,30 @@
+<footer id="footer">
+  <% if (theme.sidebar === 'bottom'){ %>
+    <%- partial('_partial/sidebar') %>
+  <% } %>
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      <p>
+        <i>友情链接:</i>
+        <ul>
+          <li><a href="http://www.uperform.cn/scrum-certification-course/">优普丰敏捷学院Scrum认证培训教练</a></li>
+          <li><a href="http://codingstyle.cn">中国软件匠艺小组</a></li>
+          <li><a href="http://www.agilecoach.cn">UCAC认证中国敏捷教练</a></li>
+          <li><a href="http://www.scrumchina.com/">Scrum中文认证国际培训</a></li>
+          <li><a href="http://bobjiang.com/">Bob Jiang姜信宝的博客</a></li>
+          <li><a href="http://www.maiyuan.me/">Ronald Mai麦宇安 敏捷教练</a></li>
+          <li><a href="https://www.scrumalliance.org/community/profile/jshen2">Scrum Alliance国际Scrum联盟</a></li>
+        </ul>
+      </p>
+    </div>
+  
+    <%- partial('weibo') %>
+    <%- partial('growing-analytics') %>
+    <%- partial('cnzz-analytics') %>
+  </div>
+
+
+
+</footer>
