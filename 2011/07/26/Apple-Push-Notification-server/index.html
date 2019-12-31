@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8"> 
+  
+  <title>编写Apple Push Notification服务器 </title>
+  <meta http-equiv="keywords" content="Scrum认证 创客 工匠 敏捷教练 软件开发顾问 Agile Coaching 申健 申导"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="iPhone OS 3.0一个引入注目的新特性是Push Notifications（推送通知），它允许向已安装相关应用程序的各设备直接发送消息。苹果在新闻提示或IM应用中展示了此特性，它也十分完美地适合于我们的服务器监视服务程序Server Density。  我们的程序提供一个选项，当你设定的某个服务器事件发生时，通知会直接发送到你的iPhone上。这是非常有用的因为它提醒用户立即打开我们的程">
+<meta name="keywords" content="ios,APNS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="编写Apple Push Notification服务器">
+<meta property="og:url" content="www.jackyshen.com/2011/07/26/Apple-Push-Notification-server/index.html">
+<meta property="og:site_name" content="申导">
+<meta property="og:description" content="iPhone OS 3.0一个引入注目的新特性是Push Notifications（推送通知），它允许向已安装相关应用程序的各设备直接发送消息。苹果在新闻提示或IM应用中展示了此特性，它也十分完美地适合于我们的服务器监视服务程序Server Density。  我们的程序提供一个选项，当你设定的某个服务器事件发生时，通知会直接发送到你的iPhone上。这是非常有用的因为它提醒用户立即打开我们的程">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://hi.csdn.net/attachment/201107/26/0_13116709548hFU.gif">
+<meta property="og:image" content="http://hi.csdn.net/attachment/201107/26/0_13116709129eFe.gif">
+<meta property="og:image" content="http://hi.csdn.net/attachment/201107/26/0_1311671042qexQ.gif">
+<meta property="og:updated_time" content="2016-02-13T12:02:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="编写Apple Push Notification服务器">
+<meta name="twitter:description" content="iPhone OS 3.0一个引入注目的新特性是Push Notifications（推送通知），它允许向已安装相关应用程序的各设备直接发送消息。苹果在新闻提示或IM应用中展示了此特性，它也十分完美地适合于我们的服务器监视服务程序Server Density。  我们的程序提供一个选项，当你设定的某个服务器事件发生时，通知会直接发送到你的iPhone上。这是非常有用的因为它提醒用户立即打开我们的程">
+<meta name="twitter:image" content="http://hi.csdn.net/attachment/201107/26/0_13116709548hFU.gif">
+  
+    <link rel="alternative" href="/atom.xml" title="申导" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <!-- <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css"> -->
+  <link rel="stylesheet" href="/css/style.css">
+  <meta name="google-site-verification" content="0Yj4uwGnuB0vsMUHmrUBkC_a1AqeLRzmqneZcUIgBao">
+  <meta name="msvalidate.01" content="70BA10961AF4781E373389EF3FF74835">
+</head></html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">申导</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Scrum Agile Coach</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页 Main</a>
+        
+          <a class="main-nav-link" href="/archives">归档 Archives</a>
+        
+          <a class="main-nav-link" href="/about-me">关于我 About Me</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="www.jackyshen.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+
+      <div class="outer">
+        <section id="main"><article id="post-Apple-Push-Notification-server" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2011/07/26/Apple-Push-Notification-server/" class="article-date">
+  <time datetime="2011-07-26T13:26:51.000Z" itemprop="datePublished">Jul 26 2011</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/programming/">programming</a>►<a class="article-category-link" href="/categories/programming/php/">php</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      编写Apple Push Notification服务器
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>iPhone OS 3.0一个引入注目的新特性是<a href="http://developer.apple.com/iphone/program/sdk/apns.html" target="_blank" rel="noopener">Push Notifications（推送通知）</a>，它允许向已安装相关应用程序的各设备直接发送消息。苹果在新闻提示或IM应用中展示了此特性，它也十分完美地适合于我们的服务器监视服务程序Server Density。</p>
+<p><img src="http://hi.csdn.net/attachment/201107/26/0_13116709548hFU.gif" alt></p>
+<p>我们的程序提供一个选项，当你设定的某个服务器事件发生时，通知会直接发送到你的iPhone上。这是非常有用的因为它提醒用户立即打开我们的程序查看引起此警示的服务器详情。</p>
+<p>Apple提供了有关实现和处理设备上提示消息的 <a href="http://developer.apple.com/iphone/library/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/IPhoneOSClientImp/IPhoneOSClientImp.html" target="_blank" rel="noopener">iPhone OS 的详细代码文档</a> ，但它只包括消息提供者服务器端编程指南。</p>
+<p>作为消息提供者，我们需要与 Apple推送通知服务 (APNS)连接以发送消息到iPhone。为减少电池使用，一个设备仅需维持与APNS的一个连接。</p>
+<p>本教程将从代码的层面介绍关于怎样建立一个推送通知服务器以连接APNS并使用推送通知到我们的服务器监视iPhone程序上。我们是使用PHP进行开发的，我们的示例都是PHP 5兼容的。</p>
+<h3 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h3><p>使用唯一的SSL许可证连接到APNS<br>循环通过你需要发送到消息<br>为各消息构建有效载荷<br>断开与 APNS的连接</p>
+<p><code>远程通知数据的流程是单向的。提供者将包括客户程序设备令牌和有效载荷的数据打包，发送到APNS，然后APNS再将通知发送给最终设备。</code></p>
+<p><img src="http://hi.csdn.net/attachment/201107/26/0_13116709129eFe.gif" alt></p>
+<h3 id="限制"><a href="#限制" class="headerlink" title="限制"></a>限制</h3><p>有效载荷限制为256字节 – 它包括了消息主体以及你希望传送带其他属性。推送通知并不适于传送大量的数据。例如，我们仅仅传送一条短消息通知服务器监视的事件已经被触发了。<br>APNS并不提供消息发送成功与否的回馈状态。一个原因是如果一个设备无法联系那么发送给它的消息将被存于队列中，然而只有最新发送的消息被存于队列中 – 覆盖了先前发送但不成功的消息。<br>推送通知不适合用于发送紧急通知，因为消息仅在设备具有wifi或手机服务连接的情况下才能被发送，这也是为什么我们推荐与其它方法如email或SMS一起使用的原因。<br>用来与APNS通讯的SSL许可证（下面将讨论）是在程序层生成的。本教程涉及到实现方法仅适于单个iPhone程序，所以如果你有多个程序，那么你需要修改代码使之适合于使用多个许可证。</p>
+<h3 id="设备令牌"><a href="#设备令牌" class="headerlink" title="设备令牌"></a>设备令牌</h3><p>每条推送消息都必须针对某特定设备。这是通过使用在你的iPhone程序中由APNS产生的唯一deviceToken（设备令牌）来实现的。一旦获取了此令牌，你需要将其存储于服务器而不是你的iPhone程序内。它看上去像这样：<br>c9d4c07c fbbc26d6 ef87a44d 53e16983 1096a5d5 fd825475 56659ddd f715defc</p>
+<p>在我们的 Server Density iPhone 程序中，我们在程序启动时调用相应的令牌生成方法，然后通过 HTTP API 调用 传回给我们的服务器 。这将使得deviceToken存储于服务器的有关用户的数据库中，从而我们可以使用它与持有此设备的用户进行通讯。</p>
+<h3 id="反馈服务"><a href="#反馈服务" class="headerlink" title="反馈服务"></a>反馈服务</h3><p>Apple 还提供了一个 反馈服务 ，你应该定期查询。它提供了一个以前使用过但不再有效的（例如用户卸载了你的iPhone程序）设备令牌列表。你可以从你的数据库中删除这些设备令牌。</p>
+<p>本教程不涉及反馈服务的使用。</p>
+<h3 id="许可证"><a href="#许可证" class="headerlink" title="许可证"></a>许可证</h3><p>要进行推送服务的第一件事就是获取推送许可证。它用来对你通过SSL与APNS通讯进行识别。</p>
+<p>在Mac上生成 Apple推送通知SSL许可证：</p>
+<ol>
+<li>登录到 iPhone Developer Connection Portal 并点击 App IDs</li>
+<li>创建一个不使用通配符的 App ID 。通配符 ID 不能用于推送通知服务。例如，我们的iPhone程序ID像这样：  AB123346CD.com.serverdensity.iphone</li>
+<li>点击App ID旁的“Configure”，然后按下按钮生产 推送通知许可证。根据“向导”指导的步骤生成一个签名并上传，最后下载生成的许可证。此步骤在 Apple文档中 也有谈到。</li>
+<li>通过双击.cer文件将你的 aps_developer_identity.cer 引入Keychain中。</li>
+<li>在Mac上启动 Keychain助手，然后在login keychain中选择 Certificates分类。你将看到一个可扩展选项“Apple Development Push Services”</li>
+<li>扩展此选项然后右击“Apple Development Push Services” &gt; Export “Apple Development Push Services ID123”。保存为 apns-dev-cert.p12 文件。</li>
+<li>扩展“Apple Development Push Services” 对“Private Key”做同样操作，保存为 apns-dev-key.p12 文件。</li>
+<li><p>需要通过终端命令将这些文件转换为PEM格式：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">openssl pkcs12 -clcerts -nokeys -out apns-dev-cert.pem -in apns-dev-cert.p12</span><br><span class="line">openssl pkcs12 -nocerts -out apns-dev-key.pem -in apns-dev-key.p12</span><br></pre></td></tr></table></figure></p>
+</li>
+<li><p>如果你想要移除密码，要么在导出/转换时不要设定或者执行：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openssl rsa -in apns-dev-key.pem -out apns-dev-key-noenc.pem</span><br></pre></td></tr></table></figure></p>
+</li>
+<li><p>最后，你需要将键和许可文件合成为apns-dev.pem文件，此文件在连接到APNS时需要使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat apns-dev-cert.pem apns-dev-key-noenc.pem &gt; apns-dev.pem</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>将此文件保存为一个易记的名字，你有可能以后会用到它。上述步骤同样适合于生成产品许可证。</p>
+<h3 id="载荷内容"><a href="#载荷内容" class="headerlink" title="载荷内容"></a>载荷内容</h3><p>载荷 格式化为遵循 RFC 4627标准的JSON格式。它由以下几部分组成：<br>提示 – 显示于设备上的文本串<br>标识 – 设备屏幕中程序图标上显示的整数<br>声音 –  显示消息在设备的同时发出的声音的文本名字<br>本教程仅处理发送简单提示文本串，但也可以发送包括诸如显示自定义按钮等在内的各种选项的字典集。</p>
+<h3 id="创建载荷"><a href="#创建载荷" class="headerlink" title="创建载荷"></a>创建载荷</h3><p>使用 PHP 很容易根据数组并 转换成 JSON而创建载荷:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$payload[&apos;aps&apos;] = array(&apos;alert&apos; =&gt; &apos;This is the alert text&apos;, &apos;badge&apos; =&gt; 1, &apos;sound&apos; =&gt; &apos;default&apos;);</span><br><span class="line">$payload = json_encode($payload);</span><br></pre></td></tr></table></figure></p>
+<p>显示 $payload 的内容可以看到传送到APNS 的 JSON字符串：<br>{<br>     “aps” : { “alert” : “This is the alert text”, “badge” : 1, “sound” : “default” }<br>}</p>
+<p>这将使消息显示于设备上，触发提升声音并将“1”置于程序图标上。默认按钮“Close”和“View”同时会显示于弹出窗口上。</p>
+<p>对于 Server Density iPhone程序而言，让用户按下“View”直接进入产生此提示的服务器是很重要的，所以我们增加了额外的自定义值：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$payload[&apos;aps&apos;] = array(&apos;alert&apos; =&gt; &apos;This is the alert text&apos;, &apos;badge&apos; =&gt; 1, &apos;sound&apos; =&gt; &apos;default&apos;);</span><br><span class="line">$payload[&apos;server&apos;] = array(&apos;serverId&apos; =&gt; $serverId, &apos;name&apos; =&gt; $name);</span><br><span class="line">$output = json_encode($payload);</span><br></pre></td></tr></table></figure></p>
+<p>当用户按下“View”后，自定义server值将被传递到设备中的程序。JSON 值如下：<br>{<br>     “aps” : { “alert” : “This is the alert text”, “badge” : 1, “sound” : “default” },<br>     “server” : { “serverId” : 1, “name” : “Server name”)<br>}</p>
+<p>256字节的限制适用于整个载荷，包括自定义字典集。</p>
+<h3 id="原生接口"><a href="#原生接口" class="headerlink" title="原生接口"></a>原生接口</h3><p>在Server Density中，一旦产生了一条提示，将建立一个载荷并插入队列中。因此有必要时我们可以同时发送多个载荷。</p>
+<p>Apple推荐使用这种方法，因为如果你在发送各载荷时频繁连接和断开，APNS有可能会封锁你的IP。<br>如Apple 描述:<br><code>原生接口使用原生socket，具有二进制内容，采用数据流技术，不产生回馈。</code></p>
+<p><img src="http://hi.csdn.net/attachment/201107/26/0_1311671042qexQ.gif" alt></p>
+<h3 id="打开连接"><a href="#打开连接" class="headerlink" title="打开连接"></a>打开连接</h3><p>打开连接的 PHP 5代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$apnsHost = &apos;gateway.sandbox.push.apple.com&apos;;</span><br><span class="line">$apnsPort = 2195;</span><br><span class="line">$apnsCert = &apos;apns-dev.pem&apos;;</span><br><span class="line"></span><br><span class="line">$streamContext = stream_context_create();</span><br><span class="line">stream_context_set_option($streamContext, &apos;ssl&apos;, &apos;local_cert&apos;, $apnsCert);</span><br><span class="line"></span><br><span class="line">$apns = stream_socket_client(&apos;ssl://&apos; . $apnsHost . &apos;:&apos; . $apnsPort, $error, $errorString, 2,</span><br><span class="line">STREAM_CLIENT_CONNECT, $streamContext);</span><br></pre></td></tr></table></figure></p>
+<p>如果发送错误，你可以参考$errorString。它也包括了SSL许可证不正确时的详细信息。</p>
+<p>许可证文件处于执行的PHP代码的当前工作目录下，如果需要你可指定其绝对路径。<br>注意测试时应该使用开发许可证及sandbox。成品主机名为 gateway.push.apple.com ，而且你必须使用不同的产品许可证。</p>
+<h3 id="发送载荷"><a href="#发送载荷" class="headerlink" title="发送载荷"></a>发送载荷</h3><p>在此，我们循环整个载荷队列进行发送。构建发送到APNS的二进制内容简单示例如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$apnsMessage = chr(0) . chr(0) . chr(32) . pack(&apos;H*&apos;, str_replace(&apos; &apos;, &apos;&apos;, $deviceToken)) . chr(0) .</span><br><span class="line">chr(strlen($payload)) . $payload;</span><br><span class="line">fwrite($apns, $apnsMessage);</span><br></pre></td></tr></table></figure></p>
+<p>注意 $deviceToken 是从数据库中提取并去除空格得到的。我们还应该检查是否$payload超过256个字节。</p>
+<p>$apnsMessage 包括了正确的二进制载荷，而fwrite 将载荷写入当前活动的数据流连接中。</p>
+<p>完成后，应关闭连接：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">socket_close($apns);</span><br><span class="line">fclose($apns);</span><br></pre></td></tr></table></figure></p>
+<h3 id="php-apns"><a href="#php-apns" class="headerlink" title="php-apns"></a>php-apns</h3><p>有一个开源服务器库<a href="http://code.google.com/p/php-apns/" target="_blank" rel="noopener">php-apns</a>实现了以上所有功能，它依赖于 memcached。我们不想使用任何第三方代码，所以完全自己编写了自己的服务器。我们使用自定义cron系统，几秒钟运行一次。</p>
+<p>原文见：<br><a href>How to build an Apple Push Notification provider server (tutorial)</a></p>
+<p>参考：<br><a href="http://developer.apple.com/iphone/library/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/ApplePushService/ApplePushService.html" target="_blank" rel="noopener">Apple 文档</a></p>
+
+      
+    </div>
+
+    
+      <div class="article-entry">
+        <hr/>
+        <h1>觉得本文有帮助，长按二维码进行微信打赏</h1>
+        <img src="http://res.uperform.cn/%E5%BE%AE%E4%BF%A1%E6%89%93%E8%B5%8F%E7%A0%81.jpeg" alt="" width="80%" style="float:left;left:auto;margin-left:10%;">
+
+      </div>
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="www.jackyshen.com/2011/07/26/Apple-Push-Notification-server/" data-id="ck4tmborv000u4bfy86l59ntu" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/APNS/">APNS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  <div>
+  </div>
+
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2012/04/05/git-config-abbreviations/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          好用的Git config 缩写配置
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2011/07/26/scrum-update-2011/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Scrum 2011更新</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+<section id="comments">
+  
+</section>
+
+</section>
+        
+          <aside id="sidebar" xmlns:wb="http://open.weibo.com/wb" >
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title">Follow me!</h3>
+  <div class="widget" xmlns:wb="http://open.weibo.com/wb">
+    <wb:follow-button uid="1001863751" type="red_3" width="100%" height="64" ></wb:follow-button>
+    <p>全球首位获得国际Scrum Alliance颁发Certified Scrum Trainer (CST认证培训师)和Certified Team Coach (CTC认证敏捷教练)双料导师级认证者。
+      <a href="https://www.scrumalliance.org/get-certified/ctc-certification/conversations-with-ctcs/jacky-shen">国际Scrum Alliance对申导获得全球首位CTC认证团队教练的访谈</a>
+    </p>
+    <p>
+      <img src="http://res.uperform.cn/certifications-of-JackyShen.png" width="100%">
+    </p>
+    <div class="article-more-link">
+      <a href="/about-me">更多了解博主...</a>
+    </div>
+  </div>
+
+  <div class="widget">
+    <h3 class="widget-title">热门文章</h3>
+    <ul>
+      <li><a href="/2016/06/10/my-agile-coach-journey/">Jacky Shen's Agile Coach Journey</a></li>
+      <li><a href="/2017/08/02/is-your-Scrum-lean-enough/">你的Scrum迭代够精益吗？看完就全明白了</a></li>
+      <li><a href="/2017/04/07/what-is-agile-coach/">国际首位CTC认证者和你聊聊什么是敏捷教练</a></li>
+      <li><a href="/2017/05/02/Agile-Coach-Mentoring-Program/">进阶敏捷教练与ScrumMaster培养辅导项目</a></li>
+      <li><a href="/2017/01/31/planning-as-a-social-event-scaling-agile-at-lego/">以社交活动的方式做计划-乐高公司的规模化敏捷</a></li>
+      <li><a href="/2018/01/21/new-csp-path-of-scrum-alliance-certifications/">2018年Scrum Alliance最新Certified Scrum认证和CSP体系</a></li>
+      <li><a href="/2016/07/04/Refactoring-with-Loops-and-Collection-Pipelines/">利用集合管道对循环进行函数式重构</a></li>
+      <li><a href="/2016/05/04/soft-skills-of-technical-leaders-and-managers">技术团队管理者的软技能</a></li>
+      <li><a href="/2016/03/26/how-bright-career-path-of-scrummaster-and-agile-coach">敏捷教练和ScrumMaster的职业现在有多吃香？</a></li>
+      <li><a href="/2016/03/26/my-agile-coach-journey">我是怎样成为敏捷教练的？</a></li>
+      <li><a href="/2016/03/26/tips-to-certified-team-coach-application">申请Scrum联盟导师级Certified Team Coach认证的攻略秘籍</a></li>
+      <li><a href="/2014/10/02/functional-programming-in-Python/">Python函数式编程</a></li>
+      <li><a href="/2015/05/21/async-operations-in-form-of-sync-programming-with-python-yielding/">利用python yielding创建协程将异步编程同步化</a></li>      
+      <li><a href="/lafable-cn/">适合重型企业的大型敏捷框架 LAFABLE</a></li>
+      <li><a href="http://www.uperform.cn/recent-public-course/">近期Scrum联盟Scrum认证培训课程表</a></li>
+    </ul>
+
+  </div>
+
+
+  <div class="widget">
+    <h3 class="widget-title">通过重构提高组织灵活性-百度技术沙龙</h3>
+	  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="100" height="64" id="cc_9879E3871335B9D99C33DC5901307461">
+  	<param name="movie" value="http://p.bokecc.com/flash/player.swf?vid=9879E3871335B9D99C33DC5901307461&siteid=0575C033D2012A28&playerid=8F2D63EFE045C05C&playertype=1&autoStart=false" />
+  	<param name="allowFullScreen" value="true" />
+  	<param name="allowScriptAccess" value="always" />
+  	<embed src="http://p.bokecc.com/flash/player.swf?vid=9879E3871335B9D99C33DC5901307461&siteid=0575C033D2012A28&playerid=8F2D63EFE045C05C&playertype=1&autoStart=false" width="220" height="150" name="cc_9879E3871335B9D99C33DC5901307461" allowFullScreen="true" allowScriptAccess="always" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"/>
+  	</object>
+  </div>
+
+  <div class="widget">
+    <h4><a href="/archives/">更多视频在这里</a></h4>
+  </div>
+
+
+</div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/18/history-of-scrum-sprint/">Scrum和Sprint名词的历史和误区</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/02/UPerform-Certified-Agile-Coach-UCAC/">UCAC敏捷教练静修-4月杭州-静待花开</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/17/git-scan-frequent-modified-hot-code-to-improve-quality/">Git命令扫描频繁修改代码热力图以提高代码质量</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/30/digital-innovations-singapore-bank-10-lessons-learnt-when-dbs-came-out-of-the-stone-age/">新加坡一家银行的数字化创新：DBS走出石器时代的十条敏捷转型经验</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/29/is-it-necessary-to-have-bug-list-column-on-kanban-for-defects-in-iteration/">敏捷项目迭代过程中测出缺陷要不要在看板加一列Bug List?</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/APNS/" style="font-size: 10px;">APNS</a> <a href="/tags/CTC/" style="font-size: 10px;">CTC</a> <a href="/tags/IIS/" style="font-size: 10px;">IIS</a> <a href="/tags/JVM/" style="font-size: 10px;">JVM</a> <a href="/tags/agile/" style="font-size: 18.89px;">agile</a> <a href="/tags/agile-tour/" style="font-size: 11.11px;">agile tour</a> <a href="/tags/agiletour/" style="font-size: 10px;">agiletour</a> <a href="/tags/alipay/" style="font-size: 10px;">alipay</a> <a href="/tags/annotation/" style="font-size: 10px;">annotation</a> <a href="/tags/arduino/" style="font-size: 11.11px;">arduino</a> <a href="/tags/ascii/" style="font-size: 10px;">ascii</a> <a href="/tags/atdd/" style="font-size: 10px;">atdd</a> <a href="/tags/automation/" style="font-size: 10px;">automation</a> <a href="/tags/bash/" style="font-size: 10px;">bash</a> <a href="/tags/bdd/" style="font-size: 10px;">bdd</a> <a href="/tags/book/" style="font-size: 10px;">book</a> <a href="/tags/branch/" style="font-size: 10px;">branch</a> <a href="/tags/career/" style="font-size: 13.33px;">career</a> <a href="/tags/certification/" style="font-size: 16.67px;">certification</a> <a href="/tags/checklist/" style="font-size: 10px;">checklist</a> <a href="/tags/ci/" style="font-size: 13.33px;">ci</a> <a href="/tags/clojure/" style="font-size: 10px;">clojure</a> <a href="/tags/coach/" style="font-size: 10px;">coach</a> <a href="/tags/coaching/" style="font-size: 11.11px;">coaching</a> <a href="/tags/coaching-coach-csp-ctc/" style="font-size: 10px;">coaching - coach - csp - ctc</a> <a href="/tags/code-coverage/" style="font-size: 10px;">code coverage</a> <a href="/tags/code-retreat/" style="font-size: 10px;">code retreat</a> <a href="/tags/code-review/" style="font-size: 10px;">code review</a> <a href="/tags/coderetreat/" style="font-size: 10px;">coderetreat</a> <a href="/tags/comet/" style="font-size: 10px;">comet</a> <a href="/tags/commitizen/" style="font-size: 10px;">commitizen</a> <a href="/tags/community/" style="font-size: 12.22px;">community</a> <a href="/tags/competence/" style="font-size: 10px;">competence</a> <a href="/tags/complexity/" style="font-size: 10px;">complexity</a> <a href="/tags/continuous-integration/" style="font-size: 10px;">continuous integration</a> <a href="/tags/craftsmanship/" style="font-size: 10px;">craftsmanship</a> <a href="/tags/cross-domain/" style="font-size: 10px;">cross domain</a> <a href="/tags/csd/" style="font-size: 11.11px;">csd</a> <a href="/tags/csp/" style="font-size: 10px;">csp</a> <a href="/tags/ctc/" style="font-size: 15.56px;">ctc</a> <a href="/tags/cucumber/" style="font-size: 10px;">cucumber</a> <a href="/tags/culture/" style="font-size: 11.11px;">culture</a> <a href="/tags/daily-scrum/" style="font-size: 10px;">daily scrum</a> <a href="/tags/decrator/" style="font-size: 10px;">decrator</a> <a href="/tags/delivery/" style="font-size: 10px;">delivery</a> <a href="/tags/design/" style="font-size: 10px;">design</a> <a href="/tags/design-patterns/" style="font-size: 10px;">design patterns</a> <a href="/tags/devops/" style="font-size: 10px;">devops</a> <a href="/tags/digital/" style="font-size: 10px;">digital</a> <a href="/tags/django/" style="font-size: 11.11px;">django</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/dojo/" style="font-size: 10px;">dojo</a> <a href="/tags/easyb/" style="font-size: 10px;">easyb</a> <a href="/tags/efficiency/" style="font-size: 10px;">efficiency</a> <a href="/tags/emberjs/" style="font-size: 10px;">emberjs</a> <a href="/tags/encoding/" style="font-size: 10px;">encoding</a> <a href="/tags/estimating/" style="font-size: 10px;">estimating</a> <a href="/tags/event/" style="font-size: 11.11px;">event</a> <a href="/tags/facilitating/" style="font-size: 10px;">facilitating</a> <a href="/tags/fail/" style="font-size: 10px;">fail</a> <a href="/tags/flexibility/" style="font-size: 10px;">flexibility</a> <a href="/tags/fluency/" style="font-size: 10px;">fluency</a> <a href="/tags/fractal/" style="font-size: 10px;">fractal</a> <a href="/tags/frequently/" style="font-size: 10px;">frequently</a> <a href="/tags/functional-programming/" style="font-size: 13.33px;">functional programming</a> <a href="/tags/gandalf/" style="font-size: 10px;">gandalf</a> <a href="/tags/git/" style="font-size: 12.22px;">git</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/gradle/" style="font-size: 10px;">gradle</a> <a href="/tags/grooming/" style="font-size: 11.11px;">grooming</a> <a href="/tags/groovy/" style="font-size: 11.11px;">groovy</a> <a href="/tags/grunt/" style="font-size: 10px;">grunt</a> <a href="/tags/gruntjs/" style="font-size: 10px;">gruntjs</a> <a href="/tags/gui/" style="font-size: 10px;">gui</a> <a href="/tags/gunicorn/" style="font-size: 10px;">gunicorn</a> <a href="/tags/hardware/" style="font-size: 10px;">hardware</a> <a href="/tags/history/" style="font-size: 10px;">history</a> <a href="/tags/hybrid/" style="font-size: 10px;">hybrid</a> <a href="/tags/invest/" style="font-size: 10px;">invest</a> <a href="/tags/ios/" style="font-size: 17.78px;">ios</a> <a href="/tags/itertools/" style="font-size: 10px;">itertools</a> <a href="/tags/jasmine/" style="font-size: 10px;">jasmine</a> <a href="/tags/java/" style="font-size: 13.33px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jenkins/" style="font-size: 11.11px;">jenkins</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/junit/" style="font-size: 10px;">junit</a> <a href="/tags/jvm/" style="font-size: 10px;">jvm</a> <a href="/tags/kanban/" style="font-size: 12.22px;">kanban</a> <a href="/tags/kata/" style="font-size: 11.11px;">kata</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/leadership/" style="font-size: 11.11px;">leadership</a> <a href="/tags/lean/" style="font-size: 14.44px;">lean</a> <a href="/tags/lean-startup/" style="font-size: 12.22px;">lean startup</a> <a href="/tags/less/" style="font-size: 12.22px;">less</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/maker/" style="font-size: 11.11px;">maker</a> <a href="/tags/management30/" style="font-size: 13.33px;">management30</a> <a href="/tags/manager/" style="font-size: 10px;">manager</a> <a href="/tags/mapping/" style="font-size: 10px;">mapping</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/measure/" style="font-size: 10px;">measure</a> <a href="/tags/measurement/" style="font-size: 10px;">measurement</a> <a href="/tags/metrics/" style="font-size: 10px;">metrics</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/multi-thread/" style="font-size: 10px;">multi thread</a> <a href="/tags/network/" style="font-size: 10px;">network</a> <a href="/tags/nexus/" style="font-size: 10px;">nexus</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/nio/" style="font-size: 10px;">nio</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/o2o/" style="font-size: 10px;">o2o</a> <a href="/tags/objc-bridging/" style="font-size: 10px;">objc - bridging</a> <a href="/tags/organization/" style="font-size: 11.11px;">organization</a> <a href="/tags/orid/" style="font-size: 10px;">orid</a> <a href="/tags/pair/" style="font-size: 10px;">pair</a> <a href="/tags/performance/" style="font-size: 10px;">performance</a> <a href="/tags/persona/" style="font-size: 10px;">persona</a> <a href="/tags/pipe/" style="font-size: 10px;">pipe</a> <a href="/tags/planning/" style="font-size: 11.11px;">planning</a> <a href="/tags/playground/" style="font-size: 10px;">playground</a> <a href="/tags/product-backlog/" style="font-size: 10px;">product backlog</a> <a href="/tags/product-owner/" style="font-size: 10px;">product owner</a> <a href="/tags/productivity/" style="font-size: 11.11px;">productivity</a> <a href="/tags/proxy/" style="font-size: 10px;">proxy</a> <a href="/tags/pyisapie/" style="font-size: 10px;">pyisapie</a> <a href="/tags/python/" style="font-size: 15.56px;">python</a> <a href="/tags/raid/" style="font-size: 10px;">raid</a> <a href="/tags/reading/" style="font-size: 10px;">reading</a> <a href="/tags/refinement/" style="font-size: 11.11px;">refinement</a> <a href="/tags/retrospective/" style="font-size: 10px;">retrospective</a> <a href="/tags/robotframework/" style="font-size: 12.22px;">robotframework</a> <a href="/tags/scaling/" style="font-size: 13.33px;">scaling</a> <a href="/tags/scrum/" style="font-size: 20px;">scrum</a> <a href="/tags/scrum-master/" style="font-size: 11.11px;">scrum master</a> <a href="/tags/sdk/" style="font-size: 10px;">sdk</a> <a href="/tags/security/" style="font-size: 10px;">security</a> <a href="/tags/selenium/" style="font-size: 10px;">selenium</a> <a href="/tags/serialization/" style="font-size: 10px;">serialization</a> <a href="/tags/signature/" style="font-size: 10px;">signature</a> <a href="/tags/singleton/" style="font-size: 10px;">singleton</a> <a href="/tags/socket/" style="font-size: 12.22px;">socket</a> <a href="/tags/sonar/" style="font-size: 10px;">sonar</a> <a href="/tags/split/" style="font-size: 10px;">split</a> <a href="/tags/spotify/" style="font-size: 12.22px;">spotify</a> <a href="/tags/sprint/" style="font-size: 11.11px;">sprint</a> <a href="/tags/sqa/" style="font-size: 10px;">sqa</a> <a href="/tags/sql/" style="font-size: 10px;">sql</a> <a href="/tags/swift/" style="font-size: 11.11px;">swift</a> <a href="/tags/tdd/" style="font-size: 11.11px;">tdd</a> <a href="/tags/tennis/" style="font-size: 10px;">tennis</a> <a href="/tags/time/" style="font-size: 10px;">time</a> <a href="/tags/time-code/" style="font-size: 10px;">time code</a> <a href="/tags/tomcat/" style="font-size: 10px;">tomcat</a> <a href="/tags/tpp/" style="font-size: 10px;">tpp</a> <a href="/tags/tps/" style="font-size: 10px;">tps</a> <a href="/tags/training/" style="font-size: 10px;">training</a> <a href="/tags/transformation/" style="font-size: 10px;">transformation</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/ucac/" style="font-size: 10px;">ucac</a> <a href="/tags/unicode/" style="font-size: 10px;">unicode</a> <a href="/tags/unit-test/" style="font-size: 12.22px;">unit test</a> <a href="/tags/unittest/" style="font-size: 11.11px;">unittest</a> <a href="/tags/user-story/" style="font-size: 15.56px;">user story</a> <a href="/tags/utf8/" style="font-size: 10px;">utf8</a> <a href="/tags/vi/" style="font-size: 10px;">vi</a> <a href="/tags/visual/" style="font-size: 10px;">visual</a> <a href="/tags/waste/" style="font-size: 10px;">waste</a> <a href="/tags/webdriver/" style="font-size: 10px;">webdriver</a> <a href="/tags/weibo/" style="font-size: 10px;">weibo</a> <a href="/tags/workshop/" style="font-size: 10px;">workshop</a> <a href="/tags/xcode/" style="font-size: 11.11px;">xcode</a> <a href="/tags/xp/" style="font-size: 15.56px;">xp</a> <a href="/tags/xvfb/" style="font-size: 10px;">xvfb</a> <a href="/tags/zen/" style="font-size: 11.11px;">zen</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/">agile</a><span class="category-list-count">81</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/coaching/">coaching</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/engineering/">engineering</a><span class="category-list-count">27</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/event/">event</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/facilitating/">facilitating</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/lean/">lean</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/product/">product</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/scaling/">scaling</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/scrum/">scrum</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/tools/">tools</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/">programming</a><span class="category-list-count">39</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/programming/architecture/">architecture</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/arduino/">arduino</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/go/">go</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/java/">java</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/javascript/">javascript</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/programming/javascript/emberjs/">emberjs</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/objectivec/">objectivec</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/php/">php</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/python/">python</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/programming/python/django/">django</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/python/functional/">functional</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/swift/">swift</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/tools/">tools</a><span class="category-list-count">3</span></li></ul></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a><span class="archive-list-count">23</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/">January 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">March 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/01/">January 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/12/">December 2012</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08/">August 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/07/">July 2011</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/05/">May 2011</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/04/">April 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">September 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/02/">February 2009</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Jacky Shen申健<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      <p>
+        <i>友情链接:</i>
+        <ul>
+          <li><a href="http://www.uperform.cn/scrum-certification-course/">优普丰敏捷学院Scrum认证培训教练</a></li>
+          <li><a href="http://codingstyle.cn">中国软件匠艺小组</a></li>
+          <li><a href="http://www.agilecoach.cn">UCAC认证中国敏捷教练</a></li>
+          <li><a href="http://www.scrumchina.com/">Scrum中文认证国际培训</a></li>
+          <li><a href="http://bobjiang.com/">Bob Jiang姜信宝的博客</a></li>
+          <li><a href="http://www.maiyuan.me/">Ronald Mai麦宇安 敏捷教练</a></li>
+          <li><a href="https://www.scrumalliance.org/community/profile/jshen2">Scrum Alliance国际Scrum联盟</a></li>
+        </ul>
+      </p>
+    </div>
+  
+      <meta property="wb:webmaster" content="37772db3e81eb2be" />
+  <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+
+    
+<script type='text/javascript'>
+      var _vds = _vds || [];
+      window._vds = _vds;
+      (function(){
+        _vds.push(['setAccountId', 'b95fba2d6958fb5a']);
+        (function() {
+          var vds = document.createElement('script');
+          vds.type='text/javascript';
+          vds.async = true;
+          vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(vds, s);
+        })();
+      })();
+</script>
+  
+    
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253167390'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1253167390%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+  
+  </div>
+
+
+
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页 Main</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档 Archives</a>
+  
+    <a href="/about-me" class="mobile-nav-link">关于我 About Me</a>
+  
+</nav>
+    
+
+<script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8"> 
+  
+  <title>Learn Python in 10 minutes </title>
+  <meta http-equiv="keywords" content="Scrum认证 创客 工匠 敏捷教练 软件开发顾问 Agile Coaching 申健 申导"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(用了好几年python,发现还是有个别语法没用到，比如 a,b=b,a 比如@classmethod 比如 dict.get(“x”, 1) 比如dict.setdefaults()。本文没有提到yield语法。) 示例代码 learnpython-zh.py Python 由 Guido Van Rossum 在90年代初创建。 它现在是最流行的语言之一 我喜爱python是因为它有极为清晰的">
+<meta name="keywords" content="Scrum认证 创客 工匠 敏捷教练 软件开发顾问 Agile Coaching 申健 申导">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Learn Python in 10 minutes">
+<meta property="og:url" content="www.jackyshen.com/2013/11/28/learn-python-in-10-minutes/index.html">
+<meta property="og:site_name" content="申导">
+<meta property="og:description" content="(用了好几年python,发现还是有个别语法没用到，比如 a,b=b,a 比如@classmethod 比如 dict.get(“x”, 1) 比如dict.setdefaults()。本文没有提到yield语法。) 示例代码 learnpython-zh.py Python 由 Guido Van Rossum 在90年代初创建。 它现在是最流行的语言之一 我喜爱python是因为它有极为清晰的">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2016-02-13T12:28:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Learn Python in 10 minutes">
+<meta name="twitter:description" content="(用了好几年python,发现还是有个别语法没用到，比如 a,b=b,a 比如@classmethod 比如 dict.get(“x”, 1) 比如dict.setdefaults()。本文没有提到yield语法。) 示例代码 learnpython-zh.py Python 由 Guido Van Rossum 在90年代初创建。 它现在是最流行的语言之一 我喜爱python是因为它有极为清晰的">
+  
+    <link rel="alternative" href="/atom.xml" title="申导" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <!-- <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css"> -->
+  <link rel="stylesheet" href="/css/style.css">
+  <meta name="google-site-verification" content="0Yj4uwGnuB0vsMUHmrUBkC_a1AqeLRzmqneZcUIgBao">
+  <meta name="msvalidate.01" content="70BA10961AF4781E373389EF3FF74835">
+</head></html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">申导</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Scrum Agile Coach</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页 Main</a>
+        
+          <a class="main-nav-link" href="/archives">归档 Archives</a>
+        
+          <a class="main-nav-link" href="/about-me">关于我 About Me</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="www.jackyshen.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+
+      <div class="outer">
+        <section id="main"><article id="post-learn-python-in-10-minutes" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/11/28/learn-python-in-10-minutes/" class="article-date">
+  <time datetime="2013-11-27T16:00:00.000Z" itemprop="datePublished">Nov 28 2013</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/programming/">programming</a>►<a class="article-category-link" href="/categories/programming/python/">python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Learn Python in 10 minutes
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(用了好几年python,发现还是有个别语法没用到，比如 a,b=b,a 比如@classmethod 比如 dict.get(“x”, 1) 比如dict.setdefaults()。本文没有提到yield语法。)</p>
+<p>示例代码 <a href="http://learnxinyminutes.com/docs/files/learnpython-zh.py" target="_blank" rel="noopener">learnpython-zh.py</a></p>
+<p>Python 由 Guido Van Rossum 在90年代初创建。 它现在是最流行的语言之一 我喜爱python是因为它有极为清晰的语法，甚至可以说，它就是可以执行的伪代码</p>
+<p>很欢迎来自您的反馈，你可以在<a href="http://twitter.com/louiedinh" target="_blank" rel="noopener">@louiedinh</a> 和 louiedinh [at] [google’s email service] 这里找到我</p>
+<p>注意: 这篇文章针对的版本是Python 2.7，但大多也可使用于其他Python 2的版本 如果是Python 3，请在网络上寻找其他教程</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 单行注释</span><br><span class="line">&quot;&quot;&quot; 多行字符串可以用</span><br><span class="line">    三个引号包裹，不过这也可以被当做</span><br><span class="line">    多行注释</span><br><span class="line">&quot;&quot;&quot;</span><br></pre></td></tr></table></figure>
+<p>####################################################</p>
+<h2 id="1-原始数据类型和操作符"><a href="#1-原始数据类型和操作符" class="headerlink" title="1. 原始数据类型和操作符"></a>1. 原始数据类型和操作符</h2><p>####################################################</p>
+<h1 id="数字类型"><a href="#数字类型" class="headerlink" title="数字类型"></a>数字类型</h1><p>3  # =&gt; 3</p>
+<h1 id="简单的算数"><a href="#简单的算数" class="headerlink" title="简单的算数"></a>简单的算数</h1><p>1 + 1  # =&gt; 2<br>8 - 1  # =&gt; 7<br>10 * 2  # =&gt; 20<br>35 / 5  # =&gt; 7</p>
+<h1 id="整数的除法会自动取整"><a href="#整数的除法会自动取整" class="headerlink" title="整数的除法会自动取整"></a>整数的除法会自动取整</h1><p>5 / 2  # =&gt; 2</p>
+<h1 id="要做精确的除法，我们需要引入浮点数"><a href="#要做精确的除法，我们需要引入浮点数" class="headerlink" title="要做精确的除法，我们需要引入浮点数"></a>要做精确的除法，我们需要引入浮点数</h1><p>2.0     # 浮点数<br>11.0 / 4.0  # =&gt; 2.75 精确多了</p>
+<h1 id="括号具有最高优先级"><a href="#括号具有最高优先级" class="headerlink" title="括号具有最高优先级"></a>括号具有最高优先级</h1><p>(1 + 3) * 2  # =&gt; 8</p>
+<h1 id="布尔值也是基本的数据类型"><a href="#布尔值也是基本的数据类型" class="headerlink" title="布尔值也是基本的数据类型"></a>布尔值也是基本的数据类型</h1><p>True<br>False</p>
+<h1 id="用-not-来取非"><a href="#用-not-来取非" class="headerlink" title="用 not 来取非"></a>用 not 来取非</h1><p>not True  # =&gt; False<br>not False  # =&gt; True</p>
+<h1 id="相等"><a href="#相等" class="headerlink" title="相等"></a>相等</h1><p>1 == 1  # =&gt; True<br>2 == 1  # =&gt; False</p>
+<h1 id="不等"><a href="#不等" class="headerlink" title="不等"></a>不等</h1><p>1 != 1  # =&gt; False<br>2 != 1  # =&gt; True</p>
+<h1 id="更多的比较操作符"><a href="#更多的比较操作符" class="headerlink" title="更多的比较操作符"></a>更多的比较操作符</h1><p>1 &lt; 10  # =&gt; True<br>1 &gt; 10  # =&gt; False<br>2 &lt;= 2  # =&gt; True<br>2 &gt;= 2  # =&gt; True</p>
+<h1 id="比较运算可以连起来写！"><a href="#比较运算可以连起来写！" class="headerlink" title="比较运算可以连起来写！"></a>比较运算可以连起来写！</h1><p>1 &lt; 2 &lt; 3  # =&gt; True<br>2 &lt; 3 &lt; 2  # =&gt; False</p>
+<h1 id="字符串通过-“-或-‘-括起来"><a href="#字符串通过-“-或-‘-括起来" class="headerlink" title="字符串通过 “ 或 ‘ 括起来"></a>字符串通过 “ 或 ‘ 括起来</h1><p>“This is a string.”<br>‘This is also a string.’</p>
+<h1 id="字符串通过加号拼接"><a href="#字符串通过加号拼接" class="headerlink" title="字符串通过加号拼接"></a>字符串通过加号拼接</h1><p>“Hello “ + “world!”  # =&gt; “Hello world!”</p>
+<h1 id="字符串可以被视为字符的列表"><a href="#字符串可以被视为字符的列表" class="headerlink" title="字符串可以被视为字符的列表"></a>字符串可以被视为字符的列表</h1><p>“This is a string”[0]  # =&gt; ‘T’</p>
+<h1 id="可以用来格式化字符串"><a href="#可以用来格式化字符串" class="headerlink" title="% 可以用来格式化字符串"></a>% 可以用来格式化字符串</h1><p>“%s can be %s” % (“strings”, “interpolated”)</p>
+<h1 id="也可以用-format-方法来格式化字符串"><a href="#也可以用-format-方法来格式化字符串" class="headerlink" title="也可以用 format 方法来格式化字符串"></a>也可以用 format 方法来格式化字符串</h1><h1 id="推荐使用这个方法"><a href="#推荐使用这个方法" class="headerlink" title="推荐使用这个方法"></a>推荐使用这个方法</h1><p>“{0} can be {1}”.format(“strings”, “formatted”)</p>
+<h1 id="也可以用变量名代替数字"><a href="#也可以用变量名代替数字" class="headerlink" title="也可以用变量名代替数字"></a>也可以用变量名代替数字</h1><p>“{name} wants to eat {food}”.format(name=”Bob”, food=”lasagna”)</p>
+<h1 id="None-是对象"><a href="#None-是对象" class="headerlink" title="None 是对象"></a>None 是对象</h1><p>None  # =&gt; None</p>
+<h1 id="不要用相等-符号来和None进行比较"><a href="#不要用相等-符号来和None进行比较" class="headerlink" title="不要用相等 == 符号来和None进行比较"></a>不要用相等 <code>==</code> 符号来和None进行比较</h1><h1 id="要用-is"><a href="#要用-is" class="headerlink" title="要用 is"></a>要用 <code>is</code></h1><p>“etc” is None  # =&gt; False<br>None is None  # =&gt; True</p>
+<h1 id="‘is’-可以用来比较对象的相等性"><a href="#‘is’-可以用来比较对象的相等性" class="headerlink" title="‘is’ 可以用来比较对象的相等性"></a>‘is’ 可以用来比较对象的相等性</h1><h1 id="这个操作符在比较原始数据时没多少用，但是比较对象时必不可少"><a href="#这个操作符在比较原始数据时没多少用，但是比较对象时必不可少" class="headerlink" title="这个操作符在比较原始数据时没多少用，但是比较对象时必不可少"></a>这个操作符在比较原始数据时没多少用，但是比较对象时必不可少</h1><h1 id="None-0-和空字符串都被算作-False"><a href="#None-0-和空字符串都被算作-False" class="headerlink" title="None, 0, 和空字符串都被算作 False"></a>None, 0, 和空字符串都被算作 False</h1><h1 id="其他的均为-True"><a href="#其他的均为-True" class="headerlink" title="其他的均为 True"></a>其他的均为 True</h1><p>0 == False  # =&gt; True<br>“” == False  # =&gt; True</p>
+<p>####################################################</p>
+<h2 id="2-变量和集合"><a href="#2-变量和集合" class="headerlink" title="2. 变量和集合"></a>2. 变量和集合</h2><p>####################################################</p>
+<h1 id="很方便的输出"><a href="#很方便的输出" class="headerlink" title="很方便的输出"></a>很方便的输出</h1><p>print “I’m Python. Nice to meet you!”</p>
+<h1 id="给变量赋值前不需要事先声明"><a href="#给变量赋值前不需要事先声明" class="headerlink" title="给变量赋值前不需要事先声明"></a>给变量赋值前不需要事先声明</h1><p>some_var = 5    # 一般建议使用小写字母和下划线组合来做为变量名<br>some_var  # =&gt; 5</p>
+<h1 id="访问未赋值的变量会抛出异常"><a href="#访问未赋值的变量会抛出异常" class="headerlink" title="访问未赋值的变量会抛出异常"></a>访问未赋值的变量会抛出异常</h1><h1 id="可以查看控制流程一节来了解如何异常处理"><a href="#可以查看控制流程一节来了解如何异常处理" class="headerlink" title="可以查看控制流程一节来了解如何异常处理"></a>可以查看控制流程一节来了解如何异常处理</h1><p>some_other_var  # 抛出 NameError</p>
+<h1 id="if-语句可以作为表达式来使用"><a href="#if-语句可以作为表达式来使用" class="headerlink" title="if 语句可以作为表达式来使用"></a>if 语句可以作为表达式来使用</h1><p>“yahoo!” if 3 &gt; 2 else 2  # =&gt; “yahoo!”</p>
+<h1 id="列表用来保存序列"><a href="#列表用来保存序列" class="headerlink" title="列表用来保存序列"></a>列表用来保存序列</h1><p>li = []</p>
+<h1 id="可以直接初始化列表"><a href="#可以直接初始化列表" class="headerlink" title="可以直接初始化列表"></a>可以直接初始化列表</h1><p>other_li = [4, 5, 6]</p>
+<h1 id="在列表末尾添加元素"><a href="#在列表末尾添加元素" class="headerlink" title="在列表末尾添加元素"></a>在列表末尾添加元素</h1><p>li.append(1)    # li 现在是 [1]<br>li.append(2)    # li 现在是 [1, 2]<br>li.append(4)    # li 现在是 [1, 2, 4]<br>li.append(3)    # li 现在是 [1, 2, 4, 3]</p>
+<h1 id="移除列表末尾元素"><a href="#移除列表末尾元素" class="headerlink" title="移除列表末尾元素"></a>移除列表末尾元素</h1><p>li.pop()        # =&gt; 3 li 现在是 [1, 2, 4]</p>
+<h1 id="重新加进去"><a href="#重新加进去" class="headerlink" title="重新加进去"></a>重新加进去</h1><p>li.append(3)    # li is now [1, 2, 4, 3] again.</p>
+<h1 id="像其他语言访问数组一样访问列表"><a href="#像其他语言访问数组一样访问列表" class="headerlink" title="像其他语言访问数组一样访问列表"></a>像其他语言访问数组一样访问列表</h1><p>li[0]  # =&gt; 1</p>
+<h1 id="访问最后一个元素"><a href="#访问最后一个元素" class="headerlink" title="访问最后一个元素"></a>访问最后一个元素</h1><p>li[-1]  # =&gt; 3</p>
+<h1 id="越界会抛出异常"><a href="#越界会抛出异常" class="headerlink" title="越界会抛出异常"></a>越界会抛出异常</h1><p>li[4]  # 抛出越界异常</p>
+<h1 id="切片语法需要用到列表的索引访问"><a href="#切片语法需要用到列表的索引访问" class="headerlink" title="切片语法需要用到列表的索引访问"></a>切片语法需要用到列表的索引访问</h1><h1 id="可以看做数学之中左闭右开区间"><a href="#可以看做数学之中左闭右开区间" class="headerlink" title="可以看做数学之中左闭右开区间"></a>可以看做数学之中左闭右开区间</h1><p>li[1:3]  # =&gt; [2, 4]</p>
+<h1 id="省略开头的元素"><a href="#省略开头的元素" class="headerlink" title="省略开头的元素"></a>省略开头的元素</h1><p>li[2:]  # =&gt; [4, 3]</p>
+<h1 id="省略末尾的元素"><a href="#省略末尾的元素" class="headerlink" title="省略末尾的元素"></a>省略末尾的元素</h1><p>li[:3]  # =&gt; [1, 2, 4]</p>
+<h1 id="删除特定元素"><a href="#删除特定元素" class="headerlink" title="删除特定元素"></a>删除特定元素</h1><p>del li[2]  # li 现在是 [1, 2, 3]</p>
+<h1 id="合并列表"><a href="#合并列表" class="headerlink" title="合并列表"></a>合并列表</h1><p>li + other_li  # =&gt; [1, 2, 3, 4, 5, 6] - 并不会不改变这两个列表</p>
+<h1 id="通过拼接来合并列表"><a href="#通过拼接来合并列表" class="headerlink" title="通过拼接来合并列表"></a>通过拼接来合并列表</h1><p>li.extend(other_li)  # li 是 [1, 2, 3, 4, 5, 6]</p>
+<h1 id="用-in-来返回元素是否在列表中"><a href="#用-in-来返回元素是否在列表中" class="headerlink" title="用 in 来返回元素是否在列表中"></a>用 in 来返回元素是否在列表中</h1><p>1 in li  # =&gt; True</p>
+<h1 id="返回列表长度"><a href="#返回列表长度" class="headerlink" title="返回列表长度"></a>返回列表长度</h1><p>len(li)  # =&gt; 6</p>
+<h1 id="元组类似于列表，但它是不可改变的"><a href="#元组类似于列表，但它是不可改变的" class="headerlink" title="元组类似于列表，但它是不可改变的"></a>元组类似于列表，但它是不可改变的</h1><p>tup = (1, 2, 3)<br>tup[0]  # =&gt; 1<br>tup[0] = 3  # 类型错误</p>
+<h1 id="对于大多数的列表操作，也适用于元组"><a href="#对于大多数的列表操作，也适用于元组" class="headerlink" title="对于大多数的列表操作，也适用于元组"></a>对于大多数的列表操作，也适用于元组</h1><p>len(tup)  # =&gt; 3<br>tup + (4, 5, 6)  # =&gt; (1, 2, 3, 4, 5, 6)<br>tup[:2]  # =&gt; (1, 2)<br>2 in tup  # =&gt; True</p>
+<h1 id="你可以将元组解包赋给多个变量"><a href="#你可以将元组解包赋给多个变量" class="headerlink" title="你可以将元组解包赋给多个变量"></a>你可以将元组解包赋给多个变量</h1><p>a, b, c = (1, 2, 3)     # a 是 1，b 是 2，c 是 3</p>
+<h1 id="如果不加括号，将会被自动视为元组"><a href="#如果不加括号，将会被自动视为元组" class="headerlink" title="如果不加括号，将会被自动视为元组"></a>如果不加括号，将会被自动视为元组</h1><p>d, e, f = 4, 5, 6</p>
+<h1 id="现在我们可以看看交换两个数字是多么容易的事"><a href="#现在我们可以看看交换两个数字是多么容易的事" class="headerlink" title="现在我们可以看看交换两个数字是多么容易的事"></a>现在我们可以看看交换两个数字是多么容易的事</h1><p>e, d = d, e     # d 是 5，e 是 4</p>
+<h1 id="字典用来储存映射关系"><a href="#字典用来储存映射关系" class="headerlink" title="字典用来储存映射关系"></a>字典用来储存映射关系</h1><p>empty_dict = {}</p>
+<h1 id="字典初始化"><a href="#字典初始化" class="headerlink" title="字典初始化"></a>字典初始化</h1><p>filled_dict = {“one”: 1, “two”: 2, “three”: 3}</p>
+<h1 id="字典也用中括号访问元素"><a href="#字典也用中括号访问元素" class="headerlink" title="字典也用中括号访问元素"></a>字典也用中括号访问元素</h1><p>filled_dict[“one”]  # =&gt; 1</p>
+<h1 id="把所有的键保存在列表中"><a href="#把所有的键保存在列表中" class="headerlink" title="把所有的键保存在列表中"></a>把所有的键保存在列表中</h1><p>filled_dict.keys()  # =&gt; [“three”, “two”, “one”]</p>
+<h1 id="键的顺序并不是唯一的，得到的不一定是这个顺序"><a href="#键的顺序并不是唯一的，得到的不一定是这个顺序" class="headerlink" title="键的顺序并不是唯一的，得到的不一定是这个顺序"></a>键的顺序并不是唯一的，得到的不一定是这个顺序</h1><h1 id="把所有的值保存在列表中"><a href="#把所有的值保存在列表中" class="headerlink" title="把所有的值保存在列表中"></a>把所有的值保存在列表中</h1><p>filled_dict.values()  # =&gt; [3, 2, 1]</p>
+<h1 id="和键的顺序相同"><a href="#和键的顺序相同" class="headerlink" title="和键的顺序相同"></a>和键的顺序相同</h1><h1 id="判断一个键是否存在"><a href="#判断一个键是否存在" class="headerlink" title="判断一个键是否存在"></a>判断一个键是否存在</h1><p>“one” in filled_dict  # =&gt; True<br>1 in filled_dict  # =&gt; False</p>
+<h1 id="查询一个不存在的键会抛出-KeyError"><a href="#查询一个不存在的键会抛出-KeyError" class="headerlink" title="查询一个不存在的键会抛出 KeyError"></a>查询一个不存在的键会抛出 KeyError</h1><p>filled_dict[“four”]  # KeyError</p>
+<h1 id="用-get-方法来避免-KeyError"><a href="#用-get-方法来避免-KeyError" class="headerlink" title="用 get 方法来避免 KeyError"></a>用 get 方法来避免 KeyError</h1><p>filled_dict.get(“one”)  # =&gt; 1<br>filled_dict.get(“four”)  # =&gt; None</p>
+<h1 id="get-方法支持在不存在的时候返回一个默认值"><a href="#get-方法支持在不存在的时候返回一个默认值" class="headerlink" title="get 方法支持在不存在的时候返回一个默认值"></a>get 方法支持在不存在的时候返回一个默认值</h1><p>filled_dict.get(“one”, 4)  # =&gt; 1<br>filled_dict.get(“four”, 4)  # =&gt; 4</p>
+<h1 id="setdefault-是一个更安全的添加字典元素的方法"><a href="#setdefault-是一个更安全的添加字典元素的方法" class="headerlink" title="setdefault 是一个更安全的添加字典元素的方法"></a>setdefault 是一个更安全的添加字典元素的方法</h1><p>filled_dict.setdefault(“five”, 5)  # filled_dict[“five”] 的值为 5<br>filled_dict.setdefault(“five”, 6)  # filled_dict[“five”] 的值仍然是 5</p>
+<h1 id="集合储存无顺序的元素"><a href="#集合储存无顺序的元素" class="headerlink" title="集合储存无顺序的元素"></a>集合储存无顺序的元素</h1><p>empty_set = set()</p>
+<h1 id="初始化一个集合"><a href="#初始化一个集合" class="headerlink" title="初始化一个集合"></a>初始化一个集合</h1><p>some_set = set([1, 2, 2, 3, 4])  # filled_set 现在是 set([1, 2, 3, 4])</p>
+<h1 id="Python-2-7-之后，大括号可以用来表示集合"><a href="#Python-2-7-之后，大括号可以用来表示集合" class="headerlink" title="Python 2.7 之后，大括号可以用来表示集合"></a>Python 2.7 之后，大括号可以用来表示集合</h1><p>filled_set = {1, 2, 2, 3, 4}  # =&gt; {1 2 3 4}</p>
+<h1 id="向集合添加元素"><a href="#向集合添加元素" class="headerlink" title="向集合添加元素"></a>向集合添加元素</h1><p>filled_set.add(5)  # filled_set 现在是 {1, 2, 3, 4, 5}</p>
+<h1 id="用-amp-来计算集合的交"><a href="#用-amp-来计算集合的交" class="headerlink" title="用 &amp; 来计算集合的交"></a>用 &amp; 来计算集合的交</h1><p>other_set = {3, 4, 5, 6}<br>filled_set &amp; other_set  # =&gt; {3, 4, 5}</p>
+<h1 id="用-来计算集合的并"><a href="#用-来计算集合的并" class="headerlink" title="用 | 来计算集合的并"></a>用 | 来计算集合的并</h1><p>filled_set | other_set  # =&gt; {1, 2, 3, 4, 5, 6}</p>
+<h1 id="用-来计算集合的差"><a href="#用-来计算集合的差" class="headerlink" title="用 - 来计算集合的差"></a>用 - 来计算集合的差</h1><p>{1, 2, 3, 4} - {2, 3, 5}  # =&gt; {1, 4}</p>
+<h1 id="用-in-来判断元素是否存在于集合中"><a href="#用-in-来判断元素是否存在于集合中" class="headerlink" title="用 in 来判断元素是否存在于集合中"></a>用 in 来判断元素是否存在于集合中</h1><p>2 in filled_set  # =&gt; True<br>10 in filled_set  # =&gt; False</p>
+<p>####################################################</p>
+<h2 id="3-控制流程"><a href="#3-控制流程" class="headerlink" title="3. 控制流程"></a>3. 控制流程</h2><p>####################################################</p>
+<h1 id="新建一个变量"><a href="#新建一个变量" class="headerlink" title="新建一个变量"></a>新建一个变量</h1><p>some_var = 5</p>
+<h1 id="这是个-if-语句，在-python-中缩进是很重要的。"><a href="#这是个-if-语句，在-python-中缩进是很重要的。" class="headerlink" title="这是个 if 语句，在 python 中缩进是很重要的。"></a>这是个 if 语句，在 python 中缩进是很重要的。</h1><h1 id="下面的代码片段将会输出-“some-var-is-smaller-than-10”"><a href="#下面的代码片段将会输出-“some-var-is-smaller-than-10”" class="headerlink" title="下面的代码片段将会输出 “some var is smaller than 10”"></a>下面的代码片段将会输出 “some var is smaller than 10”</h1><p>if some_var &gt; 10:<br>    print “some_var is totally bigger than 10.”<br>elif some_var &lt; 10:    # 这个 elif 语句是不必须的<br>    print “some_var is smaller than 10.”<br>else:           # 这个 else 也不是必须的<br>    print “some_var is indeed 10.”</p>
+<p>“””<br>用for循环遍历列表<br>输出:<br>    dog is a mammal<br>    cat is a mammal<br>    mouse is a mammal<br>“””<br>for animal in [“dog”, “cat”, “mouse”]:</p>
+<pre><code># 你可以用 % 来格式化字符串
+print &quot;%s is a mammal&quot; % animal
+</code></pre><p>“””<br><code>range(number)</code> 返回从0到给定数字的列表<br>输出:<br>    0<br>    1<br>    2<br>    3<br>“””<br>for i in range(4):<br>    print i</p>
+<p>“””<br>while 循环<br>输出:<br>    0<br>    1<br>    2<br>    3<br>“””<br>x = 0<br>while x &lt; 4:<br>    print x<br>    x += 1  #  x = x + 1 的简写</p>
+<h1 id="用-try-except-块来处理异常"><a href="#用-try-except-块来处理异常" class="headerlink" title="用 try/except 块来处理异常"></a>用 try/except 块来处理异常</h1><h1 id="Python-2-6-及以上适用"><a href="#Python-2-6-及以上适用" class="headerlink" title="Python 2.6 及以上适用:"></a>Python 2.6 及以上适用:</h1><p>try:</p>
+<pre><code># 用 raise 来抛出异常
+raise IndexError(&quot;This is an index error&quot;)
+</code></pre><p>except IndexError as e:<br>    pass    # pass 就是什么都不做，不过通常这里会做一些恢复工作</p>
+<p>####################################################</p>
+<h2 id="4-函数"><a href="#4-函数" class="headerlink" title="4. 函数"></a>4. 函数</h2><p>####################################################</p>
+<h1 id="用-def-来新建函数"><a href="#用-def-来新建函数" class="headerlink" title="用 def 来新建函数"></a>用 def 来新建函数</h1><p>def add(x, y):<br>    print “x is %s and y is %s” % (x, y)<br>    return x + y    # 通过 return 来返回值</p>
+<h1 id="调用带参数的函数"><a href="#调用带参数的函数" class="headerlink" title="调用带参数的函数"></a>调用带参数的函数</h1><p>add(5, 6)  # =&gt; 输出 “x is 5 and y is 6” 返回 11</p>
+<h1 id="通过关键字赋值来调用函数"><a href="#通过关键字赋值来调用函数" class="headerlink" title="通过关键字赋值来调用函数"></a>通过关键字赋值来调用函数</h1><p>add(y=6, x=5)   # 顺序是无所谓的</p>
+<h1 id="我们也可以定义接受多个变量的函数，这些变量是按照顺序排列的"><a href="#我们也可以定义接受多个变量的函数，这些变量是按照顺序排列的" class="headerlink" title="我们也可以定义接受多个变量的函数，这些变量是按照顺序排列的"></a>我们也可以定义接受多个变量的函数，这些变量是按照顺序排列的</h1><p>def varargs(*args):<br>    return args</p>
+<p>varargs(1, 2, 3)  # =&gt; (1,2,3)</p>
+<h1 id="我们也可以定义接受多个变量的函数，这些变量是按照关键字排列的"><a href="#我们也可以定义接受多个变量的函数，这些变量是按照关键字排列的" class="headerlink" title="我们也可以定义接受多个变量的函数，这些变量是按照关键字排列的"></a>我们也可以定义接受多个变量的函数，这些变量是按照关键字排列的</h1><p>def keyword_args(**kwargs):<br>    return kwargs</p>
+<h1 id="实际效果："><a href="#实际效果：" class="headerlink" title="实际效果："></a>实际效果：</h1><p>keyword_args(big=”foot”, loch=”ness”)  # =&gt; {“big”: “foot”, “loch”: “ness”}</p>
+<h1 id="你也可以同时将一个函数定义成两种形式"><a href="#你也可以同时将一个函数定义成两种形式" class="headerlink" title="你也可以同时将一个函数定义成两种形式"></a>你也可以同时将一个函数定义成两种形式</h1><p>def all_the_args(*args, **kwargs):<br>    print args<br>    print kwargs<br>“””<br>all_the_args(1, 2, a=3, b=4) prints:<br>    (1, 2)<br>    {“a”: 3, “b”: 4}<br>“””</p>
+<h1 id="当调用函数的时候，我们也可以进行相反的操作，把元组和字典展开为参数"><a href="#当调用函数的时候，我们也可以进行相反的操作，把元组和字典展开为参数" class="headerlink" title="当调用函数的时候，我们也可以进行相反的操作，把元组和字典展开为参数"></a>当调用函数的时候，我们也可以进行相反的操作，把元组和字典展开为参数</h1><p>args = (1, 2, 3, 4)<br>kwargs = {“a”: 3, “b”: 4}<br>all_the_args(<em>args)  # 等价于 foo(1, 2, 3, 4)<br>all_the_args(**kwargs)  # 等价于 foo(a=3, b=4)<br>all_the_args(</em>args, **kwargs)  # 等价于 foo(1, 2, 3, 4, a=3, b=4)</p>
+<h1 id="函数在-python-中是一等公民"><a href="#函数在-python-中是一等公民" class="headerlink" title="函数在 python 中是一等公民"></a>函数在 python 中是一等公民</h1><p>def create_adder(x):<br>    def adder(y):<br>        return x + y<br>    return adder</p>
+<p>add_10 = create_adder(10)<br>add_10(3)  # =&gt; 13</p>
+<h1 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h1><p>(lambda x: x &gt; 2)(3)  # =&gt; True</p>
+<h1 id="内置高阶函数"><a href="#内置高阶函数" class="headerlink" title="内置高阶函数"></a>内置高阶函数</h1><p>map(add_10, [1, 2, 3])  # =&gt; [11, 12, 13]<br>filter(lambda x: x &gt; 5, [3, 4, 5, 6, 7])  # =&gt; [6, 7]</p>
+<h1 id="可以用列表方法来对高阶函数进行更巧妙的引用"><a href="#可以用列表方法来对高阶函数进行更巧妙的引用" class="headerlink" title="可以用列表方法来对高阶函数进行更巧妙的引用"></a>可以用列表方法来对高阶函数进行更巧妙的引用</h1><p>[add_10(i) for i in [1, 2, 3]]  # =&gt; [11, 12, 13]<br>[x for x in [3, 4, 5, 6, 7] if x &gt; 5]  # =&gt; [6, 7]</p>
+<p>####################################################</p>
+<h2 id="5-类"><a href="#5-类" class="headerlink" title="5. 类"></a>5. 类</h2><p>####################################################</p>
+<h1 id="我们新建的类是从-object-类中继承的"><a href="#我们新建的类是从-object-类中继承的" class="headerlink" title="我们新建的类是从 object 类中继承的"></a>我们新建的类是从 object 类中继承的</h1><p>class Human(object):</p>
+<pre><code> # 类属性，由所有类的对象共享
+species = &quot;H. sapiens&quot;
+
+# 基本构造函数
+def __init__(self, name):
+    # 将参数赋给对象成员属性
+    self.name = name
+
+# 成员方法，参数要有 self
+def say(self, msg):
+    return &quot;%s: %s&quot; % (self.name, msg)
+
+# 类方法由所有类的对象共享
+# 这类方法在调用时，会把类本身传给第一个参数
+@classmethod
+def get_species(cls):
+    return cls.species
+
+# 静态方法是不需要类和对象的引用就可以调用的方法
+@staticmethod
+def grunt():
+    return &quot;*grunt*&quot;
+</code></pre><h1 id="实例化一个类"><a href="#实例化一个类" class="headerlink" title="实例化一个类"></a>实例化一个类</h1><p>i = Human(name=”Ian”)<br>print i.say(“hi”)     # 输出 “Ian: hi”</p>
+<p>j = Human(“Joel”)<br>print j.say(“hello”)  # 输出 “Joel: hello”</p>
+<h1 id="访问类的方法"><a href="#访问类的方法" class="headerlink" title="访问类的方法"></a>访问类的方法</h1><p>i.get_species()  # =&gt; “H. sapiens”</p>
+<h1 id="改变共享属性"><a href="#改变共享属性" class="headerlink" title="改变共享属性"></a>改变共享属性</h1><p>Human.species = “H. neanderthalensis”<br>i.get_species()  # =&gt; “H. neanderthalensis”<br>j.get_species()  # =&gt; “H. neanderthalensis”</p>
+<h1 id="访问静态变量"><a href="#访问静态变量" class="headerlink" title="访问静态变量"></a>访问静态变量</h1><p>Human.grunt()  # =&gt; “<em>grunt</em>“</p>
+<p>####################################################</p>
+<h2 id="6-模块"><a href="#6-模块" class="headerlink" title="6. 模块"></a>6. 模块</h2><p>####################################################</p>
+<h1 id="我们可以导入其他模块"><a href="#我们可以导入其他模块" class="headerlink" title="我们可以导入其他模块"></a>我们可以导入其他模块</h1><p>import math<br>print math.sqrt(16)  # =&gt; 4</p>
+<h1 id="我们也可以从一个模块中导入特定的函数"><a href="#我们也可以从一个模块中导入特定的函数" class="headerlink" title="我们也可以从一个模块中导入特定的函数"></a>我们也可以从一个模块中导入特定的函数</h1><p>from math import ceil, floor<br>print ceil(3.7)   # =&gt; 4.0<br>print floor(3.7)  # =&gt; 3.0</p>
+<h1 id="从模块中导入所有的函数"><a href="#从模块中导入所有的函数" class="headerlink" title="从模块中导入所有的函数"></a>从模块中导入所有的函数</h1><h1 id="警告：不推荐使用"><a href="#警告：不推荐使用" class="headerlink" title="警告：不推荐使用"></a>警告：不推荐使用</h1><p>from math import *</p>
+<h1 id="简写模块名"><a href="#简写模块名" class="headerlink" title="简写模块名"></a>简写模块名</h1><p>import math as m<br>math.sqrt(16) == m.sqrt(16)  # =&gt; True</p>
+<h1 id="Python的模块其实只是普通的python文件"><a href="#Python的模块其实只是普通的python文件" class="headerlink" title="Python的模块其实只是普通的python文件"></a>Python的模块其实只是普通的python文件</h1><h1 id="你也可以创建自己的模块，并且导入它们"><a href="#你也可以创建自己的模块，并且导入它们" class="headerlink" title="你也可以创建自己的模块，并且导入它们"></a>你也可以创建自己的模块，并且导入它们</h1><h1 id="模块的名字就和文件的名字相同"><a href="#模块的名字就和文件的名字相同" class="headerlink" title="模块的名字就和文件的名字相同"></a>模块的名字就和文件的名字相同</h1><h1 id="也可以通过下面的方法查看模块中有什么属性和方法"><a href="#也可以通过下面的方法查看模块中有什么属性和方法" class="headerlink" title="也可以通过下面的方法查看模块中有什么属性和方法"></a>也可以通过下面的方法查看模块中有什么属性和方法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import math</span><br><span class="line">dir(math)</span><br></pre></td></tr></table></figure>
+<h2 id="更多阅读"><a href="#更多阅读" class="headerlink" title="更多阅读"></a>更多阅读</h2><p>希望学到更多？试试下面的链接：</p>
+<ul>
+<li><a href="http://learnpythonthehardway.org/book/" target="_blank" rel="noopener">Learn Python The Hard Way</a></li>
+<li><a href="http://www.diveintopython.net/" target="_blank" rel="noopener">Dive Into Python</a></li>
+<li><a href="http://docs.python.org/2.6/" target="_blank" rel="noopener">The Official Docs</a></li>
+<li><a href="http://docs.python-guide.org/en/latest/" target="_blank" rel="noopener">Hitchhiker’s Guide to Python</a></li>
+<li><a href="http://pymotw.com/2/" target="_blank" rel="noopener">Python Module of the Week</a></li>
+</ul>
+<p>Translated by: <a href="http://binarythink.net/" target="_blank" rel="noopener">Chenbo Li</a><br><a href="http://learnxinyminutes.com/docs/zh-cn/python-cn/" target="_blank" rel="noopener">http://learnxinyminutes.com/docs/zh-cn/python-cn/</a></p>
+
+      
+    </div>
+
+    
+      <div class="article-entry">
+        <hr/>
+        <h1>觉得本文有帮助，长按二维码进行微信打赏</h1>
+        <img src="http://res.uperform.cn/%E5%BE%AE%E4%BF%A1%E6%89%93%E8%B5%8F%E7%A0%81.jpeg" alt="" width="80%" style="float:left;left:auto;margin-left:10%;">
+
+      </div>
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="www.jackyshen.com/2013/11/28/learn-python-in-10-minutes/" data-id="ck4tmbot1002u4bfyynv1yq5w" class="article-share-link">Share</a>
+      
+      
+    </footer>
+
+  </div>
+
+  <div>
+  </div>
+
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/01/04/new-to-arduino/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Arduino初探
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2013/11/28/git-tutorial/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Git - 简易指南</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+<section id="comments">
+  
+</section>
+
+</section>
+        
+          <aside id="sidebar" xmlns:wb="http://open.weibo.com/wb" >
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title">Follow me!</h3>
+  <div class="widget" xmlns:wb="http://open.weibo.com/wb">
+    <wb:follow-button uid="1001863751" type="red_3" width="100%" height="64" ></wb:follow-button>
+    <p>全球首位获得国际Scrum Alliance颁发Certified Scrum Trainer (CST认证培训师)和Certified Team Coach (CTC认证敏捷教练)双料导师级认证者。
+      <a href="https://www.scrumalliance.org/get-certified/ctc-certification/conversations-with-ctcs/jacky-shen">国际Scrum Alliance对申导获得全球首位CTC认证团队教练的访谈</a>
+    </p>
+    <p>
+      <img src="http://res.uperform.cn/certifications-of-JackyShen.png" width="100%">
+    </p>
+    <div class="article-more-link">
+      <a href="/about-me">更多了解博主...</a>
+    </div>
+  </div>
+
+  <div class="widget">
+    <h3 class="widget-title">热门文章</h3>
+    <ul>
+      <li><a href="/2016/06/10/my-agile-coach-journey/">Jacky Shen's Agile Coach Journey</a></li>
+      <li><a href="/2017/08/02/is-your-Scrum-lean-enough/">你的Scrum迭代够精益吗？看完就全明白了</a></li>
+      <li><a href="/2017/04/07/what-is-agile-coach/">国际首位CTC认证者和你聊聊什么是敏捷教练</a></li>
+      <li><a href="/2017/05/02/Agile-Coach-Mentoring-Program/">进阶敏捷教练与ScrumMaster培养辅导项目</a></li>
+      <li><a href="/2017/01/31/planning-as-a-social-event-scaling-agile-at-lego/">以社交活动的方式做计划-乐高公司的规模化敏捷</a></li>
+      <li><a href="/2018/01/21/new-csp-path-of-scrum-alliance-certifications/">2018年Scrum Alliance最新Certified Scrum认证和CSP体系</a></li>
+      <li><a href="/2016/07/04/Refactoring-with-Loops-and-Collection-Pipelines/">利用集合管道对循环进行函数式重构</a></li>
+      <li><a href="/2016/05/04/soft-skills-of-technical-leaders-and-managers">技术团队管理者的软技能</a></li>
+      <li><a href="/2016/03/26/how-bright-career-path-of-scrummaster-and-agile-coach">敏捷教练和ScrumMaster的职业现在有多吃香？</a></li>
+      <li><a href="/2016/03/26/my-agile-coach-journey">我是怎样成为敏捷教练的？</a></li>
+      <li><a href="/2016/03/26/tips-to-certified-team-coach-application">申请Scrum联盟导师级Certified Team Coach认证的攻略秘籍</a></li>
+      <li><a href="/2014/10/02/functional-programming-in-Python/">Python函数式编程</a></li>
+      <li><a href="/2015/05/21/async-operations-in-form-of-sync-programming-with-python-yielding/">利用python yielding创建协程将异步编程同步化</a></li>      
+      <li><a href="/lafable-cn/">适合重型企业的大型敏捷框架 LAFABLE</a></li>
+      <li><a href="http://www.uperform.cn/recent-public-course/">近期Scrum联盟Scrum认证培训课程表</a></li>
+    </ul>
+
+  </div>
+
+
+  <div class="widget">
+    <h3 class="widget-title">通过重构提高组织灵活性-百度技术沙龙</h3>
+	  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="100" height="64" id="cc_9879E3871335B9D99C33DC5901307461">
+  	<param name="movie" value="http://p.bokecc.com/flash/player.swf?vid=9879E3871335B9D99C33DC5901307461&siteid=0575C033D2012A28&playerid=8F2D63EFE045C05C&playertype=1&autoStart=false" />
+  	<param name="allowFullScreen" value="true" />
+  	<param name="allowScriptAccess" value="always" />
+  	<embed src="http://p.bokecc.com/flash/player.swf?vid=9879E3871335B9D99C33DC5901307461&siteid=0575C033D2012A28&playerid=8F2D63EFE045C05C&playertype=1&autoStart=false" width="220" height="150" name="cc_9879E3871335B9D99C33DC5901307461" allowFullScreen="true" allowScriptAccess="always" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"/>
+  	</object>
+  </div>
+
+  <div class="widget">
+    <h4><a href="/archives/">更多视频在这里</a></h4>
+  </div>
+
+
+</div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/18/history-of-scrum-sprint/">Scrum和Sprint名词的历史和误区</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/02/UPerform-Certified-Agile-Coach-UCAC/">UCAC敏捷教练静修-4月杭州-静待花开</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/17/git-scan-frequent-modified-hot-code-to-improve-quality/">Git命令扫描频繁修改代码热力图以提高代码质量</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/30/digital-innovations-singapore-bank-10-lessons-learnt-when-dbs-came-out-of-the-stone-age/">新加坡一家银行的数字化创新：DBS走出石器时代的十条敏捷转型经验</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/29/is-it-necessary-to-have-bug-list-column-on-kanban-for-defects-in-iteration/">敏捷项目迭代过程中测出缺陷要不要在看板加一列Bug List?</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/APNS/" style="font-size: 10px;">APNS</a> <a href="/tags/CTC/" style="font-size: 10px;">CTC</a> <a href="/tags/IIS/" style="font-size: 10px;">IIS</a> <a href="/tags/JVM/" style="font-size: 10px;">JVM</a> <a href="/tags/agile/" style="font-size: 18.89px;">agile</a> <a href="/tags/agile-tour/" style="font-size: 11.11px;">agile tour</a> <a href="/tags/agiletour/" style="font-size: 10px;">agiletour</a> <a href="/tags/alipay/" style="font-size: 10px;">alipay</a> <a href="/tags/annotation/" style="font-size: 10px;">annotation</a> <a href="/tags/arduino/" style="font-size: 11.11px;">arduino</a> <a href="/tags/ascii/" style="font-size: 10px;">ascii</a> <a href="/tags/atdd/" style="font-size: 10px;">atdd</a> <a href="/tags/automation/" style="font-size: 10px;">automation</a> <a href="/tags/bash/" style="font-size: 10px;">bash</a> <a href="/tags/bdd/" style="font-size: 10px;">bdd</a> <a href="/tags/book/" style="font-size: 10px;">book</a> <a href="/tags/branch/" style="font-size: 10px;">branch</a> <a href="/tags/career/" style="font-size: 13.33px;">career</a> <a href="/tags/certification/" style="font-size: 16.67px;">certification</a> <a href="/tags/checklist/" style="font-size: 10px;">checklist</a> <a href="/tags/ci/" style="font-size: 13.33px;">ci</a> <a href="/tags/clojure/" style="font-size: 10px;">clojure</a> <a href="/tags/coach/" style="font-size: 10px;">coach</a> <a href="/tags/coaching/" style="font-size: 11.11px;">coaching</a> <a href="/tags/coaching-coach-csp-ctc/" style="font-size: 10px;">coaching - coach - csp - ctc</a> <a href="/tags/code-coverage/" style="font-size: 10px;">code coverage</a> <a href="/tags/code-retreat/" style="font-size: 10px;">code retreat</a> <a href="/tags/code-review/" style="font-size: 10px;">code review</a> <a href="/tags/coderetreat/" style="font-size: 10px;">coderetreat</a> <a href="/tags/comet/" style="font-size: 10px;">comet</a> <a href="/tags/commitizen/" style="font-size: 10px;">commitizen</a> <a href="/tags/community/" style="font-size: 12.22px;">community</a> <a href="/tags/competence/" style="font-size: 10px;">competence</a> <a href="/tags/complexity/" style="font-size: 10px;">complexity</a> <a href="/tags/continuous-integration/" style="font-size: 10px;">continuous integration</a> <a href="/tags/craftsmanship/" style="font-size: 10px;">craftsmanship</a> <a href="/tags/cross-domain/" style="font-size: 10px;">cross domain</a> <a href="/tags/csd/" style="font-size: 11.11px;">csd</a> <a href="/tags/csp/" style="font-size: 10px;">csp</a> <a href="/tags/ctc/" style="font-size: 15.56px;">ctc</a> <a href="/tags/cucumber/" style="font-size: 10px;">cucumber</a> <a href="/tags/culture/" style="font-size: 11.11px;">culture</a> <a href="/tags/daily-scrum/" style="font-size: 10px;">daily scrum</a> <a href="/tags/decrator/" style="font-size: 10px;">decrator</a> <a href="/tags/delivery/" style="font-size: 10px;">delivery</a> <a href="/tags/design/" style="font-size: 10px;">design</a> <a href="/tags/design-patterns/" style="font-size: 10px;">design patterns</a> <a href="/tags/devops/" style="font-size: 10px;">devops</a> <a href="/tags/digital/" style="font-size: 10px;">digital</a> <a href="/tags/django/" style="font-size: 11.11px;">django</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/dojo/" style="font-size: 10px;">dojo</a> <a href="/tags/easyb/" style="font-size: 10px;">easyb</a> <a href="/tags/efficiency/" style="font-size: 10px;">efficiency</a> <a href="/tags/emberjs/" style="font-size: 10px;">emberjs</a> <a href="/tags/encoding/" style="font-size: 10px;">encoding</a> <a href="/tags/estimating/" style="font-size: 10px;">estimating</a> <a href="/tags/event/" style="font-size: 11.11px;">event</a> <a href="/tags/facilitating/" style="font-size: 10px;">facilitating</a> <a href="/tags/fail/" style="font-size: 10px;">fail</a> <a href="/tags/flexibility/" style="font-size: 10px;">flexibility</a> <a href="/tags/fluency/" style="font-size: 10px;">fluency</a> <a href="/tags/fractal/" style="font-size: 10px;">fractal</a> <a href="/tags/frequently/" style="font-size: 10px;">frequently</a> <a href="/tags/functional-programming/" style="font-size: 13.33px;">functional programming</a> <a href="/tags/gandalf/" style="font-size: 10px;">gandalf</a> <a href="/tags/git/" style="font-size: 12.22px;">git</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/gradle/" style="font-size: 10px;">gradle</a> <a href="/tags/grooming/" style="font-size: 11.11px;">grooming</a> <a href="/tags/groovy/" style="font-size: 11.11px;">groovy</a> <a href="/tags/grunt/" style="font-size: 10px;">grunt</a> <a href="/tags/gruntjs/" style="font-size: 10px;">gruntjs</a> <a href="/tags/gui/" style="font-size: 10px;">gui</a> <a href="/tags/gunicorn/" style="font-size: 10px;">gunicorn</a> <a href="/tags/hardware/" style="font-size: 10px;">hardware</a> <a href="/tags/history/" style="font-size: 10px;">history</a> <a href="/tags/hybrid/" style="font-size: 10px;">hybrid</a> <a href="/tags/invest/" style="font-size: 10px;">invest</a> <a href="/tags/ios/" style="font-size: 17.78px;">ios</a> <a href="/tags/itertools/" style="font-size: 10px;">itertools</a> <a href="/tags/jasmine/" style="font-size: 10px;">jasmine</a> <a href="/tags/java/" style="font-size: 13.33px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jenkins/" style="font-size: 11.11px;">jenkins</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/junit/" style="font-size: 10px;">junit</a> <a href="/tags/jvm/" style="font-size: 10px;">jvm</a> <a href="/tags/kanban/" style="font-size: 12.22px;">kanban</a> <a href="/tags/kata/" style="font-size: 11.11px;">kata</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/leadership/" style="font-size: 11.11px;">leadership</a> <a href="/tags/lean/" style="font-size: 14.44px;">lean</a> <a href="/tags/lean-startup/" style="font-size: 12.22px;">lean startup</a> <a href="/tags/less/" style="font-size: 12.22px;">less</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/maker/" style="font-size: 11.11px;">maker</a> <a href="/tags/management30/" style="font-size: 13.33px;">management30</a> <a href="/tags/manager/" style="font-size: 10px;">manager</a> <a href="/tags/mapping/" style="font-size: 10px;">mapping</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/measure/" style="font-size: 10px;">measure</a> <a href="/tags/measurement/" style="font-size: 10px;">measurement</a> <a href="/tags/metrics/" style="font-size: 10px;">metrics</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/multi-thread/" style="font-size: 10px;">multi thread</a> <a href="/tags/network/" style="font-size: 10px;">network</a> <a href="/tags/nexus/" style="font-size: 10px;">nexus</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/nio/" style="font-size: 10px;">nio</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/o2o/" style="font-size: 10px;">o2o</a> <a href="/tags/objc-bridging/" style="font-size: 10px;">objc - bridging</a> <a href="/tags/organization/" style="font-size: 11.11px;">organization</a> <a href="/tags/orid/" style="font-size: 10px;">orid</a> <a href="/tags/pair/" style="font-size: 10px;">pair</a> <a href="/tags/performance/" style="font-size: 10px;">performance</a> <a href="/tags/persona/" style="font-size: 10px;">persona</a> <a href="/tags/pipe/" style="font-size: 10px;">pipe</a> <a href="/tags/planning/" style="font-size: 11.11px;">planning</a> <a href="/tags/playground/" style="font-size: 10px;">playground</a> <a href="/tags/product-backlog/" style="font-size: 10px;">product backlog</a> <a href="/tags/product-owner/" style="font-size: 10px;">product owner</a> <a href="/tags/productivity/" style="font-size: 11.11px;">productivity</a> <a href="/tags/proxy/" style="font-size: 10px;">proxy</a> <a href="/tags/pyisapie/" style="font-size: 10px;">pyisapie</a> <a href="/tags/python/" style="font-size: 15.56px;">python</a> <a href="/tags/raid/" style="font-size: 10px;">raid</a> <a href="/tags/reading/" style="font-size: 10px;">reading</a> <a href="/tags/refinement/" style="font-size: 11.11px;">refinement</a> <a href="/tags/retrospective/" style="font-size: 10px;">retrospective</a> <a href="/tags/robotframework/" style="font-size: 12.22px;">robotframework</a> <a href="/tags/scaling/" style="font-size: 13.33px;">scaling</a> <a href="/tags/scrum/" style="font-size: 20px;">scrum</a> <a href="/tags/scrum-master/" style="font-size: 11.11px;">scrum master</a> <a href="/tags/sdk/" style="font-size: 10px;">sdk</a> <a href="/tags/security/" style="font-size: 10px;">security</a> <a href="/tags/selenium/" style="font-size: 10px;">selenium</a> <a href="/tags/serialization/" style="font-size: 10px;">serialization</a> <a href="/tags/signature/" style="font-size: 10px;">signature</a> <a href="/tags/singleton/" style="font-size: 10px;">singleton</a> <a href="/tags/socket/" style="font-size: 12.22px;">socket</a> <a href="/tags/sonar/" style="font-size: 10px;">sonar</a> <a href="/tags/split/" style="font-size: 10px;">split</a> <a href="/tags/spotify/" style="font-size: 12.22px;">spotify</a> <a href="/tags/sprint/" style="font-size: 11.11px;">sprint</a> <a href="/tags/sqa/" style="font-size: 10px;">sqa</a> <a href="/tags/sql/" style="font-size: 10px;">sql</a> <a href="/tags/swift/" style="font-size: 11.11px;">swift</a> <a href="/tags/tdd/" style="font-size: 11.11px;">tdd</a> <a href="/tags/tennis/" style="font-size: 10px;">tennis</a> <a href="/tags/time/" style="font-size: 10px;">time</a> <a href="/tags/time-code/" style="font-size: 10px;">time code</a> <a href="/tags/tomcat/" style="font-size: 10px;">tomcat</a> <a href="/tags/tpp/" style="font-size: 10px;">tpp</a> <a href="/tags/tps/" style="font-size: 10px;">tps</a> <a href="/tags/training/" style="font-size: 10px;">training</a> <a href="/tags/transformation/" style="font-size: 10px;">transformation</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/ucac/" style="font-size: 10px;">ucac</a> <a href="/tags/unicode/" style="font-size: 10px;">unicode</a> <a href="/tags/unit-test/" style="font-size: 12.22px;">unit test</a> <a href="/tags/unittest/" style="font-size: 11.11px;">unittest</a> <a href="/tags/user-story/" style="font-size: 15.56px;">user story</a> <a href="/tags/utf8/" style="font-size: 10px;">utf8</a> <a href="/tags/vi/" style="font-size: 10px;">vi</a> <a href="/tags/visual/" style="font-size: 10px;">visual</a> <a href="/tags/waste/" style="font-size: 10px;">waste</a> <a href="/tags/webdriver/" style="font-size: 10px;">webdriver</a> <a href="/tags/weibo/" style="font-size: 10px;">weibo</a> <a href="/tags/workshop/" style="font-size: 10px;">workshop</a> <a href="/tags/xcode/" style="font-size: 11.11px;">xcode</a> <a href="/tags/xp/" style="font-size: 15.56px;">xp</a> <a href="/tags/xvfb/" style="font-size: 10px;">xvfb</a> <a href="/tags/zen/" style="font-size: 11.11px;">zen</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/">agile</a><span class="category-list-count">81</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/coaching/">coaching</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/engineering/">engineering</a><span class="category-list-count">27</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/event/">event</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/facilitating/">facilitating</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/lean/">lean</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/product/">product</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/scaling/">scaling</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/scrum/">scrum</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/tools/">tools</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/">programming</a><span class="category-list-count">39</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/programming/architecture/">architecture</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/arduino/">arduino</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/go/">go</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/java/">java</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/javascript/">javascript</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/programming/javascript/emberjs/">emberjs</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/objectivec/">objectivec</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/php/">php</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/python/">python</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/programming/python/django/">django</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/python/functional/">functional</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/swift/">swift</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/tools/">tools</a><span class="category-list-count">3</span></li></ul></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a><span class="archive-list-count">23</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/">January 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">March 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/01/">January 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/12/">December 2012</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08/">August 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/07/">July 2011</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/05/">May 2011</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/04/">April 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">September 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/02/">February 2009</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Jacky Shen申健<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      <p>
+        <i>友情链接:</i>
+        <ul>
+          <li><a href="http://www.uperform.cn/scrum-certification-course/">优普丰敏捷学院Scrum认证培训教练</a></li>
+          <li><a href="http://codingstyle.cn">中国软件匠艺小组</a></li>
+          <li><a href="http://www.agilecoach.cn">UCAC认证中国敏捷教练</a></li>
+          <li><a href="http://www.scrumchina.com/">Scrum中文认证国际培训</a></li>
+          <li><a href="http://bobjiang.com/">Bob Jiang姜信宝的博客</a></li>
+          <li><a href="http://www.maiyuan.me/">Ronald Mai麦宇安 敏捷教练</a></li>
+          <li><a href="https://www.scrumalliance.org/community/profile/jshen2">Scrum Alliance国际Scrum联盟</a></li>
+        </ul>
+      </p>
+    </div>
+  
+      <meta property="wb:webmaster" content="37772db3e81eb2be" />
+  <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+
+    
+<script type='text/javascript'>
+      var _vds = _vds || [];
+      window._vds = _vds;
+      (function(){
+        _vds.push(['setAccountId', 'b95fba2d6958fb5a']);
+        (function() {
+          var vds = document.createElement('script');
+          vds.type='text/javascript';
+          vds.async = true;
+          vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(vds, s);
+        })();
+      })();
+</script>
+  
+    
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253167390'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1253167390%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+  
+  </div>
+
+
+
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页 Main</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档 Archives</a>
+  
+    <a href="/about-me" class="mobile-nav-link">关于我 About Me</a>
+  
+</nav>
+    
+
+<script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

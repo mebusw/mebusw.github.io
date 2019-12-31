@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8"> 
+  
+  <title>使用Groovy语言替代JUnit为Java程序编写单元测试 </title>
+  <meta http-equiv="keywords" content="Scrum认证 创客 工匠 敏捷教练 软件开发顾问 Agile Coaching 申健 申导"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(本文改编自 @申导 翻译的《有效的单元测试》，如果对本文感兴趣，请支持正版书籍。) 编程是用计算机可理解的语言来表达你的想法和意图。对于Java程序员来说就是编写一种可以由Java编译器编译为可以运行在JVM上的字节码的代码。不止一种编程语言可以编写能运行在JVM上的代码，不过每种JVM语言都具有其独特的语法和感觉，但有一点是相同的：关于在JVM创建应用程序这件事上，她们都号称比Java更加简洁">
+<meta name="keywords" content="java,unit test,groovy,jvm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Groovy语言替代JUnit为Java程序编写单元测试">
+<meta property="og:url" content="www.jackyshen.com/2015/10/01/write-unit-test-with-groovy-for-java-program/index.html">
+<meta property="og:site_name" content="申导">
+<meta property="og:description" content="(本文改编自 @申导 翻译的《有效的单元测试》，如果对本文感兴趣，请支持正版书籍。) 编程是用计算机可理解的语言来表达你的想法和意图。对于Java程序员来说就是编写一种可以由Java编译器编译为可以运行在JVM上的字节码的代码。不止一种编程语言可以编写能运行在JVM上的代码，不过每种JVM语言都具有其独特的语法和感觉，但有一点是相同的：关于在JVM创建应用程序这件事上，她们都号称比Java更加简洁">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2016-07-05T10:05:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用Groovy语言替代JUnit为Java程序编写单元测试">
+<meta name="twitter:description" content="(本文改编自 @申导 翻译的《有效的单元测试》，如果对本文感兴趣，请支持正版书籍。) 编程是用计算机可理解的语言来表达你的想法和意图。对于Java程序员来说就是编写一种可以由Java编译器编译为可以运行在JVM上的字节码的代码。不止一种编程语言可以编写能运行在JVM上的代码，不过每种JVM语言都具有其独特的语法和感觉，但有一点是相同的：关于在JVM创建应用程序这件事上，她们都号称比Java更加简洁">
+  
+    <link rel="alternative" href="/atom.xml" title="申导" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <!-- <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css"> -->
+  <link rel="stylesheet" href="/css/style.css">
+  <meta name="google-site-verification" content="0Yj4uwGnuB0vsMUHmrUBkC_a1AqeLRzmqneZcUIgBao">
+  <meta name="msvalidate.01" content="70BA10961AF4781E373389EF3FF74835">
+</head></html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">申导</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Scrum Agile Coach</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页 Main</a>
+        
+          <a class="main-nav-link" href="/archives">归档 Archives</a>
+        
+          <a class="main-nav-link" href="/about-me">关于我 About Me</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="www.jackyshen.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+
+      <div class="outer">
+        <section id="main"><article id="post-write-unit-test-with-groovy-for-java-program" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/01/write-unit-test-with-groovy-for-java-program/" class="article-date">
+  <time datetime="2015-10-01T06:33:46.000Z" itemprop="datePublished">Oct 1 2015</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/programming/">programming</a>►<a class="article-category-link" href="/categories/programming/java/">java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      使用Groovy语言替代JUnit为Java程序编写单元测试
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(本文改编自 @申导 翻译的<a href="http://book.douban.com/subject/26364867/" target="_blank" rel="noopener">《有效的单元测试》</a>，如果对本文感兴趣，请支持正版书籍。)</p>
+<p>编程是用计算机可理解的语言来表达你的想法和意图。对于Java程序员来说就是编写一种可以由Java编译器编译为可以运行在JVM上的字节码的代码。不止一种编程语言可以编写能运行在JVM上的代码，不过每种JVM语言都具有其独特的语法和感觉，但有一点是相同的：关于在JVM创建应用程序这件事上，她们都号称比Java更加简洁和更具表达力。</p>
+<h1 id="另类JVM语言"><a href="#另类JVM语言" class="headerlink" title="另类JVM语言"></a>另类JVM语言</h1><p>另类JVM语言的历史可追溯到15年前，那时Jim Hugunin在编写Jython，即一种JVM上的Python语言实现。尽管Jython难以获得发展的动力，但它启发了后来许多JVM语言的出现。</p>
+<p>受到Jython的启发，2003年Groovy语言开始在JVM上登场，有着精简语法的Groovy承诺与Java代码之间流畅的互操作性和极高简洁性，使之成为JVM上编写脚本的重要选择。其他运行在JVM平台上的语言还包括Scala, JRuby, Clojure等，以及Java本身。</p>
+<p>概括来说，各种另类JVM语言的一些潜在优势在于：</p>
+<ul>
+<li>更少的样板代码语法可以去芜存菁</li>
+<li>更多的文本(literal)数据结构</li>
+<li>针对标准类型的额外方法</li>
+<li>更多强大的语法结构</li>
+</ul>
+<a id="more"></a>
+<p>新语言、新语法、新API刚开始看起来会令人生畏，但你从来都不是一个人在战斗。针对这些语言已经存在大量信息和文档，既有在线的也有实体书。另外，在这些新编程语言周围形成的社区是友好和充满热情的，很容易融入进去。</p>
+<p>我们可以自由支配新语言结构的威力。闭包、列表比较、原生正则表达式、字符串插值、模式匹配、隐式类型转换——不胜枚举，这些语言特性迟早会派上用场。</p>
+<p>这些另类JVM语言的语法糖和表达力、丰富的API、以及强大的语法结构所带来的好处全部都可以运用在编写测试上。许多公司（包括我自己的）越来越多地转向成熟语言例如Scala来开发他们的生产系统。其他一些公司则由于各种各样的原因，还在犹豫要不要开头。</p>
+<h1 id="我们可以从采用Groovy来编写单元测试来开始"><a href="#我们可以从采用Groovy来编写单元测试来开始" class="headerlink" title="我们可以从采用Groovy来编写单元测试来开始"></a>我们可以从采用Groovy来编写单元测试来开始</h1><p>除了更适合完成工作的优点，团队还可以通过从自动化测试上开始采用新语言从而在一个安全的环境中尝试和学习。以这种诱导性毒品的方式，程序员有时间去学习语言及其惯例，而不用担心由于不熟悉新技术而导致未知的生产问题。</p>
+<p>不用动态语言如Groovy编写生产代码的一个更常见原因是性能。表达力和简洁语法的喜悦有时是牺牲绝对性能才换来的。潜在的性能损失通常对于测试代码来说是无所谓的。毕竟测试代码的第一优先级是可读性，而这正是动态语言的强大之处。只要性能损失不严重，你就能从表达力和语法简单性中受益。</p>
+<p>总的来说，最适合编写测试的是那些提供简洁语法和通用数据结构的语言，而不是那些将复杂计算变为现实的语言。从这点来讲，Groovy更容易令Java程序员上手。</p>
+<h1 id="用Groovy语言来编写测试"><a href="#用Groovy语言来编写测试" class="headerlink" title="用Groovy语言来编写测试"></a>用Groovy语言来编写测试</h1><p>用Groovy编写单元测试的前提是用显著轻量的语法来表达意图。尽管Groovy仍与Java相似，但由于它将许多Java语法变成可选从而变得轻量。</p>
+<p>例如，在Groovy中分号、括号和return关键字都变成可选的，可以不写。<br>Groovy采用一些方式减少了程序员需要写的样板代码。因为Groovy的可见性修饰符缺省为public，你可以省略它，除非你要特别地限制访问。你也可以看到在Groovy中可以不声明变量类型，而是用def来声明变量。我们经常会从其他字符串、数字和对象的字符串表示来组装字符串。Groovy也能使这种事情变得更整洁。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class ClusterTest &#123;</span><br><span class="line">    def numberOfServers = 3</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">cluster</span></span></span><br><span class="line"><span class="function">    </span></span><br><span class="line"><span class="function">    @<span class="title">Before</span></span></span><br><span class="line">    void setUp() &#123;</span><br><span class="line">        cluster = new Cluster()</span><br><span class="line">        numberOfServers.times &#123;</span><br><span class="line">            def name = "server-$&#123;it&#125;"</span><br><span class="line">            cluster.add new Server(name: name, maxConnections: <span class="number">1</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个例子展示了许多特性，显示了Groovy语言在创建复杂对象方面是如此优秀。一开始是个循环体，在其中创建了多个较小对象作为测试夹具。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def reverse = [</span><br><span class="line">      equals: false,</span><br><span class="line">      compare: &#123; Object[] args -&gt; args[1].compareTo(args[0]) &#125;</span><br><span class="line">   ] <span class="keyword">as</span> Comparator</span><br><span class="line">Collections.sort(list, reverse)</span><br></pre></td></tr></table></figure>
+<p>你可以用map代替代码块来实现更复杂的接口，充分享受函数式编程的魅力吧。</p>
+<h2 id="Groovy式的JUnit测试"><a href="#Groovy式的JUnit测试" class="headerlink" title="Groovy式的JUnit测试"></a>Groovy式的JUnit测试</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RegularJUnitTest</span> </span>&#123;</span><br><span class="line">   <span class="keyword">private</span> ComplexityCalculator complexity = <span class="keyword">new</span> ComplexityCalculator();</span><br><span class="line">   <span class="meta">@Test</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">complexityForSourceFile</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      <span class="keyword">double</span> sample1 = complexity.of(<span class="keyword">new</span> Source(<span class="string">"Sample1.java"</span>));</span><br><span class="line">      <span class="keyword">double</span> sample2 = complexity.of(<span class="keyword">new</span> Source(<span class="string">"Sample2.java"</span>));</span><br><span class="line">      assertThat(sample1, is(greaterThan(<span class="number">0.0</span>)));</span><br><span class="line">      assertThat(sample2, is(greaterThan(<span class="number">0.0</span>)));</span><br><span class="line">      assertTrue(sample1 != sample2);</span><br><span class="line">&#125; &#125;</span><br></pre></td></tr></table></figure>
+<p>为了比较，咱们用Groovy重写一个JUnit4测试。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class GroovyJUnitTest &#123;</span><br><span class="line">   def complexity = new ComplexityCalculator()</span><br><span class="line"><span class="meta">   @Test</span></span><br><span class="line">   void complexityForSourceFile() &#123;</span><br><span class="line">      def sample1 = complexity.of new Source("Sample1.java")</span><br><span class="line">      def sample2 = complexity.of new Source("Sample2.java")</span><br><span class="line">      assertThat sample1, <span class="keyword">is</span>(greaterThan(<span class="number">0.0</span>d))</span><br><span class="line">      assertThat sample2, <span class="keyword">is</span>(greaterThan(<span class="number">0.0</span>d))</span><br><span class="line">      assertTrue sample1 != sample2</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意源代码的长度是相同的。尽管Groovy提供了大量的语法糖，然而大多数编写良好的JUnit测试就算换成Groovy，也不会变得更短。但圆括号和分号将会大大减少，并且越复杂的测试，Groovy带来的收益越多。</p>
+<p>再来一个比较，可以看出用Groovy写单元测试，在准备数据时候更加简洁，更加精益：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//java</span></span><br><span class="line">AdPipeLineState state1 = <span class="keyword">new</span> AdPipeLineState();</span><br><span class="line">AdBranch branch1 = <span class="keyword">new</span> AdBranch();</span><br><span class="line">branch1.setBranchId(<span class="number">1</span>);</span><br><span class="line">state1.setAdBranch(branch1);</span><br><span class="line">AdPipeLineState state2 = <span class="keyword">new</span> AdPipeLineState();</span><br><span class="line">AdBranch branch2 = <span class="keyword">new</span> AdBranch();</span><br><span class="line">branch1.setBranchId(<span class="number">2</span>);</span><br><span class="line">state1.setAdBranch(branch2);</span><br><span class="line"></span><br><span class="line">List&lt;AdPipeLineState&gt; states = <span class="keyword">new</span> ArrayList();</span><br><span class="line">states.add(branch1);</span><br><span class="line">states.add(branch2);</span><br><span class="line"></span><br><span class="line">assertEquals(<span class="string">"..."</span>, dao.buildSqlToQueryLogOfAllBranches(states);</span><br><span class="line"></span><br><span class="line"><span class="comment">////////////////////////////</span></span><br><span class="line"><span class="comment">//groovy</span></span><br><span class="line">def state1 = <span class="keyword">new</span> AdPipeLineState(adBranch: <span class="keyword">new</span> AdBranch(branchId: <span class="number">1</span>))</span><br><span class="line">def state2 = <span class="keyword">new</span> AdPipeLineState(adBranch: <span class="keyword">new</span> AdBranch(branchId: <span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">assertEquals <span class="string">"..."</span>, dao.buildSqlToQueryLogOfAllBranches([state1, state2])</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+      <div class="article-entry">
+        <hr/>
+        <h1>觉得本文有帮助，长按二维码进行微信打赏</h1>
+        <img src="http://res.uperform.cn/%E5%BE%AE%E4%BF%A1%E6%89%93%E8%B5%8F%E7%A0%81.jpeg" alt="" width="80%" style="float:left;left:auto;margin-left:10%;">
+
+      </div>
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="www.jackyshen.com/2015/10/01/write-unit-test-with-groovy-for-java-program/" data-id="ck4tmbox5008d4bfy52bxky72" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/groovy/">groovy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jvm/">jvm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/unit-test/">unit test</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  <div>
+  </div>
+
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/10/18/force-gradle-maven-to-refresh-cache-or-download-dependency-jar-from-nexus/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          强制Gradle/Maven刷新缓存并重新从Nexus下载依赖jar包
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/08/31/pipe-and-itertools-in-functional-python/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">函数式Python中的Pipe与itertools</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+<section id="comments">
+  
+</section>
+
+</section>
+        
+          <aside id="sidebar" xmlns:wb="http://open.weibo.com/wb" >
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title">Follow me!</h3>
+  <div class="widget" xmlns:wb="http://open.weibo.com/wb">
+    <wb:follow-button uid="1001863751" type="red_3" width="100%" height="64" ></wb:follow-button>
+    <p>全球首位获得国际Scrum Alliance颁发Certified Scrum Trainer (CST认证培训师)和Certified Team Coach (CTC认证敏捷教练)双料导师级认证者。
+      <a href="https://www.scrumalliance.org/get-certified/ctc-certification/conversations-with-ctcs/jacky-shen">国际Scrum Alliance对申导获得全球首位CTC认证团队教练的访谈</a>
+    </p>
+    <p>
+      <img src="http://res.uperform.cn/certifications-of-JackyShen.png" width="100%">
+    </p>
+    <div class="article-more-link">
+      <a href="/about-me">更多了解博主...</a>
+    </div>
+  </div>
+
+  <div class="widget">
+    <h3 class="widget-title">热门文章</h3>
+    <ul>
+      <li><a href="/2016/06/10/my-agile-coach-journey/">Jacky Shen's Agile Coach Journey</a></li>
+      <li><a href="/2017/08/02/is-your-Scrum-lean-enough/">你的Scrum迭代够精益吗？看完就全明白了</a></li>
+      <li><a href="/2017/04/07/what-is-agile-coach/">国际首位CTC认证者和你聊聊什么是敏捷教练</a></li>
+      <li><a href="/2017/05/02/Agile-Coach-Mentoring-Program/">进阶敏捷教练与ScrumMaster培养辅导项目</a></li>
+      <li><a href="/2017/01/31/planning-as-a-social-event-scaling-agile-at-lego/">以社交活动的方式做计划-乐高公司的规模化敏捷</a></li>
+      <li><a href="/2018/01/21/new-csp-path-of-scrum-alliance-certifications/">2018年Scrum Alliance最新Certified Scrum认证和CSP体系</a></li>
+      <li><a href="/2016/07/04/Refactoring-with-Loops-and-Collection-Pipelines/">利用集合管道对循环进行函数式重构</a></li>
+      <li><a href="/2016/05/04/soft-skills-of-technical-leaders-and-managers">技术团队管理者的软技能</a></li>
+      <li><a href="/2016/03/26/how-bright-career-path-of-scrummaster-and-agile-coach">敏捷教练和ScrumMaster的职业现在有多吃香？</a></li>
+      <li><a href="/2016/03/26/my-agile-coach-journey">我是怎样成为敏捷教练的？</a></li>
+      <li><a href="/2016/03/26/tips-to-certified-team-coach-application">申请Scrum联盟导师级Certified Team Coach认证的攻略秘籍</a></li>
+      <li><a href="/2014/10/02/functional-programming-in-Python/">Python函数式编程</a></li>
+      <li><a href="/2015/05/21/async-operations-in-form-of-sync-programming-with-python-yielding/">利用python yielding创建协程将异步编程同步化</a></li>      
+      <li><a href="/lafable-cn/">适合重型企业的大型敏捷框架 LAFABLE</a></li>
+      <li><a href="http://www.uperform.cn/recent-public-course/">近期Scrum联盟Scrum认证培训课程表</a></li>
+    </ul>
+
+  </div>
+
+
+  <div class="widget">
+    <h3 class="widget-title">通过重构提高组织灵活性-百度技术沙龙</h3>
+	  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="100" height="64" id="cc_9879E3871335B9D99C33DC5901307461">
+  	<param name="movie" value="http://p.bokecc.com/flash/player.swf?vid=9879E3871335B9D99C33DC5901307461&siteid=0575C033D2012A28&playerid=8F2D63EFE045C05C&playertype=1&autoStart=false" />
+  	<param name="allowFullScreen" value="true" />
+  	<param name="allowScriptAccess" value="always" />
+  	<embed src="http://p.bokecc.com/flash/player.swf?vid=9879E3871335B9D99C33DC5901307461&siteid=0575C033D2012A28&playerid=8F2D63EFE045C05C&playertype=1&autoStart=false" width="220" height="150" name="cc_9879E3871335B9D99C33DC5901307461" allowFullScreen="true" allowScriptAccess="always" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"/>
+  	</object>
+  </div>
+
+  <div class="widget">
+    <h4><a href="/archives/">更多视频在这里</a></h4>
+  </div>
+
+
+</div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/18/history-of-scrum-sprint/">Scrum和Sprint名词的历史和误区</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/02/UPerform-Certified-Agile-Coach-UCAC/">UCAC敏捷教练静修-4月杭州-静待花开</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/17/git-scan-frequent-modified-hot-code-to-improve-quality/">Git命令扫描频繁修改代码热力图以提高代码质量</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/30/digital-innovations-singapore-bank-10-lessons-learnt-when-dbs-came-out-of-the-stone-age/">新加坡一家银行的数字化创新：DBS走出石器时代的十条敏捷转型经验</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/29/is-it-necessary-to-have-bug-list-column-on-kanban-for-defects-in-iteration/">敏捷项目迭代过程中测出缺陷要不要在看板加一列Bug List?</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/APNS/" style="font-size: 10px;">APNS</a> <a href="/tags/CTC/" style="font-size: 10px;">CTC</a> <a href="/tags/IIS/" style="font-size: 10px;">IIS</a> <a href="/tags/JVM/" style="font-size: 10px;">JVM</a> <a href="/tags/agile/" style="font-size: 18.89px;">agile</a> <a href="/tags/agile-tour/" style="font-size: 11.11px;">agile tour</a> <a href="/tags/agiletour/" style="font-size: 10px;">agiletour</a> <a href="/tags/alipay/" style="font-size: 10px;">alipay</a> <a href="/tags/annotation/" style="font-size: 10px;">annotation</a> <a href="/tags/arduino/" style="font-size: 11.11px;">arduino</a> <a href="/tags/ascii/" style="font-size: 10px;">ascii</a> <a href="/tags/atdd/" style="font-size: 10px;">atdd</a> <a href="/tags/automation/" style="font-size: 10px;">automation</a> <a href="/tags/bash/" style="font-size: 10px;">bash</a> <a href="/tags/bdd/" style="font-size: 10px;">bdd</a> <a href="/tags/book/" style="font-size: 10px;">book</a> <a href="/tags/branch/" style="font-size: 10px;">branch</a> <a href="/tags/career/" style="font-size: 13.33px;">career</a> <a href="/tags/certification/" style="font-size: 16.67px;">certification</a> <a href="/tags/checklist/" style="font-size: 10px;">checklist</a> <a href="/tags/ci/" style="font-size: 13.33px;">ci</a> <a href="/tags/clojure/" style="font-size: 10px;">clojure</a> <a href="/tags/coach/" style="font-size: 10px;">coach</a> <a href="/tags/coaching/" style="font-size: 11.11px;">coaching</a> <a href="/tags/coaching-coach-csp-ctc/" style="font-size: 10px;">coaching - coach - csp - ctc</a> <a href="/tags/code-coverage/" style="font-size: 10px;">code coverage</a> <a href="/tags/code-retreat/" style="font-size: 10px;">code retreat</a> <a href="/tags/code-review/" style="font-size: 10px;">code review</a> <a href="/tags/coderetreat/" style="font-size: 10px;">coderetreat</a> <a href="/tags/comet/" style="font-size: 10px;">comet</a> <a href="/tags/commitizen/" style="font-size: 10px;">commitizen</a> <a href="/tags/community/" style="font-size: 12.22px;">community</a> <a href="/tags/competence/" style="font-size: 10px;">competence</a> <a href="/tags/complexity/" style="font-size: 10px;">complexity</a> <a href="/tags/continuous-integration/" style="font-size: 10px;">continuous integration</a> <a href="/tags/craftsmanship/" style="font-size: 10px;">craftsmanship</a> <a href="/tags/cross-domain/" style="font-size: 10px;">cross domain</a> <a href="/tags/csd/" style="font-size: 11.11px;">csd</a> <a href="/tags/csp/" style="font-size: 10px;">csp</a> <a href="/tags/ctc/" style="font-size: 15.56px;">ctc</a> <a href="/tags/cucumber/" style="font-size: 10px;">cucumber</a> <a href="/tags/culture/" style="font-size: 11.11px;">culture</a> <a href="/tags/daily-scrum/" style="font-size: 10px;">daily scrum</a> <a href="/tags/decrator/" style="font-size: 10px;">decrator</a> <a href="/tags/delivery/" style="font-size: 10px;">delivery</a> <a href="/tags/design/" style="font-size: 10px;">design</a> <a href="/tags/design-patterns/" style="font-size: 10px;">design patterns</a> <a href="/tags/devops/" style="font-size: 10px;">devops</a> <a href="/tags/digital/" style="font-size: 10px;">digital</a> <a href="/tags/django/" style="font-size: 11.11px;">django</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/dojo/" style="font-size: 10px;">dojo</a> <a href="/tags/easyb/" style="font-size: 10px;">easyb</a> <a href="/tags/efficiency/" style="font-size: 10px;">efficiency</a> <a href="/tags/emberjs/" style="font-size: 10px;">emberjs</a> <a href="/tags/encoding/" style="font-size: 10px;">encoding</a> <a href="/tags/estimating/" style="font-size: 10px;">estimating</a> <a href="/tags/event/" style="font-size: 11.11px;">event</a> <a href="/tags/facilitating/" style="font-size: 10px;">facilitating</a> <a href="/tags/fail/" style="font-size: 10px;">fail</a> <a href="/tags/flexibility/" style="font-size: 10px;">flexibility</a> <a href="/tags/fluency/" style="font-size: 10px;">fluency</a> <a href="/tags/fractal/" style="font-size: 10px;">fractal</a> <a href="/tags/frequently/" style="font-size: 10px;">frequently</a> <a href="/tags/functional-programming/" style="font-size: 13.33px;">functional programming</a> <a href="/tags/gandalf/" style="font-size: 10px;">gandalf</a> <a href="/tags/git/" style="font-size: 12.22px;">git</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/gradle/" style="font-size: 10px;">gradle</a> <a href="/tags/grooming/" style="font-size: 11.11px;">grooming</a> <a href="/tags/groovy/" style="font-size: 11.11px;">groovy</a> <a href="/tags/grunt/" style="font-size: 10px;">grunt</a> <a href="/tags/gruntjs/" style="font-size: 10px;">gruntjs</a> <a href="/tags/gui/" style="font-size: 10px;">gui</a> <a href="/tags/gunicorn/" style="font-size: 10px;">gunicorn</a> <a href="/tags/hardware/" style="font-size: 10px;">hardware</a> <a href="/tags/history/" style="font-size: 10px;">history</a> <a href="/tags/hybrid/" style="font-size: 10px;">hybrid</a> <a href="/tags/invest/" style="font-size: 10px;">invest</a> <a href="/tags/ios/" style="font-size: 17.78px;">ios</a> <a href="/tags/itertools/" style="font-size: 10px;">itertools</a> <a href="/tags/jasmine/" style="font-size: 10px;">jasmine</a> <a href="/tags/java/" style="font-size: 13.33px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jenkins/" style="font-size: 11.11px;">jenkins</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/junit/" style="font-size: 10px;">junit</a> <a href="/tags/jvm/" style="font-size: 10px;">jvm</a> <a href="/tags/kanban/" style="font-size: 12.22px;">kanban</a> <a href="/tags/kata/" style="font-size: 11.11px;">kata</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/leadership/" style="font-size: 11.11px;">leadership</a> <a href="/tags/lean/" style="font-size: 14.44px;">lean</a> <a href="/tags/lean-startup/" style="font-size: 12.22px;">lean startup</a> <a href="/tags/less/" style="font-size: 12.22px;">less</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/maker/" style="font-size: 11.11px;">maker</a> <a href="/tags/management30/" style="font-size: 13.33px;">management30</a> <a href="/tags/manager/" style="font-size: 10px;">manager</a> <a href="/tags/mapping/" style="font-size: 10px;">mapping</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/measure/" style="font-size: 10px;">measure</a> <a href="/tags/measurement/" style="font-size: 10px;">measurement</a> <a href="/tags/metrics/" style="font-size: 10px;">metrics</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/multi-thread/" style="font-size: 10px;">multi thread</a> <a href="/tags/network/" style="font-size: 10px;">network</a> <a href="/tags/nexus/" style="font-size: 10px;">nexus</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/nio/" style="font-size: 10px;">nio</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/o2o/" style="font-size: 10px;">o2o</a> <a href="/tags/objc-bridging/" style="font-size: 10px;">objc - bridging</a> <a href="/tags/organization/" style="font-size: 11.11px;">organization</a> <a href="/tags/orid/" style="font-size: 10px;">orid</a> <a href="/tags/pair/" style="font-size: 10px;">pair</a> <a href="/tags/performance/" style="font-size: 10px;">performance</a> <a href="/tags/persona/" style="font-size: 10px;">persona</a> <a href="/tags/pipe/" style="font-size: 10px;">pipe</a> <a href="/tags/planning/" style="font-size: 11.11px;">planning</a> <a href="/tags/playground/" style="font-size: 10px;">playground</a> <a href="/tags/product-backlog/" style="font-size: 10px;">product backlog</a> <a href="/tags/product-owner/" style="font-size: 10px;">product owner</a> <a href="/tags/productivity/" style="font-size: 11.11px;">productivity</a> <a href="/tags/proxy/" style="font-size: 10px;">proxy</a> <a href="/tags/pyisapie/" style="font-size: 10px;">pyisapie</a> <a href="/tags/python/" style="font-size: 15.56px;">python</a> <a href="/tags/raid/" style="font-size: 10px;">raid</a> <a href="/tags/reading/" style="font-size: 10px;">reading</a> <a href="/tags/refinement/" style="font-size: 11.11px;">refinement</a> <a href="/tags/retrospective/" style="font-size: 10px;">retrospective</a> <a href="/tags/robotframework/" style="font-size: 12.22px;">robotframework</a> <a href="/tags/scaling/" style="font-size: 13.33px;">scaling</a> <a href="/tags/scrum/" style="font-size: 20px;">scrum</a> <a href="/tags/scrum-master/" style="font-size: 11.11px;">scrum master</a> <a href="/tags/sdk/" style="font-size: 10px;">sdk</a> <a href="/tags/security/" style="font-size: 10px;">security</a> <a href="/tags/selenium/" style="font-size: 10px;">selenium</a> <a href="/tags/serialization/" style="font-size: 10px;">serialization</a> <a href="/tags/signature/" style="font-size: 10px;">signature</a> <a href="/tags/singleton/" style="font-size: 10px;">singleton</a> <a href="/tags/socket/" style="font-size: 12.22px;">socket</a> <a href="/tags/sonar/" style="font-size: 10px;">sonar</a> <a href="/tags/split/" style="font-size: 10px;">split</a> <a href="/tags/spotify/" style="font-size: 12.22px;">spotify</a> <a href="/tags/sprint/" style="font-size: 11.11px;">sprint</a> <a href="/tags/sqa/" style="font-size: 10px;">sqa</a> <a href="/tags/sql/" style="font-size: 10px;">sql</a> <a href="/tags/swift/" style="font-size: 11.11px;">swift</a> <a href="/tags/tdd/" style="font-size: 11.11px;">tdd</a> <a href="/tags/tennis/" style="font-size: 10px;">tennis</a> <a href="/tags/time/" style="font-size: 10px;">time</a> <a href="/tags/time-code/" style="font-size: 10px;">time code</a> <a href="/tags/tomcat/" style="font-size: 10px;">tomcat</a> <a href="/tags/tpp/" style="font-size: 10px;">tpp</a> <a href="/tags/tps/" style="font-size: 10px;">tps</a> <a href="/tags/training/" style="font-size: 10px;">training</a> <a href="/tags/transformation/" style="font-size: 10px;">transformation</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/ucac/" style="font-size: 10px;">ucac</a> <a href="/tags/unicode/" style="font-size: 10px;">unicode</a> <a href="/tags/unit-test/" style="font-size: 12.22px;">unit test</a> <a href="/tags/unittest/" style="font-size: 11.11px;">unittest</a> <a href="/tags/user-story/" style="font-size: 15.56px;">user story</a> <a href="/tags/utf8/" style="font-size: 10px;">utf8</a> <a href="/tags/vi/" style="font-size: 10px;">vi</a> <a href="/tags/visual/" style="font-size: 10px;">visual</a> <a href="/tags/waste/" style="font-size: 10px;">waste</a> <a href="/tags/webdriver/" style="font-size: 10px;">webdriver</a> <a href="/tags/weibo/" style="font-size: 10px;">weibo</a> <a href="/tags/workshop/" style="font-size: 10px;">workshop</a> <a href="/tags/xcode/" style="font-size: 11.11px;">xcode</a> <a href="/tags/xp/" style="font-size: 15.56px;">xp</a> <a href="/tags/xvfb/" style="font-size: 10px;">xvfb</a> <a href="/tags/zen/" style="font-size: 11.11px;">zen</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/">agile</a><span class="category-list-count">81</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/coaching/">coaching</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/engineering/">engineering</a><span class="category-list-count">27</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/event/">event</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/facilitating/">facilitating</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/lean/">lean</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/product/">product</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/scaling/">scaling</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/scrum/">scrum</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/tools/">tools</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/">programming</a><span class="category-list-count">39</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/programming/architecture/">architecture</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/arduino/">arduino</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/go/">go</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/java/">java</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/javascript/">javascript</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/programming/javascript/emberjs/">emberjs</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/objectivec/">objectivec</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/php/">php</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/python/">python</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/programming/python/django/">django</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/python/functional/">functional</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/swift/">swift</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/tools/">tools</a><span class="category-list-count">3</span></li></ul></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a><span class="archive-list-count">23</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/">January 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">March 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/01/">January 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/12/">December 2012</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08/">August 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/07/">July 2011</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/05/">May 2011</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/04/">April 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">September 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/02/">February 2009</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Jacky Shen申健<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      <p>
+        <i>友情链接:</i>
+        <ul>
+          <li><a href="http://www.uperform.cn/scrum-certification-course/">优普丰敏捷学院Scrum认证培训教练</a></li>
+          <li><a href="http://codingstyle.cn">中国软件匠艺小组</a></li>
+          <li><a href="http://www.agilecoach.cn">UCAC认证中国敏捷教练</a></li>
+          <li><a href="http://www.scrumchina.com/">Scrum中文认证国际培训</a></li>
+          <li><a href="http://bobjiang.com/">Bob Jiang姜信宝的博客</a></li>
+          <li><a href="http://www.maiyuan.me/">Ronald Mai麦宇安 敏捷教练</a></li>
+          <li><a href="https://www.scrumalliance.org/community/profile/jshen2">Scrum Alliance国际Scrum联盟</a></li>
+        </ul>
+      </p>
+    </div>
+  
+      <meta property="wb:webmaster" content="37772db3e81eb2be" />
+  <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+
+    
+<script type='text/javascript'>
+      var _vds = _vds || [];
+      window._vds = _vds;
+      (function(){
+        _vds.push(['setAccountId', 'b95fba2d6958fb5a']);
+        (function() {
+          var vds = document.createElement('script');
+          vds.type='text/javascript';
+          vds.async = true;
+          vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(vds, s);
+        })();
+      })();
+</script>
+  
+    
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253167390'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1253167390%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+  
+  </div>
+
+
+
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页 Main</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档 Archives</a>
+  
+    <a href="/about-me" class="mobile-nav-link">关于我 About Me</a>
+  
+</nav>
+    
+
+<script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>
