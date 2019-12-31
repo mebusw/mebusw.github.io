@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>www.jackyshen.com/2017/08/02/is-your-Scrum-lean-enough/</loc>
+    <lastmod>2019-12-30</lastmod>
+  </url>  <url>
+    <loc>www.jackyshen.com/2019/12/23/Large-Scale-Frameworks-for-Agile/</loc>
+    <lastmod>2019-12-26</lastmod>
+  </url>  <url>
+    <loc>www.jackyshen.com/2019/09/11/subway-map-of-agile-development-practices/</loc>
+    <lastmod>2019-12-24</lastmod>
+  </url>  <url>
     <loc>www.jackyshen.com/2015/11/16/spotify-agile-engineering-culture-video-in-chinese/</loc>
     <lastmod>2019-08-28</lastmod>
   </url>  <url>
@@ -28,46 +37,46 @@
     <loc>www.jackyshen.com/2019/03/02/UPerform-Certified-Agile-Coach-UCAC/</loc>
     <lastmod>2019-03-02</lastmod>
   </url>  <url>
-    <loc>www.jackyshen.com/2017/09/11/Getting-Real-and-Rework-notes/</loc>
+    <loc>www.jackyshen.com/2015/03/06/SOA-with-REST/</loc>
     <lastmod>2018-10-27</lastmod>
   </url>  <url>
     <loc>www.jackyshen.com/2016/01/15/write-angularjs-style-commit-message/</loc>
     <lastmod>2018-10-27</lastmod>
   </url>  <url>
-    <loc>www.jackyshen.com/2016/01/13/Put-an-end-to-feature-creep/</loc>
-    <lastmod>2018-10-27</lastmod>
-  </url>  <url>
     <loc>www.jackyshen.com/2015/12/08/continuous-integration/</loc>
     <lastmod>2018-10-27</lastmod>
   </url>  <url>
-    <loc>www.jackyshen.com/2015/03/06/SOA-with-REST/</loc>
+    <loc>www.jackyshen.com/2016/01/13/Put-an-end-to-feature-creep/</loc>
     <lastmod>2018-10-27</lastmod>
   </url>  <url>
     <loc>www.jackyshen.com/2014/10/07/spotify-agile-engineering-culture/</loc>
     <lastmod>2018-10-27</lastmod>
   </url>  <url>
-    <loc>www.jackyshen.com/2014/05/04/origin-and-tools-of-bdd/</loc>
+    <loc>www.jackyshen.com/2017/09/11/Getting-Real-and-Rework-notes/</loc>
     <lastmod>2018-10-27</lastmod>
   </url>  <url>
     <loc>www.jackyshen.com/2014/09/22/Scrum-Checklist/</loc>
     <lastmod>2018-10-27</lastmod>
   </url>  <url>
-    <loc>www.jackyshen.com/2014/09/05/a-certified-scrum-developer-training-course-delivered/</loc>
-    <lastmod>2018-10-27</lastmod>
-  </url>  <url>
-    <loc>www.jackyshen.com/2014/08/24/discussion-model-with-scope-question-assumption/</loc>
-    <lastmod>2018-10-27</lastmod>
-  </url>  <url>
-    <loc>www.jackyshen.com/2014/08/21/new-to-docker-io/</loc>
-    <lastmod>2018-10-27</lastmod>
-  </url>  <url>
-    <loc>www.jackyshen.com/2014/03/28/single-code-base-or-trunk-based-development-in-mobile-bank/</loc>
+    <loc>www.jackyshen.com/2014/03/17/global-day-of-coderetreat-tianjin-2013/</loc>
     <lastmod>2018-10-27</lastmod>
   </url>  <url>
     <loc>www.jackyshen.com/2014/03/19/frequently-delivery/</loc>
     <lastmod>2018-10-27</lastmod>
   </url>  <url>
-    <loc>www.jackyshen.com/2014/03/17/global-day-of-coderetreat-tianjin-2013/</loc>
+    <loc>www.jackyshen.com/2014/03/28/single-code-base-or-trunk-based-development-in-mobile-bank/</loc>
+    <lastmod>2018-10-27</lastmod>
+  </url>  <url>
+    <loc>www.jackyshen.com/2014/05/04/origin-and-tools-of-bdd/</loc>
+    <lastmod>2018-10-27</lastmod>
+  </url>  <url>
+    <loc>www.jackyshen.com/2014/08/21/new-to-docker-io/</loc>
+    <lastmod>2018-10-27</lastmod>
+  </url>  <url>
+    <loc>www.jackyshen.com/2014/08/24/discussion-model-with-scope-question-assumption/</loc>
+    <lastmod>2018-10-27</lastmod>
+  </url>  <url>
+    <loc>www.jackyshen.com/2014/09/05/a-certified-scrum-developer-training-course-delivered/</loc>
     <lastmod>2018-10-27</lastmod>
   </url>  <url>
     <loc>www.jackyshen.com/2014/03/07/user-story-mapping/</loc>
