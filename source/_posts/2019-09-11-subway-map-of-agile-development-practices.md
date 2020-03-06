@@ -57,7 +57,7 @@ tags:
   <span class="text" style="width:77px;line-height:150%;text-align: center; position:absolute;top:308px;left:728px; margin-right:0; margin-bottom:12px">
     <a href="/glossary-of-agile/refactoring.html">重构 Refactoring</a>
 </span>
-  <span class="text" style="width:100px;line-height:150%;text-align: left; position:absolute;top:328px;left:849px; margin-right:0; margin-bottom:0">
+  <span class="text" style="width:55px;line-height:150%;text-align: left; position:absolute;top:328px;left:825px; margin-right:0; margin-bottom:0">
     <a href="/glossary-of-agile/tdd.html">测试驱动开发 TDD</a>
 </span>
   <span class="text" style="width:47px;line-height:150%;text-align: left; position:absolute;top:415px;left:6px; margin-right:0; margin-bottom:0">
@@ -168,25 +168,25 @@ tags:
   <span class="text" style="width:53px;line-height:150%;text-align: center; position:absolute;top:122px;left:705px; margin-right:0; margin-bottom:12px">
     <a href="/glossary-of-agile/gwt.html">给定-如果-那么 Given-When-Then</a>
 </span>
-  <span class="text" style="width:60px;line-height:150%;text-align: center; position:absolute;top:83px;left:786px; margin-right:0; margin-bottom:0">
+  <span class="text" style="width:55px;line-height:150%;text-align: center; position:absolute;top:83px;left:786px; margin-right:0; margin-bottom:0">
     <a href="/glossary-of-agile/bdd.html">行为驱动开发 BDD</a>
 </span>
-  <span class="text" style="width:61px;line-height:150%;text-align: left; position:absolute;top:134px;left:849px; margin-right:0; margin-bottom:0">
+  <span class="text" style="width:55px;line-height:150%;text-align: left; position:absolute;top:134px;left:825px; margin-right:0; margin-bottom:0">
     <a href="/glossary-of-agile/atdd.html">验收测试驱动开发 ATDD</a>
 </span>
-  <span class="text" style="width:100px;line-height:150%;text-align: left; position:absolute;top:197px;left:850px; margin-right:0; margin-bottom:0">
+  <span class="text" style="width:55px;line-height:150%;text-align: left; position:absolute;top:197px;left:825px; margin-right:0; margin-bottom:0">
     <a href="/glossary-of-agile/acceptance.html">验收测试 Acceptance tests</a>
 </span>
-  <span class="text" style="width:100px;line-height:150%;text-align: left; position:absolute;top:263px;left:850px; margin-right:0; margin-bottom:0">
+  <span class="text" style="width:55px;line-height:150%;text-align: left; position:absolute;top:263px;left:825px; margin-right:0; margin-bottom:0">
     <a href="/glossary-of-agile/mocks.html">模拟对象 Mock objects</a>
 </span>
-  <span class="text" style="width:67px;line-height:150%;text-align: left; position:absolute;top:395px;left:851px; margin-right:0; margin-bottom:0">
+  <span class="text" style="width:55px;line-height:150%;text-align: left; position:absolute;top:395px;left:825px; margin-right:0; margin-bottom:0">
     <a href="/glossary-of-agile/unittest.html">单元测试 Unit tests</a>
 </span>
-  <span class="text" style="width:121px;line-height:150%;text-align: left; position:absolute;top:458px;left:849px; margin-right:0; margin-bottom:0">
+  <span class="text" style="width:55px;line-height:150%;text-align: left; position:absolute;top:458px;left:825px; margin-right:0; margin-bottom:0">
     <a href="/glossary-of-agile/exploratory-testing.html">探索性测试 Exploratory testing</a>
 </span>
-  <span class="text" style="width:100px;line-height:150%;text-align: center; position:absolute;top:521px;left:841px; margin-right:0; margin-bottom:0">
+  <span class="text" style="width:55px;line-height:150%;text-align: center; position:absolute;top:521px;left:825px; margin-right:0; margin-bottom:0">
     <a href="/glossary-of-agile/usability.html">可用性测试 Usability testing</a>
 </span>
 </div>

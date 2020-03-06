@@ -163,7 +163,7 @@ tags:
 
 先接受正规系统培训，每一个能力或框架都值得深入学习，推荐CSM认证作为入门。莫要贪图便宜甚至参加“一步到位“、”大而全”的泛敏捷/精益类课程。然后立刻跳进去一个实际项目，最好是作为项目成员和实际负责人，以获取真正的经验。以穆里尼奥举例，本身是个欧洲三流球员却能带出一流球队，然而谁也不会找一个没踢过职业联赛的球员做职业足球教练吧。无论如何，**”Don’t wait change happen, be the changer yourself”** 。
 
-有了一定的经验以后，在社区中物色一位[敏捷教练导师](https://docs.google.com/document/d/1PrEiV0ujh9ltvCd1_NUVu-X8kErkhrL1U5E8Mn962Mk/edit?usp=sharing)，继续参加他的课程，建立连接，以获取持续的指引和点拨。然后扩大自己的锻炼范围，并且参加社区的讨论、分享、活动组织、[读书](http://www.uperform.cn/agile-reading)、写日记、交游、思考、冥想，不断扩展和积累自己的知识、技能、人脉，坚持以短反馈环的方式进行实践-总结-学习。
+有了一定的经验以后，在社区中物色一位[敏捷教练导师](https://docs.google.com/document/d/1PrEiV0ujh9ltvCd1_NUVu-X8kErkhrL1U5E8Mn962Mk/edit?usp=sharing)，继续参加他的课程，建立连接，以获取持续的指引和点拨。然后扩大自己的锻炼范围，并且参加社区的讨论、分享、活动组织、读书[(推荐阅读书单)](http://www.uperform.cn/agile-reading)、写日记、交游、思考、冥想，不断扩展和积累自己的知识、技能、人脉，坚持以短反馈环的方式进行实践-总结-学习。
 
 这也是一个“守破离”的过程，参考笔者Jacky Shen的[《敏捷教练成长之路》](http://www.jackyshen.com/2016/03/26/my-agile-coach-journey/)、Sunny Sun的分享[《敏捷教练之成长心法》](http://mp.weixin.qq.com/s/1GiefNVuIogfCdns_hMKKg)、Xu Yi的[《诺基亚诺西敏捷历史前世今生》](http://kaverjody.com/tag/诺基亚-诺西-敏捷-历史-前世今生-徐毅/)、Li Weihong的[《敏捷转型成长之路》](https://mp.weixin.qq.com/s?__biz=MzA5MDUxNTY0Mw==&mid=2649658628&idx=1&sn=83eea55f8801e1f994974661f225de05)
 
