@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="www.jackyshen.com/"/>
-  <updated>2019-12-26T23:29:04.000Z</updated>
+  <updated>2020-04-15T23:26:04.094Z</updated>
   <id>www.jackyshen.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>敏捷绩效考核与OKR</title>
+    <link href="www.jackyshen.com/2020/04/16/agile-performance-evalution-appraisal/"/>
+    <id>www.jackyshen.com/2020/04/16/agile-performance-evalution-appraisal/</id>
+    <published>2020-04-15T23:15:33.000Z</published>
+    <updated>2020-04-15T23:26:04.094Z</updated>
+    
+    <content type="html"><![CDATA[<p>敏捷的目标是增强组织响应变化的能力，主要通过目标对齐、信息透明一致、尽早反馈和调整、基本功提升、去中心化控制等来达到，因此绩效考核的原则要顺应这些敏捷思想，激发员工动力。我认为敏捷组织转型下，绩效考核（无论是KPI还是OKR）都应关注以下原则：</p><ol><li>更多关注团队表现而非个体表现</li><li>从被动指标分解到自组织的目标管理</li><li>配合短迭代研发周期，缩短考核周期</li><li>从奖金和排名转移到学习与成长</li></ol><p>一个可参考的敏捷团队绩效模型：</p><p><img src="https://www.uperform.cn/wp-content/uploads/2020/04/agile-okr-performance.png" alt></p><p>根据《Scrum Primer》 v0.5，作者根据Yahoo在2008年前后使用Scrum后调研（以1-5打分的方式进行），当时发现主要绩效提升表现在以下方面:  生产效率，团队精神，适应性，责任性，协作能力。那么敏捷转型的整体绩效也应该从以上方面进行考虑作为文化导向，结合我从2007年开始在诺基亚西门子通信的敏捷经历，建议做法如下</p><ul><li>减少个人绩效的权重，增加组织或团队层面的权重</li><li>绩效打分与奖金分配不完全挂钩</li><li>依据360度收集的信息、评价和数据</li><li>考虑团队工作内容、需求变化和复杂程度，可结合OKR与KPI的使用</li><li>敏捷Scrum中的短迭代计划——由PO指出迭代目标，团队共创出要达成的任务——实际就是一个执行层面的短期OKR。而产品、项目级别的大目标，可认为是战略层面的长期OKR。</li><li>设定团队之间互相支持的指标，作为团队绩效评分(Team Performance Evaluation)，例如帮助其他团队修Bug，为其他团队做分享都可以互相送分数。</li></ul><p>根据《Scrum Primer》 v0.5，作者根据Yahoo在2018年前后使用Scrum后调研（以1-5打分的方式进行），发现主要绩效提升表现在以下方面:<br>生产效率，团队精神，适应性，责任性，协作能力</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;敏捷的目标是增强组织响应变化的能力，主要通过目标对齐、信息透明一致、尽早反馈和调整、基本功提升、去中心化控制等来达到，因此绩效考核的原则要顺应这些敏捷思想，激发员工动力。我认为敏捷组织转型下，绩效考核（无论是KPI还是OKR）都应关注以下原则：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;更
+      
+    
+    </summary>
+    
+    
+      <category term="performance" scheme="www.jackyshen.com/tags/performance/"/>
+    
+      <category term="okr" scheme="www.jackyshen.com/tags/okr/"/>
+    
+      <category term="kpi" scheme="www.jackyshen.com/tags/kpi/"/>
+    
+  </entry>
   
   <entry>
     <title>大型敏捷，请和你的大老师远离敏捷</title>
@@ -560,36 +589,6 @@
       <category term="leadership" scheme="www.jackyshen.com/tags/leadership/"/>
     
       <category term="complexity" scheme="www.jackyshen.com/tags/complexity/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>推荐阅读敏捷书籍清单</title>
-    <link href="www.jackyshen.com/2017/02/03/agile-reading-recommend-books/"/>
-    <id>www.jackyshen.com/2017/02/03/agile-reading-recommend-books/</id>
-    <published>2017-02-03T15:23:52.000Z</published>
-    <updated>2018-08-10T20:11:50.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>分类目录：</p><ul><li>人生及哲学类 – Life and Philosophy</li><li>领导力类 – Leadership and Coaching</li><li>通用管理类 – General Management</li><li>敏捷管理类 – Agile Management</li><li>敏捷技术类 – Agile Technical</li></ul><p>(本敏捷书单由Bill Li与Jacky Shen整理)</p><a id="more"></a><h2 id="人生及哲学类-–-Life-and-Philosophy"><a href="#人生及哲学类-–-Life-and-Philosophy" class="headerlink" title="人生及哲学类 – Life and Philosophy"></a>人生及哲学类 – Life and Philosophy</h2><p>道德经 – Tao（by 老子 LaoZi）</p><p>活法 – Live Act（by 稻盛和夫 Kazuo Inamori）</p><p>乔布斯传 – Steve Jobs (by 沃尔特·艾萨克森 Walter Isaacson)</p><p>设计中的设计 – Designing Design (by 原研哉 Kenyahara）</p><p>禅者的初心 – Zen Mind, Beginner’s Mind (by Shunryu Suzuki 铃木俊隆)</p><p>失控 – Out of Control (by 凯文·凯利 Kevin Kelly)</p><p>复杂- Complexity: A guided tour (by 米歇尔·沃尔德罗普 Melanie Mitchell)</p><h2 id="领导力类-–-Leadership-and-Coaching"><a href="#领导力类-–-Leadership-and-Coaching" class="headerlink" title="领导力类 – Leadership and Coaching"></a>领导力类 – Leadership and Coaching</h2><p>影响力- Influence (by 罗伯特·西奥迪尼 Robert B. Cialdini)</p><p>创新公司：皮克斯的启示 – Creativity, Inc. (by 艾德•卡特姆 Ed Catmull）</p><p>驱动力 – Drive (by 丹尼尔•平克 Daniel Pink)</p><p>Quiet Leadership: Six Steps to Transforming Performance at Work (by David Rock)</p><p>The Wisdom of Teams (by Jon R. Katzenbach and Douglas K. Smith)</p><p>高绩效教练 – Coaching for Performance (by 约翰•惠特默 John Whitmore)</p><p>共创式教练:转变思维,蜕变人生 – Co-Active Coaching (by 亨利·吉姆斯-霍斯 及其他3位 Henry Kimsey-House and other 3 authors)</p><p>The Art of Focused Conversation: 100 Ways to Access Group Wisdom in the Workplace (edited by Brian Stanfield for the Canadian Institute of Cultural Affairs)</p><p>身心合一的奇迹力量 – The inner game of Tennis (by 提摩西•加尔韦 W. Timothy Gallwey)</p><p>拥抱变革 – Fearless Change (by 玛丽莲·曼斯 Mary Lynn Manns, 琳达·赖斯 (Linda Rising)</p><p>从0到1:开启商业与未来的秘密 Zero to One(by 彼得·蒂尔 Peter Thiel, 布莱克·马斯特斯Blake Masters)</p><p>从为什么开始 – Start with Why (by 西蒙•斯涅克 Simon Sinek)</p><p>瞬变 – Switch (by 奇普.希思 Chip Heath, 丹.希思 Chip Heath)</p><p>克服团队协作的五种障碍 – Overcoming the Five Dysfunctions of a Team (by 帕特里克•兰西奥尼 Patrick Lencioni)</p><p>重塑组织 - Reinventing Organizations (by Frederic Laloux, Ken Wilber)</p><h2 id="通用管理类-–-General-Management"><a href="#通用管理类-–-General-Management" class="headerlink" title="通用管理类 – General Management"></a>通用管理类 – General Management</h2><p>反脆弱 AntiFragile (by 纳西姆•尼古拉斯•塔勒布 Nassim Nicholas Taleb)</p><p>The Leader’s Guide to Radical Management (by Stephen Denning)</p><p>The Steve Jobs Way: iLeadership for a New Generation (by Jay Elliot and William L. Simon)</p><p>从优秀到卓越 – Good to Great (by 吉姆•柯林斯 Jim Collins)</p><p>第五项修炼 – The Fifth Discipline (by 彼得·圣吉 Peter Senge)</p><p>成为技术领导者 – Becoming a Technical Leader (by 杰拉尔德·温伯格 Gerald M.Weinberg)</p><p>巅峰-马斯洛赋予伟大公司的魔力 – Peak: How Great Companies Get Their Mojo from Maslow (by 奇普.康利 Chip Conley)</p><p>阿米巴经营 – Amoeba Management (by 稻盛和夫 Kazuo Inamori)</p><p>参与感：小米口碑营销内部手册 – Participatory Marketing of XiaoMi (by 黎万强 Li Wan Qiang)</p><p>丰田模式－精益制造的14项管理原则 – The TOYOTA Way (by 杰弗瑞·莱克 Jeffrey Liker)</p><p>德鲁克管理思想精要 – The Essential Drucker (by 彼得·德鲁克 Peter F. Drucker)</p><p>人月神话 – Mythical Man-Month (by 小弗雷德里克·布鲁克斯 Frederick P.Brooks)</p><p>黑客与画家 – Hackers and Painters (by 保罗·格雷厄姆 Paul Graham)</p><p>达成现实 - Getting Real (by Jason Fried / David Heinemeier Hansson / Matthew Linderman from 37signals)</p><p>重来/重塑工作 - Rework (by Jason Fried、David Heinemeier Hansson from 37signals)</p><h2 id="敏捷管理类-–-Agile-Management"><a href="#敏捷管理类-–-Agile-Management" class="headerlink" title="敏捷管理类 – Agile Management"></a>敏捷管理类 – Agile Management</h2><p>Scrum敏捷项目管理 – Agile Project Management with Scrum (by 肯.施瓦布 Ken Schwaber)</p><p>敏捷革命：提升个人创造力与企业效率的全新协作模式 –  Scrum: The Art of Doing Twice the Work in Half the Time (By 杰夫.萨瑟兰 Jeff Sutherland )</p><p>Scrum精髓 – Essential Scrum (by 肯.罗宾 Ken Rubin)</p><p>管理3.0 – Management 3.0 (by 尤根.阿佩罗 Jurgen Appelo)</p><p>产品开发流程的原则第二版 – The Principles of Product Development Flow: Second Generation (by 唐纳德.赖纳特森Donald G. Reinertsen)</p><p>用户故事与敏捷方法 – User Stories Applied (by 迈克.科恩 Mike Cohn)</p><p>Scrum敏捷软件开发 - Succeeding with Agile (by 迈克.科恩 Mike Cohn)</p><p>敏捷回顾 – Agile Retrospectives (by 埃斯特•德比 Esther Derby, 黛安娜•拉森 Diana Larsen)</p><p>如何构建敏捷项目管理团队 – Coaching Agile Teams (by 丽萨•阿金斯 Lyssa Adkins)</p><p>敏捷教练 – Agile Coaching (by 瑞秋·戴维斯 Rachel Davies, 丽姿·塞得利 Liz Sedley)</p><p>敏捷软件开发工具－精益开发方法 – Lean Software Development : An Agile Toolkit (by 玛丽.玻朋蒂克 Mary Poppendieck, 汤姆.玻朋蒂克 Tom Poppendieck)</p><p>启示录:打造用户喜爱的产品 第二版 Inspired: How To Create Products Customers Love 2nd Edition (by 马蒂.卡根 Marty Cagan)</p><p>硝烟中的Scrum和XP – Scrum and XP from the Trenches (by Henrik Kniberg)</p><p>解析极限编程 – Extreme Programming Explained: Embrace Change (by 肯特.贝克 Kent Beck, 辛西娅.安德烈斯 Cynthia Andres)</p><p>精益和敏捷开发大型应用指南 – Scaling Lean &amp; Agile Development: Thinking and Organizational Tools for Large-Scale Scrum (by 拉尔曼 Craig Larman, Bas Odde)</p><p>看板方法 – Kanban: Successful Evolutionary Change for Your Technology Business (by 大卫.安德森 David Anderson)</p><p>精益创业 – Lean Startup (by 埃里克·莱斯 Eric Ries)</p><p>影响地图 - Impact Mapping (by Gojko Adzic)</p><h2 id="敏捷技术类-–-Agile-Technical"><a href="#敏捷技术类-–-Agile-Technical" class="headerlink" title="敏捷技术类 – Agile Technical"></a>敏捷技术类 – Agile Technical</h2><p>测试驱动开发 – Test-Driven Development (by 肯特·贝克 Kent beck)</p><p>重构:改善既有代码的设计 – Refactoring: Improving the Design of Existing Code (by 马丁•福勒 Martin Fowler)</p><p>修改代码的艺术 – Working with Legacy Code (by Michael Feathers)</p><p>整洁代码 – Clean Code (by 罗伯特.马丁 Robert Martin)</p><p>敏捷软件开发：原则、模式与实践 – Agile Software Development (by 罗伯特.马丁 Robert Martin)</p><p>会说话的代码 – Self-expressed Codes(by 王洪亮 Stephen Wang)</p><p>有效的单元测试 – Effective Unit Testing (by 科斯凯拉 Lasse Koskela)</p><p>SOA与REST:用REST构建企业级SOA解决方案 – SOA with REST (by Thomas Er, Benjamin Carlyle, Cesare Pautasso, Raj Balasubramanian)</p><p>敏捷测试 – Agile Testing (by 克里斯平 Lisa Crispin, 格雷戈里 Janet Gregory)</p><p>程序员修炼之道 – The Pragmatic Programmer: From Journeyman to Master (by 亨特 Andrew Hunt, 托马斯 David Thomas)</p><p>整洁程序员 – Clean Coder (by 罗伯特.马丁 Robert Martin)</p><p>实例化需求 – Specification by Example (by Gojko Adzic)</p><p>敏捷开发的艺术 – The Art of Agile Development (by 西尔 James Shore, Shane Warden)</p><p>敏捷书单整理者：Bill Li, Jacky Shen</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;分类目录：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;人生及哲学类 – Life and Philosophy&lt;/li&gt;
-&lt;li&gt;领导力类 – Leadership and Coaching&lt;/li&gt;
-&lt;li&gt;通用管理类 – General Management&lt;/li&gt;
-&lt;li&gt;敏捷管理类 – Agile Management&lt;/li&gt;
-&lt;li&gt;敏捷技术类 – Agile Technical&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;(本敏捷书单由Bill Li与Jacky Shen整理)&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="reading" scheme="www.jackyshen.com/tags/reading/"/>
-    
-      <category term="book" scheme="www.jackyshen.com/tags/book/"/>
     
   </entry>
   

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>www.jackyshen.com/2020/04/16/agile-performance-evalution-appraisal/</loc>
+    
+    <lastmod>2020-04-15T23:26:04.094Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>www.jackyshen.com/2019/09/11/subway-map-of-agile-development-practices/</loc>
     
     <lastmod>2020-03-10T14:18:41.801Z</lastmod>
@@ -128,126 +135,7 @@
   </url>
   
   <url>
-    <loc>www.jackyshen.com/2015/12/09/refactoring/</loc>
-    
-    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.jackyshen.com/2015/12/08/continuous-integration/</loc>
-    
-    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.jackyshen.com/2014/03/28/single-code-base-or-trunk-based-development-in-mobile-bank/</loc>
-    
-    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.jackyshen.com/2014/05/04/origin-and-tools-of-bdd/</loc>
-    
-    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.jackyshen.com/2014/03/19/frequently-delivery/</loc>
-    
-    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.jackyshen.com/2016/01/13/Put-an-end-to-feature-creep/</loc>
-    
-    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.jackyshen.com/2014/03/17/global-day-of-coderetreat-tianjin-2013/</loc>
-    
-    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.jackyshen.com/2014/06/15/large-scale-scrum-jpmorgan/</loc>
-    
-    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.jackyshen.com/2016/05/04/soft-skills-of-technical-leaders-and-managers/</loc>
-    
-    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.jackyshen.com/2016/03/10/remote-scrum-teams-in-taiwan/</loc>
-    
-    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.jackyshen.com/2014/08/21/new-to-docker-io/</loc>
-    
-    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.jackyshen.com/2014/09/05/a-certified-scrum-developer-training-course-delivered/</loc>
-    
-    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.jackyshen.com/2014/09/22/Scrum-Checklist/</loc>
-    
-    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>www.jackyshen.com/2015/03/06/SOA-with-REST/</loc>
-    
-    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.jackyshen.com/2014/10/02/functional-programming-in-Python/</loc>
-    
-    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.jackyshen.com/2017/09/11/Getting-Real-and-Rework-notes/</loc>
-    
-    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.jackyshen.com/2017/01/31/planning-as-a-social-event-scaling-agile-at-lego/</loc>
-    
-    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.jackyshen.com/2016/01/15/write-angularjs-style-commit-message/</loc>
     
     <lastmod>2018-10-26T16:13:14.000Z</lastmod>
     
@@ -261,6 +149,125 @@
   </url>
   
   <url>
+    <loc>www.jackyshen.com/2014/10/02/functional-programming-in-Python/</loc>
+    
+    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.jackyshen.com/2017/01/31/planning-as-a-social-event-scaling-agile-at-lego/</loc>
+    
+    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.jackyshen.com/2017/09/11/Getting-Real-and-Rework-notes/</loc>
+    
+    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.jackyshen.com/2014/09/22/Scrum-Checklist/</loc>
+    
+    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.jackyshen.com/2014/09/05/a-certified-scrum-developer-training-course-delivered/</loc>
+    
+    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.jackyshen.com/2015/12/09/refactoring/</loc>
+    
+    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.jackyshen.com/2014/08/21/new-to-docker-io/</loc>
+    
+    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.jackyshen.com/2014/06/15/large-scale-scrum-jpmorgan/</loc>
+    
+    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.jackyshen.com/2016/03/10/remote-scrum-teams-in-taiwan/</loc>
+    
+    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.jackyshen.com/2016/01/13/Put-an-end-to-feature-creep/</loc>
+    
+    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.jackyshen.com/2014/05/04/origin-and-tools-of-bdd/</loc>
+    
+    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.jackyshen.com/2016/05/04/soft-skills-of-technical-leaders-and-managers/</loc>
+    
+    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.jackyshen.com/2014/03/28/single-code-base-or-trunk-based-development-in-mobile-bank/</loc>
+    
+    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.jackyshen.com/2014/03/19/frequently-delivery/</loc>
+    
+    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.jackyshen.com/2015/12/08/continuous-integration/</loc>
+    
+    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.jackyshen.com/2014/03/17/global-day-of-coderetreat-tianjin-2013/</loc>
+    
+    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>www.jackyshen.com/2016/01/15/write-angularjs-style-commit-message/</loc>
+    
+    <lastmod>2018-10-26T16:13:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>www.jackyshen.com/2014/03/07/user-story-mapping/</loc>
     
     <lastmod>2018-10-26T16:12:36.000Z</lastmod>
@@ -268,7 +275,7 @@
   </url>
   
   <url>
-    <loc>www.jackyshen.com/2014/02/08/scrum-master-is-like-gandalf/</loc>
+    <loc>www.jackyshen.com/2014/02/08/how-to-improve-the-team-promise-under-fix-date-fix-scope-project/</loc>
     
     <lastmod>2018-10-26T16:12:34.000Z</lastmod>
     
@@ -282,7 +289,7 @@
   </url>
   
   <url>
-    <loc>www.jackyshen.com/2014/02/08/how-to-improve-the-team-promise-under-fix-date-fix-scope-project/</loc>
+    <loc>www.jackyshen.com/2014/02/08/scrum-master-is-like-gandalf/</loc>
     
     <lastmod>2018-10-26T16:12:34.000Z</lastmod>
     
