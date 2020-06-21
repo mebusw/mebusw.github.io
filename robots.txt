@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /about/
+
+
+Sitemap: http://www.jackyshen.com/sitemap.xml
+Sitemap: http://www.jackyshen.com/baidusitemap.xml
