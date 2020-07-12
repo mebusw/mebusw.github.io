@@ -3,14 +3,14 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8"> 
   
-  <title>Tag: JVM </title>
+  <title>Tag: jvm </title>
   <meta http-equiv="keywords" content="Scrum认证 创客 工匠 敏捷教练 软件开发顾问 Agile Coaching 申健 申导"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="申健，Jacky Shen, 江湖人称“申导”。创客，工匠，敏捷教练，软件开发顾问。致力于启发创意、促进协作、交付价值的事业。1994年迷上计算机编程，毕业于南京大学。拥有CST认证Scrum培训讲师, CTC认证敏捷教练, CSP，CSM认证和CSPO认证、UCAC认证、看板认证和ToP引导技术认证。Scrum联盟CSD认证课程授权讲师，管理3.0讲师。在跨国企业从事将近十年的研发和管理工作，涉">
 <meta name="keywords" content="Scrum认证 创客 工匠 敏捷教练 软件开发顾问 Agile Coaching 申健 申导">
 <meta property="og:type" content="website">
 <meta property="og:title" content="申导">
-<meta property="og:url" content="www.jackyshen.com/tags/JVM/index.html">
+<meta property="og:url" content="www.jackyshen.com/tags/jvm/index.html">
 <meta property="og:site_name" content="申导">
 <meta property="og:description" content="申健，Jacky Shen, 江湖人称“申导”。创客，工匠，敏捷教练，软件开发顾问。致力于启发创意、促进协作、交付价值的事业。1994年迷上计算机编程，毕业于南京大学。拥有CST认证Scrum培训讲师, CTC认证敏捷教练, CSP，CSM认证和CSPO认证、UCAC认证、看板认证和ToP引导技术认证。Scrum联盟CSD认证课程授权讲师，管理3.0讲师。在跨国企业从事将近十年的研发和管理工作，涉">
 <meta property="og:locale" content="default">
@@ -74,14 +74,14 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-origin-and-tools-of-bdd" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-write-unit-test-with-groovy-for-java-program" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2014/05/04/origin-and-tools-of-bdd/" class="article-date">
-  <time datetime="2014-05-03T16:00:00.000Z" itemprop="datePublished">May 4 2014</time>
+    <a href="/2015/10/01/write-unit-test-with-groovy-for-java-program/" class="article-date">
+  <time datetime="2015-10-01T06:33:46.000Z" itemprop="datePublished">Oct 1 2015</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/agile/">agile</a>►<a class="article-category-link" href="/categories/agile/engineering/">engineering</a>
+    <a class="article-category-link" href="/categories/programming/">programming</a>►<a class="article-category-link" href="/categories/programming/java/">java</a>
   </div>
 
   </div>
@@ -92,7 +92,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/05/04/origin-and-tools-of-bdd/">关于BDD的起源和工具</a>
+      <a class="article-title" href="/2015/10/01/write-unit-test-with-groovy-for-java-program/">使用Groovy语言替代JUnit为Java程序编写单元测试</a>
     </h1>
   
 
@@ -100,15 +100,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://arnauld.github.io/incubation/jbehave-get-started/bdd-cycle-around-tdd-cycles.png" alt></p>
-<p>过去的几十年间，人们曾用过测试先行的方式，但20世纪90年代才真正提出测试驱动开发的方法。</p>
-<p>BDD源自一些TDD实践者在寻求更好的词汇来描述在TDD循环中测试的意图。</p>
-<p>英国人Dan North在2006年发表了《Better Software》的文章，首先意识到了TDD思想和”测试”一词会误导人们。Dan将这种风格的TDD命名为行为驱动开发，成功地将测试先行编程推进了一步。</p>
-<p>由于test一词并没有抓住指定期望行为的精髓，它反而承载了太多的含义。相反，社区开始谈论specifications(需求说明，简称specs)和行为，而非测试与测试方法。</p>
-<p>今天的BDD语境和领域远远超出了代码——最引人注目的是将BDD提升到需求层面，与业务分析和需求行为结合起来。</p>
+        <p>(本文改编自 @申导 翻译的<a href="http://book.douban.com/subject/26364867/" target="_blank" rel="noopener">《有效的单元测试》</a>，如果对本文感兴趣，请支持正版书籍。)</p>
+<p>编程是用计算机可理解的语言来表达你的想法和意图。对于Java程序员来说就是编写一种可以由Java编译器编译为可以运行在JVM上的字节码的代码。不止一种编程语言可以编写能运行在JVM上的代码，不过每种JVM语言都具有其独特的语法和感觉，但有一点是相同的：关于在JVM创建应用程序这件事上，她们都号称比Java更加简洁和更具表达力。</p>
+<h1 id="另类JVM语言"><a href="#另类JVM语言" class="headerlink" title="另类JVM语言"></a>另类JVM语言</h1><p>另类JVM语言的历史可追溯到15年前，那时Jim Hugunin在编写Jython，即一种JVM上的Python语言实现。尽管Jython难以获得发展的动力，但它启发了后来许多JVM语言的出现。</p>
+<p>受到Jython的启发，2003年Groovy语言开始在JVM上登场，有着精简语法的Groovy承诺与Java代码之间流畅的互操作性和极高简洁性，使之成为JVM上编写脚本的重要选择。其他运行在JVM平台上的语言还包括Scala, JRuby, Clojure等，以及Java本身。</p>
+<p>概括来说，各种另类JVM语言的一些潜在优势在于：</p>
+<ul>
+<li>更少的样板代码语法可以去芜存菁</li>
+<li>更多的文本(literal)数据结构</li>
+<li>针对标准类型的额外方法</li>
+<li>更多强大的语法结构</li>
+</ul>
         
           <p class="article-more-link">
-            <a href="/2014/05/04/origin-and-tools-of-bdd/#more">继续阅读 More</a>
+            <a href="/2015/10/01/write-unit-test-with-groovy-for-java-program/#more">继续阅读 More</a>
           </p>
         
       
@@ -117,10 +122,10 @@
     
 
     <footer class="article-footer">
-      <a data-url="www.jackyshen.com/2014/05/04/origin-and-tools-of-bdd/" data-id="ckboc9o3y005kz0fyslwul504" class="article-share-link">Share</a>
+      <a data-url="www.jackyshen.com/2015/10/01/write-unit-test-with-groovy-for-java-program/" data-id="ckcie0p7w009iurfy3jtz5da3" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JVM/">JVM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/atdd/">atdd</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bdd/">bdd</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cucumber/">cucumber</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/easyb/">easyb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/groovy/">groovy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/robotframework/">robotframework</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/groovy/">groovy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jvm/">jvm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/unit-test/">unit test</a></li></ul>
 
     </footer>
 
@@ -311,25 +316,6 @@
     <nav id="mobile-nav">
   
     <a href="/" class="mobile-nav-link">首页 Main</a>
-  
-    <a href="/archives" class="mobile-nav-link">归档 Archives</a>
-  
-    <a href="/about-me" class="mobile-nav-link">关于我 About Me</a>
-  
-</nav>
-    
-
-<script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-  </div>
-</body>
-</html>link">首页 Main</a>
   
     <a href="/archives" class="mobile-nav-link">归档 Archives</a>
   
