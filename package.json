@@ -22,7 +22,13 @@
     "npm": "^6.13.4"
   },
   "devDependencies": {
+    "@fieldtech/simple-conventional-changelog": "^1.1.4",
     "babel-eslint": "^8.2.6",
     "eslint": "^4.19.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/@fieldtech/simple-conventional-changelog"
+    }
   }
 }
