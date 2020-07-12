@@ -23,7 +23,7 @@ categories:
 
 # 敏捷教练的职业发展？不必困惑！
 
-敏捷教练是个新鲜头衔，敏捷转型的公司内都有人在做着一些事，其中很多人还是在过去的职位上，却做着全新的事情，于是就难免产生顾虑和疑惑：
+[敏捷教练](https://www.jackyshen.com/2017/04/07/what-is-agile-coach/)是个新鲜头衔，敏捷转型的公司内都有人在做着一些事，其中很多人还是在过去的职位上，却做着全新的事情，于是就难免产生顾虑和疑惑：
 
 **`公司让我做敏捷教练或ScrumMaster，到底有什么前途？我该如何发展？`**
 
@@ -65,4 +65,7 @@ categories:
 
 如果对我获得CTC认证的经验有兴趣的话，请看本系列下一篇：[我是怎样成为敏捷教练的？](/2016/03/26/my-agile-coach-journey)
 
+## 延伸阅读
+- [Scrum Master要做些啥？像甘道夫一样。](https://www.jackyshen.com/2014/02/08/scrum-master-is-like-gandalf/)
+- [国际Scrum Alliance首位CTC认证者和你聊聊什么是敏捷教练](https://www.jackyshen.com/2017/04/07/what-is-agile-coach/)
 

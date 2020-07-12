@@ -177,6 +177,9 @@ tags:
 
 个人网站: http://www.jackyshen.com
 
+## 延伸阅读
+- [我是怎样成为敏捷教练的？](https://www.jackyshen.com/2016/03/26/my-agile-coach-journey)
+- [Scrum Master要做些啥？像甘道夫一样。](https://www.jackyshen.com/2014/02/08/scrum-master-is-like-gandalf/)
 --------------
 
 ## GitChat 实录: 实战中敏捷教练的角色是什么
@@ -185,3 +188,4 @@ tags:
 2017年3月30日晚8点30分，敏捷教练，创客，产品研发顾问，培训师，江湖人称“申导”的申老师带来了主题为《和全球首位CTC认证者聊聊敏捷教练这个新兴职业》的交流。以下是主持人hrshy整理的问题精华，记录了申老师和读者间问答的精彩片段。
 
 因为是收费文章，请见 http://gitbook.cn/m/mazi/article/58c36775b7cea5d11d422f19?isLogArticle=yes&readArticle=yes&from=groupmessage&isappinstalled=0
+

@@ -64,6 +64,10 @@ categories:
 
 2018年“中国通”Vernon Stinebaker导师获得ICF-PCC教练资格，顺理成章地也获得CTC认证敏捷教练资格，并专注于此。刚刚得知国人Lance Zhang也在Vernon导师两年的辅导下，经"导师快速推荐通道"获得CTC资格，恭喜他。
 
+(**2020年7月更新**)
+
+目前中国（含港澳台）一共有6位CTC认证敏捷教练，都是在 Vernon 老师的辅导下获得。另，已经获得CTC认证者有权力去提名其他候选者（Nomination Path），此路径需要填写的书面材料较本文介绍的路径要少一些，但需要通过视频面试教练技巧。
+
 ![](https://www.uperform.cn/wp-content/uploads/2018/07/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2018-07-09-%E4%B8%8A%E5%8D%8810.03.04.png)
 
 Vernon及优普丰敏捷学院推出了[UCAC教练辅导培养项目](https://www.uperform.cn/ucac-uperform-certified-agile-coach/)，愿景是跨越理论与动手之间的能力鸿沟，加速蜕变出更多导师级敏捷教练，降低国人获取国际CTC认证的难度和时间。优普丰敏捷学院愿意贡献出自己的经验和力量，帮助社区打造坚实的实践者，基于国际通行认可的职业知识体系，在本土社区中培养出更多真正的敏捷教练，引发和传播积极的蜕变，在行业和社会上产生更大的影响。提升业界对敏捷职业路径的含金量和认可，打造国际导师级CEC/CST认证候选人的精英俱乐部。目前的[UCAC认证者](http://www.AgileCoach.CN)们都已经在摩拳擦掌，离着CTC更近了一步。2019年4月，优普丰敏捷学院在杭州举办了第一次UCAC教练聚会，很多感兴趣的敏捷教练慕名参加。Vernon随后开发了公益性的线上学习，每周一次的频率学习Scrum Alliance提供的内容，并进行教练体验辅导。
@@ -100,3 +104,7 @@ Vernon及优普丰敏捷学院推出了[UCAC教练辅导培养项目](https://ww
 * [The CTC Application Readiness Checklist](https://www.scrumalliance.org/scrum/media/ScrumAllianceMedia/Files%20and%20PDFs/Certifications/CTC/Scrum_Alliance_Certified_Team_Coach-_Application_Instructions.pdf)
 
 （全系列完）
+
+## 延伸阅读
+- [Scrum Master要做些啥？像甘道夫一样。](https://www.jackyshen.com/2014/02/08/scrum-master-is-like-gandalf/)
+- [国际Scrum Alliance首位CTC认证者和你聊聊什么是敏捷教练](https://www.jackyshen.com/2017/04/07/what-is-agile-coach/)

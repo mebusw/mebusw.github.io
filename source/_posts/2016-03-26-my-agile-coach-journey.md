@@ -62,3 +62,7 @@ categories:
 
 
 系列下一篇：[申请导师级Certified Team Coach认证的攻略秘籍](/2016/03/26/tips-to-certified-team-coach-application)
+
+## 延伸阅读
+- [Scrum Master要做些啥？像甘道夫一样。](https://www.jackyshen.com/2014/02/08/scrum-master-is-like-gandalf/)
+- [国际Scrum Alliance首位CTC认证者和你聊聊什么是敏捷教练](https://www.jackyshen.com/2017/04/07/what-is-agile-coach/)

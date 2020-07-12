@@ -66,5 +66,7 @@ SM即是内部转型的教练，同时也承担着来自"Delivery Success"的压
 
 Open mind with curiosity, pro-active exploring, willing to learning, improving and share to others. Experienced in transformation or at least understand political ego-system of organization, be good at using power w/o eager to that. Above average level of technology and product knowledge. Have communication and influencing skill. Responsible, committed, Humble, extroversion.
 
-延伸阅读：[Scrum检查清单](http://jackyshen.com/2014/02/08/scrum-checklist/)
-
+## 延伸阅读
+- [Scrum检查清单](http://jackyshen.com/2014/02/08/scrum-checklist/)
+- [国际Scrum Alliance首位CTC认证者和你聊聊什么是敏捷教练](https://www.jackyshen.com/2017/04/07/what-is-agile-coach/)
+- [我是怎样成为敏捷教练的？](https://www.jackyshen.com/2016/03/26/my-agile-coach-journey)
