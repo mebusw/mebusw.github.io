@@ -16,8 +16,8 @@ tags:
 
 下面这张地铁图囊括了各种敏捷实践及名词的集合家谱。
 
-<div>
-  <p>各条线代表了不同敏捷流派或“部落”中的实践集:</p>
+
+## 各条线代表了不同敏捷流派或“部落”中的实践集
   <table>
     <tr>
       <td style="width:16.6%; background-color: #ff01d8;"></td>
@@ -45,7 +45,7 @@ tags:
     </tr>    
   </table>
 
-</div>
+--------------
 
 <div class="wpb_column vc_column_container vc_col-sm-10" style="position: relative;"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_raw_code wpb_content_element wpb_raw_html">
