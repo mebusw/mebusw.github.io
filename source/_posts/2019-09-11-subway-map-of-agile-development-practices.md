@@ -16,6 +16,37 @@ tags:
 
 下面这张地铁图囊括了各种敏捷实践及名词的集合家谱。
 
+<div>
+  <p>各条线代表了不同敏捷流派或“部落”中的实践集:</p>
+  <table>
+    <tr>
+      <td style="width:16.6%; background-color: #ff01d8;"></td>
+      <td style="width:16.6%; padding: 5px;">极限编程</td>
+      <td style="width:16.6%; background-color: #ff005e;"></td>
+      <td style="width:16.6%; padding: 5px;">Scrum</td>
+      <td style="width:16.6%; background-color: #a8009e;"></td>
+      <td style="width:16.6%; padding: 5px;">设计</td>
+    </tr>
+    <tr>
+      <td style="width:16.6%; background-color: #f8ff00;"></td>
+      <td style="width:16.6%; padding: 5px;">团队</td>
+      <td style="width:16.6%; background-color: #ffd396;"></td>
+      <td style="width:16.6%; padding: 5px;">产品管理创新</td>
+      <td style="width:16.6%; background-color: #00889e;"></td>
+      <td style="width:16.6%; padding: 5px;">测试</td>
+    </tr>
+    <tr>
+      <td style="width:16.6%; background-color: #ffb801;"></td>
+      <td style="width:16.6%; padding: 5px;">精益</td>
+      <td style="width:16.6%; background-color: #00d795;"></td>
+      <td style="width:16.6%; padding: 5px;">DevOps</td>
+      <td style="width:16.6%; background-color: #f1f1f1;"></td>
+      <td style="width:16.6%; padding: 5px;">基础</td>
+    </tr>    
+  </table>
+
+</div>
+
 <div class="wpb_column vc_column_container vc_col-sm-10" style="position: relative;"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_raw_code wpb_content_element wpb_raw_html">
 		<div class="wpb_wrapper">
@@ -194,35 +225,6 @@ tags:
 </div>
 </div>
 </div>
-
-
-  <p>各条线代表了不同敏捷流派或“部落”中的实践集:</p>
-  <table>
-    <tr>
-    	<td style="width:16.6%; background-color: #ff01d8;"></td>
-      <td style="width:16.6%; padding: 5px;">极限编程</td>
-    	<td style="width:16.6%; background-color: #ff005e;"></td>
-      <td style="width:16.6%; padding: 5px;">Scrum</td>
-    	<td style="width:16.6%; background-color: #a8009e;"></td>
-      <td style="width:16.6%; padding: 5px;">设计</td>
-    </tr>
-    <tr>
-    	<td style="width:16.6%; background-color: #f8ff00;"></td>
-      <td style="width:16.6%; padding: 5px;">团队</td>
-    	<td style="width:16.6%; background-color: #ffd396;"></td>
-      <td style="width:16.6%; padding: 5px;">产品管理创新</td>
-    	<td style="width:16.6%; background-color: #00889e;"></td>
-      <td style="width:16.6%; padding: 5px;">测试</td>
-    </tr>
-    <tr>
-    	<td style="width:16.6%; background-color: #ffb801;"></td>
-      <td style="width:16.6%; padding: 5px;">精益</td>
-    	<td style="width:16.6%; background-color: #00d795;"></td>
-      <td style="width:16.6%; padding: 5px;">DevOps</td>
-    	<td style="width:16.6%; background-color: #f1f1f1;"></td>
-      <td style="width:16.6%; padding: 5px;">基础</td>
-    </tr>    
-  </table>
 
 
 
