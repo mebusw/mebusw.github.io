@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>www.jackyshen.com/about-me/index.html</loc>
+    
+    <lastmod>2020-10-08T01:24:00.070Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>www.jackyshen.com/2019/09/11/subway-map-of-agile-development-practices/</loc>
     
     <lastmod>2020-08-10T15:30:13.184Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>www.jackyshen.com/2014/02/08/scrum-master-is-like-gandalf/</loc>
     
     <lastmod>2020-07-12T01:53:14.706Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>www.jackyshen.com/about-me/index.html</loc>
-    
-    <lastmod>2020-07-12T00:50:44.869Z</lastmod>
     
   </url>
   
