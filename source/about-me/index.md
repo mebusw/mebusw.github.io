@@ -60,9 +60,44 @@ Jacky Shen提供敏捷相关的英文及中文Scrum培训及敏捷教练顾问�
 * ![Effective Unit Testing-有效的单元测试](http://res.uperform.cn//effective-unit-testing.png?imageView/2/w/200/h/200/q/85/format/PNG "book")
 * ![SOA with REST-用 REST 构建企业面向服务架构](http://res.uperform.cn//soa-with-rest.png?imageView/2/w/200/h/200/q/85/format/PNG "book")
 * ![DevOps 三十六计](http://res.uperform.cn//devops%E4%B8%89%E5%8D%81%E5%85%AD%E8%AE%A1.jpg?imageView/2/w/200/h/200/q/85/format/PNG "book")
-* ![Clean Agile 敏捷整洁之道](https://img3.doubanio.com/view/subject/s/public/s33655063.jpg)
+* ![Clean Agile 敏捷整洁之道](https://www.uperform.cn/wp-content/uploads/2020/08/f8ebb29d0ce607ed.jpg)
 
-## 演讲作品讲义
+
+## 视频作品 Vlogs
+
+### 异地金融研发团队（银行）的敏捷实施策略
+<iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=y01638v6tdl" allowFullScreen="true"></iframe>
+
+### 2017敏捷之旅北京站演讲--《禅与复杂》
+<iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=b3158b5nr9v" allowFullScreen="true"></iframe>
+
+### 2015敏捷之旅天津站活动花絮
+<iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=q017527ptxx" allowFullScreen="true"></iframe>
+
+
+
+### 敏捷组织为什么需要CSPO认证产品负责人
+<iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=k0859xpec89" allowFullScreen="true"></iframe>
+
+
+### 敏捷转型组织成熟度平衡轮度量
+<iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=x3117fv0hiv" allowFullScreen="true"></iframe>
+
+
+
+### 59秒看懂敏捷Scrum开发
+<iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=w3068s2la53" allowFullScreen="true"></iframe>
+
+
+### Python 函数式编程基础-直播撸代码
+<iframe src="//player.bilibili.com/player.html?aid=3873315&bvid=BV1Ws411974Z&cid=6227461&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+### 重构到管道式函数-软件匠艺小组-直播撸代码
+<iframe src="//player.bilibili.com/player.html?aid=6146294&bvid=BV1rs41167iT&cid=9980729&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+
+
+## 演讲作品讲义 Presentations
 
 * [甘道夫-中土世界的Scrum Master](https://pan.baidu.com/s/1jDq6z8NB8bjSq4c_RQsLDQ) （提取码: qax7）, 2013 Scrum Gathering
 * [禅与复杂](https://pan.baidu.com/s/1QhJ1LcdGXpBz3XCQ7nFYew) （提取码: ruqe）, 2015-2018, Agile Tour
