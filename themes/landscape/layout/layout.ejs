@@ -15,5 +15,12 @@
     <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
     <%- partial('_partial/after-footer') %>
   </div>
+
+  <script type="text/javascript">
+  $("#full-site-search").submit(function (evt) {
+    $("#wd").val($("#wd").val()+" site:www.jackyshen.com")
+  })
+  </script>
+
 </body>
 </html>
