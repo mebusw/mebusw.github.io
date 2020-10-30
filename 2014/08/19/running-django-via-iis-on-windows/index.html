@@ -63,7 +63,7 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//bing.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="www.jackyshen.com"></form>
+        <form action="//baidu.com/s" method="get" id="full-site-search" accept-charset="UTF-8" class="search-form"><input type="search" name="wd" id="wd" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="site" value="www.jackyshen.com"></form>
       </div>
     </div>
   </div>
@@ -348,5 +348,12 @@
 
 <script src="/js/script.js"></script>
   </div>
+
+  <script type="text/javascript">
+  $("#full-site-search").submit(function (evt) {
+    $("#wd").val($("#wd").val()+" site:www.jackyshen.com")
+  })
+  </script>
+
 </body>
 </html>
