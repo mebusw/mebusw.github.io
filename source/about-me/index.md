@@ -10,8 +10,8 @@ Jacky is the 1st both *Certified Team Coach (CTC)*, one of the Certified Agile C
 
 He has more than 10 years experiences to coach many organizations for large scaled Agile transformation, including Fin-tech / Banking / Telecom / Mobile Internet, as a Catalyzer.
 
-![avatar](http://res.uperform.cn//avatar1.jpg?imageView/2/w/300/h/300/q/85/format/JPG "avatar")
-![certifications](http://res.uperform.cn//certifications-of-JackyShen.png?imageView/2/w/300/h/200/q/85/format/PNG)
+![avatar](./avatar1.jpg)
+![certifications](./certifications-of-JackyShen.png)
 
 
 ## 江湖人称“申导”
@@ -56,10 +56,10 @@ Jacky Shen提供敏捷相关的英文及中文Scrum培训及敏捷教练顾问�
 * [ISQTB Agile add-on-国际软件测试认证委员会之敏捷扩展章程](http://www.cstqb.cn/16/4/1661/show.html#rd)
 * [LEGO乐高的大规模敏捷计划活动](http://www.jackyshen.com/2017/01/31/planning-as-a-social-event-scaling-agile-at-lego/)
 * [Scrum 规模化敏捷 LeSS 框架简介中文视频](https://v.qq.com/x/page/w0828olkm4q.html)
-* ![Reinventing Organization-重塑组织](http://res.uperform.cn//reinventing-organization.jpg?imageView/2/w/200/h/200/q/85/format/JPG "book")
-* ![Effective Unit Testing-有效的单元测试](http://res.uperform.cn//effective-unit-testing.png?imageView/2/w/200/h/200/q/85/format/PNG "book")
-* ![SOA with REST-用 REST 构建企业面向服务架构](http://res.uperform.cn//soa-with-rest.png?imageView/2/w/200/h/200/q/85/format/PNG "book")
-* ![DevOps 三十六计](http://res.uperform.cn//devops%E4%B8%89%E5%8D%81%E5%85%AD%E8%AE%A1.jpg?imageView/2/w/200/h/200/q/85/format/PNG "book")
+* ![Reinventing Organization-重塑组织](https://img10.360buyimg.com/n1/s200x200_jfs/t1/76983/1/13627/98737/5db110d8E06cbdfba/4abe233a376d970e.jpg)
+* ![Effective Unit Testing-有效的单元测试](https://img11.360buyimg.com/n1/jfs/t23806/217/2218826679/41112/2f77567a/5b7695acNbca846db.jpg)
+* ![SOA with REST-用 REST 构建企业面向服务架构](https://images-cn.ssl-images-amazon.com/images/I/51z2ZV-xv5L._SX392_BO1,204,203,200_.jpg)
+* ![DevOps 三十六计](https://images-cn.ssl-images-amazon.com/images/I/51g-nyTNtbL._SX379_BO1,204,203,200_.jpg)
 * ![Clean Agile 敏捷整洁之道](https://www.uperform.cn/wp-content/uploads/2020/08/f8ebb29d0ce607ed.jpg)
 
 

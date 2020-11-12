@@ -93,7 +93,7 @@ exclude_generator:
 #git@github.com:mebusw/mebusw.github.io.git
 deploy:
   type: git
-  repo: https://e.coding.net/uperform/jacky-blog/jacky-blog.git 
+  repo: git@e.coding.net:uperform/jacky-blog/jacky-blog.git 
   branch: master
 
 sitemap:
