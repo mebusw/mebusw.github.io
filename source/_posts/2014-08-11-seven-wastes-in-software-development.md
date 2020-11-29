@@ -1,4 +1,4 @@
-title: Seven wastes in software development
+title: 精益软件开发的七种浪费
 date: 2014-08-11 10:03:49
 tags: 
   - lean
@@ -9,7 +9,6 @@ categories:
   - lean
 ---
 
-# 软件开发的七种浪费
 
 取自Shigeo Shingo的丰田精益制造。与制造业进行对比，是因为比起想象一个软件，我们更容易想象制造一辆汽车。
 
