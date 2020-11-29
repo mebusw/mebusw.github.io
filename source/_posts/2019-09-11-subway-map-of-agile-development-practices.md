@@ -50,7 +50,7 @@ tags:
 <div class="wpb_column vc_column_container vc_col-sm-10" style="position: relative;"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_raw_code wpb_content_element wpb_raw_html">
 		<div class="wpb_wrapper">
-			<div style="font-family: Arial;font-size: 8pt;background-image:url(https://www.agilealliance.org/wp-content/uploads/2016/06/subway.png);background-repeat:no-repeat;background-position: left top; width:900px; height:550px;padding:0 0 0 0; margin: 10px 0 0 -36px;">
+			<div style="font-family: Arial;font-size: 8pt;background-image:url(https://www.uperform.cn/wp-content/uploads/2020/11/subway.png);background-repeat:no-repeat;background-position: left top; width:900px; height:550px;padding:0 0 0 0; margin: 10px 0 0 -36px;">
 <style>a{text-decoration:none;}</style>
   <span class="text" style="width:69px;line-height:150%;text-align: left; position:absolute;top:340px;left:2px; margin-right:0; margin-bottom:0">
     <a href="/glossary-of-agile/sustainable.html">可持续节奏</a>
