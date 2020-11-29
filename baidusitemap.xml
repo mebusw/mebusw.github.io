@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>www.jackyshen.com/2014/08/11/seven-wastes-in-software-development/</loc>
+    <lastmod>2020-11-29</lastmod>
+  </url>  <url>
     <loc>www.jackyshen.com/2020/04/16/agile-performance-evalution-appraisal/</loc>
     <lastmod>2020-11-29</lastmod>
   </url>  <url>
@@ -401,9 +404,6 @@
     <lastmod>2016-02-13</lastmod>
   </url>  <url>
     <loc>www.jackyshen.com/2014/07/21/o2o-local-life-service-only-looks-beautiful/</loc>
-    <lastmod>2016-02-13</lastmod>
-  </url>  <url>
-    <loc>www.jackyshen.com/2014/08/11/seven-wastes-in-software-development/</loc>
     <lastmod>2016-02-13</lastmod>
   </url>  <url>
     <loc>www.jackyshen.com/2014/08/19/running-django-via-iis-on-windows/</loc>
