@@ -5,7 +5,6 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
-      <a href="http://beian.miit.gov.cn">津ICP备2020009017号</a> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       <p>
         <i>友情链接:</i>
         <ul>
@@ -19,7 +18,16 @@
         </ul>
       </p>
     </div>
+    <div>
+      <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=12010102000678" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="http://www.beian.gov.cn/img/ghs.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">津公网安备 12010102000678号</p></a>
+      <br/>
+      <p style="display:inline-block;text-decoration:none;height:20px;line-height:20px;" >
+      <a href="http://beian.miit.gov.cn">津ICP备2020009017号</a> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      </p>
+    </div>
   
+
+
     <%- partial('cnzz-analytics') %>
   </div>
 
