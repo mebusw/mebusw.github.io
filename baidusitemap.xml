@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>www.jackyshen.com/2014/04/07/apply-orid-to-facilitate-agile-retrospective-meeting/</loc>
+    <lastmod>2020-12-16</lastmod>
+  </url>  <url>
     <loc>www.jackyshen.com/2014/08/11/seven-wastes-in-software-development/</loc>
     <lastmod>2020-11-29</lastmod>
   </url>  <url>
@@ -389,9 +392,6 @@
     <lastmod>2016-02-13</lastmod>
   </url>  <url>
     <loc>www.jackyshen.com/2014/03/03/do-you-need-full-code-coverage-of-unit-test/</loc>
-    <lastmod>2016-02-13</lastmod>
-  </url>  <url>
-    <loc>www.jackyshen.com/2014/04/07/apply-orid-to-facilitate-agile-retrospective-meeting/</loc>
     <lastmod>2016-02-13</lastmod>
   </url>  <url>
     <loc>www.jackyshen.com/2014/04/11/codermetrics-analytics-for-improving-software-teams/</loc>
