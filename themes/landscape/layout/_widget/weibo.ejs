@@ -38,11 +38,18 @@
 
   <div class="widget">
     <h3 class="widget-title">59秒看懂敏捷Scrum开发</h3>
-	  <div><iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=w3068s2la53" allowFullScreen="true"  width="100%"></iframe></div>
-    <br/>
+<!-- 	  <iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=w3068s2la53" allowFullScreen="true"  width="100%"></iframe> -->
+    <div id="cinema1" width="100%"></div>
+    
+    <h3 class="widget-title">2020版 Scrum Guides 有什么不同</h3>
+    <div id="cinema2" width="100%"></div>
 
     <h3 class="widget-title">2017敏捷之旅北京站演讲--《禅与复杂》</h3>
-    <iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=b3158b5nr9v" allowFullScreen="true" width="100%"></iframe>
+<!--     <iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=b3158b5nr9v" allowFullScreen="true" width="100%"></iframe>
+ -->
+    <div id="cinema3" width="100%"></div>
+
+    
 
   </div>
 
@@ -52,3 +59,64 @@
 
 
 </div>
+
+<script language="javascript" src="https://imgcache.qq.com/tencentvideo_v1/tvp/js/tvp.player_v2.js" charset="utf-8"></script>
+<script>
+      var video = new tvp.VideoInfo();
+      video.setVid('n3205s0isin');
+      var player =new tvp.Player();
+      player.create({
+        width: '100%',       //播放器的宽度
+        height: '100%', //播放器的高度
+        video: video,       //默认的视频对象
+        modId: 'cinema1',       //默认的 DOM 元素 ID
+        autoplay: false,
+        pic: 'https://www.uperform.cn/wp-content/uploads/2020/12/-2-e1608891018501.png'
+      });
+      player.onplaying = function (vid){
+        console.log(vid)
+      }
+      player.onallended = function (vid){
+        console.log(vid)
+      };
+</script>
+
+<script>
+      var video = new tvp.VideoInfo();
+      video.setVid('e3213ukjw9y');
+      var player =new tvp.Player();
+      player.create({
+        width: '100%',       //播放器的宽度
+        height: '100%', //播放器的高度
+        video: video,       //默认的视频对象
+        modId: 'cinema2',       //默认的 DOM 元素 ID
+        autoplay: false,
+        pic: 'https://www.uperform.cn/wp-content/uploads/2021/01/封面-卡通.png'
+      });
+      player.onplaying = function (vid){
+        console.log(vid)
+      }
+      player.onallended = function (vid){
+        console.log(vid)
+      };
+</script>
+
+<script>
+      var video = new tvp.VideoInfo();
+      video.setVid('b3158b5nr9v');
+      var player =new tvp.Player();
+      player.create({
+        width: '100%',       //播放器的宽度
+        height: '100%', //播放器的高度
+        video: video,       //默认的视频对象
+        modId: 'cinema3',       //默认的 DOM 元素 ID
+        autoplay: false,
+        pic: 'http://www.fodizi.net/uploadfile/201810/7/234155937.jpg'
+      });
+      player.onplaying = function (vid){
+        console.log(vid)
+      }
+      player.onallended = function (vid){
+        console.log(vid)
+      };
+</script>
