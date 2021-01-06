@@ -614,7 +614,7 @@
         <p>敏捷(Agile)已成创新行业潮流，看到许多有着强烈转型意愿的组织，慢慢开始意识到敏捷教练的重要性了，但招一个也不容易，自己培养更不容易。笔者所在的敏捷教练团队，除了提供服务直接地催化客户组织的蜕变发生，另一个愿景就是：培养更多的本土敏捷教练。本文分别阐述是什么是敏捷、教练、敏捷教练，并对发展和培养给出一些建议。</p>
 <p>(本文约5000字，阅读需要15分钟)</p>
 <p>（原文发布于<a href="http://gitbook.cn/m/mazi/article/58c36775b7cea5d11d422f19?isLogArticle=no&amp;readArticle=yes&amp;from=groupmessage&amp;isappinstalled=0）" target="_blank" rel="noopener">http://gitbook.cn/m/mazi/article/58c36775b7cea5d11d422f19?isLogArticle=no&amp;readArticle=yes&amp;from=groupmessage&amp;isappinstalled=0）</a></p>
-<p><img src="//res.uperform.cn/agile-coach1.png" alt></p>
+<p><img src="http://res.uperform.cn/agile-coach1.png" alt></p>
         
           <p class="article-more-link">
             <a href="/2017/04/07/what-is-agile-coach/#more">继续阅读 More</a>
@@ -694,11 +694,18 @@
 
   <div class="widget">
     <h3 class="widget-title">59秒看懂敏捷Scrum开发</h3>
-	  <div><iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=w3068s2la53" allowFullScreen="true"  width="100%"></iframe></div>
-    <br/>
+<!-- 	  <iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=w3068s2la53" allowFullScreen="true"  width="100%"></iframe> -->
+    <div id="cinema1" width="100%"></div>
+    
+    <h3 class="widget-title">2020版 Scrum Guides 有什么不同</h3>
+    <div id="cinema2" width="100%"></div>
 
     <h3 class="widget-title">2017敏捷之旅北京站演讲--《禅与复杂》</h3>
-    <iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=b3158b5nr9v" allowFullScreen="true" width="100%"></iframe>
+<!--     <iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=b3158b5nr9v" allowFullScreen="true" width="100%"></iframe>
+ -->
+    <div id="cinema3" width="100%"></div>
+
+    
 
   </div>
 
@@ -709,6 +716,66 @@
 
 </div>
 
+<script language="javascript" src="https://imgcache.qq.com/tencentvideo_v1/tvp/js/tvp.player_v2.js" charset="utf-8"></script>
+<script>
+      var video = new tvp.VideoInfo();
+      video.setVid('n3205s0isin');
+      var player =new tvp.Player();
+      player.create({
+        width: '100%',       //播放器的宽度
+        height: '100%', //播放器的高度
+        video: video,       //默认的视频对象
+        modId: 'cinema1',       //默认的 DOM 元素 ID
+        autoplay: false,
+        pic: 'https://www.uperform.cn/wp-content/uploads/2020/12/-2-e1608891018501.png'
+      });
+      player.onplaying = function (vid){
+        console.log(vid)
+      }
+      player.onallended = function (vid){
+        console.log(vid)
+      };
+</script>
+
+<script>
+      var video = new tvp.VideoInfo();
+      video.setVid('e3213ukjw9y');
+      var player =new tvp.Player();
+      player.create({
+        width: '100%',       //播放器的宽度
+        height: '100%', //播放器的高度
+        video: video,       //默认的视频对象
+        modId: 'cinema2',       //默认的 DOM 元素 ID
+        autoplay: false,
+        pic: 'https://www.uperform.cn/wp-content/uploads/2021/01/封面-卡通.png'
+      });
+      player.onplaying = function (vid){
+        console.log(vid)
+      }
+      player.onallended = function (vid){
+        console.log(vid)
+      };
+</script>
+
+<script>
+      var video = new tvp.VideoInfo();
+      video.setVid('b3158b5nr9v');
+      var player =new tvp.Player();
+      player.create({
+        width: '100%',       //播放器的宽度
+        height: '100%', //播放器的高度
+        video: video,       //默认的视频对象
+        modId: 'cinema3',       //默认的 DOM 元素 ID
+        autoplay: false,
+        pic: 'http://www.fodizi.net/uploadfile/201810/7/234155937.jpg'
+      });
+      player.onplaying = function (vid){
+        console.log(vid)
+      }
+      player.onallended = function (vid){
+        console.log(vid)
+      };
+</script>
   
     
   <div class="widget-wrap">
@@ -776,7 +843,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2020 Jacky Shen申健<br>
+      &copy; 2021 Jacky Shen申健<br>
       <p>
         <i>友情链接:</i>
         <ul>
@@ -823,6 +890,8 @@
     
 
 <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+
+
 
 
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
