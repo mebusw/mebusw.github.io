@@ -1,4 +1,4 @@
-title: Scrum Master要做些啥？像甘道夫一样。
+title: 敏捷教练Scrum Master要做些啥？像甘道夫一样。
 tags:
   - gandalf
   - scrum master
@@ -9,19 +9,22 @@ categories:
 
 ![gandalf](http://res.uperform.cn//gandalf-with-laptop.jpg)
 
-本文是之前为Scrum Gathering2013准备[《甘道夫--中土世界的Scrum Master》](https://pan.baidu.com/s/1jDq6z8NB8bjSq4c_RQsLDQ)（提取码: qax7）话题时总结的一些想法，更多是从内部做SM时的体会。
+本文是之前为Scrum Gathering2013准备[《甘道夫--中土世界的Scrum Master》](https://pan.baidu.com/s/1jDq6z8NB8bjSq4c_RQsLDQ)（提取码: qax7）话题时总结的一些想法，更多是从内部做ScrumMaster和敏捷教练时的体会。
+（关于SM与Agile Coach的区别，笔者认为不大，SM也不只是懂Scrum就够了。其实可以从团队级和组织级来区别工作范围，而不是纠结名字）
 
 SM是新的角色，很多时候定位不是那么清楚。The Scrum Master is primarily responsible for "How" - using Scrum the right way.
 
 <!--more-->
 ## 敏捷先驱们关于SM的定义不外乎：
-*   Ken Schwaber's discovery: “A _dead Scrum Master_ is a useless Scrum Master.”
-*   "A SM should know what to do, but more important is what should not do"
-*   "We are uncovering better ways of developing software by doing it and helping others do it."
+*   Ken Schwaber's discovery: “A _dead Scrum Master_ is a useless Scrum Master.” 一个死的敏捷教练是无用的敏捷教练
+*   "A Scrum Master should know what to do, but more important is what should not do" 敏捷教练应该知道要做什么，更重要的是，什么不要做
+*   "We are uncovering better ways of developing software by doing it and helping others do it." 我们身体力行并帮助他人来发现更好的软件（或产品）开发方式。
 
 而这里还应该加上：
 **"Survival the new Role", "Fill the gap"**
-SM即是内部转型的教练，同时也承担着来自"Delivery Success"的压力与动力
+SM即是内部转型的敏捷教练，同时也承担着来自"Delivery Success"的压力与动力。
+
+活下去才能持续发挥作用。有所为有所不为，填补所有的鸿沟，帮助组织过渡到更高的生产力，是我当时老板给我的启发和指令，所以不能拘泥于理论。是亲自填坑，还是组织人们去填坑，这才是考验SM功力经验的地方。
 
 
 ## 个人自2008年开始担任SM的一些体会
@@ -56,6 +59,10 @@ SM即是内部转型的教练，同时也承担着来自"Delivery Success"的压
 9.  external vs. internal coach 外部教练与内部教练的区别
 
 如果SM同时兼任团队的 team lead 等职责，恐怕还有更多要做的事情，比如 团队建设、人员培养 （team building/people grow） 等。
+
+## Scrum Master与敏捷教练的职业发展路径
+
+你觉得Scrum Master、敏捷教练与组织中哪些职责岗位接近？可能有：项目经理、资源条线经理（Line Manager）、HRBP或HRG（政委）等。一些公司在外招时，就将其归入项目管理部，也有内部明确SM下一步晋升路径就是资源条线经理的。笔者倒是觉得，如果能带好团队，将来做什么都行，甚至可以出去做咨询甚至创业也好。
 
 
 ## 招聘 Scrum Master 候选人的一些特征（参考JD）
