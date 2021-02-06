@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>敏捷词汇表 -- 敏捷联盟</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  <pre id="source" style="display: none;">
+# 自动化构建 Automated build
+
+
+## 定义
+在软件开发的上下文中，构建是指将开发人员负责的文件和其他资产转换为最终形式或消耗形式的软件产品的过程。该版本可能包括：
+
+- 编译源文件
+- 将已编译文件打包为压缩格式（例如jar，zip）
+- 生产安装程序
+- 创建或更新数据库架构或数据
+- 当这些步骤是可重复的，不需要任何人工干预时，构建将自动进行，并且可以在任何时间执行任何操作，而无需存储源代码控制存储库中的信息。
+
+## 预期收益
+构建自动化是有效使用持续集成的前提。但是，它带来了自己的好处：
+
+- 消除变化的源头，从而消除缺陷；包含大量必要步骤的手动构建过程提供了很多出错的机会
+- 需要彻底记录有关目标环境以及对第三方产品的依赖性的假设
+
+## 常见陷阱
+- 构建自动化的实践不应与持续集成相混淆：持续集成包括尽可能频繁地“执行”构建过程（理想情况下，每当将代码更改签入源代码控制存储库中）并“验证”构建过程的正确性。最终产品，特别是通过单元测试
+- 特别是，持续集成工具（CruiseControl，Hudson等）是与构建自动化工具（make，Ant，Maven，rake等）不同的类别。
+- 能够从开发环境（IDE）内触发某些构建操作通常是不够的：由于经常在IDE中不支持某些构建操作，因此必须有可能在IDE外部执行构建
+- 构建过程的持续时间应少于10分钟，包括执行自动测试的时间；超出这个数量级，团队通常很难实现持续整合
+
+## 起源
+- 1977年：为Unix系统创建“ make”工具-自动进行软件构建的原理并不是一个新主意
+- 1990年代：由于RAD工具和IDE的普及，“ make”类工具获得了不同的声誉
+- 2000年代：尽管实践不是新手，也不是仅限于敏捷团队，但这部分是由于敏捷实践复兴了“ make”类型的构建自动化
+
+## 使用迹象
+确定团队是否实践构建自动化的最佳方法是一个意外测试：请团队提供该产品的可安装版本。测量获得发布所需的时间，然后尝试安装或部署到现成的PC或环境中-开发团队之前尚未设置过该环境。在此过程中出现的任何“惊奇”都会建议改进自动化构建过程的方法。
+
+
+
+  </pre>
+  <p><a href="http://jackyshen.com/2019/09/11/subway-map-of-agile-development-practices/">点击看敏捷名词地铁线路全图 </a>  <p>
+  <!-- <script>
+    document.getElementById('content').innerHTML =
+      marked('# Marked in the browser\n\nRendered by **marked**.');
+  </script>
+   -->  
+  <script>
+    document.getElementById('content').innerHTML =
+      marked(document.getElementById('source').innerHTML);
+  </script>
+</body>
+</html>
+
+

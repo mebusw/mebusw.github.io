@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>敏捷词汇表 -- 敏捷联盟</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  <pre id="source" style="display: none;">
+# 给定-当-则 Given-When-Then
+
+
+## 定义
+给定-当-则 的形式是一个模板，旨在指导为一个用户故事编写验收测试：
+
+- （给定）一些上下文
+- （当）执行某些操作
+- （则）应获得一组特定的可观察到的结果
+
+一个例子：
+
+- 给定我的银行帐户已入帐，而且我最近没有提款，
+- 当我尝试取款少于我的卡限额时，
+- 则提款应完成而不会出现错误或警告
+
+JBehave，RSpec或Cucumber之类的工具鼓励使用此模板，尽管与任何工具无关，它也可以纯粹用作试探法。
+
+  </pre>
+  <p><a href="http://jackyshen.com/2019/09/11/subway-map-of-agile-development-practices/">点击看敏捷名词地铁线路全图 </a>  <p>
+  <!-- <script>
+    document.getElementById('content').innerHTML =
+      marked('# Marked in the browser\n\nRendered by **marked**.');
+  </script>
+   -->  
+  <script>
+    document.getElementById('content').innerHTML =
+      marked(document.getElementById('source').innerHTML);
+  </script>
+</body>
+</html>
+
+

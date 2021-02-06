@@ -22,7 +22,7 @@ VUCA和互联网时代，问题、方案、人员、环境很多都越来越难�
 
 <!--more-->
 
-![enter image description here](http://fengniao.fn.img-space.com/t_s600x450/g1/M00/06/8F/Cg-4rFbiKZeIcafiAADq_vVpKLQAAQUigF3EzAAAOsW534.jpg)
+![](/media/canon.jpg)
 
 作者在研究了包括富士施乐，佳能，本田，NEC，爱普生，IBM，兄弟，3M，施乐和惠普（注意，所研究项目是产品整体研发，研究对象都是当时的高科技产品：复印机、相机、个人电脑等，而不单纯是软件开发和交付）在内等多家美国日本的产品创新研发企业后，研究者提出了六点特征，组合起来可以提高产品研发速度与灵活性，提高企业竞争力：
 
@@ -169,7 +169,7 @@ Sprint Planning时PO还要与团队一起定义本迭代的Sprint Goal，显然�
 
 每个Sprint Planning时候拆分PBI，尽量拆小、拆独立，破解复杂性，破解依赖性，朝着“单件流”方向改进。降低可变性是有帮助的，但不可能每个需求都拆成一样大小，在这个过程中，[计划扑克™](http://www.uperform.cn/planning-poker/)和相对估算有助于团队尽快达成共识。有的Scrum团队还引入Product Backlog Refinement实践，在每个迭代为下一个迭代提前进行需求梳理，避免在迭代开始后再花费时间进行需求讨论，从而进一步提升下个迭代的流畅程度。这些梳理活动是一种“整流”活动，大家可以想象北京南站进站口迂回的围栏，虽然增加乘客进站的步行距离，但每个乘客进站的时间反而是缩短了。如果大家都抢着进入一个狭窄的入口，反而谁都走不快。
 
-![enter image description here](http://dmr.nosdn.127.net/65kmsrsLAv-0NftIhKgHcw==/6896093022575470856.jpg)
+![](/media/北京南站拥堵.jpg)
 
 Sprint中承诺的PBI不变也有助于流动速度，这也是一种强行压制可变性的手段。想象在拥堵的地方不断有人插队，最后就是导致整个系统都变得缓慢。对于变化非常剧烈的情况处理，请见后续章节。
 

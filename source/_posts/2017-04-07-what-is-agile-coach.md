@@ -15,7 +15,7 @@ tags:
 （原文发布于http://gitbook.cn/m/mazi/article/58c36775b7cea5d11d422f19?isLogArticle=no&readArticle=yes&from=groupmessage&isappinstalled=0）
 
 
-![](http://res.uperform.cn/agile-coach1.png)
+![gandalf](/media/gandalf-with-laptop.jpg)
 
 <!--more-->
 
@@ -27,7 +27,7 @@ tags:
 
 ["敏捷"](http://agilemanifesto.org/)是一种思维方式，核心是敏捷宣言即价值观，敏捷大树上结了很多果实，以[Scrum](http://scrumalliance.org)流派为例，它借鉴了精益思想、PDCA戴明环等，还有来自于软件工程中的一些具体实践。所以敏捷并非只适用于IT，其蕴含的思想可以贯彻整个商业闭环以及日常生活中。
 
-![](http://res.uperform.cn/agile-coach2.png)
+![](/media/老子.png)
 
 冥冥之中与几千年前的《道德经》遥相呼应，*”反者道之动，弱者道之用。天下万物生于有，有生于无。”* 世事无常，万物都在不断的循环之中变化。敏捷思维就是不确定和复杂环境中，建立低成本地响应变化的能力，让价值能顺畅地流动，保持轻松和优雅，这种灵活性称为敏捷性(agility)。
 
@@ -45,7 +45,7 @@ tags:
 
 1970年代，美国网球教练Timothy Gallwey写了一本小书[《网球的内心游戏》](/2013/12/01/the-inner-game-of-tennis)，某天无奈借调一名不会打网球的滑雪教练来代班。他叮嘱说：“你只要教他们把注意力集中在网球上，千万不要给他们做示范动作。” 滑雪教练依计行事。一个月后，他惊奇地发现，滑雪教练教授的学员普遍比职业的网球教练所教授的学员进步要快！他好奇地发现，滑雪教练因不会打网球，无法做示范，只好要求学员把注意力集中在网球上，并问一些开放性问题。学员排除了指挥和纠正，保持放松，脑海里有了优良表现的想象，身体有了感觉，那么他的绩效就会改善。
 
-![](http://res.uperform.cn/agile-coach3.png)
+![](/media/the-inner-game-of-tennis.png)
 
 这和我们的主观感受是一致的：任何球类运动，“如果老是想怎么打反而就打得不好了。别人越评判和出主意越发挥失常。”后来AT&T公司成为了他的首位企业教练客户，尽管他对通信行业和企业管理一无所知！再后来，更多专家结合咨询和心理学对教练技术不断丰富，形成了NLP理论和诸多的教练技术(Coaching)流派，组建了[ICF国际教练联盟](https://www.icf.com/)。教练技术成为激发潜能、提高企业和个人绩效、提升管理和领导力水平的有效方法。
 
@@ -53,7 +53,7 @@ tags:
 
 ### 2.2 教练技术的简明原理
 
-![](http://res.uperform.cn/agile-coach4.png)
+![](/media/unconscious-mind-iceberg.png)
 
 根据冰山理论，人的潜意识最先做出判断，人们下意识会对变化和未知表现出抗拒，这是一种生物的自我保护远离危险的天性。很多时候，人们容易受到情绪影响，相信直觉做出判断，而非理性决定，比如买房签约时被中介催促的那一刻。无论如何，真正自己认同的决定，一定是自己做出的。《瞬变》与《The Inner Game of Tennis》书中都提到了类似的比喻，即理性思考好比骑象者，而真正在行动的大象是受感性驱动的。我在台北看到孙中山先生手书的“知难行易”四个大字，深以为然。
 
@@ -65,7 +65,7 @@ tags:
 
 ### 2.3 内容与过程矩阵
 
-![](http://res.uperform.cn/agile-coachAgileCoachCompetency3.JPG)
+![](/media/agile-coachAgileCoachCompetency.jpg)
 
 专业教练也是分专业的，譬如健身教练、亲子教练、高管教练，需要结合教练技术与某个领域的经验知识。如果提供的服务更多在内容上面，就是传统的顾问(Consulting)角色，偏向于告知。而如果服务更多在探索的过程上，就更加偏向引导(Facilitating)，引导师是中立角色，不对贡献任何内容。两者结合，教练(Coaching)既然深入专业背景中，又要帮助客户进行自我探索。所以就需要有更加深入和专注的发展方向。圈子里有很多朋友都是从专业领域出发，逐渐认识到教练技能的重要性，然后开始学习专业的教练技术。
 
@@ -81,7 +81,7 @@ tags:
 
 ### 3.2 教练和顾问的区别
 
-![](http://res.uperform.cn/agile-coachSoftSkill-Performance.JPG)
+![](/media/agile-coachSoftSkill-Performance.jpg)
 
 硬技能，即客观的、理论的、科学的知识在早期对绩效提升是起主要作用的。比如你代码不会写，那就是不会写，所以一开始要通过培训和刻意练习，去发展硬技能。但是到了一定程度以后，起作用更多是[软技能](http://www.jackyshen.com/2016/05/04/soft-skills-of-technical-leaders-and-managers/)，包括如何去了解对方的意图和情绪，有效沟通协作，才能形成团队文化。
 
@@ -94,7 +94,7 @@ tags:
 
 好的培训可以聚焦学员，从感性和理性方面都得到认同和提升。但问题在于培训往往缺乏后续的支持、鼓励、问责，导致培训效果难以持续，较少引发改变。而培训后结合教练与辅导，是将培训转化为实际工作的关键机制，可以有效帮助学员将所学融入到自身工作，建立自己认同的行动计划并实施。据统计，88%的生产力提升是在有教练支持的培训下获得的[(Source: Chartered Institute of Personnel + Development UK)](https://www.slideshare.net/CommunicationCoach/growing-coaches-developing-coaching-capability-in-your-organization-61724562)
 
-![](http://res.uperform.cn/agile-coachwhy-coaching-vs-training.png)
+![](/media/agile-coachwhy-coaching-vs-training.png)
 
 敏捷教练的目标是在离开后，组织能否依靠内在源动力“持续地自我指导和改进”。正如合气道的练武三个阶段，"守破离"，师傅领进门，修行在个人。我所在的敏捷教练团队从Google那里借鉴来一句话，**“让客户越早离开我们越好”**。
 
@@ -103,19 +103,20 @@ tags:
 
 下面列举了几种国际上著名的敏捷教练能力模型，各个门派各不相同，但其实本质相通。
 
-![](http://res.uperform.cn/agile-coachagile-coach-1.png)
+![](/media/agile-coachagile-coach-1.png)
 
 (Source: "Agile Coaching", Rachel Davies & Liz Sadley)
 
-![](http://res.uperform.cn/agile-coachagile-coach-2.png)
+![](/media/agile-coachagile-coach-2.png)
+
 
 (Source: "Coaching Agile Teams (敏捷教练修炼之道)", Lyssa Adkins, agilecoachinginstitute.com)
 
-![](http://res.uperform.cn/agile-coachagile-coach-3.png)
+![](/media/agile-coachagile-coach-3.png)
 
 (Source: Esther Derby & Don Grey)
 
-![](http://res.uperform.cn/agile-coachagile-coach-4.png)
+![](/media/agile-coachagile-coach-4.png)
 
 (Source: ScrumAlliance.org)
 
@@ -137,7 +138,7 @@ tags:
 
 ”敏捷教练“未来跳出单个团队而在组织层面建立更广泛的领导力，甚至专职为其他公司提供服务。有些敏捷教练被拉去合伙创业，对方看中的就是这些”T型人才”身上良好的跨界能力、学习能力和协作能力。你可得到更高的影响力，更自由的选择，更为可观的收入。
 
-![](http://res.uperform.cn/agile-coachcompany-with-coaches.png)
+![](/media/agile-coachcompany-with-coaches.png)
 
 国外的Scrum Master职位已经供不应求，而且进入了[美国职位高薪榜第22位](https://view.inews.qq.com/a/20170310A05SKZ00)。国内的公司，包括民企外企，在linkedin上也经常能看到这个职位需求，当然ScrumMaster还只是敏捷教练的初级版本。目前大部分公司因为不熟悉这个专业，难以在内部进行培养，于是就出现了敏捷教练供不应求的局面。经常有朋友请我推荐敏捷教练、ScrumMaster到公司任职，可惜我却没法推荐给他们，因为合适的敏捷教练人才真的是凤毛麟角。
 

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>敏捷词汇表 -- 敏捷联盟</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  <pre id="source" style="display: none;">
+# 探索性测试 Exploratory testing
+
+
+## 定义
+探索性测试从严格意义上讲是一种“实践”，一种测试软件的风格或方法，通常与“脚本测试”形成对比，并且具有以下几个方面的特点：
+
+- 它强调测试人员的自主性，技能和创造力，就像其他敏捷实践强调开发人员的这些素质一样；
+- 它建议在整个项目中以交错方式执行各种与测试相关的活动（例如测试设计，测试执行和结果解释），而不是以固定的顺序和特定的“阶段”进行；
+- 它强调了这些技术的相互支持性质，以及需要多种测试方法而非正式的“测试计划”
+
+敏捷团队倾向于在“开发人员”和“测试人员”之间转移和重划角色边界，这主要是由于开发人员大量使用自动化单元测试和功能测试的结果–从某种意义上说，这是脚本测试的一种极端形式。这些活动不足以确保质量，敏捷团队可以在拥有成熟测试技能的团队成员中找到有价值的资产（无论其工作描述中是否包含“测试者”一词）。这些技能将以探索性方式更有效地部署到敏捷团队中，因为与“脚本测试”风格相比，这种风格与敏捷方法更加一致。
+
+## 也称为
+“探索性测试”一词已在一群声称与“测试思想流派”（称为“情境驱动”流派）建立联系的测试人员社区中普及，他们与其他主张采用不同测试方法的流派区别开来：工厂，质量保证，上下文驱动或敏捷。
+
+## 起源
+- 2001年：Kaner，Bach和Pettichord的“ 软件测试中的经验教训 ”中介绍了一些探索性技术以及“上下文驱动的软件测试流派”。
+- 2001年：Brian Marick成为“上下文驱动”软件测试学校的知名成员，参加了Snowbird活动，该活动导致了敏捷宣言的出版；他经常将自己描述为该团队的“令牌测试员”，从而将一些探索性测试中的实践意识带给了敏捷社区
+- 2008年：Cem Kaner给出了探索性测试的新兴定义，反映了这种测试方法的不断完善
+
+敏捷运动无疑促进了开发人员社区对测试活动的重新兴趣，而以前人们并不认为测试活动需要高水平的技能。然而，从某种程度上来说，由于将一些与测试相关的职责转移到开发人员的角色，这也导致对熟练测试人员价值的尊重减少。尽管存在各种影响，但作为更广泛的“敏捷测试”技能集的一部分，探索性测试仍在慢慢获得认可。
+
+  </pre>
+  <p><a href="http://jackyshen.com/2019/09/11/subway-map-of-agile-development-practices/">点击看敏捷名词地铁线路全图 </a>  <p>
+  <!-- <script>
+    document.getElementById('content').innerHTML =
+      marked('# Marked in the browser\n\nRendered by **marked**.');
+  </script>
+   -->  
+  <script>
+    document.getElementById('content').innerHTML =
+      marked(document.getElementById('source').innerHTML);
+  </script>
+</body>
+</html>
+
+

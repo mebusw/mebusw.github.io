@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>敏捷词汇表 -- 敏捷联盟</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  <pre id="source" style="display: none;">
+# 时间盒 Timebox
+
+
+## 定义
+时间框是一个预先约定的时间段，在此期间，一个人或团队为完成某个目标而稳定地工作。时间框方法不是让工作继续到达到目标并评估所花费的时间，而是在达到时间限制时停止工作并评估完成的工作。
+
+可以在不同的时间范围内使用时间盒。在“番茄工作法”举办个人作品约25分钟的时间盒。在完全不同的领域中，“快速约会”以其7分钟的时间盒而闻名。时间范围从一天到几个月不等。
+
+有时间限制的工作的关键规则是，工作应在时间结束时停止，并检查进度：目标是否已实现？如果目标包含多个任务，则目标是否已部分实现？
+
+## 起源
+有时间限制的迭代是早期敏捷方法（尤其是Scrum和Extreme Programming）的显着特征，但它们具有更早的历史：
+
+- 1988年：“时间盒”被描述为斯科特·舒尔茨（Scott Schultz）的“快速迭代生产原型”方法的基石，该方法在杜邦公司的分拆中使用，信息工程协会
+- 1991年：James Martin在“快速应用程序开发”一章中详细描述了“时间框”的细节。
+
+  </pre>
+  <p><a href="http://jackyshen.com/2019/09/11/subway-map-of-agile-development-practices/">点击看敏捷名词地铁线路全图 </a>  <p>
+  <!-- <script>
+    document.getElementById('content').innerHTML =
+      marked('# Marked in the browser\n\nRendered by **marked**.');
+  </script>
+   -->  
+  <script>
+    document.getElementById('content').innerHTML =
+      marked(document.getElementById('source').innerHTML);
+  </script>
+</body>
+</html>
+
+

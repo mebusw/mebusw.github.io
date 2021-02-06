@@ -17,7 +17,7 @@ categories:
 2. [我是怎样成为敏捷教练的？](/2016/03/26/my-agile-coach-journey)
 3. [申请导师级Certified Team Coach认证的攻略秘籍](/2016/03/26/tips-to-certified-team-coach-application)
 
-![](http://img.article.pchome.net/00/23/47/31/pic_lib/wm/fc003.jpg)
+![](/media/sailing-boat.jpg)
 
 # 初识敏捷
 

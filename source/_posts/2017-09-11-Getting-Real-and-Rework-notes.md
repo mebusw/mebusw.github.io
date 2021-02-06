@@ -7,7 +7,7 @@ tags:
         - scaling
 ---
 
-![](http://res.uperform.cn//%E8%9A%82%E8%9A%81%E5%86%9B%E5%9B%A2%E4%B8%8E%E5%A4%A7%E8%B1%A1.jpg)
+![](/media/蚂蚁军团与大象.jpg)
 
 
 飞机上读完了来自著名敏捷产品开发小公司--37signals的两本书，[Getting Real](http://gettingreal.37signals.com)《达成现实》和 Rework 《重塑工作》，后一本是前一半的升级版。作者是大名鼎鼎的Jason Fried / David Heinemeier Hansson / Matthew Linderman。讲述在VUCA(乌卡)互联网时代，用聪明、快速、容易的方式构建一个成功的产品。

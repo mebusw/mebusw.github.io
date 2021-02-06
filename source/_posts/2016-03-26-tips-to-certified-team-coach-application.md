@@ -19,7 +19,7 @@ categories:
 3. [申请导师级Certified Team Coach认证的攻略秘籍](/2016/03/26/tips-to-certified-team-coach-application)
 
 
-![](http://res.uperform.cn//Seals-Final-CTC-logo.png?imageView/2/w/200/h/200)
+![](https://www.uperform.cn/wp-content/uploads/2020/07/%E6%88%AA%E5%B1%8F2020-07-31-22.22.39-1024x651.png)
 
 
 

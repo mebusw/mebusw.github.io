@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>敏捷词汇表 -- 敏捷联盟</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  <pre id="source" style="display: none;">
+# 迭代 Iterations
+
+
+## 定义
+在敏捷项目的上下文中，迭代是一个进行开发的时间表，其持续时间为：
+
+- 可能因项目而异，通常在1-4周之间
+- 在大多数情况下在给定项目的持续时间内是固定的
+
+敏捷方法的一个关键特征是一个基本假设，即一个项目完全由一系列迭代组成，除了开发之前非常短暂的“构想和计划”阶段，以及之后类似短暂的“关闭”阶段。
+
+通常，迭代与日历周保持一致，通常从星期一开始，到星期五结束。与明确建议相比，这更多的是方便问题，许多团队采用不同的约定。
+
+固定的迭代长度为团队提供了一种简单的方法，可以基于速度和剩余工作量来获得对项目剩余工期的通常准确（尽管不是很精确）的估计。
+
+## 也称为
+在Scrum的社区历来使用的术语“短距离冲刺（Sprint）”，但两者时下交替使用，而不连接到一个或其他任何特定的内涵。
+
+XP将迭代称为“每周的循环周期”。
+
+敏捷地使用“迭代”一词实质上是“时间盒”的代名词，偏离了“重复行为”的日常含义，从抽象意义上更确切地说是“一次重复”；它是“ 迭代开发”的意思所传达的更平常的含义。
+
+## 起源
+- 1991年：James Martin在他的“ 快速应用程序开发 ”中描述了RAD，这可能是第一种方法，它在松散的意义上将时间装箱和“迭代”紧密地结合在一起，即“整个软件开发过程的重复”。
+- 1995年：关于Scrum的最早著作将“冲刺”的概念引入了迭代，尽管其持续时间是可变的
+- 1998年：关于极限编程的第一篇著作描述了固定长度的三周迭代，并强调了该方案在获得对进度性能的不精确但准确的反馈方面的优势
+
+  </pre>
+  <p><a href="http://jackyshen.com/2019/09/11/subway-map-of-agile-development-practices/">点击看敏捷名词地铁线路全图 </a>  <p>
+  <!-- <script>
+    document.getElementById('content').innerHTML =
+      marked('# Marked in the browser\n\nRendered by **marked**.');
+  </script>
+   -->  
+  <script>
+    document.getElementById('content').innerHTML =
+      marked(document.getElementById('source').innerHTML);
+  </script>
+</body>
+</html>
+
+

@@ -7,7 +7,7 @@ categories:
   - scrum
 ---
 
-![gandalf](http://res.uperform.cn//gandalf-with-laptop.jpg)
+![gandalf](/media/gandalf-with-laptop.jpg)
 
 本文是之前为Scrum Gathering2013准备[《甘道夫--中土世界的Scrum Master》](https://pan.baidu.com/s/1jDq6z8NB8bjSq4c_RQsLDQ)（提取码: qax7）话题时总结的一些想法，更多是从内部做ScrumMaster和敏捷教练时的体会。
 （关于SM与Agile Coach的区别，笔者认为不大，SM也不只是懂Scrum就够了。其实可以从团队级和组织级来区别工作范围，而不是纠结名字）

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>敏捷词汇表 -- 敏捷联盟</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  <pre id="source" style="display: none;">
+# 迭代式开发 Iterative development
+
+
+## 定义
+敏捷项目在允许“重复”软件开发活动以及可能“重新访问”相同工作产品的范围内是迭代的（有时使用短语“计划的返工”；重构是一个很好的例子）。
+
+它们在第三种不太重要的意义上是迭代的，因为它通常是围绕固定日历长度的一系列迭代进行构造的。但是，某些看板调度方法（如看板）在以后的意义上取消了迭代，但保留了多次重复和计划的返工的其他方面。
+
+几乎所有的敏捷项目都是增量的和迭代的。但是，可以使用也不是增量的迭代策略。例如，一种“两次构建”的策略，其中一个策略是首先创建一个一次性原型来收集用户反馈，然后使用从该经验中获得的见解来构建“真实事物”。原型设计一定是一种迭代策略，并且可能是迭代软件开发思想发展的先驱。
+
+## 起源
+迭代开发的想法比敏捷早-至少十年或两年。
+
+- 1984年：Barry Boehm对使用原型的项目进行的早期实证研究（本质上是一种迭代策略）表明，迭代方法最初在那个时期开始受到重视，这很可能是由诸如个人计算机和图形用户界面的兴起等因素驱动的
+- 1986年：Barry Boehm在一篇著名的论文中提出了“ 软件开发和增强的螺旋模型 ”，这是一种迭代模型，旨在通过任何适当的方法来识别和减少风险（尽管所提供的“典型”示例是基于原型的）
+- 1995年：Alistair Cockburn的一篇文章“ 应用程序开发中人为因素的增长 ”，提出了迭代方法逐渐获得认可的一个主要原因：软件开发的瓶颈正在转向（个人和组织）学习，而人类学习本质上是迭代，反复试验过程
+
+  </pre>
+  <p><a href="http://jackyshen.com/2019/09/11/subway-map-of-agile-development-practices/">点击看敏捷名词地铁线路全图 </a>  <p>
+  <!-- <script>
+    document.getElementById('content').innerHTML =
+      marked('# Marked in the browser\n\nRendered by **marked**.');
+  </script>
+   -->  
+  <script>
+    document.getElementById('content').innerHTML =
+      marked(document.getElementById('source').innerHTML);
+  </script>
+</body>
+</html>
+
+

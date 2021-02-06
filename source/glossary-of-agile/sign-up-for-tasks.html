@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>敏捷词汇表 -- 敏捷联盟</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  <pre id="source" style="display: none;">
+# 认领任务 Sign up
+
+
+## 定义
+敏捷开发团队的成员通常选择要执行的任务，而不是由经理分配工作。
+
+他们的选择可以与其他团队成员进行讨论。这些讨论通常在任务板前的会议中进行，通常是在日常会议中进行。
+
+签署任务通常由索引卡上的注释或代表所讨论任务的便笺来表示。一些团队使用临时贴在任务上的较小的便签，照片肖像或“化身”。
+
+## 常见陷阱
+尽管很少强调将其作为成熟的敏捷实践，但基于自我选择而不是由第三方（无论是项目经理，首席开发人员还是其他角色）分配的任务分配似乎是重要的，可能是必要的功能工作。
+
+在过渡到敏捷时，某些团队可能会暂时保留项目管理角色，包括将任务分配给其他团队成员的权限。但是从长远来看，这与大多数其他实践不兼容。因此，未能明确解决这一领域可能会危及这种过渡。
+
+## 起源
+- 1998年：关于极限编程的最早著作提到“分配的任务”与“选择的任务”是“旧方法”与“极限方法”之间的显着差异之一。
+– 有关更多信息，请参见：http://guide.agilealliance.org/guide/sign-up-for-tasks.html#sthash.frkUagOG.dpuf
+
+
+
+
+
+
+  </pre>
+  <p><a href="http://jackyshen.com/2019/09/11/subway-map-of-agile-development-practices/">点击看敏捷名词地铁线路全图 </a>  <p>
+  <!-- <script>
+    document.getElementById('content').innerHTML =
+      marked('# Marked in the browser\n\nRendered by **marked**.');
+  </script>
+   -->  
+  <script>
+    document.getElementById('content').innerHTML =
+      marked(document.getElementById('source').innerHTML);
+  </script>
+</body>
+</html>
+
+

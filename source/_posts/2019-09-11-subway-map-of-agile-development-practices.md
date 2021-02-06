@@ -1,4 +1,4 @@
-title: subway-map-of-agile-development-practices
+title: 敏捷开发实践名词术语图谱（地铁线路图）
 date: 2019-09-11 11:47:14
 tags:
 	- agile

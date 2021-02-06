@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>敏捷词汇表 -- 敏捷联盟</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  <pre id="source" style="display: none;">
+# 快速设计会 Quick design session
+
+
+## 定义
+当团队赞成“ 简单设计 ”时，开发人员通常会立即处理本地设计决策，但会警惕可能会产生深远影响的设计选择。
+
+当出现这种选择时，两个或多个开发人员可能会使用CRC卡等设计辅助工具在白板上开会进行快速设计会议。
+
+有效的设计会议的一些重要准则是：
+
+- 考虑几种可靠的替代方案（“稻草人”提议不计算在内），理想情况下为三个或更多，以便最终选择基于简单性或概念完整性之类的考虑；
+- 根据具体的具体情况评估每种选择；例如，设想与给定用户故事相关的验收测试  将在每种可能的设计下进行。
+
+## 也称为
+也称为“及时设计”。
+
+## 起源
+- 2001年：“ 已安装的极限编程 ”中介绍了“快速设计会话”
+
+## 预期收益
+在敏捷项目中，设计活动分散在整个工作期间，而不是一个明确的前期阶段。
+
+但是，“设计本身”仍然是一项必要的活动，仅仅取消早期的设计阶段并不能确保该活动得到执行。
+
+快速设计会议满足了更多战略决策的需求，而重构  则解决了本地设计问题。
+
+## 学术出版物
+一些研究存在着大部分的人种学的性质，这往往要确认敏捷偏爱快，短暂的设计和建模，例如关于这个话题，
+“ 与可擦除油墨思考：特设白板上使用的协同设计 ”鞠，尼利，威诺格拉德和莱弗
+
+
+
+  </pre>
+  <p><a href="http://jackyshen.com/2019/09/11/subway-map-of-agile-development-practices/">点击看敏捷名词地铁线路全图 </a>  <p>
+  <!-- <script>
+    document.getElementById('content').innerHTML =
+      marked('# Marked in the browser\n\nRendered by **marked**.');
+  </script>
+   -->  
+  <script>
+    document.getElementById('content').innerHTML =
+      marked(document.getElementById('source').innerHTML);
+  </script>
+</body>
+</html>
+
+

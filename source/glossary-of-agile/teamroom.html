@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>敏捷词汇表 -- 敏捷联盟</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  <pre id="source" style="display: none;">
+# 团队作战室 Team room
+
+
+## 定义
+团队（最好是整个团队，包括产品所有者或领域专家）在项目进行期间要使用专用空间，与其他小组的活动区分开。
+
+该空间提供了团队可能需要的各种便利设施：工作站（如果团队采用这种做法，则适合配对），白板和活动挂图，用于显示任务板的墙面空间，项目计划或其他图表等。
+
+## 常见陷阱
+- 分离标准很重要，“开放空间 ”不是这种实践的充分实例；一些研究表明，无关活动引起的噪音（主要是谈话）对项目工作所需的注意力有破坏性影响，但是，不容许听与项目有关的谈话，但会增强团队合作。隔间式工作环境管理“两全其美”
+## 预期收益
+- 团队活动室对Alistair Cockburn所说的“ 渗透性交流 ” 是有利的：在平衡条件下，需要信息的人和拥有信息的人之间的信息传播；而不是依靠明确的通信机制（电话，电子邮件，IM或会议），这种传播是通过“环境”手段进行的，例如窃听他人的对话或查看信息辐射者
+## 学术出版物
+对于有利于整个团队绩效的“环境”条件，有大量的研究，其中一些特别针对软件团队。尽管通常很难牢固地确定对生产力的“任何”主张，但是由于软件努力生产力这一概念的模棱两可和难以捉摸，这些研究似乎表明，隔离范围的任何一端都能产生最佳结果： “一个”办公室或“专用”团队室。
+
+尽管开放空间办公室具有经济吸引力，并且能够对工人进行不显眼的监视而具有更微妙的优势，但很可能是两全其美，尤其是在其“立方体”化身中。
+
+- 卡珀·琼斯（Capers Jones）的《办公空间如何影响编程生产力》研究了一些早期研究，并倾向于得出结论支持单个办公室（1995）。
+- Offices that Work是2001年有关“小型，快速发展的公司的工作空间策略”研究的报告，研究了开放性与隐私权，集中度和沟通性之间的权衡
+- 最近的一项研究，即通过团队并置进行快速软件开发，基于主观报告，访谈和观察数据，讨论了似乎证实了团队活动室优势的证据（2002年）
+– 有关更多信息，请参见：http://guide.agilealliance.org/guide/teamroom#sthash.GGZbeRuZ.dpuf
+
+
+
+  </pre>
+  <p><a href="http://jackyshen.com/2019/09/11/subway-map-of-agile-development-practices/">点击看敏捷名词地铁线路全图 </a>  <p>
+  <!-- <script>
+    document.getElementById('content').innerHTML =
+      marked('# Marked in the browser\n\nRendered by **marked**.');
+  </script>
+   -->  
+  <script>
+    document.getElementById('content').innerHTML =
+      marked(document.getElementById('source').innerHTML);
+  </script>
+</body>
+</html>
+
+

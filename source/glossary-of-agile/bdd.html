@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>敏捷词汇表 -- 敏捷联盟</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  <pre id="source" style="display: none;">
+# 行为驱动开发 BDD
+
+
+## 定义
+行为驱动开发（BDD）是对来自测试驱动开发（TDD）和验收测试驱动开发（ATDD）的实践的综合和完善。BDD通过以下策略增强了TDD和ATDD：
+
+- 将“五个为什么”原则应用于每个建议的用户案例，以便其目的与业务成果明确相关
+- “从外而内”思考，换句话说，仅实施那些对这些业务成果最直接贡献的行为，从而最大程度地减少浪费
+- 用一种表示法来描述行为，领域专家，测试人员和开发人员可以直接访问它们，从而改善沟通
+- 一直将这些技术应用到软件的最低抽象级别，尤其要注意行为的分布，以便使演化保持便宜
+
+## 也称为
+BDD也被称为示例规范。
+
+## 预期收益
+已经使用TDD或ATDD的团队可能出于以下几个原因而考虑使用BDD：
+
+- BDD为组织开发人员，测试人员和领域专家之间的对话提供了更精确的指导
+- 与Fit / FitNesse之类的工具相比，源自BDD方法的符号（尤其是给定的画布）更接近日常语言，并且学习曲线更浅
+- 针对BDD方法的工具通常可以根据BDD“规范”自动生成技术和最终用户文档
+
+## 常见陷阱
+尽管最早提出BDD方法的Dan North声称该方法旨在解决TDD教学中反复出现的问题，但很明显，BDD比TDD需要更广泛的概念，并且似乎很难推荐新手程序员应该首先学习BDD，而无需事先了解TDD概念
+
+BDD的使用不需要特定的工具或编程语言，并且主要是一种概念方法；使其成为纯粹的技术实践或依赖于特定工具的实践将完全忽略这一点
+
+## 起源
+- 2003：BDD的始祖agiledox是由Chris Stevenson编写的从JUnit测试自动生成技术文档的工具
+- 2004年：克里斯·马特斯（Chris Matts）和丹·诺斯（Dan North）提出了“  何时提供”  画布，将BDD的范围扩展到业务分析和文档
+- 2004年：为了检验他关于不强调“测试”术语以支持“行为”的假设，Dan North发布了JBehave
+- 2006年：Dan North在“介绍BDD”中记录了该方法  
+- 2006-2009年：发布了一些新工具来确认社区对BDD的投资，例如RSpec或更近期的版本，Cucumber和GivWenZen
+
+## 使用迹象
+- 使用BDD的团队应该能够以“用户故事”的形式提供大量“功能文档”，并在其中添加可执行方案或示例。
+- BDD从业人员不愿提及“测试”，而更喜欢术语“方案”和“规范”。按照目前的实践，BDD旨在通常使用（User Stories）的角色特征矩阵以及以给定时间形式表示的示例或场景在一个地方收集对用户有价值的结果规范; 这两个符号通常被认为是最易读的。
+- 在强调“规范”一词时，BDD的目的是对许多敏捷团队认为是独立活动的问题提供单一答案：一方面创建单元测试和“技术”代码，另一方面创建功能测试和“功能” “ 另一方面。这将导致开发人员，测试专家和领域专家之间的协作更加紧密。
+- 使用BDD的从业者或团队更不用说“班级的单元测试”，而是讲“班级行为的规范”。这反映出人们更加关注此类规范在文档中的作用：它们的名称应更具表达性，并在以给定的格式编写时以技术文档形式完成描述。
+- 首选术语不是“功能测试”，而是“产品行为规范”。BDD的技术方面与鼓励与客户，用户和领域专家进行更有效对话的技术处于同等地位。
+- 除了TDD中已经存在的重构技术外，BDD中的设计理念还特别注意在班级之间适当分配责任，这导致其从业者强调“模拟”。
+
+## 进一步阅读
+Dan North 撰写的“介绍BDD”（2006年）
+
+Liz Keogh着的“将TDD转换为BDD”（2009年）
+
+Tavares，Rezende，dos Santos，Manhaes，de Carvalho（2010）用Python语言实现行为驱动开发的工具栈
+
+  </pre>
+  <p><a href="http://jackyshen.com/2019/09/11/subway-map-of-agile-development-practices/">点击看敏捷名词地铁线路全图 </a>  <p>
+  <!-- <script>
+    document.getElementById('content').innerHTML =
+      marked('# Marked in the browser\n\nRendered by **marked**.');
+  </script>
+   -->  
+  <script>
+    document.getElementById('content').innerHTML =
+      marked(document.getElementById('source').innerHTML);
+  </script>
+</body>
+</html>
+
+

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>敏捷词汇表 -- 敏捷联盟</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  <pre id="source" style="display: none;">
+# 项目章程 Project charters
+
+
+## 定义
+团队开发并维护了项目关键成功因素的高级摘要，该摘要具有足够的综合性，可以作为活动挂图大小的纸张显示在团队会议室的一面墙上。此描述至少包括项目的主要目标，范围边界以及项目实施团队与外部利益相关者之间的相互协议。
+
+## 使用迹象
+要求团队对项目进行总体概述，并注意首先要看的内容。特定格式可能会高度可变。
+
+敏捷社区已经采用了许多不同的技术或符号，这些技术或符号被证明对捕获高级项目信息有用。例如，SSM（软件系统）的“丰富图片”方法；结构化分析中的“上下文图”；或精益制造的A3（正是从纸质格式得名）。
+
+## 常见陷阱
+- 避免使用任何类型的“文档模板”来构建项目章程；练习的价值更多地在于活动而不是可交付成果，并且更关注于特定于上下文的信息，这些信息将指导团队做出正确的决定
+- 不论采用哪种格式，项目章程都应放在单页或单张纸中；不再有的文件将被视为又一份繁重的文件，很少被查看（如果有的话）
+
+## 预期收益
+项目陷入困境的一个普遍迹象是，同一团队的成员对诸如“该项目的目标是什么？它最重要的方面是什么？您要解决谁的问题？您有什么资源可供使用？”
+
+制定项目章程，甚至更为关键的是，确保其内容“为团队所有成员所知并认可”，这将导致团队内部的工作更加协调一致，这通常是项目成果的关键决定因素。
+
+## 起源
+敏捷社区对项目章程的采用是缓慢而渐进的。到2010年，流行率略有上升，可能是因为社区打算解决不断批评的问题，即敏捷未能解决“全局”问题。
+
+- 2001年：发表文章，随后将很大程度上定义为敏捷实践的项目章程：“针对可预测的项目失败进行免疫”
+- 2003年：Industrial Logic的Joshua Kerievsky出版了《Industrial XP》，这是对Extreme Programming（XP）的一系列提议扩展，其中包括2001年的文章所定义的Project Chartering活动。
+- 2006年：让·塔巴卡（Jean Tabaka）的著作《合作说明》（Collaboration Explained）将项目章程视为有效合作的关键实践之一；尽管她明确引用了Industrial XP，但她的演讲与2001年的文章在几个方面有所不同，这表明受其他来源的影响
+
+
+  </pre>
+  <p><a href="http://jackyshen.com/2019/09/11/subway-map-of-agile-development-practices/">点击看敏捷名词地铁线路全图 </a>  <p>
+  <!-- <script>
+    document.getElementById('content').innerHTML =
+      marked('# Marked in the browser\n\nRendered by **marked**.');
+  </script>
+   -->  
+  <script>
+    document.getElementById('content').innerHTML =
+      marked(document.getElementById('source').innerHTML);
+  </script>
+</body>
+</html>
+
+

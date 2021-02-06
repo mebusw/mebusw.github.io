@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>敏捷词汇表 -- 敏捷联盟</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  <pre id="source" style="display: none;">
+# 团队 Team
+
+
+## 定义
+敏捷意义上的“团队”是一小组人，分配给相同的项目或工作，几乎全部都是全职的。少数团队成员可能是兼职贡献者，或者可能有相互竞争的责任。
+
+团队的概念包含了共同的责任感：好坏，结果应该归属于整个团队，而不是任何个人。
+
+团队应具备所有必要的能力，无论是技术（编程，设计，测试）还是业务（领域知识，决策能力）。
+
+角色和责任与结果无关紧要：开发人员可以测试，执行分析或考虑需求；分析师或领域专家可以提出有关实施的想法，等等。
+
+## 常见陷阱
+- 最基本的错误是将“团队”和“团队”等同，认为团队是人们一起工作自动产生的结果
+- 一个团队至少应有三个人（两个是一对），并且通常不会超过十个人
+- 一个人可能同时是多个“项目”的贡献者，但是他们极不可能同时将自己视为一个“团队”的成员
+## 起源
+- 2004年：肯特·贝克（Kent Beck）提议将“整个团队”（Whole Team）作为以前称为“现场客户”的业务的新名称。
+## 学术出版物
+关于敏捷团队的动力，塔克曼的概念模型（“规范，形成，强攻，表演”）可能是最常被引用的模型。
+
+但是，存在一些竞争性和较新的模型。一项专门与软件团队有关的研究发现，他们的TWQ（团队工作质量）框架的暗示性经验验证是与项目成果相关的因素；TWQ结构由沟通，协调，成员贡献平衡，相互支持，努力和凝聚力组成。
+
+
+
+
+  </pre>
+  <p><a href="http://jackyshen.com/2019/09/11/subway-map-of-agile-development-practices/">点击看敏捷名词地铁线路全图 </a>  <p>
+  <!-- <script>
+    document.getElementById('content').innerHTML =
+      marked('# Marked in the browser\n\nRendered by **marked**.');
+  </script>
+   -->  
+  <script>
+    document.getElementById('content').innerHTML =
+      marked(document.getElementById('source').innerHTML);
+  </script>
+</body>
+</html>
+
+

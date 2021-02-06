@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>敏捷词汇表 -- 敏捷联盟</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  <pre id="source" style="display: none;">
+# 验收测试驱动开发 ATDD
+
+
+## 定义
+与测试驱动开发类似，验收测试驱动开发（ATDD）涉及具有不同观点（客户，开发，测试）的团队成员，他们 在实现相应功能之前进行协作以编写  验收测试。发生以生成验收测试的协作讨论通常被称为三个伙伴，代表了客户（我们要解决什么问题？），开发（我们如何解决这个问题？）和测试（这三个方面）的观点。关于什么…）。
+
+这些验收测试代表了用户的观点，并且是描述系统运行方式的一种要求形式，并且是一种验证系统是否按预期运行的方式。在某些情况下，团队会自动执行验收测试。
+
+## 也称为
+ATDD也可以称为故事测试驱动开发（SDD），示例规范或行为驱动开发（BDD），实例化需求（Specification by Example）。存在这些不同的术语是为了强调导致相似结果的方法上的某些差异。
+
+## 预期收益
+正如TDD导致应用程序设计得更易于进行单元测试一样，ATDD赞成创建特定于功能测试的接口。（通过应用程序的实际UI进行测试被认为不太有效。）
+
+## 常见陷阱
+甚至比使用自动验收测试更多，这种做法还与使用特定工具（例如Fit / FitNess，Cucumber或其他工具）紧密相关。
+
+因此，一个主要的风险是，所选工具将阻碍而不是推动该实践的主要目的：促进开发人员和产品所有者之间关于产品需求的对话。工具应适应产品所有者的需求，而不是相反。
+
+## 起源
+- 2003年：肯特·贝克（Kent Beck）在“测试驱动的开发：通过示例”一书中简要提到了ATDD，但认为它不切实际。
+- 2003年至2004年：在Fit / FitNesse的热烈推动下，尽管贝克提出异议，ATDD仍被接受
+  </pre>
+  <p><a href="http://jackyshen.com/2019/09/11/subway-map-of-agile-development-practices/">点击看敏捷名词地铁线路全图 </a>  <p>
+  <!-- <script>
+    document.getElementById('content').innerHTML =
+      marked('# Marked in the browser\n\nRendered by **marked**.');
+  </script>
+   -->  
+  <script>
+    document.getElementById('content').innerHTML =
+      marked(document.getElementById('source').innerHTML);
+  </script>
+</body>
+</html>
+
+

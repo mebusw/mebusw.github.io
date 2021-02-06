@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>敏捷词汇表 -- 敏捷联盟</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  <pre id="source" style="display: none;">
+# 每日站会 Daily meeting
+
+
+## 定义
+团队在每天的同一天开会，以使每个人都了解对协调至关重要的信息：每个团队成员简要地描述任何“完成的”贡献以及所遇到的障碍。通常，使用Scrum的三个问题来组织讨论。会议通常在任务委员会的前面举行。
+
+本次会议通常timeboxed到15分钟的最长持续时间盒，虽然这可能需要调整为更大的团队。为了使会议保持简短，任何受到讨论的主题都将被缩短，并添加到“停车场”列表中，并在会议后与受此问题影响的人们之间进行更深入的讨论。
+
+## 也称为
+- “每日站立”：来自极限编程，它建议与会人员站起来鼓励会议简短
+- “每日Scrum”：通过引用Scrum框架的名称，并暗示橄榄球式scrum的杂乱无章的外观（有点自相矛盾：请参见下面的历史记录）
+- “杂乱无章”，“点名通话”或任意数量的变体
+
+## 预期收益
+- 每天的会议阻止了团队的常见失败模式，在这种情况下，如果没有明确的机会共享最新信息，某些关键知识有时可能会“掉进裂缝”。
+- 在简短，集中和充满活力的会议中定期进行点对点信息共享也有助于团队凝聚力
+- 与坐式会议相比，站立式会议确实更短，更愉快且更有效
+
+## 常见陷阱
+- 也许最常见的错误是将日常会议变成一个“状态报告”，每个成员向同一个人（团队的经理或指定的Scrum主管）报告进度–日常会议中的交流应该是对等的对等基础
+- 第二个常见的陷阱是每天召开的会议日复一日。这一点很容易解决，只需少量的促进技能
+- 第三个常见问题是，团队在日常会议中几乎没有什么价值，以至于人们会“忘记”拥有它，除非Scrum Master或项目经理采取主动。这通常显示出对敏捷的不冷不热的承诺
+- 最后一个常见症状是：“没有问题”的会议，即使团队显然没有达到最佳绩效，也没有团队成员提出障碍（Scrum看来是“障碍”）；这有时表明公司的文化使人们不愿意在小组讨论中讨论困难。
+
+## 起源
+- 1993年：Jim Coplien编写了原始的StandUpMeeting模式。
+- 1994年：吉姆·科普林（Jim Coplien）描述了他对“高产”的Borland Quattro Pro团队的观察，指出他们几乎每天都在开会：这篇文章也被引用为对Scrum的强大影响
+- 1997年：肯·施瓦伯（ Ken Schwaber）描述了“每日混乱”（在他的较早著作中没有出现，例如1995年的文章“ SCRUM Development Process”），后来由Mike Beedle 以模式的形式进行了重铸。
+- 1998年：“每日站立”被列为极限编程的核心实践之一
+- 大约2000年：Scrum日常会议格式中的“三个问题”被极限编程团队广泛采用
+- 2004-2006年：日常会议被概括为敏捷的核心实践，并且广泛使用任务委员会获得了最终的关键指导方针，即“在任务板附近举行日常会议”（Tobias Mayer的举例描述）
+
+## 使用迹象
+以观察员身份参加日常会议。这是一种很好的方法，可以快速地大量学习团队对敏捷实践的熟悉程度。
+
+## 进一步阅读
+这不只是站起来，由Jason Yip（2006-2011）
+
+  </pre>
+  <p><a href="http://jackyshen.com/2019/09/11/subway-map-of-agile-development-practices/">点击看敏捷名词地铁线路全图 </a>  <p>
+  <!-- <script>
+    document.getElementById('content').innerHTML =
+      marked('# Marked in the browser\n\nRendered by **marked**.');
+  </script>
+   -->  
+  <script>
+    document.getElementById('content').innerHTML =
+      marked(document.getElementById('source').innerHTML);
+  </script>
+</body>
+</html>
+
+
