@@ -91,6 +91,23 @@ categories:
 这个工具只支持GIT，SVN用户自己想办法吧（也可以考虑换用GIT:p）。
 其实还可以在工具的commit hook脚本里做文章，加入一些正则表达式来阻止无效的提交历史，把规范和纪律自动化掉。
 
+# 自动生成变更说明
+
+规范了Commit格式之后，发布新版本时，使用Conventional Changelog就能够自动生成Change log
+
+    npm i conventional-changelog-cli --save-dev
+    npm run changelog
+
+生成的文档包括以下3个部分：
+
+- New features
+- Bug fixes
+- Breaking changes(不向上兼容的部分，我们的规范不要求footer，所以这一项不会出现)
+
+每个部分都会罗列相关的 commit ，并且有指向这些 commit 的链接。当然，生成的文档允许手动修改，所以发布前，你还可以添加其他内容。
+
+
+
 当然，各种敏捷实践还是要让大家理解目的和意义，这样才能形成真正的内在驱动力，而不是被迫做事情。
 
 
