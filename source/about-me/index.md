@@ -50,7 +50,7 @@ Jacky Shen提供敏捷相关的英文及中文Scrum培训及敏捷教练顾问�
 
 ## 企业微信 Wechat: 
 
-![](/media/企业微信名片Jacky.jpeg)
+<img src="/media/企业微信名片Jacky.jpeg" style="width: 200px; height: 500px;">
 
 ## 翻译作品 Translations
 * [Scrum Checklist-Scrum 检查清单](http://www.jackyshen.com/2014/09/22/Scrum-Checklist/)
