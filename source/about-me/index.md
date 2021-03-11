@@ -10,8 +10,8 @@ Jacky is the 1st both *Certified Team Coach (CTC)*, one of the Certified Agile C
 
 He has more than 10 years experiences to coach many organizations for large scaled Agile transformation, including Fin-tech / Banking / Telecom / Mobile Internet, as a Catalyzer.
 
-![avatar](./avatar1.jpg)
-![certifications](./certifications-of-JackyShen.png)
+![avatar](/media/avatar1.jpg)
+![certifications](/media/certifications-of-JackyShen.png)
 
 
 ## 江湖人称“申导”
@@ -48,7 +48,9 @@ Jacky Shen提供敏捷相关的英文及中文Scrum培训及敏捷教练顾问�
 
 ## LinkedIn: <https://cn.linkedin.com/in/shenjacky>
 
-## 微信Webchat: (暂不公开，请通过电子邮件联络我)
+## 企业微信 Wechat: 
+
+![](/media/企业微信名片Jacky.jpeg)
 
 ## 翻译作品 Translations
 * [Scrum Checklist-Scrum 检查清单](http://www.jackyshen.com/2014/09/22/Scrum-Checklist/)
