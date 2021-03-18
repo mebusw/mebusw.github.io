@@ -106,3 +106,10 @@ Jacky Shen提供敏捷相关的英文及中文Scrum培训及敏捷教练顾问�
 * [基于影响地图的创新组织生态能力模型](https://pan.baidu.com/s/1YvvA4br0waSdFkLudDknKg) （提取码: 72fn）, 2015, Global Scrum Gathering
 * [管理者的教练式领导力](https://pan.baidu.com/s/1xnVIktrmQUuru7JKCqn3Bw)（提取码: crgn）, 2017, Tid/AgileChina
 * [大型敏捷，请和你的大老师远离敏捷](https://www.jackyshen.com/2019/12/23/Large-Scale-Frameworks-for-Agile/), 2019, AgileTour
+
+## 友情链接
+<ul>
+          <li><a href="http://bobjiang.com/">Bob Jiang姜信宝的博客</a></li>
+          <li><a href="http://www.maiyuan.me/">Ronald Mai麦宇安 敏捷教练</a></li>
+          <li><a href="https://www.scrumalliance.org/community/profile/jshen2">Scrum Alliance国际Scrum联盟</a></li>
+</ul>
