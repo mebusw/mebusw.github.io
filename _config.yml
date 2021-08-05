@@ -91,9 +91,10 @@ exclude_generator:
 ## Docs: http://hexo.io/docs/deployment.html
 #https://github.com/mebusw/mebusw.github.io.git
 #git@github.com:mebusw/mebusw.github.io.git
+#git@e.coding.net:uperform/jacky-blog/jacky-blog.git
 deploy:
   type: git
-  repo: git@e.coding.net:uperform/jacky-blog/jacky-blog.git 
+  repo: git@github.com:mebusw/mebusw.github.io.git
   branch: master
 
 sitemap:
