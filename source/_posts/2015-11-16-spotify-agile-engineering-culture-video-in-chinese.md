@@ -1,4 +1,4 @@
-title: Spotify敏捷工程文化系列视频之中文字幕版-Spotify Engineering culture videos with Chinese subtitle
+title: Spotify敏捷部落工程文化系列视频之中文字幕版-Spotify Engineering culture videos with Chinese subtitle
 date: 2015-11-16 10:31:50
 tags:
     - spotify
@@ -18,7 +18,7 @@ categories:
 
 # Video with Chinese subtitle （中文字幕版）
 
-知名音乐网站Spotify的敏捷组织设计与工程文化近两年为人称道，其敏捷教练Henrik Kniberg发布的2段视频功不可没。为了让华人同胞能更好地理解视频的内容，我们成立了一个以Scrum方式工作的字幕翻译小组，将其翻译成中文。
+知名音乐网站Spotify的敏捷部落组织设计与工程文化近两年为人称道，其敏捷教练Henrik Kniberg发布的2段视频功不可没。为了让华人同胞能更好地理解视频的内容，我们成立了一个以Scrum方式工作的字幕翻译小组，将其翻译成中文。
 
 
 1. 第一部分(Part 1 about structure and practices)，关于组织结构和敏捷实践 <https://v.qq.com/x/page/e06264d5xas.html>
