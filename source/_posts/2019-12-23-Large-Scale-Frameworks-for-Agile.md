@@ -340,7 +340,7 @@ SAFe还是以交付视角为主，产品负责人和客户代表被放在了边�
 14. 《敏捷合同》by Bas Vodde & Craig Larman, LeSS框架创始人, <https://www.uperform.cn/introduction-to-agile-contracts-1/>
 15. CCSTC商业应用学习发展项目，by 周冰
 16. 《技术团队管理者的软技能》，by 申健 https://www.jackyshen.com/2016/05/04/soft-skills-of-technical-leaders-and-managers
-17. 《Clean Agile》by Uncle Bob，敏捷宣言发起人之一，中文版将于2020年出版。
+17. 《Clean Agile》by Uncle Bob，敏捷宣言发起人之一，中文版[《敏捷整洁之道》](https://book.douban.com/subject/35083518/)于2020年出版。
 18. 《做一些不必规模化的事情》by Paul Graham，Y Combinator孵化器创始人、《黑客与画家》作者，http://paulgraham.com/ds.html
 19. 《为什么用了Scrum但你的组织却还不敏捷？》Michael James，敏捷教练，《Scrum Master Checklist》作者，https://v.qq.com/x/page/t3024y3caup.html
 20. 《大规模Scrum》， by Bas Vodde & Craig Larman, LeSS框架创始人，《敏捷合同》作者
