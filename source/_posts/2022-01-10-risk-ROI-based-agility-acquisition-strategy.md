@@ -14,7 +14,7 @@ $$
 ROI=\frac{Impact*p\%}{Cost}
 $$
 
-
+![](http://www.latex2png.com/pngs/81551a4cd830a9de7f3afa619f44420a.png)
 
 （p%=概率或确定性，Impact=影响程度或收益程度，Cost=成本）
 

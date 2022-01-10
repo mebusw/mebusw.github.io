@@ -2,5 +2,6 @@ node_modules/
 package-lock.json
 public/
 .deploy_git/
-
+.DS_Store
+db.json
 
