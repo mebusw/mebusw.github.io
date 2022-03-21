@@ -20,11 +20,47 @@ tags:
 
 ## 自动化测试的价值
 
+开发者应该编写自动化测试，以便当发现回归问题时就使构建失败。而且，测试先行的编程风格已有大量的专业研究，使用自动化测试不仅是保护回归，而且是帮助设计，在编写代码之前就指出代码的期望行为，从而在验证实现之前先验证设计。
+
+来认识一下小马。小马是著名的编程奇才，两年前刚毕业，然后加入了本地一家投行的IT部门，为银行开发用于在线自助服务的web应用程序。作为团队中最年轻的成员，起初他保持低调，集中精力学习银行的领域知识，熟悉“这里做事的方式”。
+
+几个月后，小马注意到团队的工作很多都是**返工**：修复程序员的错误。他开始关注团队修复错误的类型，发现单元测试可以轻易地捕获到其中大多数。当他感觉到哪里存在特别容易出错的代码时，小马就对其编写单元测试。
+
+> 测试帮助我们捕获错误。
+
+一段时间以后，团队其他人也开始到处编写单元测试。Marcus已被测试感染 (test-infected) 了，他碰过的代码几乎都具有相当高的自动化测试覆盖率。除了在第一次时犯错，他们不会再花费时间修复过去的错误，待修复缺陷的总数在下降。测试开始清晰可见地影响着团队工作的质量。
+
+自从小马编写第一个测试，已经过去近一年了。团队的测试覆盖率在近几个月快速提高，达到了98%的分支覆盖率。小马曾认为他们应该推动那个数字直到100%。但过去几周，他打定了主意——那些缺失的测试不会给他们带来更多价值，花费更多精力来编写测试不会带来额外的收益。许多没有测试覆盖的代码，只因所用的API要求实现某些接口，但小马的团队并未用到它们，那么何必测试那些空方法桩呢？
+
+> 100%测试覆盖率不是目标
+
+100%的覆盖率并不能够确保没有缺陷——它只能保证你所有的代码都执行了，不论程序的行为是否满足要求。与其追求代码覆盖率，不如将重点关注在确保写出有意义的测试。
+
+后来，高级软件架构师老赛加入了自助服务团队，并快速地成为了低级成员的导师，包括小马在内。小马习惯于先写代码，在提交到版本控制系统之前再补充单元测试。但老赛的风格是先写一个会失败(很明显是这样)的测试，再写足够使测试通过的代码，然后写另一个失败的测试。他重复这个循环直到完成任务。
+
+与老赛共事，小马意识到自己的编程风格开始转变。他的对象结构不同了，代码看起来稍微不同了，只是因为他开始从调用者的角度来审视代码的设计和行为了。
+
+> 测试帮助我们针对实际使用来塑造设计。
+
+想到这些，小马觉得好像明白了一些道理。当他试图用语言表达出他的编程风格是如何改变的，以及收到了哪些效果时，小马明白了他写的测试不仅仅是质量保证的工具，或是对错误及回归的保护。测试作为一种**设计代码的方式**，提供了具体的目的。编写使失败测试通过的代码比以前的方式简单多了，而且该做的也都做了。
+
+> 通过明确地指出所需的行为，测试帮助我们避免镀金。
+
+主人公小马的经历正如许多爱好测试的编程人员一样，在不断地认识和理解测试。我们经常因为相信单元测试有助于避免尴尬、耗时的错误而开始编写它们。随后我们会学到，将测试作为安全网只是等式的一部分，而另一部分——或许是更大部分——其好处是我们将测试表达为代码的思考过程。
+
+大多数人同意说编写**一些**测试是不费脑筋的。但随着我们接近完全的代码覆盖率，我们不那么确定了——我们差不多已经为一切都编写了测试，而剩下的没有测试的代码是微不足道，几乎不会破坏。这就是某些人所谓的收益递减。因此，
+
+> 编写测试的最大价值不在于结果，而在于编写过程中的学习。
+
+（略，请阅读正版原书）
+
+
+
 ## 何为优秀与代码坏味道
 
-可读性、可测性、可信赖性
+可读性、可维护性、可信赖性...
 
-<!--more-->
+
 
 
 
@@ -53,6 +89,8 @@ public void outputHasLineNumbers() {
 具体来说，我们在这个断言中是要计算输出结果中的另一个文本字符串的索引，并将其与`-1`进行比较；如果索引为`-1`，那么测试失败。测试的名字叫做`outputHasLineNumbers`，显然，对于在代码中grep()的具体调用，输出结果应当包含正在进行逐行查找的文件名，后面加上行号。
 
 不幸的是，我们不得不经过这个思考过程才能理解为什么我们要计算索引，为什么查找`test.txt:1`而不是其它东西，为什么与`-1`进行比较，当索引是`-1`或不是`-1`时测试是否会失败？这无需火箭科学就能找到答案，但却是我们大脑的不必要的认知工作。
+
+<!--more-->
 
 ### 过度断言
 
@@ -375,9 +413,751 @@ public class TestConfiguration {
 
 
 
-## 单元测试代码的可测性
+## 单元测试代码的可维护性
+
+### 重复
+
+重复是代码的万恶之源。
+
+重复是存在多份拷贝，或对单一概念的多次表达——这都是不必要的重复。
+
+```java
+public class TemplateTest {
+    @Test
+    public void emptyTemplate() throws Exception {
+         assertEquals("", new Template("").evaluate());
+}
+   @Test
+   public void plainTextTemplate() throws Exception {
+      assertEquals("plaintext", new Template("plaintext").evaluate());
+   }
+}
+```
+
+是最常见的文本字符串重复，在两个断言中，空串和plaintest字符串都出现了两次，我们叫这种重复为文字重复 (Literal Duplication)。你可以通过定义局部变量来移除它们。在上面的测试类中还存在另一种重复，也许比显而易见的字符串重复有趣得多。当我们提取那些局部变量时，这种重复会变得更加清晰。
+
+```java
+public class TemplateTest {
+   @Test
+   public void emptyTemplate() throws Exception {
+      String template = "";
+      assertEquals(template, new Template(template).evaluate());
+}
+   @Test
+   public void plainTextTemplate() throws Exception {
+      String template = "plaintext";
+      assertEquals(template, new Template(template).evaluate());
+   }
+}
+```
+
+你会发现在那两个测试函数中，只有字符串是不同的。将那些不同的部分提取为局部变量以后，剩下的断言何止是相似，简直一模一样。它们都实例化了一个Template对象，调用了evaluate函数对模板求值，并断言此函数返回相应的字符串。这种操作不同数据的重复逻辑，我们叫做结构重复 (Structural Duplication)。以上的两个代码块用一致的结构操作了不同的数据。让我们去掉这种重复，并看看代码会变成什么样。
+
+```java
+public class TemplateTest {
+   @Test
+   public void emptyTemplate() throws Exception {
+      assertTemplateRendersAsItself("");
+}
+   @Test
+   public void plainTextTemplate() throws Exception {
+      assertTemplateRendersAsItself("plaintext");
+   }
+   private void assertTemplateRendersAsItself(String template) {
+      assertEquals(template, new Template(template).evaluate());
+} }
+```
 
 
+
+文字重复或结构重复，长得一样，很容易看出来，可以通过提炼相似的结构来清晰地识别文字重复 (Literal Duplication) 和结构重复 (Structural Duplication)，但语义重复 (Semantic Duplication) ——用看起来并不相同的表达和实现完成相同功能或概念——很难看出来。
+
+```java
+@Test
+public void groupShouldContainTwoSupervisors() {
+      List<Employee> all = group.list();
+      List<Employee> employees = new ArrayList<Employee>(all);
+      Iterator<Employee> i = employees.iterator();
+      while (i.hasNext()) {
+         Employee employee = i.next();
+         if (!employee.isSupervisor()) {
+            i.remove();
+         }
+      }
+      assertEquals(2, employees.size());
+}
+
+@Test
+public void groupShouldContainFiveNewcomers() {
+      List<Employee> newcomers = new ArrayList<Employee>();
+      for (Employee employee : group.list()) {
+         DateTime oneYearAgo = DateTime.now().minusYears(1);
+         if (employee.startingDate().isAfter(oneYearAgo)) {
+            newcomers.add(employee);
+         }
+      }
+      assertEquals(5, newcomers.size());
+}
+```
+
+除了通过group.list()方法查询雇员的完整列表之外，这两个方法没有太多的文字重复，但是它们又很相似，都是查询雇员的完整列表并通过某些条件进行过滤。
+
+
+
+解法：
+
+第一步，通过改变过滤方法，使之成为结构重复。第二步，再通过提炼变量和方法，消除结构重复。
+
+### 条件逻辑
+
+条件执行语句使代码难以理解。你应该在测试方法中避免条件执行结构，例如if、else、for、 while和switch等。当测试要检查的行为比较复杂时，这一点尤其重要。这些语言结构固然有用，但对于测试代码，你应该小心行事。为了测试的可维护性，你需要保持测试的复杂度低于对应的解决方案。
+
+
+
+以下测试用例创建了Dictionary（字典）对象，用数据填充它，并验证请求到的Iterator (迭代器)中内容是正确的。
+
+```java
+public class DictionaryTest {
+	@Test
+	public void returnsAnIteratorForContents() throws Exception {
+		Dictionary dict = new Dictionary();
+		dict.add("A", new Long(3));
+		dict.add("B", "21");  
+
+		for (Iterator e = dict.iterator(); e.hasNext();) {
+			Map.Entry entry = (Map.Entry) e.next();
+			if ("A".equals(entry.getKey())) {
+				assertEquals(3L, entry.getValue());
+			}
+			if ("B".equals(entry.getKey())) {
+				assertEquals("21", entry.getValue());
+			} 
+		}
+	}
+}
+```
+
+
+
+测试实际上期望能在Iterator中找到填充的那两个条目。在修改测试时，比方说通过重构来改变Dictionary类的API，我们的目标是使意图明确和减少出错几率。对于测试代码中的全部条件执行语句，我们很容易认为某个断言已经通过但实际上却没有运行过。这是我们要避免的。
+
+
+
+解法：
+
+这种情况在处理过度复杂的代码时经常遇到，第一步就是简化它，通常是将一段代码提炼到独立且命名良好的方法中。
+
+```java
+@Test
+public void returnsAnIteratorForContents() throws Exception {
+    Dictionary dict = new Dictionary();
+    dict.add("A", new Long(3));
+    dict.add("B", "21");
+    assertContains(dict.iterator(), "A", 3L);
+    assertContains(dict.iterator(), "B", "21");
+    }
+private void assertContains(Iterator i, Object key, Object value) {
+    while (i.hasNext()) {
+      Map.Entry entry = (Map.Entry) i.next();
+      if (key.equals(entry.getKey())) {
+        assertEquals(value, entry.getValue());
+        return; 
+      }
+	}
+  fail("Iterator didn't contain " + key + " => " + value);
+}
+```
+
+提炼出的方法中仍然存在循环，但是测试的意图变得清晰，使得可维护性大不相同了。
+
+而且还更正了原先测试中的另一个问题：即使Iterator是空的，测试也不会失败。我们是这样修改的，当找到预期条目就使断言返回，而如果没找到符合的条目就使测试失败。最后的fail()调用很容易被漏掉，导致测试虽然通过但是代码却不工作，令人头痛。长点儿心吧！
+
+### 脆弱的测试
+
+修改代码导致了测试失败——那是件好事情，测试显然注意到了你认为重要而需要检查的变更——这不同于一直失败的测试。我们说的是一直亮了两周红灯的测试，而且没人去修复它。那个测试大概会继续再失败两周或者两个月，直到有人修复它，或者更有可能的是，删掉它。这都在情理之中，因为一直失败的测试几乎是没用的。你无法从它那里得知任何你还不知道的事情，或者可以信任的事情。
+
+还有一种失败的测试带给我们的生活不必要的麻烦：断断续续失败的**脆弱测试**。脆弱的意思就像**喊“狼来了”**，也就是说，虽然测试使构建失败了，但是你去看的时候，再次执行却又通过了，刚才似乎只是个意外。
+
+大多数情况下，脆弱测试失败时都涉及了线程和竞态条件，其行为依赖于日期或时间，或测试依赖于计算机的性能，因而在运行期间受到I/O速度或CPU负载的影响。访问网络资源的测试有时也会表现得脆弱，比如当网络或资源临时不可用的时候。例子展示了一个我不止一次碰到的问题：对文件系统时间戳的错误假设。
+
+```java
+@Test
+public void logsAreOrderedByTimestamp() throws Exception {
+   generateLogFile(logDir, "app-2.log", "one");
+   generateLogFile(logDir, "app-1.log", "two");
+   generateLogFile(logDir, "app-0.log", "three");
+   generateLogFile(logDir, "app.log", "four");
+   Log aggregate = AggregateLogs.collectAll(logDir);
+   assertEquals(asList("one", "two", "three", "four"),
+          aggregate.asList());
+}
+```
+
+问题在于，被测逻辑依赖于文件的时间戳。我们期望日志文件按照时间戳顺序进行汇总，将最早修改的文件作为最旧的日志文件，以此类推，并没有按照文件名的字母顺序对日志文件进行排序。结果让我们失望了。这个测试在Linux上时不时地失败，而在Mac OS X上几乎总是失败。我们看看测试中用来写日志文件的generateLogFile()方法：
+
+```java
+private void generateLogFile(final File dir, final String name,
+         final String... messages) {
+   File file = new File(dir, name);
+   for (String message : messages) {
+      IO.appendToFile(file, message);
+   }
+}
+```
+
+我们栽在了忘记给创建日志文件的被测方法传递时间。具体来说，我们忘记了在不同的计算机和平台上时间流逝得不一样。某些平台，比如Mac OS X，文件系统时间戳每秒跳动一次，也就是说除非文件生成时间足够长，或者文件生成地恰到好处，否则下一次generateLogFile()调用极有可能导致日志文件带有相同的时间戳。
+
+当你的测试遇到时间相关的问题时，你应该先通过适当的API来模拟相应的情况。对于用正确时间戳来产生日志文件这个例子，你可以依靠Java的File API，用setLastModified明确地递增每个日志文件的时间戳。清单5.7显示了修改后的工具方法。
+
+```java
+private AtomicLong timestamp = new AtomicLong(currentTimeMillis());
+private void generateLogFile(final File dir, final String name, final String... messages) {
+   File file = new File(dir, name);
+   for (String message : messages) {
+			IO.appendToFile(file, message);
+   } 
+   file.setLastModified(timestamp.addAndGet(TEN_SECONDS));
+}
+```
+
+这样我们就有效地确保每个日志文件都收到了不同的时间戳。测试能够可靠地工作于所有平台和计算机，而不需要再缓慢地执行测试了。
+
+对于间歇性的测试失败，时间戳并非唯一的麻烦来源。最突出的是多线程，它往往会使事情复杂化。涉及随机数生成的也好不到哪儿去。无论我们是否提早意识到要针对随机测试失败来保护自己，我们解决这些情况的方法都是一样的：
+
+1. 规避它。
+
+2. 控制它。
+
+3. 隔离它。
+
+最简单的办法就是彻底地规避这个问题，切断任何不确定行为的来源。例如，我们可以通过文件名的数字后缀而非时间戳来对日志文件排序。如果不能轻易地绕过棘手的部分，我们就试图控制它。例如，可以采用Fake(伪造对象)来代替随机数生成器，令其精确地返回我们需要的值。最后，如果找不到一个方法来充分地规避或控制这个问题的源头，我们的最后一招就是将难题隔离在尽可能小的范围内。这就将大多数代码从不确定行为中解脱出来，从而在一处而且仅仅一处来解决难题。
+
+### 残缺的文件路径
+
+**残缺的文件路径**会使你无法转移代码，除了自己的电脑之外，在任何其他人的电脑上都无法运行。我们都知道这个问题。假如你从没读过代码，却天生就懂得说“我们不应该在这里硬编码这个路径”，或者天生就知道明确地引用文件系统某个位置会自寻烦恼，那就怪了。下面的测试用例，它采用绝对路径从文件系统读出一份文档。
+
+```java 
+public class XmlProductCatalogTest {
+  private ProductCatalog catalog;
+  @Before
+  public void createProductCatalog() throws Exception {
+    File catalogFile = new File("C:\\workspace\\catalog.xml");
+    catalog = new XmlProductCatalog(parseXmlFrom(catalogFile));
+  }
+  @Test
+  public void countsNumberOfProducts() throws Exception {
+    assertEquals(2, catalog.numberOfProducts());
+  }
+  // remaining tests omitted for brevity
+}
+```
+
+文件路径有什么问题？首先，绝对文件路径明显地绑定了Microsoft Windows操作系统。开发者要是在Mac或Linux系统上运行测试的话，马上会得到“找不到文件(file not found)”之类的I/O错误。这段测试代码不是自包含的(self-contained)。你需要从版本控制系统中检出代码，然后马上就看到所有测试都通过。用了这种特定于平台的绝对文件路径的话，想都别想了。
+
+解法：
+
+我们现在有一个仅限于Windows的绝对文件路径。它不能在任何Mac或Linux系统上工作。除非我们全都是Windows用户，否则我们至少应该将路径改为与平台无关，比如Java的File API支持这样做：
+
+```java
+new File("/workspace/catalog.xml");
+```
+
+
+
+在Windows和UNIX 两个平台家族中，它都**能**胜任，比如你使用Windows上的C盘，那么路径就是`C:\workspace`，而在UNIX系统上路径就是`/workspace`。我们仍然被绑定在workspace这个特定位置上。这不像绑定特定用户名那么糟糕（比如：`/User/lasse`），但其实仍会强迫所有开发者都将自己的工作区(workspace)放在相同的物理位置上。
+
+尽量采用抽象引用，比如系统属性(system properties)、环境变量，或任何能获得的相对路径。不建议像System.getProperties("user.home")这样来选择相对路径，虽然在所有平台上都会返回一个有效的路径，但是那些引用里面仍然是绝对路径，仍会强迫开发者们将其工作区放在指定位置。尤其当你开发新版本同时还要维护旧版本，这种情况就非常棘手。每当你从新开发工作切换到旧分支改Bug时，你不得不在未完成工作的基础上检出旧分支，因为绝对路径永远指向同一个位置。总是尽可能去引用相对路径，例如：
+
+```java
+new File("./src/test/data/catalog.xml");
+```
+
+
+
+### 永久的临时文件
+
+临时文件应该是暂时性的，使用后即抛弃和删除。**永久的临时文件**这个测试坏味道，指的是临时文件并非暂存而是被保留了下来，也就是说在下个测试运行前它都不会被删除。
+
+俗话说，“YY是失败之母”，而程序员往往就假设临时文件是暂时性的。这会带来一些意外，而那正是我们试图避免去调试的行为。事实上，你应该尝试根本不使用文件，因为它根本不是你要测试的对象。
+
+想象针对一个基于文件的产品登记册(Product Catalog)对象的一系列测试。第一个测试会创建一个空的临时文件，不包含任何条目，然后用空文件初始化登记册，并检查登记册如期为空。第二个测试不创建文件，而是基于一个缺失的文件来初始化登记册，登记册这时应该表现得就好像那个文件存在似的，但只是个空文件。第三个测试又创建一个临时文件——这次包含了两个产品——用该文件来初始化登记册，然后检查登记册确实是包含了那两个产品。
+
+```java
+public class XmlProductCatalogTest {
+   private File tempfile;
+   @Before
+   public void prepareTemporaryFile() {
+      String tmpDir = System.getProperty("java.io.tmpdir");
+      tempfile = new File(tmpdir, "catalog.xml");
+   }
+
+  @Test
+  public void initializedWithEmptyCatalog() throws Exception {
+     populateCatalogWithProducts(0);
+     ProductCatalog catalog = new XmlProductCatalog(tempfile);
+     assertEquals(0, catalog.numberOfProducts());
+  }
+  @Test
+  public void initializedWithMissingCatalog() throws Exception {
+     ProductCatalog catalog = new XmlProductCatalog(tempfile);
+     assertEquals(0, catalog.numberOfProducts());
+  }
+
+  @Test
+     public void initializedWithPopulatedCatalog() throws Exception {
+        populateCatalogWithProducts(2);
+        ProductCatalog catalog = new XmlProductCatalog(tempfile);
+        assertEquals(2, catalog.numberOfProducts());
+  } 
+}
+```
+
+当JUnit开始执行这个测试类时，会在每个测试之前用新的File 对象来初始化私有字段tempfile。没问题。问题在于第二个测试，当 initializedWithMissingCatalog 开始执行时，系统的临时目录中已经存在一个空的catalog.xml 文件，这与测试的假设大相径庭。这意味着无论XmlProductCatalog 是否正确地处理了文件缺失，测试都能通过。不妙。
+
+解法：
+
+一般来说，能不用物理文件就尽量不用；比起操作字符串或其它类型的内存块来说，文件I/O 会使得测试变慢。说到这，当你处理测试中的临时文件时，你需要记住临时文件并不是随时保持临时性的。例如，如果你用`File#createTempFile` API获得一个临时文件，文件就和你手中的其它文件引用一样，不再是暂时性的了。除非你明确地删除它，否则文件在测试结束后哪也不会去。相反，它就是一个待在原地的幽灵文件，有可能造成看似不稳定的测试失败问题。
+
+于是针对临时文件的处理，我们归纳出几条简单的指导方针：
+
+- 在@Before中删除文件。
+
+- 如果可能的话，使用唯一的临时文件名。
+
+- 要弄清楚文件是否应该存在。
+
+关于第一条，程序员有时会用 File#deleteOnExit 将临时文件标记为删除，然后快乐地继续工作。那样做是不够的，因为文件在JVM进程退出之前并没有真正地被删除。相反，你需要在每个测试方法使用文件**之前**就删除它们，咱们就给setup增加一条语句：
+
+```java
+@Before
+public void prepareTemporaryFile() {
+   String tmpDir = System.getProperty("java.io.tmpdir");
+   tempfile = new File(tmpdir, "catalog.xml");
+   tempfile.delete();
+}
+```
+
+其次，当文件名和位置不需要那么精确的时候，推荐使用File#createTempFile。你能够确保在每次测试时得到唯一的文件名，这样你就不必担心从另一个测试继承来一个幽灵文件。本例中setup方法将修改如下：
+
+```java
+@Before
+public void prepareTemporaryFile() {
+  tempfile = File.createTempFile("catalog", ".xml");
+}
+```
+
+再者，当你不关心文件系统中是否存在物理文件时，默不作声即可。但当你在意时，你就应该明确表达出来。
+
+```java
+@Test
+public void initializedWithMissingCatalog() throws Exception {
+    withMissingFile(tempfile);
+    ProductCatalog catalog = new XmlProductCatalog(tempfile);
+    assertEquals(0, catalog.numberOfProducts());
+}
+private void withMissingFile(File file) {
+    file.delete();
+}
+```
+
+明确对执行环境的期望，除了能确保缺失的文件不存在以外，还有助于表达测试的意图。
+
+
+
+### 沉睡的蜗牛
+
+缓慢的测试是影响可维护性的主要障碍，因为不论是添加新功能还是修复问题，程序员在修改代码时都需要反复地运行测试。文件I/O并非缓慢测试的唯一来源。通常对测试套件执行时间带来的更大冲击是源自大量的Thread#sleep 调用，它允许其他线程先完成工作，然后再对预期结果和副作用进行断言。沉睡的蜗牛非常容易发现：查找Thread#sleep调用以及留意异常缓慢的测试。
+
+例子展示了对Counter对象的测试，该对象负责产生唯一的数字。显然，即使多个线程同时调用Counter，我们也希望这些数字是独一无二的。
+
+```java
+@Test
+public void concurrentAccessFromMultipleThreads() throws Exception {
+  final Counter counter = new Counter();
+  final int callsPerThread = 100;
+  final Set<Long> values = new HashSet<Long>();
+  Runnable runnable = new Runnable() {
+     @Override
+     public void run() {
+        for (int i = 0; i < callsPerThread; i++) {
+           values.add(counter.getAndIncrement());
+    } }
+  };
+  int threads = 10; 
+  for(inti=0;i<threads;i++){
+     new Thread(runnable).start();
+  }
+  Thread.sleep(500);
+  int expectedNoOfValues = threads * callsPerThread;
+  assertEquals(expectedNoOfValues, values.size());
+}
+```
+
+测试所做的工作，先是建立几个将要重复地访问计数器的线程，然后启动所有线程。由于测试无法预知线程是如何被调度的，以及何时会结束，于是我们调用了Thread#sleep，令测试在每次断言之前先等待半秒钟。
+
+尽管500毫秒听起来有点夸张，但其实并不是的。就算睡上(sleep)300毫秒，在我的电脑上测试大约也会有10%的几率失败——那正是我们讲过的**脆弱的测试**！现在，500毫秒的sleep仍然不可靠；有时需要更久的时间才能让全部线程完成工作。一旦是因为500毫秒的sleep还不够久而导致了测试失败，程序员就会延长sleep。毕竟，我们不喜欢脆弱的测试。还有另一个问题：它相当地慢。 尽管500毫秒听起来不多，但是积少成多啊，尤其是当测试代码中遍布着许多Thread#sleep的时候。
+
+解法：
+
+替换掉了奢侈和不可靠的Thread#sleep。最根本的不同在于我们使用了java.util.concurrent包中的同步对象，使得测试能够立即知晓工作线程的任务结束了。
+
+```java
+@Test
+public void concurrentAccessFromMultipleThreads() throws Exception {
+  final Counter counter = new Counter();
+  final int numberOfThreads = 10;
+  final CountDownLatch allThreadsComplete = new CountDownLatch(numberOfThreads);
+  final int callsPerThread = 100;
+  final Set<Long> values = new HashSet<Long>();
+  Runnable runnable = new Runnable() {
+    @Override
+    public void run() {
+      for (int i = 0; i < callsPerThread; i++) {
+          values.add(counter.getAndIncrement());
+      }
+      allThreadsComplete.countDown();
+      }
+  };
+  for (int i = 0; i < numberOfThreads; i++) {
+     new Thread(runnable).start();
+  }
+  allThreadsComplete.await(10, TimeUnit.SECONDS);
+  int expectedNoOfValues = numberOfThreads * callsPerThread;
+  assertEquals(expectedNoOfValues, values.size());
+}
+```
+
+该方案基于一个简单的想法，即每个工作线程结束后应当通知测试线程，从而解决了这个坏味道。只要测试线程得到这个信息，测试就可以立即继续自己的工作，基本上避免了随意添加Thread#sleep带来的不必要等待。方案建立在Java API中的标准同步对象`CountDownLatch`上。CountDownLatch有效地确保仅当指定的线程数量触发了锁才能执行测试。如果你的系统要处理线程，那么给自己一次机会，投入工具类`java.util.concurrent`包的怀抱吧。
+
+### 像素级完美
+
+**像素完美**是基本断言和魔法数字的特例。把它放在这个坏味道分类中，是因为我觉得它在计算机绘图领域频繁出现，那里的人们经常会说在测试中遇到困难。坏味道出现的场景包括，测试要求期望和实际产生的图像完美地匹配，或者期望在产生的图像中，指定坐标处的像素包含某种颜色。这样的测试是出了名的脆弱，通常很小的输入变化都会导致测试失败。
+
+例子允许用户操作屏幕上的图表，在画布上拖放长方形并用各种线段连接起来。对象图所产生的图表，其中包含各种长方形和线段。
+
+```java
+public class RenderTest {
+  @Test
+  public void boxesAreConnectedWithALine() throws Exception {
+    Box box1 = new Box(20, 20);
+    Box box2 = new Box(20, 20);
+    box1.connectTo(box2);
+    Diagram diagram = new Diagram();
+    diagram.add(box1, new Point(10, 10));
+    diagram.add(box2, new Point(40, 20));
+    BufferedImage image = render(diagram);
+    assertThat(colorAt(image, 19, 12), is(WHITE));
+    assertThat(colorAt(image, 19, 13), is(WHITE));
+    assertThat(colorAt(image, 20, 13), is(BLACK));
+    assertThat(colorAt(image, 21, 13), is(BLACK));
+    assertThat(colorAt(image, 22, 14), is(BLACK));
+    assertThat(colorAt(image, 23, 14), is(BLACK));
+    assertThat(colorAt(image, 24, 15), is(BLACK));
+    assertThat(colorAt(image, 25, 15), is(BLACK));
+    assertThat(colorAt(image, 26, 15), is(BLACK));
+    assertThat(colorAt(image, 27, 16), is(BLACK));
+    assertThat(colorAt(image, 28, 16), is(BLACK));
+    assertThat(colorAt(image, 29, 17), is(BLACK));
+    assertThat(colorAt(image, 30, 17), is(BLACK));
+    assertThat(colorAt(image, 31, 17), is(WHITE));
+    assertThat(colorAt(image, 31, 18), is(WHITE));
+  } 
+}
+```
+
+首先，测试难以验证。我是说，我怎么知道**(23, 14)**处应该有一个黑色像素？此外，不难看出这个测试是多么容易打破。任何图表边界宽度的变化，例如线段的精确位置稍有偏移，测试就会打破。这是不好的，因为测试检查的是图表中两个相连的长方形是否也可见地连在一起，而长方形的**样子**不该影响测试。
+
+如果我们测试长方形的总渲染宽度，我们可以用魔法数字来对付这个问题，用类似boxContentWidth + (2 * boxBorderWidth)的变量组成断言，来包容边界宽度的变化。但是对于两个长方形之间的线段，我们的做法没有那么显而易见。
+
+
+
+解法：
+
+用适当的抽象层次来表达测试，这是编写它们的目标之一。如果你对两个长方形相互连接感兴趣，你不该考虑像素或坐标。相反，你应该考虑**长方形**，以及它们是否**相连**。简单吗？这就是说，不要用**基本断言**，而是应该将背后的细枝末节隐藏到自定义断言中，那里才是适合的抽象层次。同时也意味着，相对于精确的值与值比较，断言中反而需要进行**模糊**匹配——一种实际的算法。
+
+将检查两个长方形是否连接的细节委托给自定义断言。自定义断言会操心如何检查（最好是以灵活和健壮的方式）。
+
+```java
+public class RenderTest {
+   private Diagram diagram;
+   @Test
+   public void boxesAreConnectedWithALine() throws Exception {
+      Box box1 = new Box(20, 20);
+      Box box2 = new Box(20, 20);
+      box1.connectTo(box2);
+      diagram = new Diagram();
+      diagram.add(box1, new Point(10, 10));
+      diagram.add(box2, new Point(40, 20));
+      assertThat(render(diagram), hasConnectingLineBetween(box1, box2));
+   }
+   private Matcher<BufferedImage> hasConnectingLineBetween(
+         final Box box1, final Box box2) {
+      return new BoxConnectorMatcher(diagram, box1, box2);
+   }
+   // rest of details omitted for now
+}
+
+```
+
+主要区别在于，将大量看似任意坐标上的像素颜色测试替换掉，代之以口语化的自定义断言——在两个长方形之间应该有一条连接线段。可读性变得好多了，而且这个特殊的测试需要的维护工作更少。然而，复杂性没有完全消除掉。我们仍然需要告诉计算机如何辨别两个长方形是否相连，而那正是神秘的BoxConnectorMatcher的职责。BoxConnectorMatcher的实现细节看似与要介绍的这种测试坏味道没啥关系。毕竟，这是一个特殊情况的方案。但是因为许多程序员似乎都对图形相关代码的可测性失去了信心，因此我觉得仔细看看其实现还是有必要的。
+
+接下来，用自定义的匹配器来检查两个长方形之间的连接。即使长方形的相关位置变动了一个像素，这种智能断言也不会被打破。
+
+```java
+public class BoxConnectorMatcher extends BaseMatcher<BufferedImage> {
+   private final Diagram diagram;
+   private final Box box1;
+   private final Box box2;
+   BoxConnectorMatcher(Diagram diagram, Box box1, Box box2) {
+      this.diagram = diagram;
+      this.box1 = box1;
+      this.box2 = box2;
+   }
+   @Override
+   public boolean matches(Object o) {
+      BufferedImage image = (BufferedImage) o;
+      Point start = findEdgePointFor(box1);
+      Point end = findEdgePointFor(box2);
+      return new PathAlgorithm(image).areConnected(start, end);
+}
+   private Point findEdgePointFor(final Box box1) {
+      Point a = diagram.positionOf(box1);
+      int x = a.x + (box1.width() / 2);
+      int y = a.y - (box1.height() / 2);
+      return new Point(x, y);
+   }
+   @Override
+   public void describeTo(Description d) {
+      d.appendText("connecting line exists between "
+            + box1 + " and " + box2);
+   } 
+}
+```
+
+BoxConnectorMatcher的精华都在matches()方法中，首先分别找出两个长方形的任意一个边缘点，然后委托给PathAlgorithm (路径算法)对象，来判定两个坐标是否在图中相连。
+
+接下来是PathAlgorithm的实现。警告：这是一段冗长的代码，我不打算细致地解释。
+
+```java
+public class PathAlgorithm {
+   private final BufferedImage img;
+   private Set<Point> visited;
+   private int lineColor;
+   public PathAlgorithm(BufferedImage image) {
+      this.img = image;
+	 }
+   public boolean areConnected(Point start, Point end) {
+      visited = new HashSet<Point>();
+      lineColor = img.getRGB(start.x, start.y);
+      return areSomehowConnected(start, end);
+   }
+   private boolean areSomehowConnected(Point start, Point end) {
+      visited.add(start);
+      if (areDirectlyConnected(start, end)) return true;
+      for (Point next : unvisitedNeighborsOf(start)) {
+         if (areSomehowConnected(next, end)) return true;
+      }
+     return false;
+   }
+   private List<Point> unvisitedNeighborsOf(Point p) {
+     List<Point> neighbors = new ArrayList<Point>();
+     for (int xDiff = -1; xDiff <= 1; xDiff++) {
+       for (int yDiff = -1; yDiff <= 1; yDiff++) {
+         Point neighbor = new Point(p.x + xDiff, p.y + yDiff);
+         if (!isWithinImageBoundary(neighbor)) continue;
+         int pixel = img.getRGB(neighbor.x, neighbor.y);
+         if (pixel == lineColor && !visited.contains(neighbor)) {
+           neighbors.add(neighbor);
+         }
+       } 
+     }
+     return neighbors;
+   }
+   private boolean isWithinImageBoundary(Point p) {
+     if (p.x < 0 || p.y < 0)  return false;
+     if (p.x >= img.getWidth()) return false;
+     if (p.y >= img.getHeight()) return false;
+     return true;
+  }
+  private boolean areDirectlyConnected(Point start, Point end) {
+    int xDistance = abs(start.x - end.x);
+    int yDistance = abs(start.y - end.y);
+    return xDistance <= 1 && yDistance <= 1;
+  }
+}
+```
+
+PathAlgorithm的实现其实就是深度优先搜索，从起始坐标开始，遍历每个颜色符合的相邻坐标，直到走完所有相连的点，或者遇到与终止坐标直接相邻的点。
+
+这种测试极其脆弱，因为即使很小的和不相关的输入变化——是否是另一个图像，或图形对象的渲染方式——都足以影响输出、打破测试，谁让你非要精确地检查像素坐标和颜色来着。同样的问题在采用**golden master**（捕获并保存当前的处理结果，未来的运行结果将会与保存的结果进行对比，从而发现预期之外的变更。又称Approve Test或标杆比对测试法）技术时也会遇到，其做法是事先将图像录制下来，并手工检查其正确性，以后再进行测试时就将渲染出的图像与之进行比对。
+
+在上述方案中，我们可以在适当抽象层次上针对表达意图的图像输出来编写断言——针对高层概念而非像素坐标。但你也看到了，这种自定义断言实现起来并不容易。无论如何，考虑到像素完美的极度脆弱性时，这样做还是物有所值的。
+
+
+
+### 参数化的混乱
+
+先看参数化测试模式的典型起始点。
+
+```java
+public class RomanNumeralsTest {
+  @Test
+  public void one() {
+    assertEquals("I", format(1));
+  }
+  @Test
+  public void two() {
+    assertEquals("II", format(2));
+  }
+  @Test
+  public void four() {
+    assertEquals("IV", format(4));
+  }
+  @Test
+  public void five() {
+    assertEquals("V", format(5));
+  }
+  @Test
+  public void seven() {
+    assertEquals("VII", format(7));
+  }
+  @Test
+  public void nine() {
+    assertEquals("IX", format(9));
+  }
+  @Test
+  public void ten() {
+    assertEquals("X", format(10));
+  }
+}
+```
+
+包含一堆只有一行的测试方法，仅仅是输入和期望输出值有所不同。被测代码是个工具类，负责将数字格式化为罗马数字。这种情形正是参数化测试模式的用武之地，其降低代码行数的手段主要是去除样板代码(boilerplate)。使用参数化测试模式和JUnit的Parameterized test runner(测试运行器)重写了相同的测试。
+
+```java
+@RunWith(Parameterized.class)
+public class RomanNumeralsTest {
+   private int number;
+   private String numeral;
+   public RomanNumeralsTest(int number, String numeral) {
+      this.number = number;
+      this.numeral = numeral;
+	}
+   @Parameters
+   public static Collection<Object[]> data() {
+      return asList(new Object[][] { { 1, "I" }, { 2, "II" },
+            { 4, "IV" }, { 5, "V" }, { 7, "VII" },
+            { 9, "IX" }, { 10, "X" } });
+	}
+	@Test
+  public void formatsPositiveIntegers() {
+    assertEquals(dataset(), numeral, format(number));
+  }
+  private String dataset() {
+    StringBuilder s = new StringBuilder();
+    s.append("Data set: [").append(this.number);
+    s.append(", \"").append(this.numeral).append("\"].");
+    return s.toString();
+	}
+}
+```
+
+可以用类似@Parameters 方法中的方式来组装一个失败消息，用于描述整个数据集，使得JUnit在匿名测试失败时能表达出该信息。
+
+### 方法间缺乏内聚
+
+内聚是构造良好的面向对象代码的主要属性。简而言之，内聚意味着一个类只代表单一**事物**，单一抽象。内聚是好事——我们希望高内聚——而**内聚**也是一种代码坏味道。本节标题中的“**方法间**”指的是，我们通过观察一个类中各方法之间的共性来确定内聚度。尽管有各种手段来计算方法内聚度，但常见公式的分母都是基于一个大概的想法，即完美内聚意味着一个类的每个字段都被每个方法所使用到。
+
+代码是处理**拆分会计 (split accounting)**的，用于将某条目的成本分散到多个会计组中。例如，新的数据库服务器将被三个不同部门使用，因此你可以将其价格分拆到三个不同的预算中。代码用三个领域对象来处理拆分会计操作：Account、Split和BudgetCategory。操作本身用Transaction对象来表示。清单中的测试类在@Before方法中为这些领域对象初始化一个夹具(fixture)，然后测试类有几个测试方法工作在那些对象上。
+
+```java
+public class SplitsTest {
+   Account account;
+   Split split;
+   BudgetCategory bc1, bc2, bc3, bc4;
+	 // ...
+   @Test
+   public void fromSplits() throws Exception {
+      List<TransactionSplit> fromSplits = new ArrayList<TransactionSplit>();
+      fromSplits.add(createSplit(bc3, 1200));
+      fromSplits.add(createSplit(bc4, 34));
+      Transaction t = createTransaction(split, account);
+      t.setFromSplits(fromSplits);
+      assertTrue(transactions(t).size() == 1);
+
+   }
+
+   @Test
+   public void toSplits() throws Exception {
+      List<TransactionSplit> toSplits = new ArrayList<TransactionSplit>();
+      toSplits.add(createSplit(bc1, 1200));
+      toSplits.add(createSplit(bc2, 34));
+      Transaction t = createTransaction(account, split);
+      t.setToSplits(toSplits);
+      assertTrue(transactions(t).size() == 1);
+   }
+}
+```
+
+坏味道是由于测试类的夹具包含了多个BudgetCategory 对象，然后测试方法只用到其中一部分。这明显与每个测试都工作在相同夹具上的想法背道而驰；各个测试方法缺乏内聚。从更大角度来看，一个过度复杂的夹具会使程序员更难理解发生了什么。更多的字段意味着更多变化的事物充斥着你的大脑。单看其中一个测试，其实也很难找出它用到了哪些字段，因为不够明显。我们反而留下疑问，“哪个category也是bc3来着？”这个问题源于一个基本的代码坏味道：糟糕的命名。尽管测试方法缺乏内聚并不会令你完全不能对夹具进行良好地命名，但往往会相当困难。
+
+例如，每个测试都具有一个输入和一个输出，但由于每个测试都有这么一对儿对象，你就不得不按照emptyInput、 inputWithOneThing、inputWithThreeIdenticalThings等来命名。这样，你就不能简单地看着夹具说，“没错。这两个是一起的，而剩下的与这个测试无关。”
+
+
+
+解法：
+
+我们已经拿出了一个对策——将类分拆。此外，更好的典型方案是强制各测试使用相同的夹具对象。要将一个测试类分解为两个，我们需要识别哪部分夹具是所有测试共享的，哪些是个别测试独有的。
+
+在该类其余的测试中，没有哪个用到两个以上的BudgetCategory 对象，而且bc1和bc2总是一起出现，要么bc3和bc4一起出现。你应该寻找这类群组，找出自然边界从而将类分拆成两个或三个更小、更专注的——内聚的——测试类。
+
+有时你需要的就是创建另一个测试类，将某些方法和夹具对象搬移过去，然后把手擦干净。通常，测试依赖于相同的工具方法，而我们不喜欢重复。这时，我们也需要将那些工具方法移到单独的类中，如此一来，分拆后的测试类都可以使用它，或者提炼一个公共基类来提供这些工具。
+
+```java
+public class TestSplitsAcrossDifferentBudgetCategories extends AbstractSplitsTestCase {
+   private BudgetCategory incomeCategory, standardCategory;
+   @Before
+   public void setup() throws Exception {
+      incomeCategory = new BudgetCategoryImpl();
+      incomeCategory.setIncome(true);
+      standardCategory = new BudgetCategoryImpl();
+      standardCategory.setIncome(false);
+	}
+  @Override
+  protected List<BudgetCategory> budgetCategories() {
+    return asList(incomeCategory, standardCategory);
+  }
+  // tests omitted
+}
+```
+
+现在夹具变得多么简单。这个测试类中用到了哪些budget category以及相互之间的区别都一目了然。将所有公共部分搬移到抽象基类AbstractSplitsTestCase中
+
+```java
+public abstract class AbstractSplitsTestCase {
+    protected Account account;
+    @Before
+    public void initializeAccount() throws Exception { ... }
+    /**
+      * Concrete test classes implement this to give the utility
+      * methods access to the BudgetCategory objects in use.
+      */
+    protected abstract List<BudgetCategory> budgetCategories();
+
+    protected List<Transaction> transactions(Transaction t) throws ModelException {
+      Document d = ModelFactory.createDocument();
+      for (BudgetCategory bc : budgetCategories()) {
+        d.addBudgetCategory(bc);
+      }
+      d.addAccount(account);
+      d.addTransaction(t);
+      return d.getTransactions();
+    }
+    protected TransactionSplit createSplit(BudgetCategory category, int amount) throws InvalidValueException { ... }
+    protected Transaction createTransaction(Source from, Source to)
+      throws InvalidValueException { ... }
+}
+```
 
 
 
@@ -760,13 +1540,21 @@ public void returnsNonZeroExitCodeForFailedCommands() {
 
 
 
-## 可测试的设计
+## 可测试性的设计
+
+略，请阅读正版原书
 
 ## 附录：Java单元测试的基本语法
 
+略，请阅读正版原书
+
 ## 附录：测试替身（Test Double）
+
+略，请阅读正版原书
 
 ## 附录：利用其他JVM语言如Groovy编写自动化测试
 
-## 更多连载
+略，请阅读正版原书
+
+
 
