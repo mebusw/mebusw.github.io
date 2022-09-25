@@ -1,4 +1,4 @@
-title: 大型敏捷，请和你的大老师远离敏捷
+title: 大型规模化敏捷，请和你的大老师远离敏捷
 date: 2019-12-23 22:38:47
 tags:
 	- safe
@@ -27,7 +27,7 @@ categories:
 ![](https://images.squarespace-cdn.com/content/v1/5665cf9f9cadb64a3b5042b2/1455207460029-8TGJ9391NCJ36D0Y54BO/ke17ZwdGBToddI8pDm48kP84woVu_Cf-7c-ilaCX4VhZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7aXK0t8ahyzoOLFEHArbPTLsj8YOPa-3VYbtSFsbkmHdx4N3MT7kbMFErxMjKM2F9w/image-asset.png?format=750w)
 
 
-## 一、从敏捷到”大型敏捷”
+## 一、从敏捷到规模化”大型敏捷”
 
 ###  1.1 回顾敏捷Agile这个词
 
