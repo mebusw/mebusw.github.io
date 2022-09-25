@@ -95,7 +95,7 @@ exclude_generator:
 deploy:
   type: git
   repo: git@github.com:mebusw/mebusw.github.io.git
-  branch: master
+  branch: gh-pages
 
 sitemap:
   path: sitemap.xml
