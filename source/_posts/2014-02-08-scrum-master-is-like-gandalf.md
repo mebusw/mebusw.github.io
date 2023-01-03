@@ -9,8 +9,9 @@ categories:
 
 ![gandalf](/media/gandalf-with-laptop.jpg)
 
-本文是之前为Scrum Gathering2013准备[《甘道夫--中土世界的Scrum Master》](https://pan.baidu.com/s/1jDq6z8NB8bjSq4c_RQsLDQ)（提取码: qax7）话题时总结的一些想法，更多是从内部做ScrumMaster和敏捷教练时的体会。
-（关于SM与Agile Coach的区别，笔者认为不大，SM也不只是懂Scrum就够了。其实可以从团队级和组织级来区别工作范围，而不是纠结名字）
+本文是之前为Scrum Gathering 2013敏捷大会准备话题时总结的一些想法，又在台北RSG2022大会进行了重制。更多是从内部做ScrumMaster和敏捷教练时的体会。重点是：对齐目标 收服人心，用魔戒甘道夫作比喻，借假修真地阐述敏捷教练打造敏捷团队的秘诀，最主要的能力就是"填坑"（Fill the Gap）
+
+（关于Scrum Master与Agile Coach的区别，笔者认为不大，SM也不只是懂Scrum就够了。其实可以从团队级和组织级来区别工作范围，而不是纠结名字）
 
 SM是新的角色，很多时候定位不是那么清楚。The Scrum Master is primarily responsible for "How" - using Scrum the right way.
 
@@ -77,3 +78,5 @@ Open mind with curiosity, pro-active exploring, willing to learning, improving a
 - [Scrum检查清单](http://jackyshen.com/2014/02/08/scrum-checklist/)
 - [国际Scrum Alliance首位CTC认证者和你聊聊什么是敏捷教练](https://www.jackyshen.com/2017/04/07/what-is-agile-coach/)
 - [我是怎样成为敏捷教练的？](https://www.jackyshen.com/2016/03/26/my-agile-coach-journey)
+- [《甘道夫--中土世界的Scrum Master》](https://pan.baidu.com/s/1jDq6z8NB8bjSq4c_RQsLDQ)（提取码: qax7）
+- [《甘道夫--中土世界的Scrum Master》十年重制版](https://mp.weixin.qq.com/s/kLe9uFAXUr8BY8MsPq94MA）
