@@ -79,4 +79,4 @@ Open mind with curiosity, pro-active exploring, willing to learning, improving a
 - [国际Scrum Alliance首位CTC认证者和你聊聊什么是敏捷教练](https://www.jackyshen.com/2017/04/07/what-is-agile-coach/)
 - [我是怎样成为敏捷教练的？](https://www.jackyshen.com/2016/03/26/my-agile-coach-journey)
 - [《甘道夫--中土世界的Scrum Master》](https://pan.baidu.com/s/1jDq6z8NB8bjSq4c_RQsLDQ)（提取码: qax7）
-- [《甘道夫--中土世界的Scrum Master》十年重制版](https://mp.weixin.qq.com/s/kLe9uFAXUr8BY8MsPq94MA）
+- [《甘道夫--中土世界的Scrum Master》十年重制版](https://mp.weixin.qq.com/s/kLe9uFAXUr8BY8MsPq94MA)
