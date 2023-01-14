@@ -9,7 +9,11 @@ categories:
 
 ![gandalf](/media/gandalf-with-laptop.jpg)
 
-本文是之前为Scrum Gathering 2013敏捷大会准备话题时总结的一些想法，又在台北RSG2022大会进行了重制。更多是从内部做ScrumMaster和敏捷教练时的体会。重点是：对齐目标 收服人心，用魔戒甘道夫作比喻，借假修真地阐述敏捷教练打造敏捷团队的秘诀，最主要的能力就是"填坑"（Fill the Gap）
+本文是之前为Scrum Gathering 2013敏捷大会准备话题时总结的一些想法，又在台北RSG2022大会进行了重制。更多是从内部做ScrumMaster和敏捷教练时的体会。重点是：对齐目标 收服人心，用魔戒甘道夫作比喻，借假修真地阐述敏捷教练打造敏捷团队的秘诀，最主要的能力就是"填坑"（Fill the Gap）。
+
+> 点击观看幻灯片演讲实录：
+
+> [对齐目标 收服人心——魔戒甘道夫用“血泪”填坑 | 打造敏捷团队的秘诀 敏捷教练借假修真](https://www.uperform.cn/%e5%af%b9%e9%bd%90%e7%9b%ae%e6%a0%87-%e6%94%b6%e6%9c%8d%e4%ba%ba%e5%bf%83-%e9%ad%94%e6%88%92%e7%94%98%e9%81%93%e5%a4%ab%e7%94%a8%e8%a1%80%e6%b3%aa%e5%a1%ab%e5%9d%91/)
 
 （关于Scrum Master与Agile Coach的区别，笔者认为不大，SM也不只是懂Scrum就够了。其实可以从团队级和组织级来区别工作范围，而不是纠结名字）
 
