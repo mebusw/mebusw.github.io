@@ -38,7 +38,7 @@ Jacky Shen提供敏捷相关的英文及中文Scrum培训及敏捷教练顾问�
 
 ## 个人网站：[www.JackyShen.com](http://www.JackyShen.com)
 
-## 电邮E-Mail:   [JackyShen@scrumchina.com](mailto:JackyShen@scrumchina.com)
+## 电邮E-Mail:   [JackyShen@uperform.cn](mailto:JackyShen@uperform.cn)
 
 ## 微博Weibo:   [@申导](http://weibo.com/u/1001863751)
 
@@ -109,7 +109,5 @@ Jacky Shen提供敏捷相关的英文及中文Scrum培训及敏捷教练顾问�
 
 ## 友情链接
 <ul>
-          <li><a href="http://bobjiang.com/">Bob Jiang姜信宝的博客</a></li>
-          <li><a href="http://www.maiyuan.me/">Ronald Mai麦宇安 敏捷教练</a></li>
           <li><a href="https://www.scrumalliance.org/community/profile/jshen2">Scrum Alliance国际Scrum联盟</a></li>
 </ul>
