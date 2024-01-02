@@ -148,7 +148,7 @@ Agile Development - 敏捷(软件)开发是一系列方法和实践，使得解�
     <a href="/glossary-of-agile/taskboard.html">任务墙</a>
 </span>
   <span class="text" style="width:113px;line-height:150%;text-align: center; position:absolute;top:78px;left:158px; margin-right:0; margin-bottom:12px">
-    <a href="/definition-of-done.html">完成的定义</a>
+    <a href="/glossary-of-agile/definition-of-done.html">完成的定义</a>
 </span>
   <span class="text" style="width:106px;line-height:150%;text-align: center; position:absolute;top:110px;left:230px; margin-right:0; margin-bottom:0">
     <a href="/glossary-of-agile/definition-of-ready.html">就绪的定义</a>
