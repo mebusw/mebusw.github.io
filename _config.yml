@@ -8,7 +8,7 @@ subtitle: Scrum Agile Coach
 description: 申健，Jacky Shen, 江湖人称“申导”。创客，工匠，敏捷教练，软件开发顾问。致力于启发创意、促进协作、交付价值的事业。1994年迷上计算机编程，毕业于南京大学。拥有CST认证Scrum培训讲师, CTC认证敏捷教练, CSP，CSM认证和CSPO认证、UCAC认证、看板认证和ToP引导技术认证。Scrum联盟CSD认证课程授权讲师，管理3.0讲师。在跨国企业从事将近十年的研发和管理工作，涉及电信、金融、互联网等领域，拥有丰富的移动应用程序和面向服务分布式系统的项目经验。自2007年开始进入敏捷开发实战，在大型敏捷组织中担任过高级软件工程师、研发经理、ScrumMaster、质量经理、敏捷教练等职位，对大型组织(500人以上)的敏捷转型，团队管理和和工程实践的落地运用具有丰富的经验。《SOA与REST》、《有效的单元测试》、《重塑组织》译者。InfoQ中文站编辑，中国敏捷教练组成员，敏捷之旅、ScrumGathering、QClub等社区活动的组织者及演讲嘉宾。桌游和羽毛球爱好者。
 author: Jacky Shen申健
 email: jackyshen@uperform.cn
-language: en
+language: zh-cn
 timezone: ''
 keywords: Scrum认证 创客 工匠 敏捷教练 软件开发顾问 Agile Coaching 申健 申导
 
@@ -107,8 +107,11 @@ deploy:
   repo: git@github.com:mebusw/mebusw.github.io.git
   branch: gh-pages
 
-sitemap:
-  path: sitemap.xml
 
-baidusitemap:
-  path: baidusitemap.xml
+sitemap:
+  path: 
+    - sitemap.xml
+    - sitemap.txt
+  rel: false
+  tags: true
+  categories: true
