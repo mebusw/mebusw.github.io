@@ -1,4 +1,3 @@
-https://www.jackyshen.com/glossary-of-agile/index.html
 https://www.jackyshen.com/glossary-of-agile/versioncontrol.html
 https://www.jackyshen.com/glossary-of-agile/velocity.html
 https://www.jackyshen.com/glossary-of-agile/user-stories.html
@@ -27,12 +26,14 @@ https://www.jackyshen.com/glossary-of-agile/poker.html
 https://www.jackyshen.com/glossary-of-agile/points-estimates-in.html
 https://www.jackyshen.com/glossary-of-agile/personas.html
 https://www.jackyshen.com/glossary-of-agile/pairing.html
+https://www.jackyshen.com/glossary-of-agile/nikoniko.html
 https://www.jackyshen.com/glossary-of-agile/mocks.html
 https://www.jackyshen.com/glossary-of-agile/leadtime.html
 https://www.jackyshen.com/glossary-of-agile/kanban.html
 https://www.jackyshen.com/glossary-of-agile/iterative.html
 https://www.jackyshen.com/glossary-of-agile/iteration.html
 https://www.jackyshen.com/glossary-of-agile/invest.html
+https://www.jackyshen.com/glossary-of-agile/incremental.html
 https://www.jackyshen.com/glossary-of-agile/heartbeatretro.html
 https://www.jackyshen.com/glossary-of-agile/gwt.html
 https://www.jackyshen.com/glossary-of-agile/frequent-release.html
@@ -53,8 +54,8 @@ https://www.jackyshen.com/glossary-of-agile/backlog-grooming.html
 https://www.jackyshen.com/glossary-of-agile/autobuild.html
 https://www.jackyshen.com/glossary-of-agile/atdd.html
 https://www.jackyshen.com/glossary-of-agile/acceptance.html
-https://www.jackyshen.com/glossary-of-agile/incremental.html
-https://www.jackyshen.com/glossary-of-agile/nikoniko.html
+https://www.jackyshen.com/2019/09/11/2019-09-11-subway-map-of-agile-development-practices/
+https://www.jackyshen.com/glossary-of-agile/index.html
 https://www.jackyshen.com/about-me/index.html
 https://www.jackyshen.com/2021/02/06/2014-02-08-scrum-master-is-like-gandalf/
 https://www.jackyshen.com/2019/12/23/2019-12-23-Large-Scale-Frameworks-for-Agile/
@@ -62,7 +63,6 @@ https://www.jackyshen.com/2022/01/01/2022-01-01-effective-unit-testing/
 https://www.jackyshen.com/2022/02/03/2022-02-03-scrum-primer-v20-chinese/
 https://www.jackyshen.com/2022/01/10/2022-01-10-risk-ROI-based-agility-acquisition-strategy/
 https://www.jackyshen.com/2021/01/25/2021-01-25-sources-of-agility/
-https://www.jackyshen.com/2019/09/11/2019-09-11-subway-map-of-agile-development-practices/
 https://www.jackyshen.com/2021/09/15/2021-09-15-what-do-you-pay-for-agile-coach/
 https://www.jackyshen.com/2021/09/12/2021-09-12-remove-scrum-from-safe/
 https://www.jackyshen.com/2015/11/16/2015-11-16-spotify-agile-engineering-culture-video-in-chinese/
