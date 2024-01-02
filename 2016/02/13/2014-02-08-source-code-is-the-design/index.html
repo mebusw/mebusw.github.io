@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>源代码就是设计 (Source code is the design) | 申导</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="至今，我仍能记起当我顿悟并最终产生下面文章时所在的地方。那是1986年的夏天，我在加利福尼亚中国湖海军武器中心担任临时顾问。在这期间，我有幸参加了一个关于Ada的研讨会。讨论当中，有一位听众提出了一个具有代表性的问题，“软件开发者是工程师吗？”我不记得当时的回答，但是我却记得当时并没有真正解答这个问题。于是，我就退出讨论，开始思考我会怎样回答这样一个问题。现在，我无法肯定当时我为什么会记起几乎10">
+<meta property="og:type" content="article">
+<meta property="og:title" content="源代码就是设计 (Source code is the design)">
+<meta property="og:url" content="https://www.jackyshen.com/2016/02/13/2014-02-08-source-code-is-the-design/index.html">
+<meta property="og:site_name" content="申导">
+<meta property="og:description" content="至今，我仍能记起当我顿悟并最终产生下面文章时所在的地方。那是1986年的夏天，我在加利福尼亚中国湖海军武器中心担任临时顾问。在这期间，我有幸参加了一个关于Ada的研讨会。讨论当中，有一位听众提出了一个具有代表性的问题，“软件开发者是工程师吗？”我不记得当时的回答，但是我却记得当时并没有真正解答这个问题。于是，我就退出讨论，开始思考我会怎样回答这样一个问题。现在，我无法肯定当时我为什么会记起几乎10">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2016-02-13T05:41:16.000Z">
+<meta property="article:modified_time" content="2016-02-13T05:41:16.000Z">
+<meta property="article:author" content="Jacky Shen申健">
+<meta property="article:tag" content="design">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="申导" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">申导</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Scrum Agile Coach</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about-me">About</a>
+        
+          <a class="main-nav-link" href="/glossary-of-agile">Glossary</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://www.jackyshen.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-2014-02-08-source-code-is-the-design" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2016/02/13/2014-02-08-source-code-is-the-design/" class="article-date">
+  <time class="dt-published" datetime="2016-02-13T05:41:16.000Z" itemprop="datePublished">2016-02-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/agile/">agile</a>►<a class="article-category-link" href="/categories/agile/engineering/">engineering</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      源代码就是设计 (Source code is the design)
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>至今，我仍能记起当我顿悟并最终产生下面文章时所在的地方。那是1986年的夏天，我在加利福尼亚中国湖海军武器中心担任临时顾问。在这期间，我有幸参加了一个关于Ada的研讨会。讨论当中，有一位听众提出了一个具有代表性的问题，“软件开发者是工程师吗？”我不记得当时的回答，但是我却记得当时并没有真正解答这个问题。于是，我就退出讨论，开始思考我会怎样回答这样一个问题。现在，我无法肯定当时我为什么会记起几乎10年前曾经在Datamation杂志上阅读过的一篇论文，不过促使我记起的应该是后续讨论中的某些东西。这篇论文阐述了工程师为什么必须是好的作家（我记得该论文谈论就是这个问题——好久没有看了），但是我从该论文中得到的关键一点是：作者认为工程过程的最终结果是文档。换句话说，工程师生产的是文档，不是实物。其他人根据这些文档去制造实物。于是，我就在困惑中提出了一个问题，“除了软件项目正常产生的所有文档以外，还有可以被认为是真正的工程文档的东西吗？”我给出的回答是，“是的，有这样的文档存在，并且只有一份——源代码。”</p>
+<span id="more"></span>
+
+<p>把源代码看作是一份工程文档——设计——完全颠覆了我对自己所选择的职业的看法。它改变了我看待一切事情的方式。此外，我对它思考的越多，我就越觉得它阐明了软件项目常常遇到的众多问题。更确切地说，我觉得大多数人不理解这个不同的看法，或者有意拒绝它这样一个事实，就足以说明很多问题。几年后，我终于有机会把我的观点公开发表。C++ Journal中的一篇有关软件设计的论文促使我给编辑写了一封关于这个主题的信。经过几封书信交换后，编辑Livleen Singh同意把我关于这个主题的想法发表为一篇论文。下面就是这篇文章。<br>——Jack Reecves, December,22,2001</p>
+<h1 id="什么是软件设计？"><a href="#什么是软件设计？" class="headerlink" title="什么是软件设计？"></a>什么是软件设计？</h1><p>Jack W.Reeves, 1992</p>
+<p>面向对象技术，特别是C++，似乎给软件界带来了不小的震动。出现了大量的论文和书籍去描述如何应用这项新技术。总的来说，那些关于面向对象技术是否只是一个骗局的问题已经被那些关于如何付出最小的努力即可获得收益的问题所替代。面向对象技术出现已经有一段时间了，但是这种爆炸式的流行却似乎有点不寻常。人们为何会突然关注它呢？对于这个问题，人们给出了各种各样的解释。事实上，很可能就没有单一的原因。也许，把多种因素的结合起来才能最终取得突破，并且这项工作正在进展之中。尽管如此，在软件革命的这个最新阶段中，C++本身看起来似乎成为了一个主要因素。同样，对于这个问题，很可能也存在很多种理由，不过我想从一个稍微不同的视角给出一个答案：C++之所以变得流行，是因为它使软件设计变得更容易的同时，也使编程变得更容易。</p>
+<p>虽然这个解释好像有点奇特，但是它却是深思熟虑的结果。在这篇论文中，我就是想要关注一下编程和程序设计之间的关系。近10年来，我一直觉得整个软件行业都没有觉察到做出一个软件设计和什么是真正的软件设计之间的一个微妙的不同点。只要看到了这一点，我认为我们就可以从C++增长的流行趋势中，学到关于如何才能成为更好的软件工程师的意义深远的知识。这个知识就是，编程不是构建软件，而是设计软件。</p>
+<p>几年前，我参见了一个讨论会，其中讨论到软件开发是否是一门工程学科的问题。虽然我不记得了讨论结果，但是我却记得它是如何促使我认识到：软件业已经做出了一些错误的和硬件工程的比较，而忽视了一些绝对正确的对比。其实，我认为我们不是软件工程师，因为我们没有认识到什么才是真正的软件设计。现在，我对这一点更是确信无疑。</p>
+<p>任何工程活动的最终目标都是某些类型的文档。当设计工作完成时，设计文档就被转交给制造团队。该团队是一个和设计团队完全不同的群体，并且其技能也和设计团队完全不同。如果设计文档正确地描绘了一个完整的设计，那么制造团队就可以着手构建产品。事实上，他们可以着手构建该产品的许多实物，完全无需设计者的任何进一步的介入。在按照我的理解方式审查了软件开发的生命周期后，我得出一个结论：实际上满足工程设计标准的惟一软件文档，就是源代码清单。</p>
+<p>对于这个观点，人们进行了很多的争论，无论是赞成的还是反对的都足以写成无数的论文。本文假定最终的源代码就是真正的软件设计，然后仔细研究了该假定带来的一些结果。我可能无法证明这个观点是正确的，但是我希望证明：它确实解释了软件行业中一些已经观察到的事实，包括C++的流行。</p>
+<p>在把代码看作是软件设计所带来的结果中，有一个结果完全盖过了所有其他的结果。它非常重要并且非常明显，也正因为如此，对于大多数软件机构来说，它完全是一个盲点。这个结果就是：软件的构建是廉价的。它根本就不具有昂贵的资格；它非常的廉价，几乎就是免费的。如果源代码是软件设计，那么实际的软件构建就是由编译器和连接器完成的。我们常常把编译和连接一个完整的软件系统的过程称为“进行一次构建”。在软件构建设备上所进行的主要投资是很少的——实际需要的只有一台计算机、一个编辑器、一个编译器以及一个连接器。一旦具有了一个构建环境，那么实际的软件构建只需花费少许的时间。编译50 000行的C++程序也许会花费很长的时间，但是构建一个具有和50 000行C++程序同样设计复杂性的硬件系统要花费多长的时间呢？</p>
+<p>把源代码看作是软件设计的另外一个结果是，软件设计相对易于创作，至少在机械意义上如此。通常，编写（也就是设计）一个具有代表性的软件模块（50至100行代码）只需花费几天的时间（对它进行完全的调试是另外一个议题，稍后会对它进行更多的讨论）。我很想问一下，是否还有任何其他的学科可以在如此短的时间内，产生出和软件具有同样复杂性的设计来，不过，首先我们必须要弄清出如何来度量和比较复杂性。然而，有一点是明显的，那就是软件设计可以 极为迅速地变得非常庞大。</p>
+<p>假设软件设计相对易于创作，并且在本质上构建起来也没有什么代价，一个不令人吃惊的发现是，软件设计往往是难以置信的庞大和复杂。这看起来似乎很明显，但是问题的重要性却常常被忽视。学校中的项目通常具有数千行的代码。具有10 000行代码（设计）的软件产品被它们的设计者丢弃的情况也是有的。我们早就不再关注于简单的软件。典型的商业软件的设计都是由数十万行代码组成的。许多软件设计达到了上百万行代码。另外，软件设计几乎总是在不断地演化。虽然当前的设计可能只有几千行代码，但是在产品的生命期中，实际上可能要编写许多倍的代码。</p>
+<p>尽管确实存在一些硬件设计，它们看起来似乎和软件设计一样复杂，但是请注意两个有关现代硬件的事实。第一，复杂的硬件工程成果未必总是没有错误的，在这一点上，它不存在像软件那样让我们相信的评判标准。多数的微处理器在发售时都具有一些逻辑错误：桥梁坍塌，大坝破裂，飞机失事以及数以千计的汽车和其他消费品被召回——所有的这些我们都记忆犹新，所有的这些都是设计错误的结果。第二，复杂的硬件设计具有与之对应的复杂、昂贵的构建阶段。结果，制造这种系统所需的能力限制了真正能够生产复杂硬件设计公司的数目。对于软件来说，没有这种限制。目前，已经有数以百计的软件机构和数以千计的非常复杂的软件系统存在，并且数量以及复杂性每天都在增长。这意味着软件行业不可能通过仿效硬件开发者找到针对自身问题的解决办法。倘若一定要说出有什么相同之处的话，那就是，当CAD和CAM可以做到帮助硬件设计者创建越来越复杂的设计时，硬件工程才会变得和软件开发越来越像。</p>
+<p>设计软件是一种管理复杂性的活动。复杂性存在于软件设计本身之中，存在于公司的软件机构之中，也存在于整个软件行业之中。软件设计和系统设计非常相似。它可以跨越多种技术并且常常涉及多个学科分支。软件的规格说明往往不固定、经常快速变化，这种变化常常在正进行软件设计时发生。同样，软件开发团队也往往不固定，常常在设计过程的中间发生变化。在许多方面，软件都要比硬件更像复杂的社会或者有机系统。所有这些都使得软件设计成为了一个困难的并且易出错的过程。虽然所有这些都不是创造性的想法，但是在软件工程革命开始将近30年后的今天，和其他工程行业相比，软件开发看起来仍然像是一种未受过训练（undisciplined）的技艺。</p>
+<p>一般的看法认为，当真正的工程师完成了一个设计，不管该设计有多么复杂，他们都非常确信该设计是可以工作的。他们也非常确信该设计可以使用公认的技术建造出来。为了做到这一点，硬件工程师花费了大量的时间去验证和改进他们的设计。例如，请考虑一个桥梁设计。在这样一个设计实际建造之前，工程师会进行结构分析——他们建立计算机模型并进行仿真，他们建立比例模型并在风洞中或者用其他一些方法进行测试。简而言之，在建造前，设计者会使用他们能够想到的一切方法来证实设计是正确的。对于一架新型客机的设计来说，情况甚至更加严重；必须要构建出和原物同尺寸的原型，并且必须要进行飞行测试来验证设计中的种种预计。</p>
+<p>对于大多数人来说，软件中明显不存在和硬件设计同样严格的工程。然而，如果我们把源代码看做是设计，那么就会发现软件工程师实际上对他们的设计做了大量的验证和改进。软件工程师不把这称为工程，而称它为测试和调试。大多数人不把测试和调试看作是真正的“工程”——在软件行业中肯定没有被看作是。造成这种看法的原因，更多的是因为软件行业拒绝把代码看作设计，而不是任何实际的工程差别。事实上，试验模型、原型以及电路试验板已经成为其他工程学科公认的组成部分。软件设计者之所以不具有或者没有使用更多的正规方法来验证他们的设计，是因为软件构建周期的简单经济规律。</p>
+<p>第一个启示：仅仅构建设计并测试它比做任何其他事情要廉价一些，也简单一些。我们不关心做了多少次构建——这些构建在时间方面的代价几乎为零，并且如果我们丢弃了构建，那么它所使用的资源完全可以重新利用。请注意，测试并非仅仅是让当前的设计正确，它也是改进设计的过程的一部分。复杂系统的硬件工程师常常建立模型（或者，至少他们把设计用计算机图形直观地表现出来）。这就使得他们获得了对于设计的一种“感觉”，而仅仅去检查设计是不可能获得这种感觉的。对于软件来说，构建这样一个模型既不可能也无必要。我们仅仅构建产品本身。即使正规的软件验证可以和编译器一样自动进行，我们还是会去进行构建&#x2F;测试循环。因此，正规的验证对于软件行业来说从来没有太多的实际意义。</p>
+<p>这就是现今软件开发过程的现实。数量不断增长的人和机构正在创建着更加复杂的软件设计。这些设计会被先用某些编程语言编写出来，然后通过构建&#x2F;测试循环进行验证和改进。过程易于出错，并且不是特别的严格。相当多的软件开发人员并不想相信这就是过程的运作方式，也正因为这一点，使问题变得更加复杂。</p>
+<p>当前大多数的软件过程都试图把软件设计的不同阶段分离到不同的类别中。必须要在顶层的设计完成并且冻结后，才能开始编码。测试和调试只对清除建造错误是必要的。程序员处在中间位置，他们是软件行业的建造工人。许多人认为，如果我们可以让程序员不再进行“随意的编码（hacking）”并且按照交给他们的设计去进行构建（还要在过程中，犯更少的错误），那么软件开发就可以变得成熟，从而成为一门真正的工程学科。但是，只要过程忽视了工程和经济学事实，这就不可能发生。</p>
+<p>例如，任何一个现代行业都无法忍受在其制造过程中出现超过100%的返工率。如果一个建造工人常常不能在第一次就构建正确，那么不久他就会失业。但是在软件业中，即使最小的一块代码，在测试和调试期间，也很可能会被修正或者完全重写。在一个创造性的过程中（比如：设计），我们认可这种改进不是制造过程的一部分。没有人会期望工程师第一次就创建出完美的设计。即使她做到了，仍然必须让它经受改进过程，目的就是为了证明它是完美的。</p>
+<p>即使我们从日本的管理方法中没有学到任何东西，我们也应该知道由于在过程中犯错误而去责备工人是无益于提高生产率的。我们不应该不断地强迫软件开发去符合不正确的过程模型，相反，我们需要去改进过程，使之有助于而不是阻碍产生更好的软件。这就是“软件工程”的石蕊测试。工程是关于你如何实施过程的，而不是关于是否需要一个CAD系统来产生最终的设计文档。</p>
+<p>关于软件开发有一个压倒性的问题，那就是一切都是设计过程的一部分。编码是设计，测试和调试是设计的一部分，并且我们通常认为的设计仍然是设计的一部分。虽然软件构建起来很廉价，但是设计起来却是难以置信的昂贵。软件非常的复杂，具有众多不同方面的设计内容以及它们所导致的设计考虑。问题在于，所有不同方面的内容是相互关连的（就像硬件工程中的一样）。我们希望顶层设计者可以忽视模块算法设计的细节。同样，我们希望程序员在设计模块内部算法时不必考虑顶层设计问题。糟糕的是，一个设计层面中的问题侵入到了其他层面之中。对于整个软件系统的成功来说，为一个特定模块选择算法可能和任何一个更高层次的设计问题同样重要。在软件设计的不同方面内容中，不存在重要性的等级。最低层模块中的一个不正确设计可能和最高层中的错误一样致命。软件设计必须在所有的方面都是完整和正确的，否则，构建于该设计基础之上的所有软件都会是错误的。</p>
+<p>为了管理复杂性，软件被分层设计。当程序员在考虑一个模块的详细设计时，可能还有数以百计的其他模块以及数以千计的细节，他不可能同时顾及。例如，在软件设计中，有一些重要方面的内容不是完全属于数据结构和算法的范畴。在理想情况下，程序员不应该在设计代码时还得去考虑设计的这些其他方面的内容。</p>
+<p>但是，设计并不是以这种方式工作的，并且原因也开始变得明朗。软件设计只有在其被编写和测试后才算完成。测试是设计验证和改进过程的基础部分。高层结构的设计不是完整的软件设计；它只是细节设计的一个结构框架。在严格地验证高层设计方面，我们的能力是非常有限的。详细设计最终会对高层设计造成的影响至少和其他的因素一样多（或者应该允许这种影响）。对设计的各个方面进行改进，是一个应该贯穿整个设计周期的过程。如果设计的任何一个方面内容被冻结在改进过程之外，那么对于最终设计将会是糟糕的或者甚至无法工作这一点，就不会觉得奇怪了。</p>
+<p>如果高层的软件设计可以成为一个更加严格的工程过程，那该有多好呀，但是软件系统的真实情况不是严格的。软件非常的复杂，它依赖于太多的其他东西。或许，某些硬件没有按照设计者认为的那样工作，或者一个库例程具有一个文档中没有说明的限制。每一个软件项目迟早都会遇到这些种类的问题。这些种类的问题会在测试期间被发现（如果我们的测试工作做得好的话），之所以如此是因为没有办法在早期就发现它们。当它们被发现时，就迫使对设计进行更改。如果我们幸运，那么对设计的更改是局部的。时常，更改会波及到整个软件设计中的一些重要部分（莫非定律）。当受到影响的设计的一部分由于某种原因不能更改时，那么为了能够适应影响，设计的其他部分就必须得遭到破坏。这通常导致的结果就是管理者所认为的“随意编码”，但是这就是软件开发的现实。</p>
+<p>例如，在我最近工作的一个项目中，发现了模块A的内部结构和另一个模块B之间的一个时序依赖关系。糟糕的是，模块A的内部结构隐藏在一个抽象体的后面，而该抽象体不允许以任何方法把对模块B的调用合入到它的正确调用序列中。当问题被发现时，当然已经错过了更改A的抽象体的时机。正如所料，所发生的就是把一个日益增长的复杂的“修正”集应用到A的内部设计上。在我们还没有安装完版本1时，就普遍感觉到设计正在衰退。每一个新的修正很可能都会破坏一些老的修正。这是一个正规的软件开发项目。最后，我和我的同事决定对设计进行更改，但是为了得到管理层的同意，我们不得不自愿无偿加班。</p>
+<p>在任何一般规模的软件项目中，肯定会出现像这样的问题，尽管人们使用了各种方法来防止它的出现，但是仍然会忽视一些重要的细节。这就是工艺和工程之间的区别。如果经验可以把我们引向正确的方向，这就是工艺。如果经验只会把我们带入未知的领域，然后我们必须使用一开始所使用的方法并通过一个受控的改进过程把它变得更好，这就是工程。</p>
+<p>我们来看一下只是作为其中很小一点的内容，所有的程序员都知道，在编码之后而不是之前编写软件设计文档会产生更加准确的文档。现在，原因是显而易见的。用代码来表现的最终设计是惟一一个在构建&#x2F;测试循环期间被改进的东西。在这个循环期间，初始设计保持不变的可能性和模块的数量以及项目中程序员的数量成反比。它很快就会变得毫无价值。</p>
+<p>在软件工程中，我们非常需要在各个层次都优秀的设计。我们特别需要优秀的顶层设计。初期的设计越好，详细设计就会越容易。设计者应该使用任何可以提供帮助的东西。结构图表、Booch 图、状态表、PDL等等——如果它能够提供帮助，就去使用它。但是，我们必须记住，这些工具和符号都不是软件设计。最后，我们必须创建真正的软件设计，并且是使用某种编程语言完成的。因此，当我们得出设计时，我们不应该害怕对它们进行编码。在必要时，我们必须应该乐于去改进它们。</p>
+<p>至今，还没有任何设计符号可以同时适用于顶层设计和详细设计。设计最终会表现为以某种编程语言编写的代码。这意味着在详细设计可以开始前，顶层设计符号必须被转换成目标编程语言。这个转换步骤耗费时间并且会引入错误。程序员常常是对需求进行回顾并且重新进行顶层设计，然后根据它们的实际去进行编码，而不是从一个可能没有和所选择的编程语言完全映射的符号进行转换。这同样也是软件开发的部分现实情况。</p>
+<p>也许，如果让设计者本人来编写初始代码，而不是后来让其他人去转换语言无关的设计，就会更好一些。我们所需要的是一个适用于各个层次设计的统一符号。换句话说，我们需要一种编程语言，它同样也适用于捕获高层的设计概念。C＋＋正好可以满足这个要求。C++是一门适用于真实项目的编程语言，同时它也是一个非常具有表达力的软件设计语言。C++允许我们直接表达关于设计组件的高层信息。这样，就可以更容易地进行设计，并且以后可以更容易地改进设计。由于它具有更强大的类型检查机制，所以也有助于检测到设计中的错误。这就产生了一个更加健壮的设计，实际上也是一个更好的工程化设计。</p>
+<p>最后，软件设计必须要用某种编程语言表现出来，然后通过一个构建&#x2F;测试循环对其进行验证和改进。除此之外的任何其他主张都完全没有用。请考虑一下都有哪些软件开发工具和技术得以流行。结构化编程在它的时代被认为是创造性的技术。Pascal使之变得流行，从而自己也变得流行。面向对象设计是新的流行技术，而C++是它的核心。现在，请考虑一下那些没有成效的东西。CASE工具，流行吗？是的；通用吗？不是。结构图表怎么样？情况也一样。同样地，还有Warner-Orr图、Booch图、对象图以及你能想起的一切。每一个都有自己的强项，以及惟一的一个根本弱点——它不是真正的软件设计。事实上，惟一一个可以被普遍认可的软件设计符号是PDL，而它看起来像什么呢？</p>
+<p>这表明，在软件业的共同潜意识中本能地知道，编程技术，特别是实际开发所使用的编程语言的改进和软件行业中任何其他东西相比，具有压倒性的重要性。这还表明，程序员关心的是设计。当出现更加具有表达力的编程语言时，软件开发者就会使用它们。</p>
+<p>同样，请考虑一下软件开发过程是如何变化的。从前，我们使用瀑布式过程。现在，我们谈论的是螺旋式开发和快速原型。虽然这种技术常常被认为可以“消除风险”以及“缩短产品的交付时间”，但是它们事实上也只是为了在软件的生命周期中更早地开始编码。这是好事。这使得构建&#x2F;测试循环可以更早地开始对设计进行验证和改进。这同样也意味着，顶层软件设计者很有可能也会去进行详细设计。</p>
+<p>正如上面所表明的，工程更多的是关于如何去实施过程的，而不是关于最终产品看起来的像什么。处在软件行业中的我们，已经接近工程师的标准，但是我们需要一些认知上的改变。编程和构建&#x2F;测试循环是工程软件过程的中心。我们需要以像这样的方式去管理它们。构建&#x2F;测试循环的经济规律，再加上软件系统几乎可以表现任何东西的事实，就使得我们完全不可能找出一种通用的方法来验证软件设计。我们可以改善这个过程，但是我们不能脱离它。</p>
+<p>最后一点：任何工程设计项目的目标是一些文档产品。显然，实际设计的文档是最重要的，但是它们并非惟一要产生的文档。最终，会期望某些人来使用软件。同样，系统很可能也需要后续的修改和增强。这意味着，和硬件项目一样，辅助文档对于软件项目具有同样的重要性。虽然暂时忽略了用户手册、安装指南以及其他一些和设计过程没有直接联系的文档，但是仍然有两个重要的需求需要使用辅助设计文档来解决。</p>
+<p>辅助文档的第一个用途是从问题空间中捕获重要的信息，这些信息是不能直接在设计中使用的。软件设计需要创造一些软件概念来对问题空间中的概念进行建模。这个过程需要我们得出一个对问题空间中概念的理解。通常，这个理解中会包含一些最后不会被直接建模到软件空间中的信息，但是这些信息却仍然有助于设计者确定什么是本质概念以及如何最好地对它们建模。这些信息应该被记录在某处，以防以后要去更改模型。</p>
+<p>对辅助文档的第二个重要需要是对设计的某些方面的内容进行记录，而这些方面的内容是难以直接从设计本身中提取的。它们既可以是高层方面的内容，也可以是低层方面内容。对于这些方面内容中的许多来说，图形是最好的描述方式。这就使得它们难以作为注释包含在代码中。这并不是说要用图形化的软件设计符号代替编程语言。这和用一些文本描述来对硬件科目的图形化设计文档进行补充没有什么区别。</p>
+<p>决不要忘记，是源代码决定了实际设计的真实样子，而不是辅助文档。在理想情况下，可以使用软件工具对源代码进行后期处理并产生出辅助文档。对于这一点，我们可能期望过高了。次一点的情况是，程序员（或者技术方面的编写者）可以使用一些工具从源代码中提取出一些特定的信息，然后可以把这些信息以其他一些方式文档化。毫无疑问，手工对这种文档保持更新是困难的。这是另外一个支持需要更具表达力的编程语言的理由。同样，这也是一个支持使这种辅助文档保持最小并且尽可能在项目晚期才使之变成正式的理由。同样，我们可以使用一些好的工具；不然的话，我们就得求助于铅笔、纸以及黑板。</p>
+<p>总结如下：<br>实际的软件运行于计算机之中。它是存储在某种磁介质中的0和1的序列。它不是使用C++语言（或者其他任何编程语言）编写的程序。<br>程序清单是代表软件设计的文档。实际上把软件设计构建出来的是编译器和连接器。<br>构建实际软件设计的廉价程度是令人难以置信的，并且它始终随着计算机速度的加快而变得更加廉价。<br>设计实际软件的昂贵程度是令人难以置信的，之所以如此，是因为软件的复杂性是令人难以置信的，并且软件项目的几乎所有步骤都是设计过程的一部分。<br>编程是一种设计活动——好的软件设计过程认可这一点，并且在编码显得有意义时，就会毫不犹豫的去编码。<br>编码要比我们所认为的更频繁地显现出它的意义。通常，在代码中表现设计的过程会揭示出一些疏漏以及额外的设计需要。这发生的越早，设计就会越好。<br>因为软件构建起来非常廉价，所以正规的工程验证方法在实际的软件开发中没有多大用处。仅仅建造设计并测试它要比试图去证明它更简单、更廉价。<br>测试和调试是设计活动——对于软件来说，它们就相当于其他工程学科中的设计验证和改进过程。好的软件设计过程认可这一点，并且不会试图去减少这些步骤。<br>还有一些其他的设计活动——称它们为高层设计、模块设计、结构设计、构架设计或者诸如此类的东西。好的软件设计过程认可这一点，并且慎重地包含这些步骤。<br>所有的设计活动都是相互影响的。好的软件设计过程认可这一点，并且当不同的设计步骤显示出有必要时，它会允许设计改变，有时甚至是根本上的改变，<br>许多不同的软件设计符号可能是有用的——它们可以作为辅助文档以及工具来帮助简化设计过程。它们不是软件设计。<br>软件开发仍然还是一门工艺，而不是一个工程学科。主要是因为缺乏验证和改善设计的关键过程中所需的严格性。<br>最后，软件开发的真正进步依赖于编程技术的进步，而这又意味着编程语言的进步。C++就是这样的一个进步。它已经取得了爆炸式的流行，因为它是一门直接支持更好的软件设计的主流编程语言。<br>C++在正确的方向上迈出了一步，但是还需要更大的进步。</p>
+<p>后 记</p>
+<p>当我回顾几乎10年前所写的东西时，有几点让我印象深刻。第一点（也是和本书最有关的）是，现今，我甚至比那时更加确信我试图去阐述的要点在本质上的正确性。随后的一些年中，许多流行的软件开发方法增强了其中的许多观点，这支持了我的信念。最明显的（或许也是最不重要的）是面向对象编程语言的流行。现在，除了C++外，出现了许多其他的面向对象编程语言。另外，还有一些面向对象设计符号，比如：UML。我关于面向对象语言之所以得到流行是因为它们允许在代码中直接表现出更具表达力的设计的论点，现在看来有点过时了。</p>
+<p>重构的概念——重新组织代码基础，使之更加健壮和可重用——同样也和我的关于设计的所有方面的内容都应该是灵活的并且在验证设计时允许改变的论点相似。重构只是提供了一个过程以及一组如何去改善已经被证实具有缺陷的设计的准则。</p>
+<p>最后，文中有一个敏捷开发的总的概念。虽然极限编程是这些新方法中最知名的一个，但是它们都具有一个共同点：它们都承认源代码是软件开发工作中的最重要的产品。</p>
+<p>另一方面，有一些观点——其中的一些我在论文中略微谈到过——在随后的一些年中，对我来说变得更加重要。第一个是构架，或者顶层设计的重要性。在论文中，我认为构架只是设计的一部分内容，并且在构建&#x2F;测试循环对设计进行验证的过程中，构架需要保持可变。这在本质上是正确的，但是回想起来，我认为我的想法有点不成熟。虽然构建&#x2F;测试循环可能揭示出构架中的问题，但是更多的问题是常常由于改变需求而表现出来的。 一般来说，设计软件是困难的，并且新的编程语言，比如：Java或者C++，以及图形化的符号，比如：UML，对于不知道如何有效地使用它的人来说，都没有多大的帮助。此外，一旦一个项目基于一个构架构建了大量的代码，那么对该构架进行基础性的更改，常常相当于丢弃掉该项目并重新开始一个，这就意味着该项目没有出现过。即使项目和机构在根本上接受了重构的概念，但是他们通常仍然不愿意去做一些看起来就像是完全重写的事情。这意味着第一次就把它作对（或者至少是接近对）是重要的，并且项目变得越大，就越要如此。幸运的是，软件设计模式有助于解决这方面问题。</p>
+<p>还有其他一些方面的内容，我认为需要更多地强调一下，其中之一就是辅助文档，尤其是构架方面的文档。虽然源代码就是设计，但是试图从源代码中得出构架，可能是一个令人畏惧的体验。在论文中，我希望能够出现一些软件工具来帮助软件开发者自动地维护来自源代码的辅助文档。我几乎已经放弃了这个希望。一个好的面向对象构架通常可以使用几幅图以及少许的十几页文本描述出来。不过，这些图（和文本）必须集中于设计中的关键类和关系。糟糕的是，对于软件设计工具可能会变得足够聪明，以至于可以从源代码的大量细节中提取出这些重要方面的内容这一点，我没有看到任何真正的希望。这意味着还得必须由人来编写和维护这种文档。我仍然认为，在源代码完成后，或者至少是在编写源代码的同时去编文档，要比在编写源代码之前去编写文档更好一些。</p>
+<p>最后，我在论文的最后谈到了C++是编程——并且因此是软件设计——艺术的一个进步，但是还需要更大的进步。就算我完全没有看到语言中出现任何真正的编程进步来挑战C++的流行，那么在今天，我会认为这一点甚至要比我首次编写它时更加正确。</p>
+<p>——Jack Reeves, 2002年1月1日</p>
+<p><a target="_blank" rel="noopener" href="http://www.bleading-edge.com/Publications/C++Journal/Cpjour2.htm">http://www.bleading-edge.com/Publications/C++Journal/Cpjour2.htm</a></p>
+<p>（这是一篇伟大的论文，该文撰写于1992年，作者在当时就能有这样的反思，实在是非常了不起。 ）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://www.jackyshen.com/2016/02/13/2014-02-08-source-code-is-the-design/" data-id="clqwe95nb005x8jfy9t7ld4e5" data-title="源代码就是设计 (Source code is the design)" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/design/" rel="tag">design</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/02/13/2014-02-08-the-land-that-scrum-forgot/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Scrum忘记的土地- The Land that Scrum Forgot
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/02/13/2014-02-08-notes-of-agile-retrospective/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">重读《Agile Retrospective敏捷回顾》一书</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/">agile</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/coaching/">coaching</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/engineering/">engineering</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/event/">event</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/facilitating/">facilitating</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/lean/">lean</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/management30/">management30</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/product/">product</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/scaling/">scaling</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/scrum/">scrum</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/tools/">tools</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/">programming</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/programming/actionscript/">actionscript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/architecture/">architecture</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/arduino/">arduino</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/go/">go</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/java/">java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/programming/javascript/emberjs/">emberjs</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/objectivec/">objectivec</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/php/">php</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/python/">python</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/programming/python/django/">django</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/python/functional/">functional</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/swift/">swift</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/tools/">tools</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/APNS/" rel="tag">APNS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CTC/" rel="tag">CTC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IIS/" rel="tag">IIS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JVM/" rel="tag">JVM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scrum/" rel="tag">Scrum</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/agile/" rel="tag">agile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/agile-coach/" rel="tag">agile coach</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/agile-tour/" rel="tag">agile tour</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/agiletour/" rel="tag">agiletour</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/alipay/" rel="tag">alipay</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/annotation/" rel="tag">annotation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/arduino/" rel="tag">arduino</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ascii/" rel="tag">ascii</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/async/" rel="tag">async</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/atdd/" rel="tag">atdd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automation/" rel="tag">automation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash/" rel="tag">bash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bdd/" rel="tag">bdd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blazeDS/" rel="tag">blazeDS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/book/" rel="tag">book</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/branch/" rel="tag">branch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/career/" rel="tag">career</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/certification/" rel="tag">certification</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/checklist/" rel="tag">checklist</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ci/" rel="tag">ci</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ci-unit-testing-automation-java/" rel="tag">ci - unit testing - automation - java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/clean/" rel="tag">clean</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/clojure/" rel="tag">clojure</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/coach/" rel="tag">coach</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/coaching/" rel="tag">coaching</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/coaching-coach-csp-ctc/" rel="tag">coaching - coach - csp - ctc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code-coverage/" rel="tag">code coverage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code-retreat/" rel="tag">code retreat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code-review/" rel="tag">code review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code-smell/" rel="tag">code smell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/coderetreat/" rel="tag">coderetreat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/comet/" rel="tag">comet</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/commitizen/" rel="tag">commitizen</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/communications/" rel="tag">communications</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/community/" rel="tag">community</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/competence/" rel="tag">competence</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/complexity/" rel="tag">complexity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/continuous-integration/" rel="tag">continuous integration</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/contract/" rel="tag">contract</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/craftsmanship/" rel="tag">craftsmanship</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cross-domain/" rel="tag">cross domain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/csd/" rel="tag">csd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/csm/" rel="tag">csm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/csp/" rel="tag">csp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ctc/" rel="tag">ctc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cucumber/" rel="tag">cucumber</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/culture/" rel="tag">culture</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/daily-scrum/" rel="tag">daily scrum</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/decrator/" rel="tag">decrator</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/delivery/" rel="tag">delivery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/design/" rel="tag">design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/design-patterns/" rel="tag">design patterns</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/devops/" rel="tag">devops</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/digital/" rel="tag">digital</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/django/" rel="tag">django</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dojo/" rel="tag">dojo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/easyb/" rel="tag">easyb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/efficiency/" rel="tag">efficiency</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ember/" rel="tag">ember</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/emberjs/" rel="tag">emberjs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/encoding/" rel="tag">encoding</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/estimating/" rel="tag">estimating</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/event/" rel="tag">event</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/facilitating/" rel="tag">facilitating</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fail/" rel="tag">fail</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flex/" rel="tag">flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flexibility/" rel="tag">flexibility</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fluency/" rel="tag">fluency</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fractal/" rel="tag">fractal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/frequently/" rel="tag">frequently</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/functional-programming/" rel="tag">functional programming</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gandalf/" rel="tag">gandalf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gevent/" rel="tag">gevent</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/glossary/" rel="tag">glossary</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/" rel="tag">go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/" rel="tag">gradle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/greenlet/" rel="tag">greenlet</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grooming/" rel="tag">grooming</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/groovy/" rel="tag">groovy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grunt/" rel="tag">grunt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gruntjs/" rel="tag">gruntjs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gui/" rel="tag">gui</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gunicorn/" rel="tag">gunicorn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hardware/" rel="tag">hardware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/history/" rel="tag">history</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hive-mind/" rel="tag">hive mind</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hybrid/" rel="tag">hybrid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/invest/" rel="tag">invest</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ios/" rel="tag">ios</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iteration/" rel="tag">iteration</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/itertools/" rel="tag">itertools</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jasmin/" rel="tag">jasmin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jasmine/" rel="tag">jasmine</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jenkins/" rel="tag">jenkins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jpmorgan/" rel="tag">jpmorgan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/junit/" rel="tag">junit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jvm/" rel="tag">jvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kanban/" rel="tag">kanban</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kata/" rel="tag">kata</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kpi/" rel="tag">kpi</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lambda/" rel="tag">lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leadership/" rel="tag">leadership</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lean/" rel="tag">lean</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lean-startup/" rel="tag">lean startup</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/less/" rel="tag">less</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/" rel="tag">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maker/" rel="tag">maker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/management30/" rel="tag">management30</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/manager/" rel="tag">manager</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mapping/" rel="tag">mapping</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/" rel="tag">maven</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/measure/" rel="tag">measure</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/measurement/" rel="tag">measurement</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/metrics/" rel="tag">metrics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mobile/" rel="tag">mobile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/multi-thread/" rel="tag">multi thread</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network/" rel="tag">network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nexus/" rel="tag">nexus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nio/" rel="tag">nio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/" rel="tag">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/o2o/" rel="tag">o2o</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/objc-bridging/" rel="tag">objc - bridging</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/okr/" rel="tag">okr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/organization/" rel="tag">organization</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/orid/" rel="tag">orid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pair/" rel="tag">pair</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/performance/" rel="tag">performance</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/persona/" rel="tag">persona</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pipe/" rel="tag">pipe</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pipeline/" rel="tag">pipeline</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/planning/" rel="tag">planning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/playground/" rel="tag">playground</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/product-backlog/" rel="tag">product backlog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/product-owner/" rel="tag">product owner</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/productivity/" rel="tag">productivity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/proxy/" rel="tag">proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pyisapie/" rel="tag">pyisapie</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/raid/" rel="tag">raid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reading/" rel="tag">reading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/recursive/" rel="tag">recursive</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/refactor/" rel="tag">refactor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/refactoring/" rel="tag">refactoring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/refinement/" rel="tag">refinement</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/remote/" rel="tag">remote</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/retrospective/" rel="tag">retrospective</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/robotframework/" rel="tag">robotframework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/safe/" rel="tag">safe</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scale/" rel="tag">scale</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scaling/" rel="tag">scaling</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scrum/" rel="tag">scrum</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scrum-master/" rel="tag">scrum master</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sdk/" rel="tag">sdk</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/security/" rel="tag">security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selenium/" rel="tag">selenium</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/serialization/" rel="tag">serialization</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/signature/" rel="tag">signature</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/singleton/" rel="tag">singleton</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/socket/" rel="tag">socket</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sonar/" rel="tag">sonar</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/split/" rel="tag">split</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spotify/" rel="tag">spotify</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sprint/" rel="tag">sprint</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sqa/" rel="tag">sqa</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/" rel="tag">sql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/" rel="tag">swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tdd/" rel="tag">tdd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tennis/" rel="tag">tennis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/time/" rel="tag">time</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/time-code/" rel="tag">time code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tomcat/" rel="tag">tomcat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tpp/" rel="tag">tpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tps/" rel="tag">tps</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/training/" rel="tag">training</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/transformation/" rel="tag">transformation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/trunk/" rel="tag">trunk</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ucac/" rel="tag">ucac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unicode/" rel="tag">unicode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unit-test/" rel="tag">unit test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unittest/" rel="tag">unittest</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/user-story/" rel="tag">user story</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/utf8/" rel="tag">utf8</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vi/" rel="tag">vi</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/visual/" rel="tag">visual</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/waste/" rel="tag">waste</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webdriver/" rel="tag">webdriver</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/weibo/" rel="tag">weibo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/workshop/" rel="tag">workshop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xcode/" rel="tag">xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xp/" rel="tag">xp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xvfb/" rel="tag">xvfb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yield/" rel="tag">yield</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zen/" rel="tag">zen</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/APNS/" style="font-size: 10px;">APNS</a> <a href="/tags/CTC/" style="font-size: 10px;">CTC</a> <a href="/tags/IIS/" style="font-size: 10px;">IIS</a> <a href="/tags/JVM/" style="font-size: 10px;">JVM</a> <a href="/tags/Scrum/" style="font-size: 10px;">Scrum</a> <a href="/tags/agile/" style="font-size: 19px;">agile</a> <a href="/tags/agile-coach/" style="font-size: 10px;">agile coach</a> <a href="/tags/agile-tour/" style="font-size: 11px;">agile tour</a> <a href="/tags/agiletour/" style="font-size: 10px;">agiletour</a> <a href="/tags/alipay/" style="font-size: 10px;">alipay</a> <a href="/tags/annotation/" style="font-size: 10px;">annotation</a> <a href="/tags/arduino/" style="font-size: 11px;">arduino</a> <a href="/tags/ascii/" style="font-size: 10px;">ascii</a> <a href="/tags/async/" style="font-size: 10px;">async</a> <a href="/tags/atdd/" style="font-size: 10px;">atdd</a> <a href="/tags/automation/" style="font-size: 10px;">automation</a> <a href="/tags/bash/" style="font-size: 10px;">bash</a> <a href="/tags/bdd/" style="font-size: 10px;">bdd</a> <a href="/tags/blazeDS/" style="font-size: 10px;">blazeDS</a> <a href="/tags/book/" style="font-size: 10px;">book</a> <a href="/tags/branch/" style="font-size: 10px;">branch</a> <a href="/tags/career/" style="font-size: 13px;">career</a> <a href="/tags/certification/" style="font-size: 16px;">certification</a> <a href="/tags/checklist/" style="font-size: 10px;">checklist</a> <a href="/tags/ci/" style="font-size: 13px;">ci</a> <a href="/tags/ci-unit-testing-automation-java/" style="font-size: 10px;">ci - unit testing - automation - java</a> <a href="/tags/clean/" style="font-size: 10px;">clean</a> <a href="/tags/clojure/" style="font-size: 11px;">clojure</a> <a href="/tags/coach/" style="font-size: 11px;">coach</a> <a href="/tags/coaching/" style="font-size: 13px;">coaching</a> <a href="/tags/coaching-coach-csp-ctc/" style="font-size: 10px;">coaching - coach - csp - ctc</a> <a href="/tags/code-coverage/" style="font-size: 10px;">code coverage</a> <a href="/tags/code-retreat/" style="font-size: 10px;">code retreat</a> <a href="/tags/code-review/" style="font-size: 10px;">code review</a> <a href="/tags/code-smell/" style="font-size: 10px;">code smell</a> <a href="/tags/coderetreat/" style="font-size: 10px;">coderetreat</a> <a href="/tags/comet/" style="font-size: 10px;">comet</a> <a href="/tags/commitizen/" style="font-size: 10px;">commitizen</a> <a href="/tags/communications/" style="font-size: 10px;">communications</a> <a href="/tags/community/" style="font-size: 12px;">community</a> <a href="/tags/competence/" style="font-size: 10px;">competence</a> <a href="/tags/complexity/" style="font-size: 10px;">complexity</a> <a href="/tags/continuous-integration/" style="font-size: 10px;">continuous integration</a> <a href="/tags/contract/" style="font-size: 10px;">contract</a> <a href="/tags/craftsmanship/" style="font-size: 10px;">craftsmanship</a> <a href="/tags/cross-domain/" style="font-size: 10px;">cross domain</a> <a href="/tags/csd/" style="font-size: 11px;">csd</a> <a href="/tags/csm/" style="font-size: 10px;">csm</a> <a href="/tags/csp/" style="font-size: 11px;">csp</a> <a href="/tags/ctc/" style="font-size: 16px;">ctc</a> <a href="/tags/cucumber/" style="font-size: 10px;">cucumber</a> <a href="/tags/culture/" style="font-size: 12px;">culture</a> <a href="/tags/daily-scrum/" style="font-size: 10px;">daily scrum</a> <a href="/tags/decrator/" style="font-size: 10px;">decrator</a> <a href="/tags/delivery/" style="font-size: 10px;">delivery</a> <a href="/tags/design/" style="font-size: 12px;">design</a> <a href="/tags/design-patterns/" style="font-size: 10px;">design patterns</a> <a href="/tags/devops/" style="font-size: 10px;">devops</a> <a href="/tags/digital/" style="font-size: 10px;">digital</a> <a href="/tags/django/" style="font-size: 12px;">django</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/dojo/" style="font-size: 10px;">dojo</a> <a href="/tags/easyb/" style="font-size: 10px;">easyb</a> <a href="/tags/efficiency/" style="font-size: 10px;">efficiency</a> <a href="/tags/ember/" style="font-size: 10px;">ember</a> <a href="/tags/emberjs/" style="font-size: 10px;">emberjs</a> <a href="/tags/encoding/" style="font-size: 10px;">encoding</a> <a href="/tags/estimating/" style="font-size: 10px;">estimating</a> <a href="/tags/event/" style="font-size: 11px;">event</a> <a href="/tags/facilitating/" style="font-size: 10px;">facilitating</a> <a href="/tags/fail/" style="font-size: 10px;">fail</a> <a href="/tags/flex/" style="font-size: 10px;">flex</a> <a href="/tags/flexibility/" style="font-size: 10px;">flexibility</a> <a href="/tags/fluency/" style="font-size: 10px;">fluency</a> <a href="/tags/fractal/" style="font-size: 10px;">fractal</a> <a href="/tags/frequently/" style="font-size: 10px;">frequently</a> <a href="/tags/functional-programming/" style="font-size: 15px;">functional programming</a> <a href="/tags/gandalf/" style="font-size: 10px;">gandalf</a> <a href="/tags/gevent/" style="font-size: 10px;">gevent</a> <a href="/tags/git/" style="font-size: 12px;">git</a> <a href="/tags/glossary/" style="font-size: 10px;">glossary</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/gradle/" style="font-size: 10px;">gradle</a> <a href="/tags/greenlet/" style="font-size: 10px;">greenlet</a> <a href="/tags/grooming/" style="font-size: 10px;">grooming</a> <a href="/tags/groovy/" style="font-size: 11px;">groovy</a> <a href="/tags/grunt/" style="font-size: 11px;">grunt</a> <a href="/tags/gruntjs/" style="font-size: 10px;">gruntjs</a> <a href="/tags/gui/" style="font-size: 10px;">gui</a> <a href="/tags/gunicorn/" style="font-size: 10px;">gunicorn</a> <a href="/tags/hardware/" style="font-size: 10px;">hardware</a> <a href="/tags/history/" style="font-size: 10px;">history</a> <a href="/tags/hive-mind/" style="font-size: 10px;">hive mind</a> <a href="/tags/hybrid/" style="font-size: 10px;">hybrid</a> <a href="/tags/invest/" style="font-size: 10px;">invest</a> <a href="/tags/ios/" style="font-size: 17px;">ios</a> <a href="/tags/iteration/" style="font-size: 10px;">iteration</a> <a href="/tags/itertools/" style="font-size: 10px;">itertools</a> <a href="/tags/jasmin/" style="font-size: 10px;">jasmin</a> <a href="/tags/jasmine/" style="font-size: 10px;">jasmine</a> <a href="/tags/java/" style="font-size: 14px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jenkins/" style="font-size: 11px;">jenkins</a> <a href="/tags/jpmorgan/" style="font-size: 10px;">jpmorgan</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/junit/" style="font-size: 11px;">junit</a> <a href="/tags/jvm/" style="font-size: 10px;">jvm</a> <a href="/tags/kanban/" style="font-size: 12px;">kanban</a> <a href="/tags/kata/" style="font-size: 11px;">kata</a> <a href="/tags/kpi/" style="font-size: 10px;">kpi</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/leadership/" style="font-size: 12px;">leadership</a> <a href="/tags/lean/" style="font-size: 16px;">lean</a> <a href="/tags/lean-startup/" style="font-size: 12px;">lean startup</a> <a href="/tags/less/" style="font-size: 14px;">less</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/maker/" style="font-size: 11px;">maker</a> <a href="/tags/management30/" style="font-size: 13px;">management30</a> <a href="/tags/manager/" style="font-size: 10px;">manager</a> <a href="/tags/mapping/" style="font-size: 10px;">mapping</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/measure/" style="font-size: 10px;">measure</a> <a href="/tags/measurement/" style="font-size: 10px;">measurement</a> <a href="/tags/metrics/" style="font-size: 10px;">metrics</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/multi-thread/" style="font-size: 10px;">multi thread</a> <a href="/tags/network/" style="font-size: 10px;">network</a> <a href="/tags/nexus/" style="font-size: 10px;">nexus</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/nio/" style="font-size: 10px;">nio</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/o2o/" style="font-size: 10px;">o2o</a> <a href="/tags/objc-bridging/" style="font-size: 10px;">objc - bridging</a> <a href="/tags/okr/" style="font-size: 10px;">okr</a> <a href="/tags/organization/" style="font-size: 11px;">organization</a> <a href="/tags/orid/" style="font-size: 10px;">orid</a> <a href="/tags/pair/" style="font-size: 10px;">pair</a> <a href="/tags/performance/" style="font-size: 12px;">performance</a> <a href="/tags/persona/" style="font-size: 10px;">persona</a> <a href="/tags/pipe/" style="font-size: 10px;">pipe</a> <a href="/tags/pipeline/" style="font-size: 10px;">pipeline</a> <a href="/tags/planning/" style="font-size: 12px;">planning</a> <a href="/tags/playground/" style="font-size: 10px;">playground</a> <a href="/tags/product-backlog/" style="font-size: 10px;">product backlog</a> <a href="/tags/product-owner/" style="font-size: 10px;">product owner</a> <a href="/tags/productivity/" style="font-size: 11px;">productivity</a> <a href="/tags/proxy/" style="font-size: 10px;">proxy</a> <a href="/tags/pyisapie/" style="font-size: 10px;">pyisapie</a> <a href="/tags/python/" style="font-size: 18px;">python</a> <a href="/tags/raid/" style="font-size: 10px;">raid</a> <a href="/tags/reading/" style="font-size: 10px;">reading</a> <a href="/tags/recursive/" style="font-size: 10px;">recursive</a> <a href="/tags/refactor/" style="font-size: 10px;">refactor</a> <a href="/tags/refactoring/" style="font-size: 10px;">refactoring</a> <a href="/tags/refinement/" style="font-size: 10px;">refinement</a> <a href="/tags/remote/" style="font-size: 10px;">remote</a> <a href="/tags/retrospective/" style="font-size: 10px;">retrospective</a> <a href="/tags/robotframework/" style="font-size: 12px;">robotframework</a> <a href="/tags/safe/" style="font-size: 10px;">safe</a> <a href="/tags/scale/" style="font-size: 10px;">scale</a> <a href="/tags/scaling/" style="font-size: 16px;">scaling</a> <a href="/tags/scrum/" style="font-size: 20px;">scrum</a> <a href="/tags/scrum-master/" style="font-size: 11px;">scrum master</a> <a href="/tags/sdk/" style="font-size: 10px;">sdk</a> <a href="/tags/security/" style="font-size: 10px;">security</a> <a href="/tags/selenium/" style="font-size: 10px;">selenium</a> <a href="/tags/serialization/" style="font-size: 10px;">serialization</a> <a href="/tags/signature/" style="font-size: 10px;">signature</a> <a href="/tags/singleton/" style="font-size: 10px;">singleton</a> <a href="/tags/socket/" style="font-size: 12px;">socket</a> <a href="/tags/sonar/" style="font-size: 10px;">sonar</a> <a href="/tags/split/" style="font-size: 10px;">split</a> <a href="/tags/spotify/" style="font-size: 13px;">spotify</a> <a href="/tags/sprint/" style="font-size: 11px;">sprint</a> <a href="/tags/sqa/" style="font-size: 10px;">sqa</a> <a href="/tags/sql/" style="font-size: 10px;">sql</a> <a href="/tags/swift/" style="font-size: 11px;">swift</a> <a href="/tags/tdd/" style="font-size: 11px;">tdd</a> <a href="/tags/tennis/" style="font-size: 10px;">tennis</a> <a href="/tags/time/" style="font-size: 10px;">time</a> <a href="/tags/time-code/" style="font-size: 12px;">time code</a> <a href="/tags/tomcat/" style="font-size: 10px;">tomcat</a> <a href="/tags/tpp/" style="font-size: 10px;">tpp</a> <a href="/tags/tps/" style="font-size: 10px;">tps</a> <a href="/tags/training/" style="font-size: 10px;">training</a> <a href="/tags/transformation/" style="font-size: 10px;">transformation</a> <a href="/tags/trunk/" style="font-size: 10px;">trunk</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/ucac/" style="font-size: 10px;">ucac</a> <a href="/tags/unicode/" style="font-size: 10px;">unicode</a> <a href="/tags/unit-test/" style="font-size: 13px;">unit test</a> <a href="/tags/unittest/" style="font-size: 11px;">unittest</a> <a href="/tags/user-story/" style="font-size: 16px;">user story</a> <a href="/tags/utf8/" style="font-size: 10px;">utf8</a> <a href="/tags/vi/" style="font-size: 10px;">vi</a> <a href="/tags/visual/" style="font-size: 10px;">visual</a> <a href="/tags/waste/" style="font-size: 10px;">waste</a> <a href="/tags/webdriver/" style="font-size: 10px;">webdriver</a> <a href="/tags/weibo/" style="font-size: 10px;">weibo</a> <a href="/tags/workshop/" style="font-size: 10px;">workshop</a> <a href="/tags/xcode/" style="font-size: 11px;">xcode</a> <a href="/tags/xp/" style="font-size: 17px;">xp</a> <a href="/tags/xvfb/" style="font-size: 10px;">xvfb</a> <a href="/tags/yield/" style="font-size: 10px;">yield</a> <a href="/tags/zen/" style="font-size: 11px;">zen</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/12/">December 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08/">August 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/07/">July 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/05/">May 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/04/">April 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">September 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/07/">July 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/02/">February 2009</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/02/03/2022-02-03-scrum-primer-v20-chinese/">简明Scrum入门教程  (Scrum Primer v2.0版)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/10/2022-01-10-risk-ROI-based-agility-acquisition-strategy/">基于风险投入比的敏捷性（灵活适应）获得策略</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/01/2022-01-01-effective-unit-testing/">有效的单元测试之一--代码坏味道（读书笔记精华带源码）</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/15/2021-09-15-what-do-you-pay-for-agile-coach/">企业组织购买敏捷教练的价值是什么</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/12/2021-09-12-remove-scrum-from-safe/">全球敏捷业界呼吁从 SAFe 中删除对 Scrum 的引用！</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 Jacky Shen申健<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+      
+
+
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about-me" class="mobile-nav-link">About</a>
+  
+    <a href="/glossary-of-agile" class="mobile-nav-link">Glossary</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
