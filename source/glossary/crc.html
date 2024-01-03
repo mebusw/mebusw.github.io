@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>敏捷词汇表 -- 敏捷联盟</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked@1.2.9/marked.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  <pre id="source" style="display: none;">
+# CRC卡片 CRC cards
+
+
+## 定义
+CRC卡（用于班级，职责，协作者）是一种将角色扮演游戏和面向对象设计的世界联系起来的活动。
+
+为了快速设计出一些不同的想法来设计面向对象系统的某些功能，两个或多个团队成员在索引卡上写下了该功能涉及的最显着类的名称。然后，将这些卡片充实，列出每个班级的职责和合作者的姓名，即他们赖以执行自己职责的其他班级的名称。
+
+下一步是通过演绎一个合理的计算场景来验证（或视情况而定）每个设计思想，每个开发人员都扮演一个或多个类的角色。
+
+对话框可能如下所示：“您好，身份验证控制器！我是一个Web请求，我想要此资源的内容。” –“很好，让我拥有您的凭据，以便将它们以及您要执行的操作的名称提供给我们的访问控制列表；我将根据结果将您重定向到我们的View组件之一，等等。”
+
+## 起源
+- 1988年：尽管像CRC技术那样通过拟人化对象来通过设计问题进行推理的想法似乎很自然，但是它却受到了一些可怕的批评，例如Dijsktra的这篇文章“ 关于真正教授计算机科学的残酷性 ”，就像面向对象正在成为主流一样：“在计算科学中，应禁止拟人化的隐喻”。
+- 1989年：Ward Cunningham在与Kent Beck 的联合文章中描述了CRC技术；卡所用的特定格式源自坎宁安（Cunningham）设计的一个应用程序，该设计将设计文档存储为Hypercard堆栈。
+- 1995年：基于与CRC卡相同的灵感，沃德·坎宁安（Ward Cunningham）开发了Wiki的概念，该概念后来成为Wikipedia的始祖，无疑是万维网历史上最有影响力的想法之一。
+- 2002年：Rebecca Wirfs-Brock和Alan McKean通过有关责任驱动设计的书《对象设计：角色，责任和协作者》使 CRC卡普及。（亚马逊会员链接）
+
+## 进一步阅读
+类责任协作者（CRC）模型： Scott Ambler 的敏捷介绍
+
+  </pre>
+  <p><a href="/glossary">点击看敏捷名词地铁线路全图 </a>  <p>
+  <!-- <script>
+    document.getElementById('content').innerHTML =
+      marked('# Marked in the browser\n\nRendered by **marked**.');
+  </script>
+   -->  
+  <script>
+    document.getElementById('content').innerHTML =
+      marked(document.getElementById('source').innerHTML);
+  </script>
+</body>
+</html>
+
+

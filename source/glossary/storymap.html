@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>敏捷词汇表 -- 敏捷联盟</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked@1.2.9/marked.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  <pre id="source" style="display: none;">
+# 用户故事地图 Story Map
+
+
+## 定义
+故事映射包括沿两个独立的维度对用户故事进行排序。“地图”以粗略的优先级顺序（或“描述活动以解释系统行为的顺序”）沿水平轴排列用户活动。在垂直轴上，它表示实现的复杂程度不断提高。
+
+给定这样安排的故事地图，第一水平行表示“ 行走骨架 ”，这是产品的准系统但可用的版本。在连续的行中进行操作会使产品具有更多功能。
+
+## 也称为
+用户故事映射
+
+## 预期收益
+这种做法的目的是避免出现增量交付的失败模式，在这种模式下，可以发布产品，这些产品原则上具有很高的业务价值，但由于其功能上依赖于价值较低的功能而无法使用，因此无法使用推迟到将来的版本。
+
+## 常见陷阱
+不适用
+
+## 潜在成本
+不适用
+
+## 起源
+- 2005年：杰夫·帕顿（Jeff Patton）在没有给出名字的情况下，在“一切取决于如何分割”中提出了故事映射的概念。
+- 2008年：故事映射实践在Jeff Patton的“新用户故事积压就是一张地图”中得到了描述和丰富的说明。
+
+## 使用迹象
+不适用
+
+## 技能水平
+不适用
+
+## 进一步阅读
+用户故事映射：发现整个故事，构建合适的产品，作者：Jeff Patton和Peter Economic
+
+
+
+
+  </pre>
+  <p><a href="/glossary">点击看敏捷名词地铁线路全图 </a>  <p>
+  <!-- <script>
+    document.getElementById('content').innerHTML =
+      marked('# Marked in the browser\n\nRendered by **marked**.');
+  </script>
+   -->  
+  <script>
+    document.getElementById('content').innerHTML =
+      marked(document.getElementById('source').innerHTML);
+  </script>
+</body>
+</html>
+
+

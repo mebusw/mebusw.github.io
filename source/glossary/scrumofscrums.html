@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>敏捷词汇表 -- 敏捷联盟</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked@1.2.9/marked.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  <pre id="source" style="display: none;">
+# Scrum of Scrums （SOS）
+
+
+## 定义
+一种将Scrum扩展到大型团队（超过12人）的技术，包括将团队分为5-10个敏捷团队。子团队中的每个日常Scrum都以指定一名成员为“大使”结束，该成员与来自其他团队的大使（称为Scrum of Scrums）参加每日会议。
+
+根据具体情况，大使可能是技术贡献者，或者是每个团队的Scrum Master，甚至是每个团队的经理。
+
+否则，Scrum的Scrum会作为日常例行会议进行，而大使会代表他们所代表的团队报告完成情况，后续步骤和障碍。解决障碍的工作预计将集中于各小组之间的协调挑战；解决方案可能需要同意团队之间的接口，协商责任范围等。
+
+Scrum of Scrum将通过自己的待办事项跟踪这些项目，其中每个项目都有助于改善团队之间的协调。
+
+## 也称为
+也称为“元Scrum”。
+
+## 起源
+2001年：Jeff Sutherland在《敏捷的规模：在五家公司中发明和重新发明SCRUM》一文中首次描述了Scrum of Scrums（总结了IDX的经验）。
+
+
+
+
+  </pre>
+  <p><a href="/glossary">点击看敏捷名词地铁线路全图 </a>  <p>
+  <!-- <script>
+    document.getElementById('content').innerHTML =
+      marked('# Marked in the browser\n\nRendered by **marked**.');
+  </script>
+   -->  
+  <script>
+    document.getElementById('content').innerHTML =
+      marked(document.getElementById('source').innerHTML);
+  </script>
+</body>
+</html>
+
+

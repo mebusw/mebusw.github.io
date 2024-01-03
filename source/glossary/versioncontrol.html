@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>敏捷词汇表 -- 敏捷联盟</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked@1.2.9/marked.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  <pre id="source" style="display: none;">
+# 版本控制 Version control
+
+
+## 定义
+就版本控制而言，严格来说，它并不是严格意义上的敏捷“实践”，因为它现在（幸运地）已在整个行业中广泛传播。
+
+但是，出于以下几个原因必须在此提及：
+
+- 尽管它们很少见，但仍然偶尔会遇到版本控制工具或实践过时的团队，甚至根本没有采用版本控制工具的团队
+- 版本控制不仅是“良好实践”，而且是许多敏捷实践（例如持续集成）的促成因素
+- 敏捷社区倾向于特定类型的工具和实践，即与开源社区相同：提供并发工作的系统（“合并”模型而不是“锁定”），最近更倾向于分布式而不是集中式模型
+- 因此，对于敏捷团队来说，明确地考虑其版本控制策略和基础结构，并确保它们和其工程实践和谐地合作是有益的。
+
+
+  </pre>
+  <p><a href="/glossary">点击看敏捷名词地铁线路全图 </a>  <p>
+  <!-- <script>
+    document.getElementById('content').innerHTML =
+      marked('# Marked in the browser\n\nRendered by **marked**.');
+  </script>
+   -->  
+  <script>
+    document.getElementById('content').innerHTML =
+      marked(document.getElementById('source').innerHTML);
+  </script>
+</body>
+</html>
+
+

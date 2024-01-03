@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>敏捷词汇表 -- 敏捷联盟</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked@1.2.9/marked.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  <pre id="source" style="display: none;">
+# 三个提问 Three Questions
+
+
+## 定义
+在每天的会议是围绕着以下三个问题的一些变型结构：
+
+- 自上次会议以来，您完成了什么？
+- 您计划在下次会议之前完成什么？
+- 您正在遇到什么？
+
+## 常见陷阱
+这些问题的目的是强调任务的完成，而不是花费的精力。虽然经常听到“昨天我在X上工作……今天我将继续在X上工作……一切都很好”，但这是一个错误（嘲笑为“ Scrum Zombie ”模式）；最好说“我通过”。对完成有一个清晰的定义可以帮助克服这一问题。
+
+  </pre>
+  <p><a href="/glossary">点击看敏捷名词地铁线路全图 </a>  <p>
+  <!-- <script>
+    document.getElementById('content').innerHTML =
+      marked('# Marked in the browser\n\nRendered by **marked**.');
+  </script>
+   -->  
+  <script>
+    document.getElementById('content').innerHTML =
+      marked(document.getElementById('source').innerHTML);
+  </script>
+</body>
+</html>
+
+

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>敏捷词汇表 -- 敏捷联盟</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked@1.2.9/marked.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  <pre id="source" style="display: none;">
+# 持续部署 Continuous deployment （CD）
+
+
+## 定义
+持续部署可以看作是持续集成的扩展，目的是最大程度地缩短交付周期，即缩短开发周期，即在开发过程中编写新代码行与实际用户在生产中使用此新代码之间的时间。
+
+为了实现连续部署，该团队依赖于基础结构，该基础结构将自动化和检测导致部署的各个步骤，以便在每次集成成功满足这些发布条件之后，使用新代码更新实时应用程序。
+
+需要使用仪器来确保降低质量的任何建议都会导致部署过程中止或回滚新功能，并引发人为干预。
+
+## 预期收益
+缩短部署时间可带来连续部署所需的主要好处，并具有两个主要效果：
+
+- 开发每个功能后，可提早获得投资回报，从而减少了对大量资本投资的需求
+- 用户对每个新功能发布到生产时的早期反馈，这提供了诸如并行（或A / B）测试之类的技术来确定用户偏爱的两种可能实现方式中的哪一种
+
+## 常见陷阱
+在某种程度上，将持续部署视为提高质量的策略，很容易（特别是对于那些对其新颖性和技术性痴迷的开发人员）选择错误的目标，并针对“最大部署频率”进行优化-这不会本身可以提高质量
+
+## 潜在成本
+- 连续部署依赖于广泛的工具，以确保新提供给用户的功能不会导致事件发生，从而降低外部感知的质量
+- 出于同样的原因，连续部署依赖于基础架构，该基础架构允许在自动化测试未检测到缺陷时轻松撤消新功能。
+
+## 起源
+- 2002年：在早期（未出版的）将精益思想应用于软件的讨论中，肯特·贝克提到将未部署的功能称为“清单”，并提到了在LifeWare和“其他几个”上的持续部署。但是，要完善和整理这个想法需要几年的时间
+- 2006年：Agile2006 会议记录了第一篇描述持续部署的核心的会议文章，由Jez Humble，Chris Read和Dan North撰写的“ The Deployment Production Line ”在Agile2006会议上发表，Agile2006是英国多个Thoughtworks团队的实践的集锦。
+- 2009年：连续部署的做法已经很好地建立起来，尽管在蒂莫西·菲茨（Timothy Fitz）对“ IMVU的持续部署 ”一文的评论中仍然颇有争议。它不仅在敏捷中变得重要，而且还作为精益创业或Devops 等更专业的最新战略的核心要素
+
+  </pre>
+  <p><a href="/glossary">点击看敏捷名词地铁线路全图 </a>  <p>
+  <!-- <script>
+    document.getElementById('content').innerHTML =
+      marked('# Marked in the browser\n\nRendered by **marked**.');
+  </script>
+   -->  
+  <script>
+    document.getElementById('content').innerHTML =
+      marked(document.getElementById('source').innerHTML);
+  </script>
+</body>
+</html>
+
+

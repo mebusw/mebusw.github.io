@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>敏捷词汇表 -- 敏捷联盟</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked@1.2.9/marked.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  <pre id="source" style="display: none;">
+# 计划扑克 Planning poker
+
+
+## 定义
+许多敏捷团队使用的一种有趣的估算方法。
+
+团队在客户或产品负责人在场的情况下开会。在桌子周围，每个团队成员都拿着一组扑克牌，上面带有适合于用户故事得分估算的数值。
+
+产品负责人简要说明了一个故事的意图和价值。开发团队的每个成员都静静地选择一个估计，并准备好面朝下准备好相应的卡片。当每个人都选择了他们之后，这些卡片就会面朝上，然后大声读出估算值。
+
+给出最高和最低估值的两个（或更多）团队成员证明了自己的推理。经过简短的讨论，团队可以通过再进行一轮或多轮比赛来寻求趋向共识的估计。
+
+## 常见陷阱
+Planning Poker的一个陷阱在于将“收敛到共识估计”作为一项义务，而不是在一轮游戏之后进行对话的自然结果。这样做有擦除有用信息的风险，即，初始估计值的广泛差异所传达的不确定性程度。
+
+## 预期收益
+- 使用结构化，类似游戏的格式可以使事情进展顺利，并避免在无休止的讨论中陷入僵局（这个特殊的结果是实践的初衷）
+- 会议的形式提供了一个利用所有团队成员知识的机会，而在结构化的会议形式中，更多外向的团队成员有时会将安静的成员拒之门外
+- 揭示初始估算之后的对话是汇总关于正在讨论的用户故事和表面实施风险的见解的好方法
+
+## 学术出版物
+尼尔斯·克里斯蒂安·豪根（Nils Christian Haugen）的探索性研究似乎证实了这种做法的价值，与单个“专家”相比，这种做法产生的估计值略好。
+
+## 起源
+- 1970年代：Barry Boehm提出了“ Wideband Delphi”，这是Planning Poker的前身
+- 2002年：James Grenning 在一篇文章中提出了Planning Poker的当前形式
+- 2005年：Mike Cohn的“敏捷估算与规划”计划扑克技术在Scrum社区中得到了广泛的普及，许多规划技术也在其中。
+
+  </pre>
+  <p><a href="/glossary">点击看敏捷名词地铁线路全图 </a>  <p>
+  <!-- <script>
+    document.getElementById('content').innerHTML =
+      marked('# Marked in the browser\n\nRendered by **marked**.');
+  </script>
+   -->  
+  <script>
+    document.getElementById('content').innerHTML =
+      marked(document.getElementById('source').innerHTML);
+  </script>
+</body>
+</html>
+
+
