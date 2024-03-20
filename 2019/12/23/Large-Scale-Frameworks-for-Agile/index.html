@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>大型规模化敏捷，请和你的大老师远离敏捷 | 申导</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="随着敏捷开发的流行，近年来各种大型、规模化敏捷框架、敏捷组织设计、业务敏捷也称为大老师们口中的热词，也带来了很多讨论甚至质疑。本文根据笔者Jacky Shen在2019上海和北京敏捷之旅发表演讲所整理。 笔者认为，敏捷的核心是“小而美”，追求“大而全”非常危险而且也达不到敏捷的目标，即“早+准”，在不确定环境中快速反馈来命中商业愿景，提升竞争力。 本文分为以下三个部分：  从敏捷到”大型敏捷” 骨">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大型规模化敏捷，请和你的大老师远离敏捷">
+<meta property="og:url" content="https://www.jackyshen.com/2019/12/23/Large-Scale-Frameworks-for-Agile/index.html">
+<meta property="og:site_name" content="申导">
+<meta property="og:description" content="随着敏捷开发的流行，近年来各种大型、规模化敏捷框架、敏捷组织设计、业务敏捷也称为大老师们口中的热词，也带来了很多讨论甚至质疑。本文根据笔者Jacky Shen在2019上海和北京敏捷之旅发表演讲所整理。 笔者认为，敏捷的核心是“小而美”，追求“大而全”非常危险而且也达不到敏捷的目标，即“早+准”，在不确定环境中快速反馈来命中商业愿景，提升竞争力。 本文分为以下三个部分：  从敏捷到”大型敏捷” 骨">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/5665cf9f9cadb64a3b5042b2/1455207460029-8TGJ9391NCJ36D0Y54BO/ke17ZwdGBToddI8pDm48kP84woVu_Cf-7c-ilaCX4VhZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7aXK0t8ahyzoOLFEHArbPTLsj8YOPa-3VYbtSFsbkmHdx4N3MT7kbMFErxMjKM2F9w/image-asset.png?format=750w">
+<meta property="og:image" content="https://www.jackyshen.com/lafable-cn/images/planning-train-cn.png">
+<meta property="og:image" content="https://www.jackyshen.com/lafable-cn/images/strolling-train-cn.png">
+<meta property="og:image" content="https://www.jackyshen.com/lafable-cn/images/stabilization-train-cn.png">
+<meta property="og:image" content="http://www.smharter.com/blog/wp-content/uploads/ELSVWC4XkAAknNN.jpg">
+<meta property="og:image" content="https://image.slidesharecdn.com/og1cwvwmrfovhfosz2ia-signature-02e75976b03eb7e3ff452214b01bb357bb61f1faf4276bb476c1cf1aa4161888-poli-141028072104-conversion-gate01/95/comparing-ways-to-scale-agile-at-agile-product-and-project-manager-meetup-9-638.jpg?cb=1414497261">
+<meta property="og:image" content="https://34slpa7u66f159hfp1fhl9aur1-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/ToT4.png">
+<meta property="og:image" content="https://www.uperform.cn/wp-content/uploads/2016/09/resource-allocation-cross-sites.png">
+<meta property="og:image" content="https://www.uperform.cn/wp-content/uploads/2016/09/less-structure.png">
+<meta property="og:image" content="https://www.uperform.cn/wp-content/uploads/2016/09/uperform-consulting-package.png">
+<meta property="og:image" content="https://pic.pimg.tw/kojenchieh/1479039594-3911847207_n.png">
+<meta property="article:published_time" content="2019-12-23T14:38:47.000Z">
+<meta property="article:modified_time" content="2022-05-31T02:47:46.386Z">
+<meta property="article:author" content="Jacky Shen申健">
+<meta property="article:tag" content="scrum">
+<meta property="article:tag" content="agile">
+<meta property="article:tag" content="scaling">
+<meta property="article:tag" content="spotify">
+<meta property="article:tag" content="less">
+<meta property="article:tag" content="safe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://images.squarespace-cdn.com/content/v1/5665cf9f9cadb64a3b5042b2/1455207460029-8TGJ9391NCJ36D0Y54BO/ke17ZwdGBToddI8pDm48kP84woVu_Cf-7c-ilaCX4VhZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7aXK0t8ahyzoOLFEHArbPTLsj8YOPa-3VYbtSFsbkmHdx4N3MT7kbMFErxMjKM2F9w/image-asset.png?format=750w">
+  
+    <link rel="alternate" href="/atom.xml" title="申导" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">申导</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Scrum Agile Coach</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about-me">About</a>
+        
+          <a class="main-nav-link" href="/glossary">Glossary</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://www.jackyshen.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Large-Scale-Frameworks-for-Agile" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/12/23/Large-Scale-Frameworks-for-Agile/" class="article-date">
+  <time class="dt-published" datetime="2019-12-23T14:38:47.000Z" itemprop="datePublished">2019-12-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/agile/">agile</a>►<a class="article-category-link" href="/categories/agile/scaling/">scaling</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      大型规模化敏捷，请和你的大老师远离敏捷
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>随着敏捷开发的流行，近年来各种大型、规模化敏捷框架、敏捷组织设计、业务敏捷也称为大老师们口中的热词，也带来了很多讨论甚至质疑。本文根据笔者<a href="www.jackyshen.com">Jacky Shen</a>在2019上海和北京敏捷之旅发表演讲所整理。</p>
+<p><strong>笔者认为，敏捷的核心是“小而美”，追求“大而全”非常危险而且也达不到敏捷的目标，即“早+准”，在不确定环境中快速反馈来命中商业愿景，提升竞争力。</strong></p>
+<p>本文分为以下三个部分：</p>
+<ul>
+<li>从敏捷到”大型敏捷”</li>
+<li>骨感现实中的复杂性</li>
+<li>变革管理及一些原则</li>
+</ul>
+<p><img src="https://images.squarespace-cdn.com/content/v1/5665cf9f9cadb64a3b5042b2/1455207460029-8TGJ9391NCJ36D0Y54BO/ke17ZwdGBToddI8pDm48kP84woVu_Cf-7c-ilaCX4VhZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7aXK0t8ahyzoOLFEHArbPTLsj8YOPa-3VYbtSFsbkmHdx4N3MT7kbMFErxMjKM2F9w/image-asset.png?format=750w"></p>
+<h2 id="一、从敏捷到规模化”大型敏捷”"><a href="#一、从敏捷到规模化”大型敏捷”" class="headerlink" title="一、从敏捷到规模化”大型敏捷”"></a>一、从敏捷到规模化”大型敏捷”</h2><h3 id="1-1-回顾敏捷Agile这个词"><a href="#1-1-回顾敏捷Agile这个词" class="headerlink" title="1.1 回顾敏捷Agile这个词"></a>1.1 回顾敏捷Agile这个词</h3><p>2001年17位软件行业先驱在美国雪鸟镇聚会，石破天惊地提出了<a target="_blank" rel="noopener" href="http://www.uperform.cn/agile-manifesto-principles-chinese/">《敏捷开发宣言》</a>，当时的主要关注点包括：</p>
+<ul>
+<li>追求响应力与灵活性，即适应性over预测性 （不是单纯地求快，也不是要压榨产能）</li>
+<li>以人为本（一群“艺术”家），而非用流程来管控（流水线工人）</li>
+<li>提升客户和团队满意度</li>
+</ul>
+<p>然而现实中，人们对”敏捷”还有其他期望：</p>
+<ul>
+<li>“抄竞品抄得快” — （敏捷不见得能帮你少花时间，只让你知道该干嘛）</li>
+<li>“明年少招点人” — （敏捷不见得提高产能，只是增加了可管理性）</li>
+<li>“按时上线” — （敏捷不见得确保时间，只是摧毁不切实际的幻想）</li>
+</ul>
+<p>笔者认为，<strong>我们平时书本和课程谈的各种敏捷方法论、框架实践集，都在描述一种“理想的未来状态”，但是很难说如何在特定组织中能够达到那种状态，所以与敏捷转型（变革管理）是两码事。</strong></p>
+<span id="more"></span>
+
+<h3 id="1-2-大型敏捷、规模化的意图"><a href="#1-2-大型敏捷、规模化的意图" class="headerlink" title="1.2 大型敏捷、规模化的意图"></a>1.2 大型敏捷、规模化的意图</h3><ul>
+<li>某个项目或产品确实需要多于9人（多团队）以上共同完成开发（也有人叫多团队敏捷）</li>
+<li>不仅仅是开发部门，而是全IT流程参与，包括需求部门、测试部门、运维部门等（敏捷开发本来就是提倡这样）</li>
+<li>不仅仅是IT敏捷，让公司业务、市场部门也参与，更加灵活地响应市场变化，提升业绩 （也有人叫业务敏捷）</li>
+<li>不仅仅是单个项目or产品团队，希望其他项目组、部门、业务线全都用起来敏捷模式 （也有人叫组织级敏捷）</li>
+</ul>
+<p>然而，大部分公司称不上大型开发：因为通常某个产品组也就10来个人，比较独立。但：</p>
+<ul>
+<li>产品开发组之间可能存在技术依赖或使用了共享的模块</li>
+<li>不同编程语言、技术栈、中间件、遗留系统、烂代码、耦合、依赖、存储过程、古老的编程语言</li>
+<li>（由于采购不同供应商导致）技术栈过于分散，人员相互学习交叉工作存在学习投入不足，或者身份差异不允许交叉学习</li>
+</ul>
+<h3 id="1-3-大型敏捷框架概览"><a href="#1-3-大型敏捷框架概览" class="headerlink" title="1.3 大型敏捷框架概览"></a>1.3 大型敏捷框架概览</h3><p>目前市面上常见大型敏捷框架和方法论一般来说会提到：LeSS, SAFe, DAD, Nexus, Spotify, Scrum@Scale等。我们来看一个有代表性的，<a href="https://www.jackyshen.com/lafable-cn/">适合重型企业的大型敏捷框架 LAFABLE</a>，是Mike Cohn提出的，最新为5.0版本。</p>
+<p><img src="https://www.jackyshen.com/lafable-cn/images/planning-train-cn.png"></p>
+<p><img src="https://www.jackyshen.com/lafable-cn/images/strolling-train-cn.png"></p>
+<p><img src="https://www.jackyshen.com/lafable-cn/images/stabilization-train-cn.png"></p>
+<p>怎么样，看到什么问题了吗？</p>
+<p>矩阵式的结构中，更多的团队待办列表造成局部优化，似乎产出很高，但是丢了全局优先级视角，很可能延迟了反馈和客户价值，SOS也变成了项目经理的汇报会。诸多新角色，造成更多组织官僚，说白了，监工的中间商比干活儿的人还多，这能敏捷起来吗？</p>
+<p>这个框架正如被某些咨询公司推崇的SAFe框架一样（巧合的是，它也推出了5.0）。SAFe的开发价值流（定义、构建、测试、发布）及其ART ，就是多个瀑布式的项目。组织结构的现状里面，一定已经存在类似的结构，相关但不一定在同地的多个部门或团队为同一个产品领域而工作。即ART设计并没引发什么变化，而敏捷的关键在于解耦后重组资源，这才是难点，激进的Craig Larman甚至说“close some sites”（关掉一些城市的办公室）。</p>
+<p>SAFe还是以交付视角为主，产品负责人和客户代表被放在了边缘的一角里面，这样是无法牵动业务一起转型的。SAFe的人力绩效那部分建议中，持续反馈是的说法是可以，但源自Attlansian的高底薪是不合经济规律的，高底薪只有行业头部公司才给的出，而且在经济下行周期也难以维系。</p>
+<h3 id="1-4-“SAFe-is-just-another-RUP”-—-Ken-Schwaber"><a href="#1-4-“SAFe-is-just-another-RUP”-—-Ken-Schwaber" class="headerlink" title="1.4 “SAFe is just another RUP” — Ken Schwaber"></a>1.4 “SAFe is just another RUP” — Ken Schwaber</h3><p>笔者曾经觉得大而全的SAFe框架，能让一些既得利益者能看到好处然后支持变革，是好事。然而，因为资源利益交换摆不上台面的，所以框架能说出来利益对齐都不是真利益。企业级变革都是老板工程，帝王之术自古有之。可能就是换几个诸侯的事情，别说底下没执行力，老板搞不定诸侯们就是改朝换代。</p>
+<p>企业级的、原则指导性的框架，如果进化速度过快可能是因为没想明白，或者故意堆砌热词。企业级转型没个2-3年是不会有很大变化的。</p>
+<p>该框架底层是Scrum实践为主，其他没看到任何“个体与交互、适应性”的内容，框架的中层及以上就是瀑布大版本规划（10周），更像一个大项目。核心反馈机制弱。没考虑上线以后的维护机制，缺乏人的互动，没有持续需求分析也没有持续改进机制，追求“高大全”，违背敏捷原则#10也违背精益思想。</p>
+<p>更别提100人规模的PI Planning大会会议效率低，参与和理解的效果差。（如果只是在启动时开一次可以接受）</p>
+<p>相反，<strong>敏捷结构追求的是“小团队、自组织、跨职能”，从客户和产品视角拆分、解耦backlog，打破职能孤岛，计划上留有buffer和planB应对变化，机制上允许甩掉包袱，强调透明性及DoD，尽早尽少地做事是关键，追求可持续的快速反馈</strong>。</p>
+<p><img src="http://www.smharter.com/blog/wp-content/uploads/ELSVWC4XkAAknNN.jpg"></p>
+<p>在<a target="_blank" rel="noopener" href="https://software.af.mil/dsop/documents/">美国国防部2019年11月一份报告</a>中指出，非常反对使用诸如SAFe这类“死板、预定义的框架”，因为造成在（某飞行器项目）“研发中过晚地发现多种依赖”，而我们知道，依赖是巨大的风险。</p>
+<p>自SAFe打着“规模化敏捷”旗号诞生起，一方面迎合了一些商业利益，各种恰烂饭的“大老师”鼓吹“大敏捷”，使客户组织愈加不敏捷。另一方面，质疑声一直不断。不论是知名敏捷人士，还是发起<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/V-PojzupohQvI7NnAfhUHw">敏捷宣言的17个人都公开发文反对SAFe</a>。包括Martin Fowler、Dave Snowden、Steve Denning、Marty Cagan、Ken Schwaber、Mike Cohn、Mike Beedle、Ron Jeffries、Dave Thomas等。Martin Fowler甚至公开说：“SAFe&#x3D;shitty agile for enterprise” (屎一样的企业级敏捷)！</p>
+<p><img src="https://image.slidesharecdn.com/og1cwvwmrfovhfosz2ia-signature-02e75976b03eb7e3ff452214b01bb357bb61f1faf4276bb476c1cf1aa4161888-poli-141028072104-conversion-gate01/95/comparing-ways-to-scale-agile-at-agile-product-and-project-manager-meetup-9-638.jpg?cb=1414497261"></p>
+<p>另一个小道消息讲，由于Dean在早期出版的敏捷类书籍中引用了大量他人和社区贡献的文章，但不进行明显的引用说明（欧美很看重这种credit），使得其他敏捷人士心里也不是很愉快，不愿意与Dean来往。</p>
+<h3 id="1-5-为什么规模化扩展不是个好主意"><a href="#1-5-为什么规模化扩展不是个好主意" class="headerlink" title="1.5 为什么规模化扩展不是个好主意"></a>1.5 为什么规模化扩展不是个好主意</h3><ul>
+<li>产品和创意由小团队协作出来</li>
+<li>沟通路径和开销大</li>
+<li>全生命周期的总成本（TCO），例如依赖、集成等风险容易后移，导致变更成本高</li>
+<li>局部优化易于全局优化</li>
+<li>传统组织设计带来了不必要复杂性的幻觉</li>
+<li>流程补丁打补丁，但极少去掉补丁</li>
+<li>更多层级使团队远离客户</li>
+<li>人数过多阻碍了实验性过程之快速反馈</li>
+</ul>
+<h3 id="1-6-扩展效率-vs-扩展适应力"><a href="#1-6-扩展效率-vs-扩展适应力" class="headerlink" title="1.6 扩展效率 vs.扩展适应力"></a>1.6 扩展效率 vs.扩展适应力</h3><p><img src="https://34slpa7u66f159hfp1fhl9aur1-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/ToT4.png"></p>
+<p>左图是传统的层级结构，强调自上而下的命令与控制，讲究去扩展执行效率和资源利用率。右边是数字化和敏捷转型大潮中，为了适应变化的环境，《赋能》书中及Scrum of Scrum描述的更多是去中心化、跨职能、自组织的团队。国内有一个企业案例，就是青岛海尔的“人单合一”组织形式，国外著名的<a href="https://www.jackyshen.com/2015/11/16/spotify-agile-engineering-culture-video-in-chinese/">Spotify案例</a>，都是讲究去扩展适应力。</p>
+<h2 id="二、骨感现实中的复杂性"><a href="#二、骨感现实中的复杂性" class="headerlink" title="二、骨感现实中的复杂性"></a>二、骨感现实中的复杂性</h2><blockquote>
+<p>失控不可怕，因为混乱是通向新秩序的阶梯；<br>看似有序和坚固，才是脆弱和混乱的温床。</p>
+</blockquote>
+<h3 id="2-1-上层管理者关注资源分配"><a href="#2-1-上层管理者关注资源分配" class="headerlink" title="2.1 上层管理者关注资源分配"></a>2.1 上层管理者关注资源分配</h3><p>越往上的企业管理者，终极关注点必然是“生存永续”。</p>
+<p>笔者曾给某跨国企业进行敏捷转型咨询辅导，总部在国外，国内多个城市的研发中心。进去时发现，一个功能特性因为历史原因，被切分的很碎，不同地点的不同团队相互依赖和等待严重。这样的大型组织很难获得快速反馈。</p>
+<p><img src="https://www.uperform.cn/wp-content/uploads/2016/09/resource-allocation-cross-sites.png"></p>
+<p>我们帮助管理者描绘了资源&#x2F;组件分布的现状，使总部的高层领导看清了局面。一段时间后，高层领导下决心关闭了某个城市的办公室（对那里员工来说，被裁员并不开心），重新进行了资源分配和整合，这次组织变革有力推动了整体的敏捷性提升。</p>
+<h3 id="2-2-跨地域团队的争宠"><a href="#2-2-跨地域团队的争宠" class="headerlink" title="2.2 跨地域团队的争宠"></a>2.2 跨地域团队的争宠</h3><p>要理解跨地域交付团队管理者的“欺上瞒下”，背后是一番好意在为自己团队争得更多发展机会。</p>
+<p>纵观历史，总部的“帝王之术”其实是另一个维度的“敏捷性”。古代统治者就是要多生孩子，优胜劣汰，东边不亮西边亮的意思。这种业务敏捷确实是全局优化，但敏捷性不是通过主动加速反馈获得的，也不是通过模块化组合获得的。而对于单个“孩子”来说，难免会局部优化，看紧自己的一亩三分地。</p>
+<p>但如果各区域分家独立运作、解耦，争宠情况就可以得到改善。类似“藩王”，这要看上层的智慧和授权了。</p>
+<h3 id="2-3-财大气粗（需求方向的决策权）"><a href="#2-3-财大气粗（需求方向的决策权）" class="headerlink" title="2.3 财大气粗（需求方向的决策权）"></a>2.3 财大气粗（需求方向的决策权）</h3><p>决策权混乱是敏捷转型难以深入的一个常见原因，用Scrum的话来说，谁做PO呢？通常取决于谁出钱，谁控制时间表。</p>
+<p>那么研发费用谁出？以下以银行为例讨论：</p>
+<ul>
+<li><p>一类是业务部门不直接承担研发费用，技术部门的成本由银行列支</p>
+</li>
+<li><p>另一类是业务部门承担研发费用，技术部门的项目都由业务部门计价后发起，或者研发完成后对成本内部计价分摊到业务部门。</p>
+</li>
+</ul>
+<p>但是，业务部门不代表企业的整体利益（以银行业为例）</p>
+<ul>
+<li>一是国家对银行的技术有严格监管，如服务连续性、信息安全、基础设施建设等等，专业性极强，很难把这些职责交给业务部门去承担；</li>
+<li>二是银行的业务部门众多，难免受制于本部门的考核指标、短期利益，提出的很多需求连客户都代表不了，更无法代表银行的整体利益；</li>
+<li>三是业务部门由一个个具体的人构成，难免受制于个人的能力和格局，提出的低价值甚至无价值需求比比皆是。</li>
+</ul>
+<h3 id="2-4-其他现象"><a href="#2-4-其他现象" class="headerlink" title="2.4 其他现象"></a>2.4 其他现象</h3><ul>
+<li>紧急、常规版本怎么设置？开发过程怎么管，要不要版本经理？<ul>
+<li>但不是说给原来的职位角色都安上一个“敏捷”的帽子</li>
+</ul>
+</li>
+<li>度量报告及对外宣传怎么写？</li>
+<li>隶属多供应商的外包人员怎么管理？</li>
+<li>外包合同怎么签？</li>
+<li>绩效怎么打？</li>
+</ul>
+<h3 id="2-5-大型（多团队）开发动态浮现出的靠谱实践"><a href="#2-5-大型（多团队）开发动态浮现出的靠谱实践" class="headerlink" title="2.5 大型（多团队）开发动态浮现出的靠谱实践"></a>2.5 大型（多团队）开发动态浮现出的靠谱实践</h3><p>笔者在诺基亚西门子通信工作期间，亲历LeSS框架的生长过程，单个产品线的单个版本涉及数百人协作。这些不是顶层设计出来的，而是慢慢浮现生长的，例如：</p>
+<ul>
+<li>SCM 分支策略：同时存在多达10几个客户&#x2F;版本分支而非特性分支，某一个变更需要明确哪些分支才能修改</li>
+<li>线上缺陷的路由者：需要有人进行初步筛选分配到合适的产品线或团队</li>
+<li>共享模块的负责人&#x2F;PR Reviewer: 保证多团队修改的代码质量、内部开源模式</li>
+<li>多级CI：缩短验证和反馈时间</li>
+<li>虚拟架构团队或Cross-functional team：最好的架构出自于自组织团队</li>
+<li>组织级障碍清单Impediment Backlog：汇总组织级障碍，拉通解决共同问题，深化变革（不要妄想套用一个静态的组织结构图）</li>
+<li>内部敏捷社区：分享、传播、成长</li>
+<li>大型遗留系统必须逐步补自动化测试和重构改造</li>
+<li>绩效考评中更多增加团队的权重</li>
+</ul>
+<h3 id="2-6-越简单，越有效"><a href="#2-6-越简单，越有效" class="headerlink" title="2.6 越简单，越有效"></a>2.6 越简单，越有效</h3><p>敏捷原则#10：简明扼要，去掉不必要的工作，是敏捷的本质。</p>
+<p>《道德经》曰：“大成若缺”。（数学家）哥德尔的不完备性定理：“无矛盾”和“完备”是不能同时满足的，既完美又统一是不存在的！</p>
+<p><img src="https://www.uperform.cn/wp-content/uploads/2016/09/less-structure.png"></p>
+<p>再看看SAFe之类大型敏捷，总是想“高大全”，把事情越搞越复杂，经不起实战检验，适得其反。能落地的一定是简单易懂，如果读者的产品确实涉及多团队协作，笔者个人比较推崇LeSS框架。</p>
+<h2 id="三、变革管理及一些原则"><a href="#三、变革管理及一些原则" class="headerlink" title="三、变革管理及一些原则"></a>三、变革管理及一些原则</h2><h3 id="3-1-变革管理-vs-敏捷方法论"><a href="#3-1-变革管理-vs-敏捷方法论" class="headerlink" title="3.1 变革管理 vs.敏捷方法论"></a>3.1 变革管理 vs.敏捷方法论</h3><p>这是两个维度的事情。大家要的不仅是框架，还有咨询和转型路线图（How to do）</p>
+<ul>
+<li>组织结构应该是动态的，守破离，不是卖一张Spotify结构图的事情<ul>
+<li>现状-中短期目标状态（如Scrum）-中期目标状态（多团队敏捷）-长期目标（基于原则生长，因地制宜）</li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://www.uperform.cn/agile-training/#coaching">转型路线图</a>在其他类咨询内也能找到（如：人力资源转型、IPD导入）且差不多的<ul>
+<li>通常先培训和评估，然后小范围试点，接下来分批铺开</li>
+<li>任何变革的关键是上层支持，获得权力来移除障碍，也涉及绩效考核的调整</li>
+<li>所以变革转型路线图并非敏捷框架图的一部分，而只是咨询解决方案的一部分</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://www.uperform.cn/wp-content/uploads/2016/09/uperform-consulting-package.png"></p>
+<h3 id="3-2-从转型推进者的角度思考"><a href="#3-2-从转型推进者的角度思考" class="headerlink" title="3.2 从转型推进者的角度思考"></a>3.2 从转型推进者的角度思考</h3><ul>
+<li>打包服务方案让人安心<ul>
+<li>需要的不仅仅是敏捷框架，而是<a target="_blank" rel="noopener" href="https://www.uperform.cn/lean-agile-balanced-wheel/">敏捷成熟度模型</a>和路线图</li>
+</ul>
+</li>
+<li>kotter 8步法<ul>
+<li>第一步紧迫感最重要，评估现状类似X光扫描，挖掘动力</li>
+<li>拿到尚方宝剑</li>
+<li>透明化工作和问题，并进行优先级排序</li>
+</ul>
+</li>
+<li>考虑奶酪分配</li>
+<li>考虑如何表明（度量）进展和成效</li>
+</ul>
+<h3 id="3-3-妥协程度"><a href="#3-3-妥协程度" class="headerlink" title="3.3 妥协程度"></a>3.3 妥协程度</h3><p>作为方法论，既然定义的是一个未来理想状态，那就不要太妥协，因为标准（框架和实践）定为100分，现实中能做到60分就不错了。但如果标准（框架和实践）一开始就妥协为60分，现实中能做到20分就不错了。</p>
+<p>另一方面，标准要高不能妥协，但实施路线图可以妥协和分阶段。咨询和转型范围不只是一个小系统，而是“整体”，整体意味着80%达标。一般用成熟度模型评估现状，应该包括：教学大纲和考卷两部分，每一级应能独立存在，有可见效果，才能锁定收益。 </p>
+<h3 id="3-4-商业（研发）组织的共性问题"><a href="#3-4-商业（研发）组织的共性问题" class="headerlink" title="3.4 商业（研发）组织的共性问题"></a>3.4 商业（研发）组织的共性问题</h3><p>无论什么敏捷实践或框架，无非是通过建设四大能力域来解决组织的三大问题:</p>
+<ul>
+<li>三大问题<ul>
+<li>决策</li>
+<li>协作</li>
+<li>能力</li>
+</ul>
+</li>
+<li>四大能力域<ul>
+<li>需求管理</li>
+<li>项目管理</li>
+<li>版本管理</li>
+<li>质量管理</li>
+</ul>
+</li>
+</ul>
+<p>但敏捷实践的做法与CMMI&#x2F;瀑布&#x2F;PMP却是截然不同的，不要被夸夸奇谈的大老师蒙蔽了。尤其那些好处CMMI、敏捷、DevOps通吃的，下次遇到他就说“talk is cheap, show me the code”，写几把代码看看再说。</p>
+<h3 id="3-5-基于敏捷原则的Scaling"><a href="#3-5-基于敏捷原则的Scaling" class="headerlink" title="3.5 基于敏捷原则的Scaling"></a>3.5 基于敏捷原则的Scaling</h3><ul>
+<li>从一开始就要改变结构 （如定义Scrum角色，开发测试人员坐在一个团队中等）<ul>
+<li>组织结构以产品（客户价值）为中心进行调整</li>
+<li>业务要买账，有动力深度采用</li>
+<li>预算和绩效考核调整方向为鼓励相互支持与合作</li>
+</ul>
+</li>
+<li>解耦成小单元，加速信息流动和决策</li>
+<li>规模化的关键就是“去规模化”<ul>
+<li>LeSS is More, 组织设计也像我们做的产品一样以少为多，简单是敏捷的本质</li>
+</ul>
+</li>
+<li>扁平化组织结构，减少信息流动的中间商<ul>
+<li>闭环思维，快速反馈</li>
+<li>流程有增也要有减</li>
+</ul>
+</li>
+<li>培养人</li>
+<li>管理者先自我觉察，再以身作则，然后授权放手</li>
+<li>持续集成CI，必须有！（而持续交付&#x2F;DevOps却可以晚一点引入） </li>
+<li>尽量小地引入变化（如仅少数团队从Scrum和一些XP实践开始）</li>
+<li>先用Vertical方式来扩展，PO越少排序越容易。这种扩展方式从干系人角度看还是一个团队，如LeSS引入的Requirement Area <ul>
+<li>（而Horizontal方式会引入更大的复杂度与成本。这种扩展方式从干系人角度看是多个团队，如SAFe引入的Program Level ）</li>
+</ul>
+</li>
+<li>以更灵活的方式签署外包合同</li>
+</ul>
+<h3 id="3-6-区分组织面对的是复杂问题还是繁杂问题？"><a href="#3-6-区分组织面对的是复杂问题还是繁杂问题？" class="headerlink" title="3.6 区分组织面对的是复杂问题还是繁杂问题？"></a>3.6 区分组织面对的是复杂问题还是繁杂问题？</h3><p><a href="https://www.jackyshen.com/2017/08/02/is-your-Scrum-lean-enough/">参考Cynefin框架</a>，很多问题实际上70年代的精益所要解决的问题，而还未到敏捷的范畴：</p>
+<ul>
+<li>譬如加速财务流程，且要考虑低级错误、人为因素、场外因素</li>
+<li>譬如团队要解决的只是基本项目管理和交付技能问题，连“瀑布”水平都还远未到达</li>
+</ul>
+<p><img src="https://pic.pimg.tw/kojenchieh/1479039594-3911847207_n.png"></p>
+<p>敏捷的本意是从繁冗的流程与工具中解脱出来，以人为本。可以说是从正规军到特种兵的转变，但是现实中一些团队，不在于规模大小，还处在凭本能做事的起义军水平。在这种情况下，可能先要建立基本的能力和流程，或许瀑布什么的也不错呢。</p>
+<table>
+<thead>
+<tr>
+<th>起义军</th>
+<th>正规军</th>
+<th>特种兵</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>本能驱动开发</td>
+<td>流程驱动开发</td>
+<td>互动驱动开发</td>
+</tr>
+</tbody></table>
+<h3 id="3-7-关键：Product-Owner-业务需求方是火车头"><a href="#3-7-关键：Product-Owner-业务需求方是火车头" class="headerlink" title="3.7 关键：Product Owner&#x2F;业务需求方是火车头"></a>3.7 关键：Product Owner&#x2F;业务需求方是火车头</h3><p>将熊熊一窝。<a target="_blank" rel="noopener" href="https://v.qq.com/x/page/t3024y3caup.html">PO&#x2F;需求方是决定方向的掌舵人</a>，方向和决策有误，不会有好的成果，所有支持的人员和实践都是空谈</p>
+<ul>
+<li>传统业务组织的需求方强势却说不清楚，IT团队理解分析能力不足却试图一次弄清楚，沟通链条长，再加上多部门决策不明，忽视产品经理&#x2F;产品负责人培养产品的ownership（所有权与担当）缺失</li>
+<li>各部门缺乏一致的战略目标和产品定义，所以只能依靠项目经理协调和推动，但是各方或许都藏着留一手</li>
+</ul>
+<h3 id="3-8-关键：需求澄清是头号问题，然后是工程能力"><a href="#3-8-关键：需求澄清是头号问题，然后是工程能力" class="headerlink" title="3.8 关键：需求澄清是头号问题，然后是工程能力"></a>3.8 关键：需求澄清是头号问题，然后是工程能力</h3><p>现实中，大部分团队还是要解决的是业务说明白，程序听明白的情况，需求澄清、缩短沟通链条的问题就已经不错了，即40年前精益思想所要解决的问题。</p>
+<ul>
+<li>需求分析的方法沿用传统的SRS有耗时过长，阅读困难，覆盖不全等问题。从源头降低了整体工程的效率。</li>
+<li>采用PRD的方法，去掉各种必要信息，只有原型加简单描述，把问题传递给下游，导致开发过程中反复确认，降低效率。</li>
+<li>需求分析的读者有若干种，但是去只通过一种文档试图让所有人获取自己想要的信息。</li>
+<li>缺少图形化的表达，通过大量文字，掩盖重要信息，增加理解困难。根源原因是大家惧怕画图。然而一图胜千言。</li>
+</ul>
+<p>而TDD&#x2F;重构等敏捷实践是非常好的，然而在上述主要矛盾解决之前，工程实践并未让人直接感受到收益，也难怪推行不畅了</p>
+<h3 id="3-9-关键：敏捷合同（外包开发供应商合作）"><a href="#3-9-关键：敏捷合同（外包开发供应商合作）" class="headerlink" title="3.9 关键：敏捷合同（外包开发供应商合作）"></a>3.9 关键：敏捷合同（外包开发供应商合作）</h3><ul>
+<li>多供应商服务于多部门合作，需要由PO来牵头主导统一管理</li>
+<li><a target="_blank" rel="noopener" href="https://www.uperform.cn/introduction-to-agile-contracts-1/">敏捷合同</a>形式：<ul>
+<li>包项目 Fixed Scope, Fixed Price</li>
+<li>包人头，（带有奖惩的）T&amp;M</li>
+<li>(例如以UCP计)单位工作固定价格</li>
+<li>包人头，（带有预算上限的）T&amp;M</li>
+<li>共享损益的目标成本合同</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-10-关键：教练式领导力、文化、软技能"><a href="#3-10-关键：教练式领导力、文化、软技能" class="headerlink" title="3.10 关键：教练式领导力、文化、软技能"></a>3.10 关键：<strong>教练式领导力、文化、软技能</strong></h3><p>转型的边界就是管理者的理念、认识模式、习惯模式等等。面对新时代新形势，管理者的认知必须升级，<a href="https://www.jackyshen.com/2016/05/04/soft-skills-of-technical-leaders-and-managers">教练式领导力</a>可以了解一下。</p>
+<p>专业教练通常会利用三个对齐：认知、利益、情感来帮助团队和组织心往一处想。别光谈利益，也别不谈利益。</p>
+<p>管理者请永远记得”培养人”，这是长远的效益。</p>
+<h2 id="四、参考资料"><a href="#四、参考资料" class="headerlink" title="四、参考资料"></a>四、参考资料</h2><ol>
+<li>常见大型敏捷框架和方法论比较： <a target="_blank" rel="noopener" href="https://www.slideshare.net/BerndSchiffer/comparing-ways-to-scale-agile-at-agile-product-and-project-manager-meetup">https://www.slideshare.net/BerndSchiffer/comparing-ways-to-scale-agile-at-agile-product-and-project-manager-meetup</a></li>
+<li>LAFABLE框架： <a target="_blank" rel="noopener" href="http://www.lafable.com/">http://www.lafable.com/</a>，中文版：<a href="https://www.jackyshen.com/lafable-cn/">https://www.jackyshen.com/lafable-cn/</a></li>
+<li>美国国防部2018-2019关于某空军项目失败的调查报告，由USAF首席软件官Nicolas Chaillian签发：<a target="_blank" rel="noopener" href="https://software.af.mil/dsop/documents/">https://software.af.mil/dsop/documents/</a></li>
+<li>敏捷宣言17君子和其他敏捷知名人士公开反对SAFe文章合集：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/V-PojzupohQvI7NnAfhUHw">https://mp.weixin.qq.com/s/V-PojzupohQvI7NnAfhUHw</a>，以及<a target="_blank" rel="noopener" href="https://www.linkedin.com/pulse/safe-lean-agile-modern-management-theory-luca-minudel/">https://www.linkedin.com/pulse/safe-lean-agile-modern-management-theory-luca-minudel/</a></li>
+<li>招商银行的技术业务关系思考，by 夏雷 <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/9g8WOmNNXQiexTOGJHHMag">https://mp.weixin.qq.com/s/9g8WOmNNXQiexTOGJHHMag</a></li>
+<li>演讲《开思基于LeSS框架的敏捷组织规模化设计与思考》，by 曾庄俊、申健</li>
+<li>系统性团队教练。曌乾组织教练、ICF国际专业教练、系统性团队教练。</li>
+<li>《真正提升软件团队能力的方法，唯有极限编程》, by 熊节 <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/2iC-MkFnTmymqoVhPExgqw">https://mp.weixin.qq.com/s/2iC-MkFnTmymqoVhPExgqw</a></li>
+<li>《你的Scrum够精益吗？》，by 申健 <a href="https://www.jackyshen.com/2017/08/02/is-your-Scrum-lean-enough/">https://www.jackyshen.com/2017/08/02/is-your-Scrum-lean-enough/</a></li>
+<li>需求分析工具箱 by 王洪亮 <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/b7BboFQt9nNMO7vTGfTYdg">https://mp.weixin.qq.com/s/b7BboFQt9nNMO7vTGfTYdg</a></li>
+<li>TDD练功房 by 熊节 <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/2w4tvsr5sK8_3Z6eeppWBQ">https://mp.weixin.qq.com/s/2w4tvsr5sK8_3Z6eeppWBQ</a></li>
+<li>中国软件匠艺小组 by 李小波 <a target="_blank" rel="noopener" href="https://codingstyle.cn/">https://codingstyle.cn</a></li>
+<li>《甲乙方敏捷合同怎么签》，<a target="_blank" rel="noopener" href="https://www.uperform.cn/agile-contract/">https://www.uperform.cn/agile-contract/</a></li>
+<li>《敏捷合同》by Bas Vodde &amp; Craig Larman, LeSS框架创始人, <a target="_blank" rel="noopener" href="https://www.uperform.cn/introduction-to-agile-contracts-1/">https://www.uperform.cn/introduction-to-agile-contracts-1/</a></li>
+<li>CCSTC商业应用学习发展项目，by 周冰</li>
+<li>《技术团队管理者的软技能》，by 申健 <a href="https://www.jackyshen.com/2016/05/04/soft-skills-of-technical-leaders-and-managers">https://www.jackyshen.com/2016/05/04/soft-skills-of-technical-leaders-and-managers</a></li>
+<li>《Clean Agile》by Uncle Bob，敏捷宣言发起人之一，中文版<a target="_blank" rel="noopener" href="https://book.douban.com/subject/35083518/">《敏捷整洁之道》</a>于2020年出版。</li>
+<li>《做一些不必规模化的事情》by Paul Graham，Y Combinator孵化器创始人、《黑客与画家》作者，<a target="_blank" rel="noopener" href="http://paulgraham.com/ds.html">http://paulgraham.com/ds.html</a></li>
+<li>《为什么用了Scrum但你的组织却还不敏捷？》Michael James，敏捷教练，《Scrum Master Checklist》作者，<a target="_blank" rel="noopener" href="https://v.qq.com/x/page/t3024y3caup.html">https://v.qq.com/x/page/t3024y3caup.html</a></li>
+<li>《大规模Scrum》， by Bas Vodde &amp; Craig Larman, LeSS框架创始人，《敏捷合同》作者</li>
+<li>《赋能》（Team of teams），by Stanley McChrystal</li>
+<li>敏捷精益平衡轮（成熟度模型）：<a target="_blank" rel="noopener" href="https://www.uperform.cn/lean-agile-balanced-wheel/">https://www.uperform.cn/lean-agile-balanced-wheel/</a></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://www.jackyshen.com/2019/12/23/Large-Scale-Frameworks-for-Agile/" data-id="cltzclg0m000h5xfyf2v02u1c" data-title="大型规模化敏捷，请和你的大老师远离敏捷" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/agile/" rel="tag">agile</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/less/" rel="tag">less</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/safe/" rel="tag">safe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scaling/" rel="tag">scaling</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scrum/" rel="tag">scrum</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spotify/" rel="tag">spotify</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/04/16/agile-performance-evalution-appraisal/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          敏捷绩效考核与OKR
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/11/subway-map-of-agile-development-practices/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">敏捷开发实践名词术语图谱（地铁线路图）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Kategorien</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/">agile</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/coaching/">coaching</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/engineering/">engineering</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/event/">event</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/facilitating/">facilitating</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/lean/">lean</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/management30/">management30</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/product/">product</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/scaling/">scaling</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/scrum/">scrum</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/tools/">tools</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/">programming</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/programming/actionscript/">actionscript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/architecture/">architecture</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/arduino/">arduino</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/go/">go</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/java/">java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/programming/javascript/emberjs/">emberjs</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/objectivec/">objectivec</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/php/">php</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/python/">python</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/programming/python/django/">django</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/python/functional/">functional</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/swift/">swift</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/tools/">tools</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/APNS/" rel="tag">APNS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CTC/" rel="tag">CTC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IIS/" rel="tag">IIS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JVM/" rel="tag">JVM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scrum/" rel="tag">Scrum</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/agile/" rel="tag">agile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/agile-coach/" rel="tag">agile coach</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/agile-tour/" rel="tag">agile tour</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/agiletour/" rel="tag">agiletour</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/alipay/" rel="tag">alipay</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/annotation/" rel="tag">annotation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/arduino/" rel="tag">arduino</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ascii/" rel="tag">ascii</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/async/" rel="tag">async</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/atdd/" rel="tag">atdd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automation/" rel="tag">automation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash/" rel="tag">bash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bdd/" rel="tag">bdd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blazeDS/" rel="tag">blazeDS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/book/" rel="tag">book</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/branch/" rel="tag">branch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/career/" rel="tag">career</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/certification/" rel="tag">certification</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/checklist/" rel="tag">checklist</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ci/" rel="tag">ci</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ci-unit-testing-automation-java/" rel="tag">ci - unit testing - automation - java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/clean/" rel="tag">clean</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/clojure/" rel="tag">clojure</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/coach/" rel="tag">coach</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/coaching/" rel="tag">coaching</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/coaching-coach-csp-ctc/" rel="tag">coaching - coach - csp - ctc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code-coverage/" rel="tag">code coverage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code-retreat/" rel="tag">code retreat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code-review/" rel="tag">code review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code-smell/" rel="tag">code smell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/coderetreat/" rel="tag">coderetreat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/comet/" rel="tag">comet</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/commitizen/" rel="tag">commitizen</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/communications/" rel="tag">communications</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/community/" rel="tag">community</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/competence/" rel="tag">competence</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/complexity/" rel="tag">complexity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/continuous-integration/" rel="tag">continuous integration</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/contract/" rel="tag">contract</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/craftsmanship/" rel="tag">craftsmanship</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cross-domain/" rel="tag">cross domain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/csd/" rel="tag">csd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/csm/" rel="tag">csm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/csp/" rel="tag">csp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ctc/" rel="tag">ctc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cucumber/" rel="tag">cucumber</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/culture/" rel="tag">culture</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/daily-scrum/" rel="tag">daily scrum</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/decrator/" rel="tag">decrator</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/delivery/" rel="tag">delivery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/design/" rel="tag">design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/design-patterns/" rel="tag">design patterns</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/devops/" rel="tag">devops</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/digital/" rel="tag">digital</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/django/" rel="tag">django</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dojo/" rel="tag">dojo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/easyb/" rel="tag">easyb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/efficiency/" rel="tag">efficiency</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ember/" rel="tag">ember</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/emberjs/" rel="tag">emberjs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/encoding/" rel="tag">encoding</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/estimating/" rel="tag">estimating</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/event/" rel="tag">event</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/facilitating/" rel="tag">facilitating</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fail/" rel="tag">fail</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flex/" rel="tag">flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flexibility/" rel="tag">flexibility</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fluency/" rel="tag">fluency</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fractal/" rel="tag">fractal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/frequently/" rel="tag">frequently</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/functional-programming/" rel="tag">functional programming</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gandalf/" rel="tag">gandalf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gevent/" rel="tag">gevent</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/glossary/" rel="tag">glossary</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/" rel="tag">go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/" rel="tag">gradle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/greenlet/" rel="tag">greenlet</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grooming/" rel="tag">grooming</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/groovy/" rel="tag">groovy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grunt/" rel="tag">grunt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gruntjs/" rel="tag">gruntjs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gui/" rel="tag">gui</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gunicorn/" rel="tag">gunicorn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hardware/" rel="tag">hardware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/history/" rel="tag">history</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hive-mind/" rel="tag">hive mind</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hybrid/" rel="tag">hybrid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/invest/" rel="tag">invest</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ios/" rel="tag">ios</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iteration/" rel="tag">iteration</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/itertools/" rel="tag">itertools</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jasmin/" rel="tag">jasmin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jasmine/" rel="tag">jasmine</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jenkins/" rel="tag">jenkins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jpmorgan/" rel="tag">jpmorgan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/junit/" rel="tag">junit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jvm/" rel="tag">jvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kanban/" rel="tag">kanban</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kata/" rel="tag">kata</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kpi/" rel="tag">kpi</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lambda/" rel="tag">lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leadership/" rel="tag">leadership</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lean/" rel="tag">lean</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lean-startup/" rel="tag">lean startup</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/less/" rel="tag">less</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/" rel="tag">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maker/" rel="tag">maker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/management30/" rel="tag">management30</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/manager/" rel="tag">manager</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mapping/" rel="tag">mapping</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/" rel="tag">maven</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/measure/" rel="tag">measure</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/measurement/" rel="tag">measurement</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/metrics/" rel="tag">metrics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mobile/" rel="tag">mobile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/multi-thread/" rel="tag">multi thread</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network/" rel="tag">network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nexus/" rel="tag">nexus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nio/" rel="tag">nio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/" rel="tag">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/o2o/" rel="tag">o2o</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/objc-bridging/" rel="tag">objc - bridging</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/okr/" rel="tag">okr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/organization/" rel="tag">organization</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/orid/" rel="tag">orid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pair/" rel="tag">pair</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/performance/" rel="tag">performance</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/persona/" rel="tag">persona</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pipe/" rel="tag">pipe</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pipeline/" rel="tag">pipeline</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/planning/" rel="tag">planning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/playground/" rel="tag">playground</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/product-backlog/" rel="tag">product backlog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/product-owner/" rel="tag">product owner</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/productivity/" rel="tag">productivity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/proxy/" rel="tag">proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pyisapie/" rel="tag">pyisapie</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/raid/" rel="tag">raid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reading/" rel="tag">reading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/recursive/" rel="tag">recursive</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/refactor/" rel="tag">refactor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/refactoring/" rel="tag">refactoring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/refinement/" rel="tag">refinement</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/remote/" rel="tag">remote</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/retrospective/" rel="tag">retrospective</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/robotframework/" rel="tag">robotframework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/safe/" rel="tag">safe</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scale/" rel="tag">scale</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scaling/" rel="tag">scaling</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scrum/" rel="tag">scrum</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scrum-master/" rel="tag">scrum master</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sdk/" rel="tag">sdk</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/security/" rel="tag">security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selenium/" rel="tag">selenium</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/serialization/" rel="tag">serialization</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/signature/" rel="tag">signature</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/singleton/" rel="tag">singleton</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/socket/" rel="tag">socket</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sonar/" rel="tag">sonar</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/split/" rel="tag">split</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spotify/" rel="tag">spotify</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sprint/" rel="tag">sprint</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sqa/" rel="tag">sqa</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/" rel="tag">sql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/" rel="tag">swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tdd/" rel="tag">tdd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tennis/" rel="tag">tennis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/time/" rel="tag">time</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/time-code/" rel="tag">time code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tomcat/" rel="tag">tomcat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tpp/" rel="tag">tpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tps/" rel="tag">tps</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/training/" rel="tag">training</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/transformation/" rel="tag">transformation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/trunk/" rel="tag">trunk</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ucac/" rel="tag">ucac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unicode/" rel="tag">unicode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unit-test/" rel="tag">unit test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unittest/" rel="tag">unittest</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/user-story/" rel="tag">user story</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/utf8/" rel="tag">utf8</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vi/" rel="tag">vi</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/visual/" rel="tag">visual</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/waste/" rel="tag">waste</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webdriver/" rel="tag">webdriver</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/weibo/" rel="tag">weibo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/workshop/" rel="tag">workshop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xcode/" rel="tag">xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xp/" rel="tag">xp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xvfb/" rel="tag">xvfb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yield/" rel="tag">yield</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zen/" rel="tag">zen</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/APNS/" style="font-size: 10.91px;">APNS</a> <a href="/tags/CTC/" style="font-size: 10.91px;">CTC</a> <a href="/tags/IIS/" style="font-size: 10.91px;">IIS</a> <a href="/tags/JVM/" style="font-size: 10.91px;">JVM</a> <a href="/tags/Scrum/" style="font-size: 10.91px;">Scrum</a> <a href="/tags/agile/" style="font-size: 19.09px;">agile</a> <a href="/tags/agile-coach/" style="font-size: 10.91px;">agile coach</a> <a href="/tags/agile-tour/" style="font-size: 11.82px;">agile tour</a> <a href="/tags/agiletour/" style="font-size: 10.91px;">agiletour</a> <a href="/tags/alipay/" style="font-size: 10.91px;">alipay</a> <a href="/tags/annotation/" style="font-size: 10.91px;">annotation</a> <a href="/tags/arduino/" style="font-size: 11.82px;">arduino</a> <a href="/tags/ascii/" style="font-size: 10.91px;">ascii</a> <a href="/tags/async/" style="font-size: 10.91px;">async</a> <a href="/tags/atdd/" style="font-size: 10.91px;">atdd</a> <a href="/tags/automation/" style="font-size: 10.91px;">automation</a> <a href="/tags/bash/" style="font-size: 10.91px;">bash</a> <a href="/tags/bdd/" style="font-size: 10.91px;">bdd</a> <a href="/tags/blazeDS/" style="font-size: 10.91px;">blazeDS</a> <a href="/tags/book/" style="font-size: 10.91px;">book</a> <a href="/tags/branch/" style="font-size: 10.91px;">branch</a> <a href="/tags/career/" style="font-size: 13.64px;">career</a> <a href="/tags/certification/" style="font-size: 16.36px;">certification</a> <a href="/tags/checklist/" style="font-size: 10px;">checklist</a> <a href="/tags/ci/" style="font-size: 13.64px;">ci</a> <a href="/tags/ci-unit-testing-automation-java/" style="font-size: 10.91px;">ci - unit testing - automation - java</a> <a href="/tags/clean/" style="font-size: 10.91px;">clean</a> <a href="/tags/clojure/" style="font-size: 11.82px;">clojure</a> <a href="/tags/coach/" style="font-size: 11.82px;">coach</a> <a href="/tags/coaching/" style="font-size: 13.64px;">coaching</a> <a href="/tags/coaching-coach-csp-ctc/" style="font-size: 10.91px;">coaching - coach - csp - ctc</a> <a href="/tags/code-coverage/" style="font-size: 10.91px;">code coverage</a> <a href="/tags/code-retreat/" style="font-size: 10.91px;">code retreat</a> <a href="/tags/code-review/" style="font-size: 10.91px;">code review</a> <a href="/tags/code-smell/" style="font-size: 10.91px;">code smell</a> <a href="/tags/coderetreat/" style="font-size: 10.91px;">coderetreat</a> <a href="/tags/comet/" style="font-size: 10.91px;">comet</a> <a href="/tags/commitizen/" style="font-size: 10.91px;">commitizen</a> <a href="/tags/communications/" style="font-size: 10.91px;">communications</a> <a href="/tags/community/" style="font-size: 12.73px;">community</a> <a href="/tags/competence/" style="font-size: 10.91px;">competence</a> <a href="/tags/complexity/" style="font-size: 10.91px;">complexity</a> <a href="/tags/continuous-integration/" style="font-size: 10.91px;">continuous integration</a> <a href="/tags/contract/" style="font-size: 10.91px;">contract</a> <a href="/tags/craftsmanship/" style="font-size: 10.91px;">craftsmanship</a> <a href="/tags/cross-domain/" style="font-size: 10.91px;">cross domain</a> <a href="/tags/csd/" style="font-size: 11.82px;">csd</a> <a href="/tags/csm/" style="font-size: 10.91px;">csm</a> <a href="/tags/csp/" style="font-size: 11.82px;">csp</a> <a href="/tags/ctc/" style="font-size: 16.36px;">ctc</a> <a href="/tags/cucumber/" style="font-size: 10.91px;">cucumber</a> <a href="/tags/culture/" style="font-size: 12.73px;">culture</a> <a href="/tags/daily-scrum/" style="font-size: 10.91px;">daily scrum</a> <a href="/tags/decrator/" style="font-size: 10.91px;">decrator</a> <a href="/tags/delivery/" style="font-size: 10.91px;">delivery</a> <a href="/tags/design/" style="font-size: 12.73px;">design</a> <a href="/tags/design-patterns/" style="font-size: 10.91px;">design patterns</a> <a href="/tags/devops/" style="font-size: 10.91px;">devops</a> <a href="/tags/digital/" style="font-size: 10.91px;">digital</a> <a href="/tags/django/" style="font-size: 12.73px;">django</a> <a href="/tags/docker/" style="font-size: 10.91px;">docker</a> <a href="/tags/dojo/" style="font-size: 10.91px;">dojo</a> <a href="/tags/easyb/" style="font-size: 10.91px;">easyb</a> <a href="/tags/efficiency/" style="font-size: 10.91px;">efficiency</a> <a href="/tags/ember/" style="font-size: 10.91px;">ember</a> <a href="/tags/emberjs/" style="font-size: 10.91px;">emberjs</a> <a href="/tags/encoding/" style="font-size: 10.91px;">encoding</a> <a href="/tags/estimating/" style="font-size: 10.91px;">estimating</a> <a href="/tags/event/" style="font-size: 11.82px;">event</a> <a href="/tags/facilitating/" style="font-size: 10.91px;">facilitating</a> <a href="/tags/fail/" style="font-size: 10.91px;">fail</a> <a href="/tags/flex/" style="font-size: 10.91px;">flex</a> <a href="/tags/flexibility/" style="font-size: 10.91px;">flexibility</a> <a href="/tags/fluency/" style="font-size: 10.91px;">fluency</a> <a href="/tags/fractal/" style="font-size: 10.91px;">fractal</a> <a href="/tags/frequently/" style="font-size: 10.91px;">frequently</a> <a href="/tags/functional-programming/" style="font-size: 15.45px;">functional programming</a> <a href="/tags/gandalf/" style="font-size: 10.91px;">gandalf</a> <a href="/tags/gevent/" style="font-size: 10.91px;">gevent</a> <a href="/tags/git/" style="font-size: 12.73px;">git</a> <a href="/tags/glossary/" style="font-size: 10.91px;">glossary</a> <a href="/tags/go/" style="font-size: 10.91px;">go</a> <a href="/tags/gradle/" style="font-size: 10.91px;">gradle</a> <a href="/tags/greenlet/" style="font-size: 10.91px;">greenlet</a> <a href="/tags/grooming/" style="font-size: 10.91px;">grooming</a> <a href="/tags/groovy/" style="font-size: 11.82px;">groovy</a> <a href="/tags/grunt/" style="font-size: 11.82px;">grunt</a> <a href="/tags/gruntjs/" style="font-size: 10.91px;">gruntjs</a> <a href="/tags/gui/" style="font-size: 10.91px;">gui</a> <a href="/tags/gunicorn/" style="font-size: 10.91px;">gunicorn</a> <a href="/tags/hardware/" style="font-size: 10.91px;">hardware</a> <a href="/tags/history/" style="font-size: 10.91px;">history</a> <a href="/tags/hive-mind/" style="font-size: 10.91px;">hive mind</a> <a href="/tags/hybrid/" style="font-size: 10.91px;">hybrid</a> <a href="/tags/invest/" style="font-size: 10.91px;">invest</a> <a href="/tags/ios/" style="font-size: 17.27px;">ios</a> <a href="/tags/iteration/" style="font-size: 10.91px;">iteration</a> <a href="/tags/itertools/" style="font-size: 10.91px;">itertools</a> <a href="/tags/jasmin/" style="font-size: 10.91px;">jasmin</a> <a href="/tags/jasmine/" style="font-size: 10.91px;">jasmine</a> <a href="/tags/java/" style="font-size: 14.55px;">java</a> <a href="/tags/javascript/" style="font-size: 10.91px;">javascript</a> <a href="/tags/jenkins/" style="font-size: 11.82px;">jenkins</a> <a href="/tags/jpmorgan/" style="font-size: 10.91px;">jpmorgan</a> <a href="/tags/js/" style="font-size: 10.91px;">js</a> <a href="/tags/junit/" style="font-size: 11.82px;">junit</a> <a href="/tags/jvm/" style="font-size: 10.91px;">jvm</a> <a href="/tags/kanban/" style="font-size: 12.73px;">kanban</a> <a href="/tags/kata/" style="font-size: 11.82px;">kata</a> <a href="/tags/kpi/" style="font-size: 10.91px;">kpi</a> <a href="/tags/lambda/" style="font-size: 10.91px;">lambda</a> <a href="/tags/leadership/" style="font-size: 12.73px;">leadership</a> <a href="/tags/lean/" style="font-size: 16.36px;">lean</a> <a href="/tags/lean-startup/" style="font-size: 12.73px;">lean startup</a> <a href="/tags/less/" style="font-size: 14.55px;">less</a> <a href="/tags/mac/" style="font-size: 10.91px;">mac</a> <a href="/tags/maker/" style="font-size: 11.82px;">maker</a> <a href="/tags/management30/" style="font-size: 13.64px;">management30</a> <a href="/tags/manager/" style="font-size: 10.91px;">manager</a> <a href="/tags/mapping/" style="font-size: 10.91px;">mapping</a> <a href="/tags/maven/" style="font-size: 10.91px;">maven</a> <a href="/tags/measure/" style="font-size: 10.91px;">measure</a> <a href="/tags/measurement/" style="font-size: 10.91px;">measurement</a> <a href="/tags/metrics/" style="font-size: 10.91px;">metrics</a> <a href="/tags/mobile/" style="font-size: 10.91px;">mobile</a> <a href="/tags/multi-thread/" style="font-size: 10.91px;">multi thread</a> <a href="/tags/network/" style="font-size: 10.91px;">network</a> <a href="/tags/nexus/" style="font-size: 10.91px;">nexus</a> <a href="/tags/nginx/" style="font-size: 10.91px;">nginx</a> <a href="/tags/nio/" style="font-size: 10.91px;">nio</a> <a href="/tags/nodejs/" style="font-size: 10.91px;">nodejs</a> <a href="/tags/npm/" style="font-size: 10.91px;">npm</a> <a href="/tags/o2o/" style="font-size: 10.91px;">o2o</a> <a href="/tags/objc-bridging/" style="font-size: 10.91px;">objc - bridging</a> <a href="/tags/okr/" style="font-size: 10.91px;">okr</a> <a href="/tags/organization/" style="font-size: 11.82px;">organization</a> <a href="/tags/orid/" style="font-size: 10.91px;">orid</a> <a href="/tags/pair/" style="font-size: 10.91px;">pair</a> <a href="/tags/performance/" style="font-size: 12.73px;">performance</a> <a href="/tags/persona/" style="font-size: 10.91px;">persona</a> <a href="/tags/pipe/" style="font-size: 10.91px;">pipe</a> <a href="/tags/pipeline/" style="font-size: 10.91px;">pipeline</a> <a href="/tags/planning/" style="font-size: 12.73px;">planning</a> <a href="/tags/playground/" style="font-size: 10.91px;">playground</a> <a href="/tags/product-backlog/" style="font-size: 10.91px;">product backlog</a> <a href="/tags/product-owner/" style="font-size: 10.91px;">product owner</a> <a href="/tags/productivity/" style="font-size: 11.82px;">productivity</a> <a href="/tags/proxy/" style="font-size: 10.91px;">proxy</a> <a href="/tags/pyisapie/" style="font-size: 10.91px;">pyisapie</a> <a href="/tags/python/" style="font-size: 18.18px;">python</a> <a href="/tags/raid/" style="font-size: 10.91px;">raid</a> <a href="/tags/reading/" style="font-size: 10.91px;">reading</a> <a href="/tags/recursive/" style="font-size: 10.91px;">recursive</a> <a href="/tags/refactor/" style="font-size: 10.91px;">refactor</a> <a href="/tags/refactoring/" style="font-size: 10.91px;">refactoring</a> <a href="/tags/refinement/" style="font-size: 10.91px;">refinement</a> <a href="/tags/remote/" style="font-size: 10.91px;">remote</a> <a href="/tags/retrospective/" style="font-size: 10.91px;">retrospective</a> <a href="/tags/robotframework/" style="font-size: 12.73px;">robotframework</a> <a href="/tags/safe/" style="font-size: 10.91px;">safe</a> <a href="/tags/scale/" style="font-size: 10.91px;">scale</a> <a href="/tags/scaling/" style="font-size: 16.36px;">scaling</a> <a href="/tags/scrum/" style="font-size: 20px;">scrum</a> <a href="/tags/scrum-master/" style="font-size: 11.82px;">scrum master</a> <a href="/tags/sdk/" style="font-size: 10.91px;">sdk</a> <a href="/tags/security/" style="font-size: 10.91px;">security</a> <a href="/tags/selenium/" style="font-size: 10.91px;">selenium</a> <a href="/tags/serialization/" style="font-size: 10.91px;">serialization</a> <a href="/tags/signature/" style="font-size: 10.91px;">signature</a> <a href="/tags/singleton/" style="font-size: 10.91px;">singleton</a> <a href="/tags/socket/" style="font-size: 12.73px;">socket</a> <a href="/tags/sonar/" style="font-size: 10.91px;">sonar</a> <a href="/tags/split/" style="font-size: 10.91px;">split</a> <a href="/tags/spotify/" style="font-size: 13.64px;">spotify</a> <a href="/tags/sprint/" style="font-size: 11.82px;">sprint</a> <a href="/tags/sqa/" style="font-size: 10.91px;">sqa</a> <a href="/tags/sql/" style="font-size: 10.91px;">sql</a> <a href="/tags/swift/" style="font-size: 11.82px;">swift</a> <a href="/tags/tdd/" style="font-size: 11.82px;">tdd</a> <a href="/tags/tennis/" style="font-size: 10.91px;">tennis</a> <a href="/tags/time/" style="font-size: 10.91px;">time</a> <a href="/tags/time-code/" style="font-size: 12.73px;">time code</a> <a href="/tags/tomcat/" style="font-size: 10.91px;">tomcat</a> <a href="/tags/tpp/" style="font-size: 10.91px;">tpp</a> <a href="/tags/tps/" style="font-size: 10.91px;">tps</a> <a href="/tags/training/" style="font-size: 10.91px;">training</a> <a href="/tags/transformation/" style="font-size: 10.91px;">transformation</a> <a href="/tags/trunk/" style="font-size: 10.91px;">trunk</a> <a href="/tags/ubuntu/" style="font-size: 10.91px;">ubuntu</a> <a href="/tags/ucac/" style="font-size: 10.91px;">ucac</a> <a href="/tags/unicode/" style="font-size: 10.91px;">unicode</a> <a href="/tags/unit-test/" style="font-size: 13.64px;">unit test</a> <a href="/tags/unittest/" style="font-size: 11.82px;">unittest</a> <a href="/tags/user-story/" style="font-size: 16.36px;">user story</a> <a href="/tags/utf8/" style="font-size: 10.91px;">utf8</a> <a href="/tags/vi/" style="font-size: 10.91px;">vi</a> <a href="/tags/visual/" style="font-size: 10.91px;">visual</a> <a href="/tags/waste/" style="font-size: 10.91px;">waste</a> <a href="/tags/webdriver/" style="font-size: 10.91px;">webdriver</a> <a href="/tags/weibo/" style="font-size: 10.91px;">weibo</a> <a href="/tags/workshop/" style="font-size: 10.91px;">workshop</a> <a href="/tags/xcode/" style="font-size: 11.82px;">xcode</a> <a href="/tags/xp/" style="font-size: 17.27px;">xp</a> <a href="/tags/xvfb/" style="font-size: 10.91px;">xvfb</a> <a href="/tags/yield/" style="font-size: 10.91px;">yield</a> <a href="/tags/zen/" style="font-size: 11.82px;">zen</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">九月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">五月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">十一月 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">十月 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">九月 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">八月 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">二月 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">十二月 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/12/">十二月 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08/">八月 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">六月 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">五月 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/07/">七月 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">六月 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/05/">五月 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/04/">四月 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">九月 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/07/">七月 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/02/">二月 2009</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/02/03/scrum-primer-v20-chinese/">简明Scrum入门教程  (Scrum Primer v2.0版)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/10/risk-ROI-based-agility-acquisition-strategy/">基于风险投入比的敏捷性（灵活适应）获得策略</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/01/effective-unit-testing/">有效的单元测试之一--代码坏味道（读书笔记精华带源码）</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/15/what-do-you-pay-for-agile-coach/">企业组织购买敏捷教练的价值是什么</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/12/remove-scrum-from-safe/">全球敏捷业界呼吁从 SAFe 中删除对 Scrum 的引用！</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 Jacky Shen申健<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+      
+
+
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about-me" class="mobile-nav-link">About</a>
+  
+    <a href="/glossary" class="mobile-nav-link">Glossary</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

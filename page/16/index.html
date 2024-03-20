@@ -80,75 +80,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-2012-06-04-how-to-select-automation-test-framework" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-estimating-is-difficult" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2012/06/04/2012-06-04-how-to-select-automation-test-framework/" class="article-date">
-  <time class="dt-published" datetime="2012-06-04T04:21:53.000Z" itemprop="datePublished">2012-06-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/agile/">agile</a>►<a class="article-category-link" href="/categories/agile/engineering/">engineering</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2012/06/04/2012-06-04-how-to-select-automation-test-framework/">如何选择自动化测试框架</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="如何选择自动化测试框架"><a href="#如何选择自动化测试框架" class="headerlink" title="如何选择自动化测试框架"></a>如何选择自动化测试框架</h1><p>软件自动化测试，作为手工测试的替代，越来越受到关注。<a target="_blank" rel="noopener" href="http://eliga.fi/">Pekka Klärck</a>，作为<a target="_blank" rel="noopener" href="http://code.google.com/p/robotframework/">Robot Framework</a>的创建者和核心开发者，按照系统级别，介绍了<a target="_blank" rel="noopener" href="http://www.slideshare.net/pekkaklarck/introduction-to-test-automation">几种不同的自动化测试方法的区别</a>。</p>
-<h2 id="五种自动化测试方法"><a href="#五种自动化测试方法" class="headerlink" title="五种自动化测试方法"></a>五种自动化测试方法</h2><ol>
-<li><p>记录回放的方式流行于商业工具之中，无需编程技能即可快速上手。然而这种方法相对脆弱，一旦UI变化测试就会受到影响，分散的脚本不可重用且难以维护，而且系统在测试前必须可用（也就意味着无法使用A-TDD方法）。因此这种方法并不适合大型自动化测试。</p>
-</li>
-<li><p>线性脚本允许使用各种语言来编写非结构化脚本，脚本直接与被测系统交互。能够快速上手，灵活性强。但是编写脚本需要编程技能，系统中一个改动会影响所有脚本，没有经过模块化或重用的大量脚本难以维护。因此这种方法适合简单任务，不适合大型自动化。</p>
-</li>
-<li><p>模块化脚本由两部分组成：驱动脚本执行测试，测试库函数完成与被测系统交互。驱动脚本编写起来非常简单，这样可以更快地建立新测试，容易维护。然而需要花时间和编程技能建立测试库，并将测试数据嵌入脚本，建立新测试就需要新的测试脚本。因此，只要拥有编程技能，这种方法还是适合大型项目，但不适合非编程人员。</p>
-</li>
-<li><p>数据驱动方法，将数据与测试脚本分离，基于模块化的测试库，一个驱动脚本可以执行多个相似测试，这样非常容易建立新测试。维护工作可以分离，测试人员负责数据，程序员负责写测试库。然而，不同类型测试仍需要新的驱动脚本，初始建立数据解析器和重用组件需要花人力。这种方法适合大型项目，只需要较少的编程技能。</p>
-</li>
-<li><p>关键字驱动，将数据与关键字结合来描述如何使用数据执行测试。这种方法具备数据驱动的优势，同时非编程人员也能建立新类型测试。所有测试由同一个框架来执行，无需不同的驱动脚本。然而初始成本很大，但是可以使用开源方案！因此非常适合大型项目。</p>
-</li>
-</ol>
-<p>Pekka对以上五种方法的介绍其实也是对自动化测试发展史的介绍，同时也体现了RobotFramework背后的设计思想。</p>
-<h2 id="除了测试框架的选择，要想做好自动化测试，还要关注其他方面。"><a href="#除了测试框架的选择，要想做好自动化测试，还要关注其他方面。" class="headerlink" title="除了测试框架的选择，要想做好自动化测试，还要关注其他方面。"></a>除了测试框架的选择，要想做好自动化测试，还要关注其他方面。</h2><p>自动化测试需要关注<strong>可测性</strong>。自动化最难的部分是与被测系统交互，特别是GUI层。确保系统容易被测试，比如给GUI元素增加标识、输出易于解析的文本、提供自动化接口等。</p>
-<p>系统一般可以分为GUI层以及GUI之下的业务层。GUI层测试需要调用与普通用户同样的接口，但是某些GUI技术缺乏好的工具支持，会使测试变得脆弱，而且执行相对较慢。从业务层开始测试相对容易，执行快。但GUI层仍然需要被测试，以保证GUI正确连接到了业务层，甚至有时GUI层也具有业务功能。Pekka建议考虑对业务层进行完全测试，而部分地对GUI层实行端到端测试。 不是所有系统都具有GUI层，却可能具有API、数据库、服务器、命令行等。自动化测试框架可以调用不同驱动来进行测试。这些非GUI层相对容易测试，只要把测试用例看作另一个客户端而已。</p>
-<p>那么自动化测试应该在什么阶段进行？如果开发完成后单独做自动化，这是典型的瀑布式过程，不同团队之间存在沟通障碍，反馈周期慢，产品在后期难以获得可测性，从而导致复杂和脆弱的测试方案。相反，典型敏捷式过程中，程序员和测试人员协同完成自动化。把自动化看作团队开发的一部分，可测性不再是问题，团队做技术决定时就可以考虑可测性和工具选择，程序员可以提前加入提供可测性的钩子特性。</p>
-<p>自动化测试需要<strong>版本控制</strong>和<strong>持续集成</strong>来支持。将测试和代码放在一起，像管理代码一样管理测试脚本，那么多可用工具，SVN、GIT、Mercurial，没道理不用。持续集成是全方位自动化的关键，当测试或代码有所改动立即执行测试。如果测试运行时间比较长，也可以定期运行。使用<a target="_blank" rel="noopener" href="http://jenkins-ci.org/">Jenkins</a>、Hudson、Cruise Control、 BuildBot吧，自己写定时脚本或Cron Job可以休矣。</p>
-<h2 id="选择商业自动化工具还是开源工具？"><a href="#选择商业自动化工具还是开源工具？" class="headerlink" title="选择商业自动化工具还是开源工具？"></a>选择商业自动化工具还是开源工具？</h2><p>好东西肯定贵，但是贵的不见得好，再便宜的许可证也会阻止整个团队的协作。而且商业化工具难以和其他自动化工具（特别是其他厂商的）或版本控制、持续集成进行整合和定制化。另外，产品终止或公司关门是潜在的风险。开源工具可供选择余地很大，当然也是良莠不齐。开源工具通常容易与其他工具整合，关键是免费，谁都可以随意使用和定制化，还永远不会消失。至于免费软件，越来越少了，很多自由软件都已经开源。免费软件同样不能定制化，且存在中止的风险。</p>
-<h2 id="做自动化需要哪些技能？"><a href="#做自动化需要哪些技能？" class="headerlink" title="做自动化需要哪些技能？"></a>做自动化需要哪些技能？</h2><p>一般来说，包括Python、Ruby、Perl、JavaScript、正则表达式、XPath和CSS定位、SQL语句、版本控制等。</p>
-<h2 id="有了自动化，手工测试还需要吗？"><a href="#有了自动化，手工测试还需要吗？" class="headerlink" title="有了自动化，手工测试还需要吗？"></a>有了自动化，手工测试还需要吗？</h2><p>当然需要！！ 不过，要避免手工执行脚本来测试，还是将其完全自动化吧，测试人员可以更多关注于探索性测试。 记住，机器擅长回归测试，人类善于寻找Bug。</p>
-<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>本文作者 <a href="www.JackyShen.com/about-me">@申导</a> 自2007年开始在诺基亚西门子内部接触到RobotFramework工具，在团队管理和一线开发的时候，一直坚持和推荐RF工具至今，尤其是基于RF的ATDD&#x2F;BDD团队协作实践，在敏捷团队中取得良好收益，并形成了一套完成的培训体系。欢迎交流经验。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://www.jackyshen.com/2012/06/04/2012-06-04-how-to-select-automation-test-framework/" data-id="clqwe95mw00218jfygsashcxm" data-title="如何选择自动化测试框架" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/automation/" rel="tag">automation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/robotframework/" rel="tag">robotframework</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-2012-05-07-estimating-is-difficult" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2012/05/07/2012-05-07-estimating-is-difficult/" class="article-date">
+    <a href="/2012/05/07/estimating-is-difficult/" class="article-date">
   <time class="dt-published" datetime="2012-05-07T12:12:46.000Z" itemprop="datePublished">2012-05-07</time>
 </a>
     
@@ -164,7 +98,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2012/05/07/2012-05-07-estimating-is-difficult/">估算是一种，很难的东西，如影~随行~</a>
+      <a class="p-name article-title" href="/2012/05/07/estimating-is-difficult/">估算是一种，很难的东西，如影~随行~</a>
     </h1>
   
 
@@ -176,13 +110,13 @@
 <p>Bob大叔首先抛出一个问题，如何将著名的葛底斯堡演说的237个单词以固定字体和固定行宽写在一张书签上。如果人工执行这个任务，假设每秒钟处理一个单词来寻找合适的断句点，估计5分钟内就可以完成，而且实际花费时间也和估计的差不多。然而，如果要编写程序来做，要花多久？而且是在知晓算法、没有意外情况、没有绊脚石、无需备份和恢复功能的情况下，编写程序要花多久时间？</p>
         
           <p class="article-more-link">
-            <a href="/2012/05/07/2012-05-07-estimating-is-difficult/#more">Read More</a>
+            <a href="/2012/05/07/estimating-is-difficult/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://www.jackyshen.com/2012/05/07/2012-05-07-estimating-is-difficult/" data-id="clqwe95mv001t8jfybf7d8s7r" data-title="估算是一种，很难的东西，如影~随行~" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://www.jackyshen.com/2012/05/07/estimating-is-difficult/" data-id="cltzclg18003k5xfy7nq1edn3" data-title="估算是一种，很难的东西，如影~随行~" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -196,9 +130,9 @@
 
 
   
-    <article id="post-2012-05-07-what-do-middle-managers-do" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-what-do-middle-managers-do" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2012/05/07/2012-05-07-what-do-middle-managers-do/" class="article-date">
+    <a href="/2012/05/07/what-do-middle-managers-do/" class="article-date">
   <time class="dt-published" datetime="2012-05-07T12:12:33.000Z" itemprop="datePublished">2012-05-07</time>
 </a>
     
@@ -214,7 +148,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2012/05/07/2012-05-07-what-do-middle-managers-do/">中层管理者应该做什么？</a>
+      <a class="p-name article-title" href="/2012/05/07/what-do-middle-managers-do/">中层管理者应该做什么？</a>
     </h1>
   
 
@@ -238,7 +172,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://www.jackyshen.com/2012/05/07/2012-05-07-what-do-middle-managers-do/" data-id="clqwe95mv001x8jfy7lx6b13e" data-title="中层管理者应该做什么？" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://www.jackyshen.com/2012/05/07/what-do-middle-managers-do/" data-id="cltzclg2x00ct5xfyd63xapyr" data-title="中层管理者应该做什么？" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -252,9 +186,9 @@
 
 
   
-    <article id="post-2011-07-26-Apple-Push-Notification-server" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-Apple-Push-Notification-server" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2011/07/26/2011-07-26-Apple-Push-Notification-server/" class="article-date">
+    <a href="/2011/07/26/Apple-Push-Notification-server/" class="article-date">
   <time class="dt-published" datetime="2011-07-26T13:26:51.000Z" itemprop="datePublished">2011-07-26</time>
 </a>
     
@@ -270,7 +204,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2011/07/26/2011-07-26-Apple-Push-Notification-server/">编写Apple Push Notification服务器</a>
+      <a class="p-name article-title" href="/2011/07/26/Apple-Push-Notification-server/">编写Apple Push Notification服务器</a>
     </h1>
   
 
@@ -333,7 +267,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://www.jackyshen.com/2011/07/26/2011-07-26-Apple-Push-Notification-server/" data-id="clqwe95mt001b8jfybvwbaiv0" data-title="编写Apple Push Notification服务器" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://www.jackyshen.com/2011/07/26/Apple-Push-Notification-server/" data-id="cltzclg0i00035xfy4q4v86jv" data-title="编写Apple Push Notification服务器" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -347,9 +281,9 @@
 
 
   
-    <article id="post-2011-07-20-fail-to-connect-Jenkins-to-Mac" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-fail-to-connect-Jenkins-to-Mac" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2011/07/20/2011-07-20-fail-to-connect-Jenkins-to-Mac/" class="article-date">
+    <a href="/2011/07/20/fail-to-connect-Jenkins-to-Mac/" class="article-date">
   <time class="dt-published" datetime="2011-07-20T13:40:45.000Z" itemprop="datePublished">2011-07-20</time>
 </a>
     
@@ -365,7 +299,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2011/07/20/2011-07-20-fail-to-connect-Jenkins-to-Mac/">Jenkins CI连接Mac电脑失败</a>
+      <a class="p-name article-title" href="/2011/07/20/fail-to-connect-Jenkins-to-Mac/">Jenkins CI连接Mac电脑失败</a>
     </h1>
   
 
@@ -377,13 +311,13 @@
 <p>我的Jenkins安装在Linux上，但是iphone app却只能在Mac机上进行编译和运行单元测试，所以需要给Jenkins建立带tag 的Node，并且把iphone工程也打上相同的tag，这样就可以强制该工程在Mac环境上编译，而不是在本机Linux上。</p>
         
           <p class="article-more-link">
-            <a href="/2011/07/20/2011-07-20-fail-to-connect-Jenkins-to-Mac/#more">Read More</a>
+            <a href="/2011/07/20/fail-to-connect-Jenkins-to-Mac/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://www.jackyshen.com/2011/07/20/2011-07-20-fail-to-connect-Jenkins-to-Mac/" data-id="clqwe95mt00178jfy9gj776bj" data-title="Jenkins CI连接Mac电脑失败" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://www.jackyshen.com/2011/07/20/fail-to-connect-Jenkins-to-Mac/" data-id="cltzclg18003q5xfy7ker6mpw" data-title="Jenkins CI连接Mac电脑失败" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -397,9 +331,9 @@
 
 
   
-    <article id="post-2011-07-19-run-unittest-in-iphone-simulator-from-terminal" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-run-unittest-in-iphone-simulator-from-terminal" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2011/07/19/2011-07-19-run-unittest-in-iphone-simulator-from-terminal/" class="article-date">
+    <a href="/2011/07/19/run-unittest-in-iphone-simulator-from-terminal/" class="article-date">
   <time class="dt-published" datetime="2011-07-19T13:54:53.000Z" itemprop="datePublished">2011-07-19</time>
 </a>
     
@@ -415,7 +349,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2011/07/19/2011-07-19-run-unittest-in-iphone-simulator-from-terminal/">命令行运行iphone模拟器以及单元测试</a>
+      <a class="p-name article-title" href="/2011/07/19/run-unittest-in-iphone-simulator-from-terminal/">命令行运行iphone模拟器以及单元测试</a>
     </h1>
   
 
@@ -428,13 +362,13 @@
 <p>关于使用Jenkins CI,参见<a href="http://www.jackyshen.com/2011-07-20-fail-to-connect-Jenkins-to-Mac">Jenkins CI 连接Mac 电脑失败</a></p>
         
           <p class="article-more-link">
-            <a href="/2011/07/19/2011-07-19-run-unittest-in-iphone-simulator-from-terminal/#more">Read More</a>
+            <a href="/2011/07/19/run-unittest-in-iphone-simulator-from-terminal/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://www.jackyshen.com/2011/07/19/2011-07-19-run-unittest-in-iphone-simulator-from-terminal/" data-id="clqwe95ms00128jfybcb3cteh" data-title="命令行运行iphone模拟器以及单元测试" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://www.jackyshen.com/2011/07/19/run-unittest-in-iphone-simulator-from-terminal/" data-id="cltzclg2c009q5xfy1xj29lum" data-title="命令行运行iphone模拟器以及单元测试" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -448,9 +382,9 @@
 
 
   
-    <article id="post-2011-06-17-comet-long-connection" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-comet-long-connection" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2011/06/17/2011-06-17-comet-long-connection/" class="article-date">
+    <a href="/2011/06/17/comet-long-connection/" class="article-date">
   <time class="dt-published" datetime="2011-06-17T14:35:33.000Z" itemprop="datePublished">2011-06-17</time>
 </a>
     
@@ -466,7 +400,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2011/06/17/2011-06-17-comet-long-connection/">comet长连接</a>
+      <a class="p-name article-title" href="/2011/06/17/comet-long-connection/">comet长连接</a>
     </h1>
   
 
@@ -485,7 +419,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://www.jackyshen.com/2011/06/17/2011-06-17-comet-long-connection/" data-id="clqwe95ms000z8jfygxlk63sw" data-title="comet长连接" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://www.jackyshen.com/2011/06/17/comet-long-connection/" data-id="cltzclg13002n5xfycj9oajqe" data-title="comet长连接" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -499,9 +433,9 @@
 
 
   
-    <article id="post-2011-06-13-install-ubuntu11-on-raid5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-install-ubuntu11-on-raid5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2011/06/13/2011-06-13-install-ubuntu11-on-raid5/" class="article-date">
+    <a href="/2011/06/13/install-ubuntu11-on-raid5/" class="article-date">
   <time class="dt-published" datetime="2011-06-13T14:31:45.000Z" itemprop="datePublished">2011-06-13</time>
 </a>
     
@@ -517,7 +451,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2011/06/13/2011-06-13-install-ubuntu11-on-raid5/">在Raid5磁盘阵列上安装Ubuntu11</a>
+      <a class="p-name article-title" href="/2011/06/13/install-ubuntu11-on-raid5/">在Raid5磁盘阵列上安装Ubuntu11</a>
     </h1>
   
 
@@ -529,13 +463,13 @@
 <p>因为是8G内存，所以下载了Ubuntu 11.04桌面版。从liveCD引导，一路回车，到磁盘分区时，提示无法在分区上安装启动程序，列表中可以选择的有&#x2F;dev&#x2F;sda，raid-p0等，无论选哪个都不行。</p>
         
           <p class="article-more-link">
-            <a href="/2011/06/13/2011-06-13-install-ubuntu11-on-raid5/#more">Read More</a>
+            <a href="/2011/06/13/install-ubuntu11-on-raid5/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://www.jackyshen.com/2011/06/13/2011-06-13-install-ubuntu11-on-raid5/" data-id="clqwe95mr000v8jfy19v64uil" data-title="在Raid5磁盘阵列上安装Ubuntu11" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://www.jackyshen.com/2011/06/13/install-ubuntu11-on-raid5/" data-id="cltzclg1m005w5xfychfqavbt" data-title="在Raid5磁盘阵列上安装Ubuntu11" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -549,9 +483,9 @@
 
 
   
-    <article id="post-2011-05-11-socket-server-architecture-overview" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-socket-server-architecture-overview" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2011/05/11/2011-05-11-socket-server-architecture-overview/" class="article-date">
+    <a href="/2011/05/11/socket-server-architecture-overview/" class="article-date">
   <time class="dt-published" datetime="2011-05-11T14:45:09.000Z" itemprop="datePublished">2011-05-11</time>
 </a>
     
@@ -567,7 +501,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2011/05/11/2011-05-11-socket-server-architecture-overview/">Socket服务器整体架构概述</a>
+      <a class="p-name article-title" href="/2011/05/11/socket-server-architecture-overview/">Socket服务器整体架构概述</a>
     </h1>
   
 
@@ -593,7 +527,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://www.jackyshen.com/2011/05/11/2011-05-11-socket-server-architecture-overview/" data-id="clqwe95mr000t8jfy3y34f3jk" data-title="Socket服务器整体架构概述" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://www.jackyshen.com/2011/05/11/socket-server-architecture-overview/" data-id="cltzclg2i00ak5xfybz2aghns" data-title="Socket服务器整体架构概述" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -607,9 +541,9 @@
 
 
   
-    <article id="post-2011-05-11-performance-and-encoding-of-Tomcat" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-performance-and-encoding-of-Tomcat" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2011/05/11/2011-05-11-performance-and-encoding-of-Tomcat/" class="article-date">
+    <a href="/2011/05/11/performance-and-encoding-of-Tomcat/" class="article-date">
   <time class="dt-published" datetime="2011-05-11T14:39:50.000Z" itemprop="datePublished">2011-05-11</time>
 </a>
     
@@ -625,7 +559,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2011/05/11/2011-05-11-performance-and-encoding-of-Tomcat/">tomcat性能优化及乱码解决</a>
+      <a class="p-name article-title" href="/2011/05/11/performance-and-encoding-of-Tomcat/">tomcat性能优化及乱码解决</a>
     </h1>
   
 
@@ -636,17 +570,70 @@
         <p>几招让你的Tomcat在生产环境上表现更好</p>
         
           <p class="article-more-link">
-            <a href="/2011/05/11/2011-05-11-performance-and-encoding-of-Tomcat/#more">Read More</a>
+            <a href="/2011/05/11/performance-and-encoding-of-Tomcat/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://www.jackyshen.com/2011/05/11/2011-05-11-performance-and-encoding-of-Tomcat/" data-id="clqwe95mp000o8jfy12wrgwdg" data-title="tomcat性能优化及乱码解决" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://www.jackyshen.com/2011/05/11/performance-and-encoding-of-Tomcat/" data-id="cltzclg24008q5xfy81dhgz36" data-title="tomcat性能优化及乱码解决" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tomcat/" rel="tag">tomcat</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-network-programming-in-iOS" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2011/05/08/network-programming-in-iOS/" class="article-date">
+  <time class="dt-published" datetime="2011-05-08T15:26:48.000Z" itemprop="datePublished">2011-05-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/programming/">programming</a>►<a class="article-category-link" href="/categories/programming/objectivec/">objectivec</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2011/05/08/network-programming-in-iOS/">iOS网络编程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="一、检测网络状态"><a href="#一、检测网络状态" class="headerlink" title="一、检测网络状态"></a>一、检测网络状态</h1><h2 id="添加源文件和framework"><a href="#添加源文件和framework" class="headerlink" title="添加源文件和framework"></a>添加源文件和framework</h2><p>开发Web等网络应用程序的时候，需要确认网络环境，连接情况等信息。如果没有处理它们，是不会通过Apple的审(我们的)查的。<br>Apple 的例程 Reachability 中介绍了取得&#x2F;检测网络状态的方法。要在应用程序程序中使用Reachability，首先要完成如下两部：</p>
+<ol>
+<li>添加源文件：<br>在你的程序中使用 Reachability 只须将该例程中的 Reachability.h 和 Reachability.m 拷贝到你的工程中。如下图：</li>
+<li>添加framework：<br>将SystemConfiguration.framework 添加进工程。如下图：</li>
+</ol>
+        
+          <p class="article-more-link">
+            <a href="/2011/05/08/network-programming-in-iOS/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://www.jackyshen.com/2011/05/08/network-programming-in-iOS/" data-id="cltzclg1y007q5xfygf3scby8" data-title="iOS网络编程" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/" rel="tag">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/network/" rel="tag">network</a></li></ul>
 
     </footer>
   </div>
@@ -691,7 +678,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/APNS/" style="font-size: 10px;">APNS</a> <a href="/tags/CTC/" style="font-size: 10px;">CTC</a> <a href="/tags/IIS/" style="font-size: 10px;">IIS</a> <a href="/tags/JVM/" style="font-size: 10px;">JVM</a> <a href="/tags/Scrum/" style="font-size: 10px;">Scrum</a> <a href="/tags/agile/" style="font-size: 19px;">agile</a> <a href="/tags/agile-coach/" style="font-size: 10px;">agile coach</a> <a href="/tags/agile-tour/" style="font-size: 11px;">agile tour</a> <a href="/tags/agiletour/" style="font-size: 10px;">agiletour</a> <a href="/tags/alipay/" style="font-size: 10px;">alipay</a> <a href="/tags/annotation/" style="font-size: 10px;">annotation</a> <a href="/tags/arduino/" style="font-size: 11px;">arduino</a> <a href="/tags/ascii/" style="font-size: 10px;">ascii</a> <a href="/tags/async/" style="font-size: 10px;">async</a> <a href="/tags/atdd/" style="font-size: 10px;">atdd</a> <a href="/tags/automation/" style="font-size: 10px;">automation</a> <a href="/tags/bash/" style="font-size: 10px;">bash</a> <a href="/tags/bdd/" style="font-size: 10px;">bdd</a> <a href="/tags/blazeDS/" style="font-size: 10px;">blazeDS</a> <a href="/tags/book/" style="font-size: 10px;">book</a> <a href="/tags/branch/" style="font-size: 10px;">branch</a> <a href="/tags/career/" style="font-size: 13px;">career</a> <a href="/tags/certification/" style="font-size: 16px;">certification</a> <a href="/tags/checklist/" style="font-size: 10px;">checklist</a> <a href="/tags/ci/" style="font-size: 13px;">ci</a> <a href="/tags/ci-unit-testing-automation-java/" style="font-size: 10px;">ci - unit testing - automation - java</a> <a href="/tags/clean/" style="font-size: 10px;">clean</a> <a href="/tags/clojure/" style="font-size: 11px;">clojure</a> <a href="/tags/coach/" style="font-size: 11px;">coach</a> <a href="/tags/coaching/" style="font-size: 13px;">coaching</a> <a href="/tags/coaching-coach-csp-ctc/" style="font-size: 10px;">coaching - coach - csp - ctc</a> <a href="/tags/code-coverage/" style="font-size: 10px;">code coverage</a> <a href="/tags/code-retreat/" style="font-size: 10px;">code retreat</a> <a href="/tags/code-review/" style="font-size: 10px;">code review</a> <a href="/tags/code-smell/" style="font-size: 10px;">code smell</a> <a href="/tags/coderetreat/" style="font-size: 10px;">coderetreat</a> <a href="/tags/comet/" style="font-size: 10px;">comet</a> <a href="/tags/commitizen/" style="font-size: 10px;">commitizen</a> <a href="/tags/communications/" style="font-size: 10px;">communications</a> <a href="/tags/community/" style="font-size: 12px;">community</a> <a href="/tags/competence/" style="font-size: 10px;">competence</a> <a href="/tags/complexity/" style="font-size: 10px;">complexity</a> <a href="/tags/continuous-integration/" style="font-size: 10px;">continuous integration</a> <a href="/tags/contract/" style="font-size: 10px;">contract</a> <a href="/tags/craftsmanship/" style="font-size: 10px;">craftsmanship</a> <a href="/tags/cross-domain/" style="font-size: 10px;">cross domain</a> <a href="/tags/csd/" style="font-size: 11px;">csd</a> <a href="/tags/csm/" style="font-size: 10px;">csm</a> <a href="/tags/csp/" style="font-size: 11px;">csp</a> <a href="/tags/ctc/" style="font-size: 16px;">ctc</a> <a href="/tags/cucumber/" style="font-size: 10px;">cucumber</a> <a href="/tags/culture/" style="font-size: 12px;">culture</a> <a href="/tags/daily-scrum/" style="font-size: 10px;">daily scrum</a> <a href="/tags/decrator/" style="font-size: 10px;">decrator</a> <a href="/tags/delivery/" style="font-size: 10px;">delivery</a> <a href="/tags/design/" style="font-size: 12px;">design</a> <a href="/tags/design-patterns/" style="font-size: 10px;">design patterns</a> <a href="/tags/devops/" style="font-size: 10px;">devops</a> <a href="/tags/digital/" style="font-size: 10px;">digital</a> <a href="/tags/django/" style="font-size: 12px;">django</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/dojo/" style="font-size: 10px;">dojo</a> <a href="/tags/easyb/" style="font-size: 10px;">easyb</a> <a href="/tags/efficiency/" style="font-size: 10px;">efficiency</a> <a href="/tags/ember/" style="font-size: 10px;">ember</a> <a href="/tags/emberjs/" style="font-size: 10px;">emberjs</a> <a href="/tags/encoding/" style="font-size: 10px;">encoding</a> <a href="/tags/estimating/" style="font-size: 10px;">estimating</a> <a href="/tags/event/" style="font-size: 11px;">event</a> <a href="/tags/facilitating/" style="font-size: 10px;">facilitating</a> <a href="/tags/fail/" style="font-size: 10px;">fail</a> <a href="/tags/flex/" style="font-size: 10px;">flex</a> <a href="/tags/flexibility/" style="font-size: 10px;">flexibility</a> <a href="/tags/fluency/" style="font-size: 10px;">fluency</a> <a href="/tags/fractal/" style="font-size: 10px;">fractal</a> <a href="/tags/frequently/" style="font-size: 10px;">frequently</a> <a href="/tags/functional-programming/" style="font-size: 15px;">functional programming</a> <a href="/tags/gandalf/" style="font-size: 10px;">gandalf</a> <a href="/tags/gevent/" style="font-size: 10px;">gevent</a> <a href="/tags/git/" style="font-size: 12px;">git</a> <a href="/tags/glossary/" style="font-size: 10px;">glossary</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/gradle/" style="font-size: 10px;">gradle</a> <a href="/tags/greenlet/" style="font-size: 10px;">greenlet</a> <a href="/tags/grooming/" style="font-size: 10px;">grooming</a> <a href="/tags/groovy/" style="font-size: 11px;">groovy</a> <a href="/tags/grunt/" style="font-size: 11px;">grunt</a> <a href="/tags/gruntjs/" style="font-size: 10px;">gruntjs</a> <a href="/tags/gui/" style="font-size: 10px;">gui</a> <a href="/tags/gunicorn/" style="font-size: 10px;">gunicorn</a> <a href="/tags/hardware/" style="font-size: 10px;">hardware</a> <a href="/tags/history/" style="font-size: 10px;">history</a> <a href="/tags/hive-mind/" style="font-size: 10px;">hive mind</a> <a href="/tags/hybrid/" style="font-size: 10px;">hybrid</a> <a href="/tags/invest/" style="font-size: 10px;">invest</a> <a href="/tags/ios/" style="font-size: 17px;">ios</a> <a href="/tags/iteration/" style="font-size: 10px;">iteration</a> <a href="/tags/itertools/" style="font-size: 10px;">itertools</a> <a href="/tags/jasmin/" style="font-size: 10px;">jasmin</a> <a href="/tags/jasmine/" style="font-size: 10px;">jasmine</a> <a href="/tags/java/" style="font-size: 14px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jenkins/" style="font-size: 11px;">jenkins</a> <a href="/tags/jpmorgan/" style="font-size: 10px;">jpmorgan</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/junit/" style="font-size: 11px;">junit</a> <a href="/tags/jvm/" style="font-size: 10px;">jvm</a> <a href="/tags/kanban/" style="font-size: 12px;">kanban</a> <a href="/tags/kata/" style="font-size: 11px;">kata</a> <a href="/tags/kpi/" style="font-size: 10px;">kpi</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/leadership/" style="font-size: 12px;">leadership</a> <a href="/tags/lean/" style="font-size: 16px;">lean</a> <a href="/tags/lean-startup/" style="font-size: 12px;">lean startup</a> <a href="/tags/less/" style="font-size: 14px;">less</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/maker/" style="font-size: 11px;">maker</a> <a href="/tags/management30/" style="font-size: 13px;">management30</a> <a href="/tags/manager/" style="font-size: 10px;">manager</a> <a href="/tags/mapping/" style="font-size: 10px;">mapping</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/measure/" style="font-size: 10px;">measure</a> <a href="/tags/measurement/" style="font-size: 10px;">measurement</a> <a href="/tags/metrics/" style="font-size: 10px;">metrics</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/multi-thread/" style="font-size: 10px;">multi thread</a> <a href="/tags/network/" style="font-size: 10px;">network</a> <a href="/tags/nexus/" style="font-size: 10px;">nexus</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/nio/" style="font-size: 10px;">nio</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/o2o/" style="font-size: 10px;">o2o</a> <a href="/tags/objc-bridging/" style="font-size: 10px;">objc - bridging</a> <a href="/tags/okr/" style="font-size: 10px;">okr</a> <a href="/tags/organization/" style="font-size: 11px;">organization</a> <a href="/tags/orid/" style="font-size: 10px;">orid</a> <a href="/tags/pair/" style="font-size: 10px;">pair</a> <a href="/tags/performance/" style="font-size: 12px;">performance</a> <a href="/tags/persona/" style="font-size: 10px;">persona</a> <a href="/tags/pipe/" style="font-size: 10px;">pipe</a> <a href="/tags/pipeline/" style="font-size: 10px;">pipeline</a> <a href="/tags/planning/" style="font-size: 12px;">planning</a> <a href="/tags/playground/" style="font-size: 10px;">playground</a> <a href="/tags/product-backlog/" style="font-size: 10px;">product backlog</a> <a href="/tags/product-owner/" style="font-size: 10px;">product owner</a> <a href="/tags/productivity/" style="font-size: 11px;">productivity</a> <a href="/tags/proxy/" style="font-size: 10px;">proxy</a> <a href="/tags/pyisapie/" style="font-size: 10px;">pyisapie</a> <a href="/tags/python/" style="font-size: 18px;">python</a> <a href="/tags/raid/" style="font-size: 10px;">raid</a> <a href="/tags/reading/" style="font-size: 10px;">reading</a> <a href="/tags/recursive/" style="font-size: 10px;">recursive</a> <a href="/tags/refactor/" style="font-size: 10px;">refactor</a> <a href="/tags/refactoring/" style="font-size: 10px;">refactoring</a> <a href="/tags/refinement/" style="font-size: 10px;">refinement</a> <a href="/tags/remote/" style="font-size: 10px;">remote</a> <a href="/tags/retrospective/" style="font-size: 10px;">retrospective</a> <a href="/tags/robotframework/" style="font-size: 12px;">robotframework</a> <a href="/tags/safe/" style="font-size: 10px;">safe</a> <a href="/tags/scale/" style="font-size: 10px;">scale</a> <a href="/tags/scaling/" style="font-size: 16px;">scaling</a> <a href="/tags/scrum/" style="font-size: 20px;">scrum</a> <a href="/tags/scrum-master/" style="font-size: 11px;">scrum master</a> <a href="/tags/sdk/" style="font-size: 10px;">sdk</a> <a href="/tags/security/" style="font-size: 10px;">security</a> <a href="/tags/selenium/" style="font-size: 10px;">selenium</a> <a href="/tags/serialization/" style="font-size: 10px;">serialization</a> <a href="/tags/signature/" style="font-size: 10px;">signature</a> <a href="/tags/singleton/" style="font-size: 10px;">singleton</a> <a href="/tags/socket/" style="font-size: 12px;">socket</a> <a href="/tags/sonar/" style="font-size: 10px;">sonar</a> <a href="/tags/split/" style="font-size: 10px;">split</a> <a href="/tags/spotify/" style="font-size: 13px;">spotify</a> <a href="/tags/sprint/" style="font-size: 11px;">sprint</a> <a href="/tags/sqa/" style="font-size: 10px;">sqa</a> <a href="/tags/sql/" style="font-size: 10px;">sql</a> <a href="/tags/swift/" style="font-size: 11px;">swift</a> <a href="/tags/tdd/" style="font-size: 11px;">tdd</a> <a href="/tags/tennis/" style="font-size: 10px;">tennis</a> <a href="/tags/time/" style="font-size: 10px;">time</a> <a href="/tags/time-code/" style="font-size: 12px;">time code</a> <a href="/tags/tomcat/" style="font-size: 10px;">tomcat</a> <a href="/tags/tpp/" style="font-size: 10px;">tpp</a> <a href="/tags/tps/" style="font-size: 10px;">tps</a> <a href="/tags/training/" style="font-size: 10px;">training</a> <a href="/tags/transformation/" style="font-size: 10px;">transformation</a> <a href="/tags/trunk/" style="font-size: 10px;">trunk</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/ucac/" style="font-size: 10px;">ucac</a> <a href="/tags/unicode/" style="font-size: 10px;">unicode</a> <a href="/tags/unit-test/" style="font-size: 13px;">unit test</a> <a href="/tags/unittest/" style="font-size: 11px;">unittest</a> <a href="/tags/user-story/" style="font-size: 16px;">user story</a> <a href="/tags/utf8/" style="font-size: 10px;">utf8</a> <a href="/tags/vi/" style="font-size: 10px;">vi</a> <a href="/tags/visual/" style="font-size: 10px;">visual</a> <a href="/tags/waste/" style="font-size: 10px;">waste</a> <a href="/tags/webdriver/" style="font-size: 10px;">webdriver</a> <a href="/tags/weibo/" style="font-size: 10px;">weibo</a> <a href="/tags/workshop/" style="font-size: 10px;">workshop</a> <a href="/tags/xcode/" style="font-size: 11px;">xcode</a> <a href="/tags/xp/" style="font-size: 17px;">xp</a> <a href="/tags/xvfb/" style="font-size: 10px;">xvfb</a> <a href="/tags/yield/" style="font-size: 10px;">yield</a> <a href="/tags/zen/" style="font-size: 11px;">zen</a>
+      <a href="/tags/APNS/" style="font-size: 10.91px;">APNS</a> <a href="/tags/CTC/" style="font-size: 10.91px;">CTC</a> <a href="/tags/IIS/" style="font-size: 10.91px;">IIS</a> <a href="/tags/JVM/" style="font-size: 10.91px;">JVM</a> <a href="/tags/Scrum/" style="font-size: 10.91px;">Scrum</a> <a href="/tags/agile/" style="font-size: 19.09px;">agile</a> <a href="/tags/agile-coach/" style="font-size: 10.91px;">agile coach</a> <a href="/tags/agile-tour/" style="font-size: 11.82px;">agile tour</a> <a href="/tags/agiletour/" style="font-size: 10.91px;">agiletour</a> <a href="/tags/alipay/" style="font-size: 10.91px;">alipay</a> <a href="/tags/annotation/" style="font-size: 10.91px;">annotation</a> <a href="/tags/arduino/" style="font-size: 11.82px;">arduino</a> <a href="/tags/ascii/" style="font-size: 10.91px;">ascii</a> <a href="/tags/async/" style="font-size: 10.91px;">async</a> <a href="/tags/atdd/" style="font-size: 10.91px;">atdd</a> <a href="/tags/automation/" style="font-size: 10.91px;">automation</a> <a href="/tags/bash/" style="font-size: 10.91px;">bash</a> <a href="/tags/bdd/" style="font-size: 10.91px;">bdd</a> <a href="/tags/blazeDS/" style="font-size: 10.91px;">blazeDS</a> <a href="/tags/book/" style="font-size: 10.91px;">book</a> <a href="/tags/branch/" style="font-size: 10.91px;">branch</a> <a href="/tags/career/" style="font-size: 13.64px;">career</a> <a href="/tags/certification/" style="font-size: 16.36px;">certification</a> <a href="/tags/checklist/" style="font-size: 10px;">checklist</a> <a href="/tags/ci/" style="font-size: 13.64px;">ci</a> <a href="/tags/ci-unit-testing-automation-java/" style="font-size: 10.91px;">ci - unit testing - automation - java</a> <a href="/tags/clean/" style="font-size: 10.91px;">clean</a> <a href="/tags/clojure/" style="font-size: 11.82px;">clojure</a> <a href="/tags/coach/" style="font-size: 11.82px;">coach</a> <a href="/tags/coaching/" style="font-size: 13.64px;">coaching</a> <a href="/tags/coaching-coach-csp-ctc/" style="font-size: 10.91px;">coaching - coach - csp - ctc</a> <a href="/tags/code-coverage/" style="font-size: 10.91px;">code coverage</a> <a href="/tags/code-retreat/" style="font-size: 10.91px;">code retreat</a> <a href="/tags/code-review/" style="font-size: 10.91px;">code review</a> <a href="/tags/code-smell/" style="font-size: 10.91px;">code smell</a> <a href="/tags/coderetreat/" style="font-size: 10.91px;">coderetreat</a> <a href="/tags/comet/" style="font-size: 10.91px;">comet</a> <a href="/tags/commitizen/" style="font-size: 10.91px;">commitizen</a> <a href="/tags/communications/" style="font-size: 10.91px;">communications</a> <a href="/tags/community/" style="font-size: 12.73px;">community</a> <a href="/tags/competence/" style="font-size: 10.91px;">competence</a> <a href="/tags/complexity/" style="font-size: 10.91px;">complexity</a> <a href="/tags/continuous-integration/" style="font-size: 10.91px;">continuous integration</a> <a href="/tags/contract/" style="font-size: 10.91px;">contract</a> <a href="/tags/craftsmanship/" style="font-size: 10.91px;">craftsmanship</a> <a href="/tags/cross-domain/" style="font-size: 10.91px;">cross domain</a> <a href="/tags/csd/" style="font-size: 11.82px;">csd</a> <a href="/tags/csm/" style="font-size: 10.91px;">csm</a> <a href="/tags/csp/" style="font-size: 11.82px;">csp</a> <a href="/tags/ctc/" style="font-size: 16.36px;">ctc</a> <a href="/tags/cucumber/" style="font-size: 10.91px;">cucumber</a> <a href="/tags/culture/" style="font-size: 12.73px;">culture</a> <a href="/tags/daily-scrum/" style="font-size: 10.91px;">daily scrum</a> <a href="/tags/decrator/" style="font-size: 10.91px;">decrator</a> <a href="/tags/delivery/" style="font-size: 10.91px;">delivery</a> <a href="/tags/design/" style="font-size: 12.73px;">design</a> <a href="/tags/design-patterns/" style="font-size: 10.91px;">design patterns</a> <a href="/tags/devops/" style="font-size: 10.91px;">devops</a> <a href="/tags/digital/" style="font-size: 10.91px;">digital</a> <a href="/tags/django/" style="font-size: 12.73px;">django</a> <a href="/tags/docker/" style="font-size: 10.91px;">docker</a> <a href="/tags/dojo/" style="font-size: 10.91px;">dojo</a> <a href="/tags/easyb/" style="font-size: 10.91px;">easyb</a> <a href="/tags/efficiency/" style="font-size: 10.91px;">efficiency</a> <a href="/tags/ember/" style="font-size: 10.91px;">ember</a> <a href="/tags/emberjs/" style="font-size: 10.91px;">emberjs</a> <a href="/tags/encoding/" style="font-size: 10.91px;">encoding</a> <a href="/tags/estimating/" style="font-size: 10.91px;">estimating</a> <a href="/tags/event/" style="font-size: 11.82px;">event</a> <a href="/tags/facilitating/" style="font-size: 10.91px;">facilitating</a> <a href="/tags/fail/" style="font-size: 10.91px;">fail</a> <a href="/tags/flex/" style="font-size: 10.91px;">flex</a> <a href="/tags/flexibility/" style="font-size: 10.91px;">flexibility</a> <a href="/tags/fluency/" style="font-size: 10.91px;">fluency</a> <a href="/tags/fractal/" style="font-size: 10.91px;">fractal</a> <a href="/tags/frequently/" style="font-size: 10.91px;">frequently</a> <a href="/tags/functional-programming/" style="font-size: 15.45px;">functional programming</a> <a href="/tags/gandalf/" style="font-size: 10.91px;">gandalf</a> <a href="/tags/gevent/" style="font-size: 10.91px;">gevent</a> <a href="/tags/git/" style="font-size: 12.73px;">git</a> <a href="/tags/glossary/" style="font-size: 10.91px;">glossary</a> <a href="/tags/go/" style="font-size: 10.91px;">go</a> <a href="/tags/gradle/" style="font-size: 10.91px;">gradle</a> <a href="/tags/greenlet/" style="font-size: 10.91px;">greenlet</a> <a href="/tags/grooming/" style="font-size: 10.91px;">grooming</a> <a href="/tags/groovy/" style="font-size: 11.82px;">groovy</a> <a href="/tags/grunt/" style="font-size: 11.82px;">grunt</a> <a href="/tags/gruntjs/" style="font-size: 10.91px;">gruntjs</a> <a href="/tags/gui/" style="font-size: 10.91px;">gui</a> <a href="/tags/gunicorn/" style="font-size: 10.91px;">gunicorn</a> <a href="/tags/hardware/" style="font-size: 10.91px;">hardware</a> <a href="/tags/history/" style="font-size: 10.91px;">history</a> <a href="/tags/hive-mind/" style="font-size: 10.91px;">hive mind</a> <a href="/tags/hybrid/" style="font-size: 10.91px;">hybrid</a> <a href="/tags/invest/" style="font-size: 10.91px;">invest</a> <a href="/tags/ios/" style="font-size: 17.27px;">ios</a> <a href="/tags/iteration/" style="font-size: 10.91px;">iteration</a> <a href="/tags/itertools/" style="font-size: 10.91px;">itertools</a> <a href="/tags/jasmin/" style="font-size: 10.91px;">jasmin</a> <a href="/tags/jasmine/" style="font-size: 10.91px;">jasmine</a> <a href="/tags/java/" style="font-size: 14.55px;">java</a> <a href="/tags/javascript/" style="font-size: 10.91px;">javascript</a> <a href="/tags/jenkins/" style="font-size: 11.82px;">jenkins</a> <a href="/tags/jpmorgan/" style="font-size: 10.91px;">jpmorgan</a> <a href="/tags/js/" style="font-size: 10.91px;">js</a> <a href="/tags/junit/" style="font-size: 11.82px;">junit</a> <a href="/tags/jvm/" style="font-size: 10.91px;">jvm</a> <a href="/tags/kanban/" style="font-size: 12.73px;">kanban</a> <a href="/tags/kata/" style="font-size: 11.82px;">kata</a> <a href="/tags/kpi/" style="font-size: 10.91px;">kpi</a> <a href="/tags/lambda/" style="font-size: 10.91px;">lambda</a> <a href="/tags/leadership/" style="font-size: 12.73px;">leadership</a> <a href="/tags/lean/" style="font-size: 16.36px;">lean</a> <a href="/tags/lean-startup/" style="font-size: 12.73px;">lean startup</a> <a href="/tags/less/" style="font-size: 14.55px;">less</a> <a href="/tags/mac/" style="font-size: 10.91px;">mac</a> <a href="/tags/maker/" style="font-size: 11.82px;">maker</a> <a href="/tags/management30/" style="font-size: 13.64px;">management30</a> <a href="/tags/manager/" style="font-size: 10.91px;">manager</a> <a href="/tags/mapping/" style="font-size: 10.91px;">mapping</a> <a href="/tags/maven/" style="font-size: 10.91px;">maven</a> <a href="/tags/measure/" style="font-size: 10.91px;">measure</a> <a href="/tags/measurement/" style="font-size: 10.91px;">measurement</a> <a href="/tags/metrics/" style="font-size: 10.91px;">metrics</a> <a href="/tags/mobile/" style="font-size: 10.91px;">mobile</a> <a href="/tags/multi-thread/" style="font-size: 10.91px;">multi thread</a> <a href="/tags/network/" style="font-size: 10.91px;">network</a> <a href="/tags/nexus/" style="font-size: 10.91px;">nexus</a> <a href="/tags/nginx/" style="font-size: 10.91px;">nginx</a> <a href="/tags/nio/" style="font-size: 10.91px;">nio</a> <a href="/tags/nodejs/" style="font-size: 10.91px;">nodejs</a> <a href="/tags/npm/" style="font-size: 10.91px;">npm</a> <a href="/tags/o2o/" style="font-size: 10.91px;">o2o</a> <a href="/tags/objc-bridging/" style="font-size: 10.91px;">objc - bridging</a> <a href="/tags/okr/" style="font-size: 10.91px;">okr</a> <a href="/tags/organization/" style="font-size: 11.82px;">organization</a> <a href="/tags/orid/" style="font-size: 10.91px;">orid</a> <a href="/tags/pair/" style="font-size: 10.91px;">pair</a> <a href="/tags/performance/" style="font-size: 12.73px;">performance</a> <a href="/tags/persona/" style="font-size: 10.91px;">persona</a> <a href="/tags/pipe/" style="font-size: 10.91px;">pipe</a> <a href="/tags/pipeline/" style="font-size: 10.91px;">pipeline</a> <a href="/tags/planning/" style="font-size: 12.73px;">planning</a> <a href="/tags/playground/" style="font-size: 10.91px;">playground</a> <a href="/tags/product-backlog/" style="font-size: 10.91px;">product backlog</a> <a href="/tags/product-owner/" style="font-size: 10.91px;">product owner</a> <a href="/tags/productivity/" style="font-size: 11.82px;">productivity</a> <a href="/tags/proxy/" style="font-size: 10.91px;">proxy</a> <a href="/tags/pyisapie/" style="font-size: 10.91px;">pyisapie</a> <a href="/tags/python/" style="font-size: 18.18px;">python</a> <a href="/tags/raid/" style="font-size: 10.91px;">raid</a> <a href="/tags/reading/" style="font-size: 10.91px;">reading</a> <a href="/tags/recursive/" style="font-size: 10.91px;">recursive</a> <a href="/tags/refactor/" style="font-size: 10.91px;">refactor</a> <a href="/tags/refactoring/" style="font-size: 10.91px;">refactoring</a> <a href="/tags/refinement/" style="font-size: 10.91px;">refinement</a> <a href="/tags/remote/" style="font-size: 10.91px;">remote</a> <a href="/tags/retrospective/" style="font-size: 10.91px;">retrospective</a> <a href="/tags/robotframework/" style="font-size: 12.73px;">robotframework</a> <a href="/tags/safe/" style="font-size: 10.91px;">safe</a> <a href="/tags/scale/" style="font-size: 10.91px;">scale</a> <a href="/tags/scaling/" style="font-size: 16.36px;">scaling</a> <a href="/tags/scrum/" style="font-size: 20px;">scrum</a> <a href="/tags/scrum-master/" style="font-size: 11.82px;">scrum master</a> <a href="/tags/sdk/" style="font-size: 10.91px;">sdk</a> <a href="/tags/security/" style="font-size: 10.91px;">security</a> <a href="/tags/selenium/" style="font-size: 10.91px;">selenium</a> <a href="/tags/serialization/" style="font-size: 10.91px;">serialization</a> <a href="/tags/signature/" style="font-size: 10.91px;">signature</a> <a href="/tags/singleton/" style="font-size: 10.91px;">singleton</a> <a href="/tags/socket/" style="font-size: 12.73px;">socket</a> <a href="/tags/sonar/" style="font-size: 10.91px;">sonar</a> <a href="/tags/split/" style="font-size: 10.91px;">split</a> <a href="/tags/spotify/" style="font-size: 13.64px;">spotify</a> <a href="/tags/sprint/" style="font-size: 11.82px;">sprint</a> <a href="/tags/sqa/" style="font-size: 10.91px;">sqa</a> <a href="/tags/sql/" style="font-size: 10.91px;">sql</a> <a href="/tags/swift/" style="font-size: 11.82px;">swift</a> <a href="/tags/tdd/" style="font-size: 11.82px;">tdd</a> <a href="/tags/tennis/" style="font-size: 10.91px;">tennis</a> <a href="/tags/time/" style="font-size: 10.91px;">time</a> <a href="/tags/time-code/" style="font-size: 12.73px;">time code</a> <a href="/tags/tomcat/" style="font-size: 10.91px;">tomcat</a> <a href="/tags/tpp/" style="font-size: 10.91px;">tpp</a> <a href="/tags/tps/" style="font-size: 10.91px;">tps</a> <a href="/tags/training/" style="font-size: 10.91px;">training</a> <a href="/tags/transformation/" style="font-size: 10.91px;">transformation</a> <a href="/tags/trunk/" style="font-size: 10.91px;">trunk</a> <a href="/tags/ubuntu/" style="font-size: 10.91px;">ubuntu</a> <a href="/tags/ucac/" style="font-size: 10.91px;">ucac</a> <a href="/tags/unicode/" style="font-size: 10.91px;">unicode</a> <a href="/tags/unit-test/" style="font-size: 13.64px;">unit test</a> <a href="/tags/unittest/" style="font-size: 11.82px;">unittest</a> <a href="/tags/user-story/" style="font-size: 16.36px;">user story</a> <a href="/tags/utf8/" style="font-size: 10.91px;">utf8</a> <a href="/tags/vi/" style="font-size: 10.91px;">vi</a> <a href="/tags/visual/" style="font-size: 10.91px;">visual</a> <a href="/tags/waste/" style="font-size: 10.91px;">waste</a> <a href="/tags/webdriver/" style="font-size: 10.91px;">webdriver</a> <a href="/tags/weibo/" style="font-size: 10.91px;">weibo</a> <a href="/tags/workshop/" style="font-size: 10.91px;">workshop</a> <a href="/tags/xcode/" style="font-size: 11.82px;">xcode</a> <a href="/tags/xp/" style="font-size: 17.27px;">xp</a> <a href="/tags/xvfb/" style="font-size: 10.91px;">xvfb</a> <a href="/tags/yield/" style="font-size: 10.91px;">yield</a> <a href="/tags/zen/" style="font-size: 11.82px;">zen</a>
     </div>
   </div>
 
@@ -713,23 +700,23 @@
       <ul>
         
           <li>
-            <a href="/2022/02/03/2022-02-03-scrum-primer-v20-chinese/">简明Scrum入门教程  (Scrum Primer v2.0版)</a>
+            <a href="/2022/02/03/scrum-primer-v20-chinese/">简明Scrum入门教程  (Scrum Primer v2.0版)</a>
           </li>
         
           <li>
-            <a href="/2022/01/10/2022-01-10-risk-ROI-based-agility-acquisition-strategy/">基于风险投入比的敏捷性（灵活适应）获得策略</a>
+            <a href="/2022/01/10/risk-ROI-based-agility-acquisition-strategy/">基于风险投入比的敏捷性（灵活适应）获得策略</a>
           </li>
         
           <li>
-            <a href="/2022/01/01/2022-01-01-effective-unit-testing/">有效的单元测试之一--代码坏味道（读书笔记精华带源码）</a>
+            <a href="/2022/01/01/effective-unit-testing/">有效的单元测试之一--代码坏味道（读书笔记精华带源码）</a>
           </li>
         
           <li>
-            <a href="/2021/09/15/2021-09-15-what-do-you-pay-for-agile-coach/">企业组织购买敏捷教练的价值是什么</a>
+            <a href="/2021/09/15/what-do-you-pay-for-agile-coach/">企业组织购买敏捷教练的价值是什么</a>
           </li>
         
           <li>
-            <a href="/2021/09/12/2021-09-12-remove-scrum-from-safe/">全球敏捷业界呼吁从 SAFe 中删除对 Scrum 的引用！</a>
+            <a href="/2021/09/12/remove-scrum-from-safe/">全球敏捷业界呼吁从 SAFe 中删除对 Scrum 的引用！</a>
           </li>
         
       </ul>
