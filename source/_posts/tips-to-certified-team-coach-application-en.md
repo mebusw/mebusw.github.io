@@ -14,9 +14,9 @@ categories:
 
 This series includes three posts:
 
-1. [How Bright Career Path of ScrumMaster and Agile Coach?](/2016/06/10/how-bright-career-path-of-scrummaster-and-agile-coach)
-2. [Jacky Shen's Agile Coach Journey](/2016/06/10/my-agile-coach-journey)
-3. [Tips to Certified Team Coach application](/2016/06/10/tips-to-certified-team-coach-application)
+1. [How Bright Career Path of ScrumMaster and Agile Coach?](/2016/06/10/how-bright-career-path-of-scrummaster-and-agile-coach-en)
+2. [Jacky Shen's Agile Coach Journey](/2016/06/10/my-agile-coach-journey-en)
+3. [Tips to Certified Team Coach application](/2016/06/10/tips-to-certified-team-coach-application-en)
 
 ![](http://res.uperform.cn//Seals-Final-CTC-logo.png?imageView/2/w/200/h/200)
 
