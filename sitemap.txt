@@ -1,3 +1,4 @@
+https://www.jackyshen.com/2024/05/07/How-I-Won-Singapore%E2%80%99s-GPT-4-Prompt-Engineering-Competition/
 https://www.jackyshen.com/2017/04/07/what-is-agile-coach/
 https://www.jackyshen.com/2016/06/10/my-agile-coach-journey-en/
 https://www.jackyshen.com/2016/06/10/how-bright-career-path-of-scrummaster-and-agile-coach-en/
@@ -429,6 +430,11 @@ https://www.jackyshen.com/tags/scale/
 https://www.jackyshen.com/tags/ci-unit-testing-automation-java/
 https://www.jackyshen.com/tags/agile-coach/
 https://www.jackyshen.com/tags/csm/
+https://www.jackyshen.com/tags/chatgpt/
+https://www.jackyshen.com/tags/llm/
+https://www.jackyshen.com/tags/ai/
+https://www.jackyshen.com/tags/prompting/
+https://www.jackyshen.com/tags/prompt-engineering/
 https://www.jackyshen.com/categories/programming/
 https://www.jackyshen.com/categories/programming/objectivec/
 https://www.jackyshen.com/categories/programming/java/

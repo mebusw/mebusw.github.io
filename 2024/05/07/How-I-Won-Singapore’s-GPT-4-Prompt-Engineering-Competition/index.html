@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>COSTAR结构化表达框架，助我夺冠新加坡首届 GPT-4 提示工程大赛 | 申导</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="深度探索我在驾驭大语言模型（LLMs）中学到的策略 庆祝这一里程碑 — 真正的胜利在于宝贵的学习经历！ 2023年11月，我非常荣幸地在新加坡政府科技局（GovTech）组织的首届 GPT-4 提示工程大赛中脱颖而出，这场比赛吸引了超过 400 名杰出的参与者。 提示工程是一门将艺术与科学巧妙融合的学科 — 它不仅关乎技术的理解，更涉及创造力和战略思考。这里分享的是我在实践中学到的一些提示工程策略">
+<meta property="og:type" content="article">
+<meta property="og:title" content="COSTAR结构化表达框架，助我夺冠新加坡首届 GPT-4 提示工程大赛">
+<meta property="og:url" content="https://www.jackyshen.com/2024/05/07/How-I-Won-Singapore%E2%80%99s-GPT-4-Prompt-Engineering-Competition/index.html">
+<meta property="og:site_name" content="申导">
+<meta property="og:description" content="深度探索我在驾驭大语言模型（LLMs）中学到的策略 庆祝这一里程碑 — 真正的胜利在于宝贵的学习经历！ 2023年11月，我非常荣幸地在新加坡政府科技局（GovTech）组织的首届 GPT-4 提示工程大赛中脱颖而出，这场比赛吸引了超过 400 名杰出的参与者。 提示工程是一门将艺术与科学巧妙融合的学科 — 它不仅关乎技术的理解，更涉及创造力和战略思考。这里分享的是我在实践中学到的一些提示工程策略">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.jackyshen.com/media/GPT4-prompt-competition-1.webp">
+<meta property="og:image" content="https://www.jackyshen.com/media/GPT4-prompt-competition-2.webp">
+<meta property="og:image" content="https://www.jackyshen.com/media/GPT4-prompt-competition-3.webp">
+<meta property="og:image" content="https://www.jackyshen.com/media/GPT4-prompt-competition-4.webp">
+<meta property="og:image" content="https://www.jackyshen.com/media/GPT4-prompt-competition-5.webp">
+<meta property="og:image" content="https://www.jackyshen.com/media/GPT4-prompt-competition-6.webp">
+<meta property="og:image" content="https://www.jackyshen.com/media/GPT4-prompt-competition-7.webp">
+<meta property="og:image" content="https://www.jackyshen.com/media/GPT4-prompt-competition-8.webp">
+<meta property="og:image" content="https://www.jackyshen.com/media/GPT4-prompt-competition-9.webp">
+<meta property="og:image" content="https://www.jackyshen.com/media/GPT4-prompt-competition-10.webp">
+<meta property="og:image" content="https://www.jackyshen.com/media/GPT4-prompt-competition-11.webp">
+<meta property="og:image" content="https://www.jackyshen.com/media/GPT4-prompt-competition-12.webp">
+<meta property="og:image" content="https://www.jackyshen.com/media/GPT4-prompt-competition-13.webp">
+<meta property="og:image" content="https://www.jackyshen.com/media/GPT4-prompt-competition-14.webp">
+<meta property="og:image" content="https://www.jackyshen.com/media/GPT4-prompt-competition-15.webp">
+<meta property="og:image" content="https://www.jackyshen.com/media/GPT4-prompt-competition-16.webp">
+<meta property="og:image" content="https://www.jackyshen.com/media/GPT4-prompt-competition-17.webp">
+<meta property="og:image" content="https://www.jackyshen.com/media/GPT4-prompt-competition-18.webp">
+<meta property="og:image" content="https://www.jackyshen.com/media/GPT4-prompt-competition-19.webp">
+<meta property="article:published_time" content="2024-05-06T23:44:33.000Z">
+<meta property="article:modified_time" content="2024-05-06T23:55:46.003Z">
+<meta property="article:author" content="Jacky Shen申健">
+<meta property="article:tag" content="chatgpt">
+<meta property="article:tag" content="llm">
+<meta property="article:tag" content="ai">
+<meta property="article:tag" content="prompt engineering">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.jackyshen.com/media/GPT4-prompt-competition-1.webp">
+  
+    <link rel="alternate" href="/atom.xml" title="申导" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">申导</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Scrum Agile Coach</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about-me">About</a>
+        
+          <a class="main-nav-link" href="/glossary">Glossary</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://www.jackyshen.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-How-I-Won-Singapore’s-GPT-4-Prompt-Engineering-Competition" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/05/07/How-I-Won-Singapore%E2%80%99s-GPT-4-Prompt-Engineering-Competition/" class="article-date">
+  <time class="dt-published" datetime="2024-05-06T23:44:33.000Z" itemprop="datePublished">2024-05-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      COSTAR结构化表达框架，助我夺冠新加坡首届 GPT-4 提示工程大赛
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>深度探索我在驾驭大语言模型（LLMs）中学到的策略</p>
+<p><img src="/media/GPT4-prompt-competition-1.webp" alt="庆祝这一里程碑 — 真正的胜利在于宝贵的学习经历！"><br>庆祝这一里程碑 — 真正的胜利在于宝贵的学习经历！</p>
+<p>2023年11月，我非常荣幸地在新加坡政府科技局（GovTech）组织的首届 GPT-4 提示工程大赛中脱颖而出，这场比赛吸引了超过 400 名杰出的参与者。</p>
+<p>提示工程是一门将艺术与科学巧妙融合的学科 — 它不仅关乎技术的理解，更涉及创造力和战略思考。这里分享的是我在实践中学到的一些提示工程策略，这些策略能够精准地驱动任何大语言模型为你服务，甚至做得更多！</p>
+<blockquote>
+<p><strong>作者的话：</strong> 在写作本文时，我特意避开了那些已经广泛讨论和记录的常规提示工程技巧。相反，我更希望分享一些我在实验中获得的新洞见，以及我个人在理解和应用这些技巧时的独到见解。希望你能从中获得乐趣！</p>
+</blockquote>
+<p><strong>本文涵盖以下主题，其中</strong> 🔵 <strong>代表初学者友好的技巧，而</strong> 🔴 <strong>代表高级策略：</strong></p>
+<ol>
+<li>🔵 <a target="_blank" rel="noopener" href="https://towardsdatascience.com/how-i-won-singapores-gpt-4-prompt-engineering-competition-34c195a93d41#10b2"><strong>借助 CO-STAR 框架构建高效的提示</strong></a></li>
+<li>🔵 <a target="_blank" rel="noopener" href="https://towardsdatascience.com/how-i-won-singapores-gpt-4-prompt-engineering-competition-34c195a93d41#8f6a"><strong>利用分隔符来分节构建提示</strong></a></li>
+<li>🔴 <a target="_blank" rel="noopener" href="https://towardsdatascience.com/how-i-won-singapores-gpt-4-prompt-engineering-competition-34c195a93d41#1cfa"><strong>设计含有 LLM 保护机制的系统级提示</strong></a></li>
+<li>🔴 <a target="_blank" rel="noopener" href="https://towardsdatascience.com/how-i-won-singapores-gpt-4-prompt-engineering-competition-34c195a93d41#183c"><strong>仅依靠大语言模型分析数据集，无需插件或代码</strong></a> — <strong>实际案例分析 Kaggle 的真实数据集</strong></li>
+</ol>
+<h2 id="1-🔵-借助-CO-STAR-框架构建高效的提示"><a href="#1-🔵-借助-CO-STAR-框架构建高效的提示" class="headerlink" title="1. 🔵 借助 CO-STAR 框架构建高效的提示"></a>1. 🔵 借助 CO-STAR 框架构建高效的提示</h2><p>在使用大语言模型时，有效的提示构建至关重要。CO-STAR 框架，由新加坡政府科技局数据科学与 AI 团队创立，是一个实用的提示构建工具。它考虑了所有影响大语言模型响应效果和相关性的关键因素，帮助你获得更优的反馈。</p>
+<p><img src="/media/GPT4-prompt-competition-2.webp" alt="CO-STAR 框架 — 作者提供的图像"><br>CO-STAR 框架 — 作者提供的图像</p>
+<h3 id="如何应用-CO-STAR-框架："><a href="#如何应用-CO-STAR-框架：" class="headerlink" title="如何应用 CO-STAR 框架："></a>如何应用 CO-STAR 框架：</h3><ul>
+<li><strong>(C) 上下文：为任务提供背景信息</strong> 通过为大语言模型（LLM）提供详细的背景信息，可以帮助它精确理解讨论的具体场景，确保提供的反馈具有相关性。</li>
+<li><strong>(O) 目标：明确你要求大语言模型完成的任务</strong> 清晰地界定任务目标，可以使大语言模型更专注地调整其回应，以实现这一具体目标。</li>
+<li><strong>(S) 风格：明确你期望的写作风格</strong> 你可以指定一个特定的著名人物或某个行业专家的写作风格，如商业分析师或 CEO。这将<strong>指导</strong>大语言模型以一种符合你需求的方式和词汇选择进行回应。</li>
+<li><strong>(T) 语气：设置回应的情感调</strong> 设定适当的语气，确保大语言模型的回应能够与预期的情感或情绪背景相协调。可能的语气包括正式、幽默、富有同情心等。</li>
+<li><strong>(A) 受众：识别目标受众</strong> 针对特定受众定制大语言模型的回应，无论是领域内的专家、初学者还是儿童，都能确保内容在特定上下文中适当且容易理解。</li>
+<li><strong>(R) 响应：规定输出的格式</strong> 确定输出格式是为了确保大语言模型按照你的具体需求进行输出，便于执行下游任务。常见的格式包括列表、JSON 格式的数据、专业报告等。对于大部分需要程序化处理大语言模型输出的应用来说，JSON 格式是理想的选择。</li>
+</ul>
+<h3 id="CO-STAR-框架的实用示例"><a href="#CO-STAR-框架的实用示例" class="headerlink" title="CO-STAR 框架的实用示例"></a>CO-STAR 框架的实用示例</h3><p>这里有一个 CO-STAR 框架为何有用的现实案例。假设你担任社交媒体经理，需要草拟一条 Facebook 帖子，用以推广公司的新产品。</p>
+<span id="more"></span>
+
+<p>未使用 CO-STAR 的快速提示可能是这样的：</p>
+<blockquote>
+<p>为我的公司 Alpha 的新产品 Beta——一款新型超快速吹风机，撰写一条 Facebook 帖子。</p>
+</blockquote>
+<p>这是 GPT-4 的回答：</p>
+<blockquote>
+<p>介绍 Alpha 公司革命性的 Beta 吹风机！告别长时间、无聊的吹发过程！Alpha 公司自豪地推出 Beta，这是我们在护发技术上的最新创新——超快干燥：Beta 设计旨在让你的吹发时间减半，得益于其先进的强力马达。快速准备，享受更多你所爱的时间！立即购买：[产品页面链接]</p>
+</blockquote>
+<p>这一输出虽足够，但显得过于泛化，缺乏必要的细节和针对性吸引力，未能真正触及公司目标受众的心。</p>
+<p>下面是一个应用 CO-STAR 模板的示例，它提醒我们在制定提示时，要考虑到任务的其它方面，特别是之前快速提示中缺少的<code>风格</code>、<code>语调</code>和<code>受众</code>：</p>
+<blockquote>
+<p># CONTEXT（上下文） #<br>我想推广公司的新产品。我的公司名为 Alpha，新产品名为 Beta，是一款新型超快速吹风机。</p>
+<p># OBJECTIVE（目标） #<br>帮我创建一条 Facebook 帖子，目的是吸引人们点击产品链接进行购买。</p>
+<p># STYLE（风格） #<br>参照 Dyson 等成功公司的宣传风格，它们在推广类似产品时的文案风格。</p>
+<p># TONE（语调） #<br>说服性</p>
+<p># AUDIENCE（受众） #<br>我们公司在 Facebook 上的主要受众是老年人。请针对这一群体在选择护发产品时的典型关注点来定制帖子。</p>
+<p># RESPONSE（响应） #<br>保持 Facebook 帖子简洁而深具影响力。</p>
+</blockquote>
+<p>通过运用 CO-STAR 框架，GPT-4 的响应变得更具针对性和效果：</p>
+<blockquote>
+<p>用 Alpha Beta——超快速吹风机，体验轻松的优雅生活，它是为具有洞察力的一代人设计的。</p>
+<p>与 Alpha Beta 一起，重新找回简单而高效的护发乐趣。我们的最新创新不仅是一款吹风机；它还承诺为那些懂得欣赏生活美好事物的人提供快速、柔和且可靠的发型打理。</p>
+<p>- 易用且直观：向复杂的设备说再见。Alpha Beta 专为舒适和简便而设计，非常适合那些喜欢简洁、无麻烦操作的人。- 节省时间的技术：我们知道您的时间非常宝贵。因此，Alpha Beta 显著缩短吹发时间，让您有更多时间享受生活。</p>
+<p>每天都是与 Alpha Beta 相伴的美好发型日。立即体验优雅与简约的完美结合。</p>
+<p>[您的产品链接在此]</p>
+</blockquote>
+<p>CO-STAR 框架指引您以有组织的方式提供所有关键任务信息，确保响应完全针对您的需求并进行优化。</p>
+<h2 id="2-🔵-使用分隔符进行文本分段"><a href="#2-🔵-使用分隔符进行文本分段" class="headerlink" title="2. 🔵 使用分隔符进行文本分段"></a>2. 🔵 使用分隔符进行文本分段</h2><p><img src="/media/GPT4-prompt-competition-3.webp" alt="img"></p>
+<p>分隔符是特殊的符号，它们帮助大语言模型 (LLM) 辨识提示中哪些部分应当被视为一个完整的意义单元。这非常关键，因为你的提示是作为一个长的 Token 序列一次性传给模型的。通过设置分隔符，可以为这些 Token 序列提供结构，使特定部分得到不同的处理。</p>
+<p>需要注意的是，对于简单的任务，分隔符对大语言模型的回应质量可能无显著影响。但是，任务越复杂，合理使用分隔符进行文本分段对模型的反应影响越明显。</p>
+<h3 id="分隔符的作用"><a href="#分隔符的作用" class="headerlink" title="分隔符的作用"></a>分隔符的作用</h3><p>分隔符可以是任何不常见组合的特殊字符序列，如：</p>
+<ul>
+<li>###</li>
+<li>&#x3D;&#x3D;&#x3D;</li>
+<li>&gt;&gt;&gt;</li>
+</ul>
+<p>选择哪种特殊字符并不重要，关键是这些字符足够独特，使得模型能将其识别为分隔符，而非常规标点符号。</p>
+<p>这里是一个分隔符使用的示例：</p>
+<blockquote>
+<p>请在 &lt;&lt;<CONVERSATIONS>&gt;&gt; 中对每段对话的情绪进行分类，标为‘正面’或‘负面’。仅提供情绪分类结果，不需任何引言。</p>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><p>对话示例</p>
+<p><a href="%E6%97%A9%E4%B8%8A%E5%A5%BD%EF%BC%8C%E4%BB%8A%E5%A4%A9%E6%88%91%E8%83%BD%E4%B8%BA%E6%82%A8%E5%81%9A%E4%BA%9B%E4%BB%80%E4%B9%88%EF%BC%9F">Agent</a>: 早安，我今天怎么为您服务？ <a href="%E8%BF%99%E4%B8%AA%E4%BA%A7%E5%93%81%E7%9C%9F%E5%B7%AE%E5%8A%B2%EF%BC%8C%E4%B8%80%E7%82%B9%E9%83%BD%E4%B8%8D%E7%AC%A6%E5%90%88%E5%B9%BF%E5%91%8A%E5%AE%A3%E4%BC%A0%EF%BC%81">Customer</a>: 嗨，我只想说我真的很喜欢你们的产品。它超出了我的预期！</p>
+<h3 id="-1"><a href="#-1" class="headerlink" title=""></a></h3><p>输出示例</p>
+<p>负面</p>
+<p>正面</p>
+<h3 id="-2"><a href="#-2" class="headerlink" title=""></a></h3><p>&lt;&lt;&lt;</p>
+<p>&gt;&gt;&gt;</p>
+</blockquote>
+<p>在上述示例中，使用 <code>###</code> 分隔符来分隔不同的部分，通过大写的章节标题如 <code>对话示例</code> 和 <code>输出示例</code> 进行区分。引言部分说明了要对 <code>&lt;&lt;&lt;CONVERSATIONS&gt;&gt;&gt;</code> 中的对话进行情绪分类，而这些对话在提示的底部给出，没有任何解释文本，但分隔符的存在让模型明白这些对话需要被分类。</p>
+<p>GPT-4 的输出正如请求的那样，仅给出情绪分类：</p>
+<blockquote>
+<p>正面</p>
+<p>负面</p>
+</blockquote>
+<h3 id="将分隔符用作-XML-标签"><a href="#将分隔符用作-XML-标签" class="headerlink" title="将分隔符用作 XML 标签"></a>将分隔符用作 XML 标签</h3><p>使用 XML 标签作为分隔符是一种方法。XML 标签是被尖括号包围的，包括开启标签和结束标签。例如，<code>&lt;tag&gt;</code>和<code>&lt;/tag&gt;</code>。这种方法非常有效，因为大语言模型已经接受了大量包含 XML 格式的网页内容的训练，因此能够理解其结构。</p>
+<p>以下是利用 XML 标签作为分隔符对同一提示进行结构化的例子：</p>
+<blockquote>
+<p>分类以下对话的情感，分为正面和负面两类，根据给出的例子进行分类。请直接给出情感分类结果，不需要添加任何引导性文本。</p>
+<classes>
+正面
+负面
+</classes>
+
+<example-conversations>
+
+</example-conversations>
+
+<example-classes>
+负面
+正面
+</example-classes>
+
+<conversations>
+
+</conversations>
+</blockquote>
+<p>在指令中使用的名词与 XML 标签的名词一致，如 <code>conversations</code>、<code>classes</code> 和 <code>examples</code>，因此使用的 XML 标签分别是 <code>&lt;conversations&gt;</code>、<code>&lt;classes&gt;</code>、<code>&lt;example-conversations&gt;</code> 和 <code>&lt;example-classes&gt;</code>。这确保了模型能够清晰地理解指令与使用的标签之间的关系。</p>
+<p>通过这种结构化的分隔符使用方式，可以确保 GPT-4 精确地按照您的期望响应：</p>
+<blockquote>
+<p>正面</p>
+<p>负面</p>
+</blockquote>
+<h2 id="3-🔴-利用大语言模型-LLM-的系统提示创建机制"><a href="#3-🔴-利用大语言模型-LLM-的系统提示创建机制" class="headerlink" title="3. 🔴 利用大语言模型 (LLM) 的系统提示创建机制"></a>3. 🔴 利用大语言模型 (LLM) 的系统提示创建机制</h2><blockquote>
+<p>_在开始前，我们需指出，本节内容仅适用于具备系统提示功能的大语言模型 (LLM)，与文章中其他适用于所有大语言模型的部分不同。显然，具有此功能的最知名的大语言模型是 ChatGPT，因此我们</p>
+</blockquote>
+<p>将以 ChatGPT 为例进行说明。_</p>
+<p><img src="/media/GPT4-prompt-competition-4.webp" alt="img"></p>
+<h3 id="关于系统提示的术语解释"><a href="#关于系统提示的术语解释" class="headerlink" title="关于系统提示的术语解释"></a>关于系统提示的术语解释</h3><p>首先，我们来厘清几个术语：在讨论 ChatGPT 时，这三个术语“系统提示”、“系统消息”和“自定义指令”几乎可以互换使用。这种用法让许多人（包括我自己）感到混淆，因此 OpenAI 发表了一篇<a target="_blank" rel="noopener" href="https://help.openai.com/en/articles/8234522-chat-completions-api-system-message-vs-custom-instructions-in-ui">文章</a>，专门解释了这些术语。简要总结如下：</p>
+<ul>
+<li>“系统提示”和“系统消息”是通过 Chat Completions API 编程方式交互时使用的术语。</li>
+<li>而“自定义指令”则是在通过 <a target="_blank" rel="noopener" href="https://chat.openai.com/">https://chat.openai.com/</a> 的用户界面与 ChatGPT 交互时使用的术语。</li>
+</ul>
+<p><img src="/media/GPT4-prompt-competition-5.webp" alt="img"></p>
+<p>（图片来自 <a target="_blank" rel="noopener" href="https://blog.enterprisedna.co/chatgpt-custom-instructions/">Enterprise DNA Blog</a>）</p>
+<p>尽管这三个术语表达的是相同的概念，但不必因术语的使用而感到困扰。下面我们将统一使用“系统提示”这一术语。现在，让我们一探究竟！</p>
+<h3 id="什么是系统提示？"><a href="#什么是系统提示？" class="headerlink" title="什么是系统提示？"></a>什么是系统提示？</h3><blockquote>
+<p>系统提示是您向大语言模型提供的关于其应如何响应的额外指示。这被视为一种额外的提示，因为它超出了您对大语言模型的常规用户提示。</p>
+</blockquote>
+<p>在对话中，每当您提出一个新的提示时，系统提示就像是一个过滤器，大语言模型会在回应您的新提示之前自动应用这一过滤器。这意味着在对话中每次大语言模型给出回应时，都会考虑到这些系统提示。</p>
+<p>系统提示一般包括以下几个部分：</p>
+<ul>
+<li><strong>任务定义</strong>：确保大语言模型（LLM）在整个对话中清楚自己的任务。</li>
+<li><strong>输出格式</strong>：指导 LLM 如何格式化其回答。</li>
+<li><strong>操作边界</strong>：明确 LLM 不应采取的行为。这些边界是 LLM 治理中新兴的一个方面，旨在界定 LLM 的操作范围。</li>
+</ul>
+<p>例如，系统提示可能是这样的：</p>
+<blockquote>
+<p>您需要用这段文本来回答问题：[插入文本]。请按照<code>&#123;&quot;问题&quot;: &quot;答案&quot;&#125;</code> 的格式来回答。如果文本信息不足以回答问题，请以”NA”作答。您只能解答与[指定范围]相关的问题。请避免回答任何与年龄、性别及宗教等人口统计信息相关的问题。</p>
+</blockquote>
+<p>每一部分对应的内容如下图所示：</p>
+<p><img src="/media/GPT4-prompt-competition-6.webp" alt="系统提示解析 - 图片由作者提供">系统提示解析 - 图片由作者提供</p>
+<h3 id="那么用户提示中应该包括什么内容？"><a href="#那么用户提示中应该包括什么内容？" class="headerlink" title="那么用户提示中应该包括什么内容？"></a>那么用户提示中应该包括什么内容？</h3><p>系统提示已经概括了任务的总体要求。在上述示例中，任务被定义为仅使用特定文本进行问题解答，同时指导 LLM 按照<code>&#123;&quot;问题&quot;：&quot;答案&quot;&#125;</code>的格式进行回答。</p>
+<blockquote>
+<p>您需要用这段文本来回答问题：[插入文本]。请按照<code>&#123;&quot;问题&quot;: &quot;答案&quot;&#125;</code>的格式来回答。</p>
+</blockquote>
+<p>这种情况下，每个用户提示就是您想用该文本回答的具体问题。例如，用户提示可能是<code>&quot;这篇文本主要讲了什么？&quot;</code>，LLM 的回答将是<code>&#123;&quot;这篇文本主要讲了什么？&quot;:&quot;文本主要讲述了......&quot;&#125;</code>。</p>
+<p>但我们可以将这种任务进一步推广。通常，与只询问一个文本相比，你可能会有多个文本需要询问。这时，我们可以将系统提示的首句从</p>
+<blockquote>
+<p>您需要用这段文本来回答问题：[插入文本]。</p>
+</blockquote>
+<p>改为</p>
+<blockquote>
+<p>您需要使用提供的文本来回答问题。</p>
+</blockquote>
+<p>如此，每个用户提示将包括要问答的文本和问题，例如：</p>
+<blockquote>
+<p><text> [插入文本] </text></p>
+<p><question> [插入问题] </question></p>
+</blockquote>
+<p>此处，我们使用 XML 标签来分隔信息，以便以结构化方式向 LLM 提供所需的两个信息。XML 标签中的名词，<code>text</code> 和 <code>question</code>，与系统提示中的名词相对应，以便 LLM 理解这些标签是如何与指令相关联的。</p>
+<p>总之，系统提示应提供整体任务指令，而每个用户提示则需要提供执行该任务所需的具体细节。在这个例子中，这些细节就是文本和问题。</p>
+<h3 id="额外内容：为-LLM-设定动态规则"><a href="#额外内容：为-LLM-设定动态规则" class="headerlink" title="额外内容：为 LLM 设定动态规则"></a>额外内容：为 LLM 设定动态规则</h3><p>在之前的讨论中，我们通过系统提示来设定规则，这些规则一经设定，将在整个对话中保持不变。但如果你想在对话的不同阶段实施不同的规则，应该怎么做呢？</p>
+<p>对于直接使用 ChatGPT 用户界面的用户来说，目前还没有直接的方法可以实现这一点。然而，如果你通过编程方式与 ChatGPT 互动，那么情况就大不相同了！随着对开发有效 LLM 规则的关注不断增加，一些允许你通过编程方式设定更为详细和动态的规则的开源软件包也应运而生。</p>
+<p>特别推荐的一个是由 NVIDIA 团队开发的<a target="_blank" rel="noopener" href="https://github.com/NVIDIA/NeMo-Guardrails">NeMo Guardrails</a>。这个工具允许你配置用户与 LLM 之间的预期对话流程，并在对话的不同环节设定不同的规则，实现规则的动态调整。这无疑是探索对话动态管理的一个很好的资源，值得一试！</p>
+<h2 id="4-🔴-仅用大语言模型-LLM-分析数据集，不借助插件或编码"><a href="#4-🔴-仅用大语言模型-LLM-分析数据集，不借助插件或编码" class="headerlink" title="4. 🔴 仅用大语言模型 (LLM) 分析数据集，不借助插件或编码"></a>4. 🔴 仅用大语言模型 (LLM) 分析数据集，不借助插件或编码</h2><p><img src="/media/GPT4-prompt-competition-7.webp" alt="img"></p>
+<p>你可能已经听说过 OpenAI 在 ChatGPT 的 GPT-4 中为付费账户提供的高级数据分析插件。它让用户可以上传数据集到 ChatGPT 并直接在数据集上执行编码，实现精准的数据分析。</p>
+<p>但是，你知道吗？并不总是需要依赖这类插件来有效地使用大语言模型 (LLM) 分析数据集。我们首先来探讨一下仅利用 LLM 进行数据分析的优势与限制。</p>
+<h3 id="LLM-在哪些数据集分析类型上不擅长"><a href="#LLM-在哪些数据集分析类型上不擅长" class="headerlink" title="LLM 在哪些数据集分析类型上不擅长"></a>LLM 在哪些数据集分析类型上<em>不</em>擅长</h3><p>正如你可能已经知道的，LLMs 在执行精确的数学计算方面有所限制，这让它们不适合需要精确量化分析的任务，比如：</p>
+<ul>
+<li><strong>描述性统计（Descriptive Statistics）：</strong> 通过如均值或方差等措施定量总结数值列。</li>
+<li><strong>相关性分析（Correlation Analysis）：</strong> 获取列间的精确相关系数。</li>
+<li><strong>统计分析（Statistical Analysis）：</strong> 例如进行假设检验，判断数据点组间是否存在统计显著的差异。</li>
+<li><strong>机器学习（Machine Learning）：</strong> 在数据集上执行预测模型，如使用线性回归、梯度增强树或神经网络。</li>
+</ul>
+<p>正是为了执行这些量化任务，OpenAI 推出了高级数据分析插件，以便通过编程语言在数据集上运行代码。</p>
+<p><strong>那么，为什么还有人想仅用 LLMs 来分析数据集而不用这些插件呢？</strong></p>
+<h3 id="LLM-擅长的数据集分析类型"><a href="#LLM-擅长的数据集分析类型" class="headerlink" title="LLM 擅长的数据集分析类型"></a>LLM 擅长的数据集分析类型</h3><p>LLMs 在识别模式和趋势方面表现出色。这得益于它们在庞大且多样化的数据上接受的广泛训练，能够洞察到复杂的模式，这些模式可能不是一眼就能看出来的。</p>
+<p>这使它们非常适合执行基于模式查找的任务，例如：</p>
+<ul>
+<li><strong>异常检测：</strong> 基于一个或多个列值，识别偏离常态的异常数据点。</li>
+<li><strong>聚类：</strong> 将具有相似特征的数据点按列分组。</li>
+<li><strong>跨列关系：</strong> 识别各列之间的联合趋势。</li>
+<li><strong>文本分析（适用于文本列）：</strong> 根据主题或情感进行分类。</li>
+<li><strong>趋势分析（针对有时间维度的数据集）：</strong> 识别列中的模式、季节性变化或趋势。</li>
+</ul>
+<p>对于这些基于模式的任务，单独使用 LLMs 可能实际上会在更短的时间内比使用编程代码产生更好的结果！接下来，我们将通过一个例子来详细说明这一点。</p>
+<h3 id="仅使用-LLM-分析-Kaggle-数据集"><a href="#仅使用-LLM-分析-Kaggle-数据集" class="headerlink" title="仅使用 LLM 分析 Kaggle 数据集"></a>仅使用 LLM 分析 Kaggle 数据集</h3><p>我们将使用一个流行的实际<a target="_blank" rel="noopener" href="https://www.kaggle.com/datasets/imakash3011/customer-personality-analysis">Kaggle 数据集</a>，该数据集专为客户个性分析而设计，帮助公司对客户基础进行细分，从而更好地了解客户。</p>
+<p>为了之后验证 LLM 分析的方便，我们将这个数据集缩减至 50 行，并仅保留最相关的几列。缩减后的数据集如下所示，每一行代表一位客户，各列展示了客户的相关信息：</p>
+<p><img src="/media/GPT4-prompt-competition-8.webp" alt="数据集前三行 —— 图片由作者提供">数据集前三行 —— 图片由作者提供</p>
+<p>设想你是公司营销团队的一员，你的任务是利用这份客户信息数据集来指导营销活动。这是一个分两步的任务：首先，利用数据集生成有意义的客户细分；其次，针对每个细分提出最佳的市场营销策略。这是一个实际的商业问题，其中第一步的模式识别能力是 LLM 可以大显身手的地方。</p>
+<p>我们将按以下方式设计任务提示，采用四种提示工程技术（<a target="_blank" rel="noopener" href="https://towardsdatascience.com/how-i-won-singapores-gpt-4-prompt-engineering-competition-34c195a93d41#544b">更多详情</a>）：</p>
+<ol>
+<li>将复杂任务分解成简单步骤；</li>
+<li>引用每个步骤的中间输出；</li>
+<li>格式化 LLM 的回答；</li>
+<li>将指令与数据集分离。</li>
+</ol>
+<blockquote>
+<p>*<strong>系统提示：*</strong><br>我希望你扮演数据科学家的角色来分析数据集。不要编造数据集中不存在的信息。对于我提出的每个分析要求，提供确切且确定的答案，不要提供代码或指导在其他平台上进行分析的方法。</p>
+<p>*<strong>提示：*</strong><br># CONTEXT #<br>我销售葡萄酒。我手头有一个客户信息数据集：[出生年份，婚姻状况，收入，子女数量，上次购买至今天数，消费金额]。</p>
+<p>#############</p>
+<p># OBJECTIVE #<br>我希望你利用这个数据集将我的客户分组，并为每个群组制定营销策略。遵循以下分步骤，且不使用代码：</p>
+<p>\1. CLUSTERS: 根据数据集的列将客户分组，确保同一群组内的客户在列值上相似，不同群组的客户在列值上明显不同。确保每一行数据只属于一个群组。</p>
+<p>对于每个发现的群组，<br>\2. CLUSTER_INFORMATION: 根据数据集的列来描述群组。<br>\3. CLUSTER_NAME: 根据[CLUSTER_INFORMATION]解读得出该客户群组的简称。<br>\4. MARKETING_IDEAS: 提出针对该客户群组的市场营销策略。<br>\5. RATIONALE: 解释为什么[MARKETING_IDEAS]对这个客户群组有效且相关。</p>
+<p>#############</p>
+<p># STYLE #<br>商业分析报告</p>
+<p>#############</p>
+<p># TONE #<br>专业、技术性</p>
+<p>#############</p>
+<p># AUDIENCE #<br>我的商业伙伴们。让他们相信你的营销策略是深思熟虑的，并且有充分的数据支持。</p>
+<p>#############</p>
+<p># RESPONSE: MARKDOWN REPORT #<br>&lt;对[CLUSTERS]中的每一个群组&gt; — 客户群组：[CLUSTER_NAME] — 群组档案：[CLUSTER_INFORMATION] — 营销策略：[MARKETING_IDEAS] — 理由：[RATIONALE]</p>
+<p>&lt;附录&gt;<br>提供一个表格，列出每个群组中的行号，以支持你的分析。表头如下：[[CLUSTER_NAME], 行号列表]。</p>
+<p>#############</p>
+<p># START ANALYSIS #<br>如果你已经明白，请向我索要我的数据集。</p>
+</blockquote>
+<p>下面是 GPT-4 的回复，我们将继续将数据集以 CSV 字符串的形式传递给它。</p>
+<p><img src="/media/GPT4-prompt-competition-9.webp" alt="img"></p>
+<p>随后，GPT-4 按照我们要求的标记符报告格式回复了分析结果：</p>
+<p><img src="/media/GPT4-prompt-competition-10.webp" alt="img"></p>
+<p><img src="/media/GPT4-prompt-competition-11.webp" alt="img"></p>
+<p><img src="/media/GPT4-prompt-competition-12.webp" alt="img"></p>
+<h3 id="验证大语言模型的分析能力"><a href="#验证大语言模型的分析能力" class="headerlink" title="验证大语言模型的分析能力"></a>验证大语言模型的分析能力</h3><p>为了简洁，我们选择两个由大语言模型生成的客户群体进行验证——“年轻家庭”和“挑剔的爱好者”。</p>
+<p><strong>年轻家庭</strong> - 大语言模型生成的描述：出生于 1980 年后，已婚或同居，中等偏低的收入，育有孩子，常做小额消费。 - 此群体包括的数据行：3、4、7、10、16、20 - 深入查看这些数据行的详细信息，结果显示：</p>
+<p><img src="/media/GPT4-prompt-competition-13.webp" alt="img"></p>
+<p>年轻家庭的完整数据 — 作者图片</p>
+<p>这些数据完美对应大语言模型确定的用户描述。该模型甚至能够识别包含空值的数据行，而无需我们预先处理！</p>
+<p><strong>挑剔的爱好者</strong> - 大语言模型生成的描述：年龄跨度广泛，不限婚姻状况，高收入，孩子情况不一，高消费水平。 - 此群体包括的数据行：2、5、18、29、34、36 - 深入查看这些数据行的详细信息，结果显示：</p>
+<p><img src="/media/GPT4-prompt-competition-14.webp" alt="img"></p>
+<p>挑剔的爱好者的完整数据 — 作者图片</p>
+<p>这些数据再次精准匹配大语言模型确定的用户描述！</p>
+<p>本例展示了大语言模型在识别模式、解读及简化多维数据集以提炼出有意义的洞见方面的强大能力，确保其分析结果扎根于数据的真实情况。</p>
+<h3 id="使用-ChatGPT-的高级数据分析插件会如何？"><a href="#使用-ChatGPT-的高级数据分析插件会如何？" class="headerlink" title="使用 ChatGPT 的高级数据分析插件会如何？"></a>使用 ChatGPT 的高级数据分析插件会如何？</h3><p>为了全面考虑，我使用同一提示尝试了相同的任务，不过这次我让 ChatGPT 通过编程方式进行分析，启用了其高级数据分析插件。插件应用 K-均值等聚类算法直接对数据集进行处理，以便划分不同的客户群体，并据此制定营销策略。</p>
+<p>尽管数据集仅含 50 行，多次尝试均显示错误信息且未产生任何结果：</p>
+<p><img src="/media/GPT4-prompt-competition-15.webp" alt="尝试 1 的错误和无输出 — 作者图片">尝试 1 的错误和无输出 — 作者图片</p>
+<p><img src="/media/GPT4-prompt-competition-16.webp" alt="尝试 2 的错误和无输出 — 作者图片">尝试 2 的错误和无输出 — 作者图片</p>
+<p>当前情况表明，虽然高级数据分析插件能够轻松完成一些简单任务，如统计描述或生成图表，但在执行需要较大计算量的高级任务时，有时可能因为计算限制或其他原因而发生错误，导致无法输出结果。</p>
+<h3 id="那么…何时应当用大语言模型-LLM-来分析数据集？"><a href="#那么…何时应当用大语言模型-LLM-来分析数据集？" class="headerlink" title="那么…何时应当用大语言模型 (LLM) 来分析数据集？"></a>那么…何时应当用大语言模型 (LLM) 来分析数据集？</h3><p>答案因分析的具体类型而异。</p>
+<p>对于需要精确的数学运算或复杂的规则处理的任务，传统的编程方法依然更加适用。</p>
+<p>而对于依赖模式识别的任务，传统的编程和算法处理可能更加困难且耗时。大语言模型在这类任务中表现优异，能提供包括分析附件在内的额外输出，并能生成 Markdown 格式的完整分析报告。</p>
+<blockquote>
+<p>总的来说，是否采用大语言模型取决于任务本身的性质，需要平衡其在模式识别上的强项与传统编程技术提供的精确度和特定性。</p>
+</blockquote>
+<h3 id="回到提示工程环节！"><a href="#回到提示工程环节！" class="headerlink" title="回到提示工程环节！"></a>回到提示工程环节！</h3><p>在本节结束前，让我们重新审视用于生成此数据分析的提示，并详细解析关键的提示工程技巧：</p>
+<blockquote>
+<p>*<strong>提示:*</strong><br># CONTEXT #<br>我经营葡萄酒生意。我手头有一份包含客户信息的数据集：[出生年份，婚姻状况，收入，子女数目，自上次购买至今天数，消费金额]。</p>
+<p>#############</p>
+<p># OBJECTIVE #<br>我希望你利用这份数据集将我的客户进行分组，随后为我提供针对每个群体的市场营销策略。请按以下步骤操作，且不要编写代码：</p>
+<p>\1. CLUSTERS: 利用数据集中的列值对行数据进行聚类，确保同一聚类内的客户在列值上保持相似，而不同聚类的客户则明显不同。确保每一行数据只属于一个聚类。</p>
+<p>对于每个确定的聚类，<br>\2. CLUSTER_INFORMATION: 描述聚类的特征。<br>\3. CLUSTER_NAME: 根据[CLUSTER_INFORMATION]解读，为这个客户群体起一个简称。<br>\4. MARKETING_IDEAS: 提出针对此群体的营销策略。<br>\5. RATIONALE: 解释这些[MARKETING_IDEAS]为何对此群体有效。</p>
+<p>#############</p>
+<p># STYLE #<br>商业分析报告</p>
+<p>#############</p>
+<p># TONE #<br>专业，技术性</p>
+<p>#############</p>
+<p># AUDIENCE #<br>面向我的商业伙伴。让他们确信你的营销策略是经过深思熟虑的，并完全得到数据支持。</p>
+<p>#############</p>
+<p># RESPONSE: MARKDOWN REPORT #<br>&lt;对于[CLUSTERS]中的每个聚类&gt;<br>— 客户群组：[CLUSTER_NAME]<br>— 简介：[CLUSTER_INFORMATION]<br>— 营销想法：[MARKETING_IDEAS]<br>— 理由：[RATIONALE]</p>
+<p>&lt;附录&gt; 提供一个表格，记录每个聚类的行号，以佐证你的分析。表头如下：[[CLUSTER_NAME], 行号列表]。</p>
+<p>#############</p>
+<p># START ANALYSIS #<br>如果你已经理解，请向我请求我的数据集。</p>
+</blockquote>
+<h4 id="技巧-1：将复杂任务简化成步骤"><a href="#技巧-1：将复杂任务简化成步骤" class="headerlink" title="技巧 1：将复杂任务简化成步骤"></a>技巧 1：将复杂任务简化成步骤</h4><p>大语言模型（LLM）擅长处理简单的任务，对于复杂的任务则表现不佳。因此，在面对复杂任务时，把它分解成一步步简单的指令是至关重要的。这种方法的核心思想是，明确告知 LLM 你自己执行该任务时会采取的每一个步骤。</p>
+<p>例如，具体步骤如下：</p>
+<blockquote>
+<p>请按照这个步骤操作，不要使用编码：</p>
+<ol>
+<li><strong>数据聚类（CLUSTERS）</strong>：利用数据集的各列特征，将数据行进行聚类，确保同一聚类中的客户在这些特征上相似，而不同聚类的客户则明显不同。每条数据只能属于一个聚类。</li>
+</ol>
+<p>对于每个聚类，<br>\2. <strong>聚类描述（CLUSTER_INFORMATION）</strong>：描述聚类的特点。<br>\3. <strong>聚类命名（CLUSTER_NAME）</strong>：根据聚类描述，为这个客户群体起一个简洁的名字。<br>\4. <strong>营销策略（MARKETING_IDEAS）</strong>：为这个客户群体制定营销策略。<br>\5. <strong>策略解释（RATIONALE）</strong>：说明为什么这些营销策略对这个客户群体有效。</p>
+</blockquote>
+<p>这样的分步指导，比起直接要求 LLM“对客户进行分组并提出营销策略”的方式，能显著提高其输出的准确性。</p>
+<h4 id="技巧-2：标记并引用中间输出"><a href="#技巧-2：标记并引用中间输出" class="headerlink" title="技巧 2：标记并引用中间输出"></a>技巧 2：标记并引用中间输出</h4><p>在提供步骤时，我们会用大写字母标记每个步骤的输出，例如<code>数据聚类（CLUSTERS）</code>、<code>聚类描述（CLUSTER_INFORMATION）</code>、<code>聚类命名（CLUSTER_NAME）</code>、<code>营销策略（MARKETING_IDEAS）</code>和<code>策略解释（RATIONALE）</code>。这样做是为了区分指令中的变量名和其他文本，方便后续引用这些中间输出。</p>
+<h4 id="技巧-3：优化响应格式"><a href="#技巧-3：优化响应格式" class="headerlink" title="技巧 3：优化响应格式"></a>技巧 3：优化响应格式</h4><p>此处我们请求一个 Markdown 格式的报告，以增强响应的可读性和结构性。利用中间步骤的变量名，可以明确报告的构架。</p>
+<blockquote>
+<p># 响应：Markdown 报告 #<br>&lt;对每个数据聚类[数据聚类（CLUSTERS）]&gt;<br>— 客户群体：[聚类命名（CLUSTER_NAME）]<br>— 群体特征：[聚类描述（CLUSTER_INFORMATION）]<br>— 营销策略：[营销策略（MARKETING_IDEAS）]<br>— 策略说明：[策略解释（RATIONALE）]</p>
+<p>&lt;附录&gt; 提供一个表格，记录每个聚类包含的数据行号，以验证分析的准确性。表格标题为：[聚类命名（CLUSTER_NAME）, 行号列表]。</p>
+</blockquote>
+<p>此外，你还可以让 ChatGPT 将报告以可下载文件形式提供，便于你在编写最终报告时参考使用。</p>
+<p><img src="/media/GPT4-prompt-competition-17.webp" alt="保存 GPT-4 的回答为文件">保存 GPT-4 的回答为文件</p>
+<h4 id="技巧-4：将任务指令与数据集分离"><a href="#技巧-4：将任务指令与数据集分离" class="headerlink" title="技巧 4：将任务指令与数据集分离"></a>技巧 4：将任务指令与数据集分离</h4><p>在我们的首个提示中，你会发现我们并没有直接将数据集交给大语言模型（LLM）。反而，提示只给出了数据集分析的任务指令，并在底部添加了这样的话：</p>
+<blockquote>
+<p># START ANALYSIS #<br>如果你明白了，请向我请求数据集。</p>
+</blockquote>
+<p>随后 ChatGPT 表示它已理解，并在下一个提示中，我们通过 CSV 字符串的形式将数据集传递给它：</p>
+<p><img src="/media/GPT4-prompt-competition-18.webp" alt="GPT-4 的反馈 — 作者提供的图像">GPT-4 的反馈 — 作者提供的图像</p>
+<p><strong>但为什么需要将指令与数据集分开处理呢？</strong></p>
+<p>这样做可以帮助大语言模型更清晰地理解各自的内容，降低遗漏信息的风险，尤其是在指令较多且复杂的任务中。你可能遇到过这样的情况：在一个长的提示中提出的某个指令被“偶然遗忘”了——例如，你请求一个 100 字的回答，但大语言模型却给出了更长的段落。通过先接收指令，再处理这些指令所对应的数据集，大语言模型可以更好地消化它应该做的事情，然后再执行相关的数据操作。</p>
+<p>值得注意的是，这种指令与数据集的分离只能在可以维护对话记忆的聊天型大语言模型中实现，而非那些没有这种记忆功能的完成型模型。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>在本文结束之前，我想分享一些关于这次非凡旅程的个人思考。</p>
+<p>首先，我要衷心感谢 GovTech Singapore 精心策划这场精彩的比赛。如果你对 GovTech 如何组织这场独一无二的比赛感兴趣，可以阅读 Nicole Lee——比赛的主要组织者撰写的<a target="_blank" rel="noopener" href="https://go.gov.sg/how-govtech-designed-promptroyale2023">这篇文章</a>。</p>
+<p><img src="/media/GPT4-prompt-competition-19.webp" alt="决赛阶段的现场对决！">决赛阶段的现场对决！</p>
+<p>其次，我要向那些出色的竞争对手们致以最高的敬意，每个人都展现了特别的才能，让这场比赛既充满挑战又富有成效！我永远不会忘记决赛那一刻，我们在舞台上激烈竞争，现场观众的欢呼声——这是我将一直珍视的记忆。</p>
+<p>对我而言，这不只是一场比赛；这是一次才华、创造力及学习精神的盛会。我对未来充满期待，并激动于即将到来的一切！</p>
+<p>撰写本文让我感到非常愉快，如果你在阅读时也享受这份乐趣，希望你能花一点时间点赞并关注！</p>
+<p>期待下一次的相遇！Sheila</p>
+<p>Translated on May 6, 2024 - Published on December 28, 2023<br>原文：<a target="_blank" rel="noopener" href="https://towardsdatascience.com/how-i-won-singapores-gpt-4-prompt-engineering-competition-34c195a93d41">GPT4-prompt-competition</a></p>
+<p>作者：Sheila Teo<br>译者：宝玉</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://www.jackyshen.com/2024/05/07/How-I-Won-Singapore%E2%80%99s-GPT-4-Prompt-Engineering-Competition/" data-id="clvvm4qx40000jvgneya32i0f" data-title="COSTAR结构化表达框架，助我夺冠新加坡首届 GPT-4 提示工程大赛" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ai/" rel="tag">ai</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/chatgpt/" rel="tag">chatgpt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/llm/" rel="tag">llm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/prompt-engineering/" rel="tag">prompt engineering</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/02/03/scrum-primer-v20-chinese/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">简明Scrum入门教程  (Scrum Primer v2.0版)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Kategorien</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/">agile</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/agile/coaching/">coaching</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/engineering/">engineering</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/event/">event</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/facilitating/">facilitating</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/lean/">lean</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/management30/">management30</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/product/">product</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/scaling/">scaling</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/scrum/">scrum</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/agile/tools/">tools</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/">programming</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/programming/actionscript/">actionscript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/architecture/">architecture</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/arduino/">arduino</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/go/">go</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/java/">java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/javascript/">javascript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/programming/javascript/emberjs/">emberjs</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/objectivec/">objectivec</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/php/">php</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/python/">python</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/programming/python/django/">django</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/python/functional/">functional</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/swift/">swift</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/tools/">tools</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/APNS/" rel="tag">APNS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CTC/" rel="tag">CTC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IIS/" rel="tag">IIS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JVM/" rel="tag">JVM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scrum/" rel="tag">Scrum</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/agile/" rel="tag">agile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/agile-coach/" rel="tag">agile coach</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/agile-tour/" rel="tag">agile tour</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/agiletour/" rel="tag">agiletour</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ai/" rel="tag">ai</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/alipay/" rel="tag">alipay</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/annotation/" rel="tag">annotation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/arduino/" rel="tag">arduino</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ascii/" rel="tag">ascii</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/async/" rel="tag">async</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/atdd/" rel="tag">atdd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automation/" rel="tag">automation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash/" rel="tag">bash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bdd/" rel="tag">bdd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blazeDS/" rel="tag">blazeDS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/book/" rel="tag">book</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/branch/" rel="tag">branch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/career/" rel="tag">career</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/certification/" rel="tag">certification</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chatgpt/" rel="tag">chatgpt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/checklist/" rel="tag">checklist</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ci/" rel="tag">ci</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ci-unit-testing-automation-java/" rel="tag">ci - unit testing - automation - java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/clean/" rel="tag">clean</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/clojure/" rel="tag">clojure</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/coach/" rel="tag">coach</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/coaching/" rel="tag">coaching</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/coaching-coach-csp-ctc/" rel="tag">coaching - coach - csp - ctc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code-coverage/" rel="tag">code coverage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code-retreat/" rel="tag">code retreat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code-review/" rel="tag">code review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code-smell/" rel="tag">code smell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/coderetreat/" rel="tag">coderetreat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/comet/" rel="tag">comet</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/commitizen/" rel="tag">commitizen</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/communications/" rel="tag">communications</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/community/" rel="tag">community</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/competence/" rel="tag">competence</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/complexity/" rel="tag">complexity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/continuous-integration/" rel="tag">continuous integration</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/contract/" rel="tag">contract</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/craftsmanship/" rel="tag">craftsmanship</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cross-domain/" rel="tag">cross domain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/csd/" rel="tag">csd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/csm/" rel="tag">csm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/csp/" rel="tag">csp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ctc/" rel="tag">ctc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cucumber/" rel="tag">cucumber</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/culture/" rel="tag">culture</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/daily-scrum/" rel="tag">daily scrum</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/decrator/" rel="tag">decrator</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/delivery/" rel="tag">delivery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/design/" rel="tag">design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/design-patterns/" rel="tag">design patterns</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/devops/" rel="tag">devops</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/digital/" rel="tag">digital</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/django/" rel="tag">django</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dojo/" rel="tag">dojo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/easyb/" rel="tag">easyb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/efficiency/" rel="tag">efficiency</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ember/" rel="tag">ember</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/emberjs/" rel="tag">emberjs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/encoding/" rel="tag">encoding</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/estimating/" rel="tag">estimating</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/event/" rel="tag">event</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/facilitating/" rel="tag">facilitating</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fail/" rel="tag">fail</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flex/" rel="tag">flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flexibility/" rel="tag">flexibility</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fluency/" rel="tag">fluency</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fractal/" rel="tag">fractal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/frequently/" rel="tag">frequently</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/functional-programming/" rel="tag">functional programming</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gandalf/" rel="tag">gandalf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gevent/" rel="tag">gevent</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/glossary/" rel="tag">glossary</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/" rel="tag">go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/" rel="tag">gradle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/greenlet/" rel="tag">greenlet</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grooming/" rel="tag">grooming</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/groovy/" rel="tag">groovy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grunt/" rel="tag">grunt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gruntjs/" rel="tag">gruntjs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gui/" rel="tag">gui</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gunicorn/" rel="tag">gunicorn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hardware/" rel="tag">hardware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/history/" rel="tag">history</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hive-mind/" rel="tag">hive mind</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hybrid/" rel="tag">hybrid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/invest/" rel="tag">invest</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ios/" rel="tag">ios</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iteration/" rel="tag">iteration</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/itertools/" rel="tag">itertools</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jasmin/" rel="tag">jasmin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jasmine/" rel="tag">jasmine</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jenkins/" rel="tag">jenkins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jpmorgan/" rel="tag">jpmorgan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/junit/" rel="tag">junit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jvm/" rel="tag">jvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kanban/" rel="tag">kanban</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kata/" rel="tag">kata</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kpi/" rel="tag">kpi</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lambda/" rel="tag">lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leadership/" rel="tag">leadership</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lean/" rel="tag">lean</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lean-startup/" rel="tag">lean startup</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/less/" rel="tag">less</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/llm/" rel="tag">llm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/" rel="tag">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maker/" rel="tag">maker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/management30/" rel="tag">management30</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/manager/" rel="tag">manager</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mapping/" rel="tag">mapping</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/" rel="tag">maven</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/measure/" rel="tag">measure</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/measurement/" rel="tag">measurement</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/metrics/" rel="tag">metrics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mobile/" rel="tag">mobile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/multi-thread/" rel="tag">multi thread</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network/" rel="tag">network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nexus/" rel="tag">nexus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nio/" rel="tag">nio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/" rel="tag">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/o2o/" rel="tag">o2o</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/objc-bridging/" rel="tag">objc - bridging</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/okr/" rel="tag">okr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/organization/" rel="tag">organization</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/orid/" rel="tag">orid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pair/" rel="tag">pair</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/performance/" rel="tag">performance</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/persona/" rel="tag">persona</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pipe/" rel="tag">pipe</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pipeline/" rel="tag">pipeline</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/planning/" rel="tag">planning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/playground/" rel="tag">playground</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/product-backlog/" rel="tag">product backlog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/product-owner/" rel="tag">product owner</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/productivity/" rel="tag">productivity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prompt-engineering/" rel="tag">prompt engineering</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prompting/" rel="tag">prompting</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/proxy/" rel="tag">proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pyisapie/" rel="tag">pyisapie</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/raid/" rel="tag">raid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reading/" rel="tag">reading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/recursive/" rel="tag">recursive</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/refactor/" rel="tag">refactor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/refactoring/" rel="tag">refactoring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/refinement/" rel="tag">refinement</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/remote/" rel="tag">remote</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/retrospective/" rel="tag">retrospective</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/robotframework/" rel="tag">robotframework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/safe/" rel="tag">safe</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scale/" rel="tag">scale</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scaling/" rel="tag">scaling</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scrum/" rel="tag">scrum</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scrum-master/" rel="tag">scrum master</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sdk/" rel="tag">sdk</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/security/" rel="tag">security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selenium/" rel="tag">selenium</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/serialization/" rel="tag">serialization</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/signature/" rel="tag">signature</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/singleton/" rel="tag">singleton</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/socket/" rel="tag">socket</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sonar/" rel="tag">sonar</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/split/" rel="tag">split</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spotify/" rel="tag">spotify</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sprint/" rel="tag">sprint</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sqa/" rel="tag">sqa</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/" rel="tag">sql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/" rel="tag">swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tdd/" rel="tag">tdd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tennis/" rel="tag">tennis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/time/" rel="tag">time</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/time-code/" rel="tag">time code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tomcat/" rel="tag">tomcat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tpp/" rel="tag">tpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tps/" rel="tag">tps</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/training/" rel="tag">training</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/transformation/" rel="tag">transformation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/trunk/" rel="tag">trunk</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ucac/" rel="tag">ucac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unicode/" rel="tag">unicode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unit-test/" rel="tag">unit test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unittest/" rel="tag">unittest</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/user-story/" rel="tag">user story</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/utf8/" rel="tag">utf8</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vi/" rel="tag">vi</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/visual/" rel="tag">visual</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/waste/" rel="tag">waste</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webdriver/" rel="tag">webdriver</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/weibo/" rel="tag">weibo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/workshop/" rel="tag">workshop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xcode/" rel="tag">xcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xp/" rel="tag">xp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xvfb/" rel="tag">xvfb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yield/" rel="tag">yield</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zen/" rel="tag">zen</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/APNS/" style="font-size: 10.91px;">APNS</a> <a href="/tags/CTC/" style="font-size: 10.91px;">CTC</a> <a href="/tags/IIS/" style="font-size: 10.91px;">IIS</a> <a href="/tags/JVM/" style="font-size: 10.91px;">JVM</a> <a href="/tags/Scrum/" style="font-size: 10.91px;">Scrum</a> <a href="/tags/agile/" style="font-size: 19.09px;">agile</a> <a href="/tags/agile-coach/" style="font-size: 10.91px;">agile coach</a> <a href="/tags/agile-tour/" style="font-size: 11.82px;">agile tour</a> <a href="/tags/agiletour/" style="font-size: 10.91px;">agiletour</a> <a href="/tags/ai/" style="font-size: 10.91px;">ai</a> <a href="/tags/alipay/" style="font-size: 10.91px;">alipay</a> <a href="/tags/annotation/" style="font-size: 10.91px;">annotation</a> <a href="/tags/arduino/" style="font-size: 11.82px;">arduino</a> <a href="/tags/ascii/" style="font-size: 10.91px;">ascii</a> <a href="/tags/async/" style="font-size: 10.91px;">async</a> <a href="/tags/atdd/" style="font-size: 10.91px;">atdd</a> <a href="/tags/automation/" style="font-size: 10.91px;">automation</a> <a href="/tags/bash/" style="font-size: 10.91px;">bash</a> <a href="/tags/bdd/" style="font-size: 10.91px;">bdd</a> <a href="/tags/blazeDS/" style="font-size: 10.91px;">blazeDS</a> <a href="/tags/book/" style="font-size: 10.91px;">book</a> <a href="/tags/branch/" style="font-size: 10.91px;">branch</a> <a href="/tags/career/" style="font-size: 13.64px;">career</a> <a href="/tags/certification/" style="font-size: 16.36px;">certification</a> <a href="/tags/chatgpt/" style="font-size: 10.91px;">chatgpt</a> <a href="/tags/checklist/" style="font-size: 10px;">checklist</a> <a href="/tags/ci/" style="font-size: 13.64px;">ci</a> <a href="/tags/ci-unit-testing-automation-java/" style="font-size: 10.91px;">ci - unit testing - automation - java</a> <a href="/tags/clean/" style="font-size: 10.91px;">clean</a> <a href="/tags/clojure/" style="font-size: 11.82px;">clojure</a> <a href="/tags/coach/" style="font-size: 11.82px;">coach</a> <a href="/tags/coaching/" style="font-size: 13.64px;">coaching</a> <a href="/tags/coaching-coach-csp-ctc/" style="font-size: 10.91px;">coaching - coach - csp - ctc</a> <a href="/tags/code-coverage/" style="font-size: 10.91px;">code coverage</a> <a href="/tags/code-retreat/" style="font-size: 10.91px;">code retreat</a> <a href="/tags/code-review/" style="font-size: 10.91px;">code review</a> <a href="/tags/code-smell/" style="font-size: 10.91px;">code smell</a> <a href="/tags/coderetreat/" style="font-size: 10.91px;">coderetreat</a> <a href="/tags/comet/" style="font-size: 10.91px;">comet</a> <a href="/tags/commitizen/" style="font-size: 10.91px;">commitizen</a> <a href="/tags/communications/" style="font-size: 10.91px;">communications</a> <a href="/tags/community/" style="font-size: 12.73px;">community</a> <a href="/tags/competence/" style="font-size: 10.91px;">competence</a> <a href="/tags/complexity/" style="font-size: 10.91px;">complexity</a> <a href="/tags/continuous-integration/" style="font-size: 10.91px;">continuous integration</a> <a href="/tags/contract/" style="font-size: 10.91px;">contract</a> <a href="/tags/craftsmanship/" style="font-size: 10.91px;">craftsmanship</a> <a href="/tags/cross-domain/" style="font-size: 10.91px;">cross domain</a> <a href="/tags/csd/" style="font-size: 11.82px;">csd</a> <a href="/tags/csm/" style="font-size: 10.91px;">csm</a> <a href="/tags/csp/" style="font-size: 11.82px;">csp</a> <a href="/tags/ctc/" style="font-size: 16.36px;">ctc</a> <a href="/tags/cucumber/" style="font-size: 10.91px;">cucumber</a> <a href="/tags/culture/" style="font-size: 12.73px;">culture</a> <a href="/tags/daily-scrum/" style="font-size: 10.91px;">daily scrum</a> <a href="/tags/decrator/" style="font-size: 10.91px;">decrator</a> <a href="/tags/delivery/" style="font-size: 10.91px;">delivery</a> <a href="/tags/design/" style="font-size: 12.73px;">design</a> <a href="/tags/design-patterns/" style="font-size: 10.91px;">design patterns</a> <a href="/tags/devops/" style="font-size: 10.91px;">devops</a> <a href="/tags/digital/" style="font-size: 10.91px;">digital</a> <a href="/tags/django/" style="font-size: 12.73px;">django</a> <a href="/tags/docker/" style="font-size: 10.91px;">docker</a> <a href="/tags/dojo/" style="font-size: 10.91px;">dojo</a> <a href="/tags/easyb/" style="font-size: 10.91px;">easyb</a> <a href="/tags/efficiency/" style="font-size: 10.91px;">efficiency</a> <a href="/tags/ember/" style="font-size: 10.91px;">ember</a> <a href="/tags/emberjs/" style="font-size: 10.91px;">emberjs</a> <a href="/tags/encoding/" style="font-size: 10.91px;">encoding</a> <a href="/tags/estimating/" style="font-size: 10.91px;">estimating</a> <a href="/tags/event/" style="font-size: 11.82px;">event</a> <a href="/tags/facilitating/" style="font-size: 10.91px;">facilitating</a> <a href="/tags/fail/" style="font-size: 10.91px;">fail</a> <a href="/tags/flex/" style="font-size: 10.91px;">flex</a> <a href="/tags/flexibility/" style="font-size: 10.91px;">flexibility</a> <a href="/tags/fluency/" style="font-size: 10.91px;">fluency</a> <a href="/tags/fractal/" style="font-size: 10.91px;">fractal</a> <a href="/tags/frequently/" style="font-size: 10.91px;">frequently</a> <a href="/tags/functional-programming/" style="font-size: 15.45px;">functional programming</a> <a href="/tags/gandalf/" style="font-size: 10.91px;">gandalf</a> <a href="/tags/gevent/" style="font-size: 10.91px;">gevent</a> <a href="/tags/git/" style="font-size: 12.73px;">git</a> <a href="/tags/glossary/" style="font-size: 10.91px;">glossary</a> <a href="/tags/go/" style="font-size: 10.91px;">go</a> <a href="/tags/gradle/" style="font-size: 10.91px;">gradle</a> <a href="/tags/greenlet/" style="font-size: 10.91px;">greenlet</a> <a href="/tags/grooming/" style="font-size: 10.91px;">grooming</a> <a href="/tags/groovy/" style="font-size: 11.82px;">groovy</a> <a href="/tags/grunt/" style="font-size: 11.82px;">grunt</a> <a href="/tags/gruntjs/" style="font-size: 10.91px;">gruntjs</a> <a href="/tags/gui/" style="font-size: 10.91px;">gui</a> <a href="/tags/gunicorn/" style="font-size: 10.91px;">gunicorn</a> <a href="/tags/hardware/" style="font-size: 10.91px;">hardware</a> <a href="/tags/history/" style="font-size: 10.91px;">history</a> <a href="/tags/hive-mind/" style="font-size: 10.91px;">hive mind</a> <a href="/tags/hybrid/" style="font-size: 10.91px;">hybrid</a> <a href="/tags/invest/" style="font-size: 10.91px;">invest</a> <a href="/tags/ios/" style="font-size: 17.27px;">ios</a> <a href="/tags/iteration/" style="font-size: 10.91px;">iteration</a> <a href="/tags/itertools/" style="font-size: 10.91px;">itertools</a> <a href="/tags/jasmin/" style="font-size: 10.91px;">jasmin</a> <a href="/tags/jasmine/" style="font-size: 10.91px;">jasmine</a> <a href="/tags/java/" style="font-size: 14.55px;">java</a> <a href="/tags/javascript/" style="font-size: 10.91px;">javascript</a> <a href="/tags/jenkins/" style="font-size: 11.82px;">jenkins</a> <a href="/tags/jpmorgan/" style="font-size: 10.91px;">jpmorgan</a> <a href="/tags/js/" style="font-size: 10.91px;">js</a> <a href="/tags/junit/" style="font-size: 11.82px;">junit</a> <a href="/tags/jvm/" style="font-size: 10.91px;">jvm</a> <a href="/tags/kanban/" style="font-size: 12.73px;">kanban</a> <a href="/tags/kata/" style="font-size: 11.82px;">kata</a> <a href="/tags/kpi/" style="font-size: 10.91px;">kpi</a> <a href="/tags/lambda/" style="font-size: 10.91px;">lambda</a> <a href="/tags/leadership/" style="font-size: 12.73px;">leadership</a> <a href="/tags/lean/" style="font-size: 16.36px;">lean</a> <a href="/tags/lean-startup/" style="font-size: 12.73px;">lean startup</a> <a href="/tags/less/" style="font-size: 14.55px;">less</a> <a href="/tags/llm/" style="font-size: 10.91px;">llm</a> <a href="/tags/mac/" style="font-size: 10.91px;">mac</a> <a href="/tags/maker/" style="font-size: 11.82px;">maker</a> <a href="/tags/management30/" style="font-size: 13.64px;">management30</a> <a href="/tags/manager/" style="font-size: 10.91px;">manager</a> <a href="/tags/mapping/" style="font-size: 10.91px;">mapping</a> <a href="/tags/maven/" style="font-size: 10.91px;">maven</a> <a href="/tags/measure/" style="font-size: 10.91px;">measure</a> <a href="/tags/measurement/" style="font-size: 10.91px;">measurement</a> <a href="/tags/metrics/" style="font-size: 10.91px;">metrics</a> <a href="/tags/mobile/" style="font-size: 10.91px;">mobile</a> <a href="/tags/multi-thread/" style="font-size: 10.91px;">multi thread</a> <a href="/tags/network/" style="font-size: 10.91px;">network</a> <a href="/tags/nexus/" style="font-size: 10.91px;">nexus</a> <a href="/tags/nginx/" style="font-size: 10.91px;">nginx</a> <a href="/tags/nio/" style="font-size: 10.91px;">nio</a> <a href="/tags/nodejs/" style="font-size: 10.91px;">nodejs</a> <a href="/tags/npm/" style="font-size: 10.91px;">npm</a> <a href="/tags/o2o/" style="font-size: 10.91px;">o2o</a> <a href="/tags/objc-bridging/" style="font-size: 10.91px;">objc - bridging</a> <a href="/tags/okr/" style="font-size: 10.91px;">okr</a> <a href="/tags/organization/" style="font-size: 11.82px;">organization</a> <a href="/tags/orid/" style="font-size: 10.91px;">orid</a> <a href="/tags/pair/" style="font-size: 10.91px;">pair</a> <a href="/tags/performance/" style="font-size: 12.73px;">performance</a> <a href="/tags/persona/" style="font-size: 10.91px;">persona</a> <a href="/tags/pipe/" style="font-size: 10.91px;">pipe</a> <a href="/tags/pipeline/" style="font-size: 10.91px;">pipeline</a> <a href="/tags/planning/" style="font-size: 12.73px;">planning</a> <a href="/tags/playground/" style="font-size: 10.91px;">playground</a> <a href="/tags/product-backlog/" style="font-size: 10.91px;">product backlog</a> <a href="/tags/product-owner/" style="font-size: 10.91px;">product owner</a> <a href="/tags/productivity/" style="font-size: 11.82px;">productivity</a> <a href="/tags/prompt-engineering/" style="font-size: 10.91px;">prompt engineering</a> <a href="/tags/prompting/" style="font-size: 10px;">prompting</a> <a href="/tags/proxy/" style="font-size: 10.91px;">proxy</a> <a href="/tags/pyisapie/" style="font-size: 10.91px;">pyisapie</a> <a href="/tags/python/" style="font-size: 18.18px;">python</a> <a href="/tags/raid/" style="font-size: 10.91px;">raid</a> <a href="/tags/reading/" style="font-size: 10.91px;">reading</a> <a href="/tags/recursive/" style="font-size: 10.91px;">recursive</a> <a href="/tags/refactor/" style="font-size: 10.91px;">refactor</a> <a href="/tags/refactoring/" style="font-size: 10.91px;">refactoring</a> <a href="/tags/refinement/" style="font-size: 10.91px;">refinement</a> <a href="/tags/remote/" style="font-size: 10.91px;">remote</a> <a href="/tags/retrospective/" style="font-size: 10.91px;">retrospective</a> <a href="/tags/robotframework/" style="font-size: 12.73px;">robotframework</a> <a href="/tags/safe/" style="font-size: 10.91px;">safe</a> <a href="/tags/scale/" style="font-size: 10.91px;">scale</a> <a href="/tags/scaling/" style="font-size: 16.36px;">scaling</a> <a href="/tags/scrum/" style="font-size: 20px;">scrum</a> <a href="/tags/scrum-master/" style="font-size: 11.82px;">scrum master</a> <a href="/tags/sdk/" style="font-size: 10.91px;">sdk</a> <a href="/tags/security/" style="font-size: 10.91px;">security</a> <a href="/tags/selenium/" style="font-size: 10.91px;">selenium</a> <a href="/tags/serialization/" style="font-size: 10.91px;">serialization</a> <a href="/tags/signature/" style="font-size: 10.91px;">signature</a> <a href="/tags/singleton/" style="font-size: 10.91px;">singleton</a> <a href="/tags/socket/" style="font-size: 12.73px;">socket</a> <a href="/tags/sonar/" style="font-size: 10.91px;">sonar</a> <a href="/tags/split/" style="font-size: 10.91px;">split</a> <a href="/tags/spotify/" style="font-size: 13.64px;">spotify</a> <a href="/tags/sprint/" style="font-size: 11.82px;">sprint</a> <a href="/tags/sqa/" style="font-size: 10.91px;">sqa</a> <a href="/tags/sql/" style="font-size: 10.91px;">sql</a> <a href="/tags/swift/" style="font-size: 11.82px;">swift</a> <a href="/tags/tdd/" style="font-size: 11.82px;">tdd</a> <a href="/tags/tennis/" style="font-size: 10.91px;">tennis</a> <a href="/tags/time/" style="font-size: 10.91px;">time</a> <a href="/tags/time-code/" style="font-size: 12.73px;">time code</a> <a href="/tags/tomcat/" style="font-size: 10.91px;">tomcat</a> <a href="/tags/tpp/" style="font-size: 10.91px;">tpp</a> <a href="/tags/tps/" style="font-size: 10.91px;">tps</a> <a href="/tags/training/" style="font-size: 10.91px;">training</a> <a href="/tags/transformation/" style="font-size: 10.91px;">transformation</a> <a href="/tags/trunk/" style="font-size: 10.91px;">trunk</a> <a href="/tags/ubuntu/" style="font-size: 10.91px;">ubuntu</a> <a href="/tags/ucac/" style="font-size: 10.91px;">ucac</a> <a href="/tags/unicode/" style="font-size: 10.91px;">unicode</a> <a href="/tags/unit-test/" style="font-size: 13.64px;">unit test</a> <a href="/tags/unittest/" style="font-size: 11.82px;">unittest</a> <a href="/tags/user-story/" style="font-size: 16.36px;">user story</a> <a href="/tags/utf8/" style="font-size: 10.91px;">utf8</a> <a href="/tags/vi/" style="font-size: 10.91px;">vi</a> <a href="/tags/visual/" style="font-size: 10.91px;">visual</a> <a href="/tags/waste/" style="font-size: 10.91px;">waste</a> <a href="/tags/webdriver/" style="font-size: 10.91px;">webdriver</a> <a href="/tags/weibo/" style="font-size: 10.91px;">weibo</a> <a href="/tags/workshop/" style="font-size: 10.91px;">workshop</a> <a href="/tags/xcode/" style="font-size: 11.82px;">xcode</a> <a href="/tags/xp/" style="font-size: 17.27px;">xp</a> <a href="/tags/xvfb/" style="font-size: 10.91px;">xvfb</a> <a href="/tags/yield/" style="font-size: 10.91px;">yield</a> <a href="/tags/zen/" style="font-size: 11.82px;">zen</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">五月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">九月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">五月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">十一月 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">十月 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">九月 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">八月 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">二月 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">十二月 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/12/">十二月 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08/">八月 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">六月 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">五月 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/07/">七月 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">六月 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/05/">五月 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/04/">四月 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">九月 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/07/">七月 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/02/">二月 2009</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/05/07/How-I-Won-Singapore%E2%80%99s-GPT-4-Prompt-Engineering-Competition/">COSTAR结构化表达框架，助我夺冠新加坡首届 GPT-4 提示工程大赛</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/03/scrum-primer-v20-chinese/">简明Scrum入门教程  (Scrum Primer v2.0版)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/10/risk-ROI-based-agility-acquisition-strategy/">基于风险投入比的敏捷性（灵活适应）获得策略</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/01/effective-unit-testing/">有效的单元测试之一--代码坏味道（读书笔记精华带源码）</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/15/what-do-you-pay-for-agile-coach/">企业组织购买敏捷教练的价值是什么</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 Jacky Shen申健<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+      
+
+
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about-me" class="mobile-nav-link">About</a>
+  
+    <a href="/glossary" class="mobile-nav-link">Glossary</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.jackyshen.com/2024/05/07/How-I-Won-Singapore%E2%80%99s-GPT-4-Prompt-Engineering-Competition/</loc>
+    
+    <lastmod>2024-05-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.jackyshen.com/2017/04/07/what-is-agile-coach/</loc>
     
     <lastmod>2024-03-20</lastmod>
@@ -2020,7 +2029,7 @@
 
   <url>
     <loc>https://www.jackyshen.com/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -2028,1442 +2037,1477 @@
   
   <url>
     <loc>https://www.jackyshen.com/tags/java/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/fractal/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/flex/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/blazeDS/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/sql/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/serialization/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/ios/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/singleton/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/design-patterns/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/socket/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/proxy/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/network/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/multi-thread/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/nio/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/tomcat/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/raid/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/ubuntu/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/comet/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/ci/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/unittest/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/jenkins/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/mac/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/APNS/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/scrum/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/git/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/productivity/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/gui/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/robotframework/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/selenium/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/webdriver/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/xvfb/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/estimating/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/manager/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/agile/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/automation/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/django/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/nginx/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/gunicorn/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/javascript/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/hybrid/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/mobile/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/cross-domain/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/gruntjs/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/jasmine/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/nodejs/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/npm/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/agile-tour/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/sonar/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/go/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/emberjs/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/grunt/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/js/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/annotation/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/decrator/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/python/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/arduino/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/maker/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/planning/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/visual/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/organization/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/scaling/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/spotify/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/less/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/split/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/user-story/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/security/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/sprint/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/invest/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/coaching/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/design/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/measure/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/efficiency/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/product-owner/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/gandalf/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/scrum-master/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/time-code/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/performance/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/daily-scrum/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/tdd/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/tpp/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/transformation/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/mapping/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/delivery/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/frequently/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/code-retreat/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/code-coverage/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/unit-test/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/branch/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/facilitating/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/orid/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/retrospective/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/measurement/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/lean/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/metrics/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/atdd/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/bdd/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/cucumber/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/easyb/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/groovy/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/JVM/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/jpmorgan/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/playground/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/swift/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/xcode/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/lambda/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/clojure/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/functional-programming/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/management30/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/community/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/lean-startup/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/o2o/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/tps/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/waste/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/IIS/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/pyisapie/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/docker/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/devops/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/training/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/csd/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/sqa/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/grooming/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/refinement/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/workshop/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/checklist/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/recursive/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/culture/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/fail/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/kata/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/dojo/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/tennis/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/ember/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/jasmin/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/trunk/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/hive-mind/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/weibo/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/sdk/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/objc-bridging/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/signature/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/alipay/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/unicode/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/utf8/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/ascii/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/encoding/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/kanban/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/flexibility/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/fluency/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/competence/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/junit/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/xp/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/vi/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/bash/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/yield/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/async/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/gevent/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/greenlet/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/pipe/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/itertools/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/jvm/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/gradle/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/maven/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/nexus/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/agiletour/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/event/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/continuous-integration/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/code-review/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/refactoring/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/code-smell/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/pair/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/persona/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/coderetreat/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/zen/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/product-backlog/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/commitizen/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/craftsmanship/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/remote/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/certification/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/career/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/ctc/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/leadership/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/communications/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/csp/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/pipeline/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/refactor/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/reading/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/book/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/coaching-coach-csp-ctc/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/complexity/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/coach/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/hardware/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/CTC/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/digital/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/Scrum/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/iteration/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/time/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/ucac/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/contract/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/glossary/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/history/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/okr/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/kpi/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/safe/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/clean/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/scale/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/ci-unit-testing-automation-java/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/agile-coach/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/tags/csm/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.jackyshen.com/tags/chatgpt/</loc>
+    <lastmod>2024-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.jackyshen.com/tags/llm/</loc>
+    <lastmod>2024-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.jackyshen.com/tags/ai/</loc>
+    <lastmod>2024-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.jackyshen.com/tags/prompting/</loc>
+    <lastmod>2024-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.jackyshen.com/tags/prompt-engineering/</loc>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -3472,182 +3516,182 @@
   
   <url>
     <loc>https://www.jackyshen.com/categories/programming/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/categories/programming/objectivec/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/categories/programming/java/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/categories/programming/actionscript/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/categories/programming/architecture/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/categories/programming/tools/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/categories/agile/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/categories/programming/php/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/categories/programming/python/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/categories/programming/javascript/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/categories/programming/go/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/categories/agile/engineering/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/categories/programming/arduino/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/categories/agile/scaling/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/categories/agile/facilitating/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/categories/agile/scrum/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/categories/agile/coaching/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/categories/programming/python/django/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/categories/agile/tools/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/categories/agile/event/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/categories/agile/product/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/categories/agile/lean/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/categories/programming/javascript/emberjs/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/categories/programming/swift/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/categories/programming/python/functional/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.jackyshen.com/categories/agile/management30/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2024-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
