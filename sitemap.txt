@@ -1,3 +1,4 @@
+https://www.jackyshen.com/2024/07/16/clients-and-bosses-love-you-because-of-EOOI-model/
 https://www.jackyshen.com/2024/05/07/How-I-Won-Singapore%E2%80%99s-GPT-4-Prompt-Engineering-Competition/
 https://www.jackyshen.com/2017/04/07/what-is-agile-coach/
 https://www.jackyshen.com/2016/06/10/my-agile-coach-journey-en/
@@ -435,6 +436,7 @@ https://www.jackyshen.com/tags/llm/
 https://www.jackyshen.com/tags/ai/
 https://www.jackyshen.com/tags/prompting/
 https://www.jackyshen.com/tags/prompt-engineering/
+https://www.jackyshen.com/tags/communication/
 https://www.jackyshen.com/categories/programming/
 https://www.jackyshen.com/categories/programming/objectivec/
 https://www.jackyshen.com/categories/programming/java/
