@@ -1,3 +1,6 @@
+https://www.jackyshen.com/2026/06/26/cross-3-repo-legacy-coding-with-orchastrator-agents/
+https://www.jackyshen.com/2026/02/09/openspec-or-superpower-10x-Scrum-in-AI/
+https://www.jackyshen.com/2014/08/24/backlog-refinement-with-scope-question-assumption/
 https://www.jackyshen.com/2025/04/14/how-to-grow-leadership-of-a-tech-lead/
 https://www.jackyshen.com/2024/10/26/rework-aristotle-google-research-on-team-effectiveness/
 https://www.jackyshen.com/2024/07/16/clients-and-bosses-love-you-because-of-EOOI-model/
@@ -77,7 +80,6 @@ https://www.jackyshen.com/2015/11/16/spotify-agile-engineering-culture-video-in-
 https://www.jackyshen.com/2017/01/31/planning-as-a-social-event-scaling-agile-at-lego/
 https://www.jackyshen.com/2021/03/03/RFTG-expansion-1-rules-chinese/
 https://www.jackyshen.com/2016/01/15/write-angularjs-style-commit-message/
-https://www.jackyshen.com/2014/08/24/backlog-refinement-with-scope-question-assumption/
 https://www.jackyshen.com/2017/08/02/is-your-Scrum-lean-enough/
 https://www.jackyshen.com/2016/03/26/tips-to-certified-team-coach-application/
 https://www.jackyshen.com/2016/03/26/my-agile-coach-journey/
@@ -446,6 +448,14 @@ https://www.jackyshen.com/tags/google/
 https://www.jackyshen.com/tags/motivation/
 https://www.jackyshen.com/tags/innovation/
 https://www.jackyshen.com/tags/influence/
+https://www.jackyshen.com/tags/AI/
+https://www.jackyshen.com/tags/HarnessEngineering/
+https://www.jackyshen.com/tags/VibeCoding/
+https://www.jackyshen.com/tags/openspec/
+https://www.jackyshen.com/tags/superpower/
+https://www.jackyshen.com/tags/claudecode/
+https://www.jackyshen.com/tags/orchestrator/
+https://www.jackyshen.com/tags/agent/
 https://www.jackyshen.com/categories/programming/
 https://www.jackyshen.com/categories/programming/objectivec/
 https://www.jackyshen.com/categories/programming/java/
@@ -472,3 +482,5 @@ https://www.jackyshen.com/categories/programming/javascript/emberjs/
 https://www.jackyshen.com/categories/programming/swift/
 https://www.jackyshen.com/categories/programming/python/functional/
 https://www.jackyshen.com/categories/agile/management30/
+https://www.jackyshen.com/categories/ai/
+https://www.jackyshen.com/categories/ai/coding/
