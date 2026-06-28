@@ -1,5 +1,5 @@
 ---
-title: Open source HarnessXP framework - For migrating legacy AI native enterprise-level cross-warehouse multi-technology stack code projects to HarnessXP development, you can abandon openspec/superpowers. 
+title: 开源HarnessXP框架：AI Native企业级跨仓多技术栈遗留代码项目迁移到驾驭工程开发，你可以放弃openspec/superpowers了
 
 date: 2026-06-28 12:43:00
 tags:
