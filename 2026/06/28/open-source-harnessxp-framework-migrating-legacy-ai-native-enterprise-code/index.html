@@ -13,9 +13,8 @@
 <meta property="og:site_name" content="申导">
 <meta property="og:description" content="开源这个框架的起因上个月，一个朋友跟我吐槽：他们组 5 个 Claude Code agent 一起干活，后端 agent 把 API 字段改了，前端 agent 完全不知道，联调挂在生产环境。 我问他：”你们不是用 git 协作的吗？” 他说：”用了。但 git merge 退出码是 0，分支 tip 就是没进 main。下次部署就是旧代码。” 这其实是所有跨 2 个以上仓库跑 AI agent">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/AxSfDycXFQmuEAibH026vF40B9RgvCibtpLdL8rKViaQQRgWobenKiaWVOibs7R9GibTaKzB2GxEoJeqCW185m20Bg2FrrZZmuuUJUzydTibRNQSrg/640?from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=0">
 <meta property="article:published_time" content="2026-06-28T04:43:00.000Z">
-<meta property="article:modified_time" content="2026-06-28T04:44:43.842Z">
+<meta property="article:modified_time" content="2026-06-28T04:47:56.884Z">
 <meta property="article:author" content="Jacky Shen申健">
 <meta property="article:tag" content="AI">
 <meta property="article:tag" content="HarnessEngineering">
@@ -26,7 +25,6 @@
 <meta property="article:tag" content="orchestrator">
 <meta property="article:tag" content="agent">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://mmbiz.qpic.cn/mmbiz_png/AxSfDycXFQmuEAibH026vF40B9RgvCibtpLdL8rKViaQQRgWobenKiaWVOibs7R9GibTaKzB2GxEoJeqCW185m20Bg2FrrZZmuuUJUzydTibRNQSrg/640?from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=0">
   
     <link rel="alternate" href="/atom.xml" title="申导" type="application/atom+xml">
   
@@ -120,9 +118,9 @@
 <p>他说：”用了。但 <code>git merge</code> 退出码是 0，分支 tip 就是没进 main。下次部署就是旧代码。”</p>
 <p>这其实是所有跨 2 个以上仓库跑 AI agent 的团队都会撞上的三面墙。今天介绍一个工具 HarnessXP，三面墙一起拆。</p>
 <p> 项目作者是XP多年实践者，一开始是为了迁移和统一自己的已有的3个项目代码（小程序、后端服务、管理员网站）。后来越搞越大，最后相当于自己弄出来一套openspec commands。一开始确实是想直接用openspec的，后来发现他跨不了仓，然后就在chatGPT和ClaudeCode的帮忙下，自己搞出来一套跨仓的SDD框架。改业务代码过程中，就碰到各种bug，一边儿改代码儿，一边儿修这些命令，就弄出了这么个项目，剥离了业务代码，开源给社区供大家学习和参考。地址：<a target="_blank" rel="noopener" href="https://github.com/mebusw/HarnessXP">https://github.com/mebusw/HarnessXP</a></p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/AxSfDycXFQmuEAibH026vF40B9RgvCibtpLdL8rKViaQQRgWobenKiaWVOibs7R9GibTaKzB2GxEoJeqCW185m20Bg2FrrZZmuuUJUzydTibRNQSrg/640?from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=0" alt="Image"></p>
-<h2 id="5分钟上手"><a href="#5分钟上手" class="headerlink" title="5分钟上手"></a>5分钟上手</h2><h2 id=""><a href="#" class="headerlink" title="- "></a>- </h2><h2 id="-1"><a href="#-1" class="headerlink" title="- "></a>- </h2><h2 id="-2"><a href="#-2" class="headerlink" title="- "></a>- </h2><h2 id="-3"><a href="#-3" class="headerlink" title="- "></a>- </h2><h2 id="-4"><a href="#-4" class="headerlink" title="- "></a>- </h2><h2 id="-5"><a href="#-5" class="headerlink" title="- "></a>- </h2><h2 id="-6"><a href="#-6" class="headerlink" title="- "></a>- </h2><h2 id="-7"><a href="#-7" class="headerlink" title="- "></a>- </h2><h2 id="-8"><a href="#-8" class="headerlink" title="- "></a>- </h2><h2 id="-9"><a href="#-9" class="headerlink" title="- "></a>- </h2><p>- </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># 1. 拉框架git clone https://github.com/mebusw/HarnessXP.gitcd HarnessXP# 2. 初始化新项目（在干净父目录）mkdir my-project &amp;&amp; cd my-project../HarnessXP/bin/init \  --name my-project \  --repo backend:../backend:service:node \  --repo web:../web:web:react \  --repo mobile:../mobile:app:flutter# 3. 把你的共享契约放进 orchestrator 的 shared/cd orchestrator# （把 openapi.yaml / types.ts / config.schema.json 丢进 .openspec/shared/）# 4. 同步契约到所有业务仓bash .openspec/swarm/sync-shared.sh all# 5. 启动 spec-driven workflowclaude&gt; /spec USER_AUTH&gt; /plan USER_AUTH&gt; /swarm USER_AUTH&gt; /merge USER_AUTH</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+
+<h2 id="5分钟上手"><a href="#5分钟上手" class="headerlink" title="5分钟上手"></a>5分钟上手</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 1. 拉框架</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/mebusw/HarnessXP.git</span><br><span class="line"><span class="built_in">cd</span> HarnessXP</span><br><span class="line"><span class="comment"># 2. 初始化新项目（在干净父目录）</span></span><br><span class="line"><span class="built_in">mkdir</span> my-project &amp;&amp; <span class="built_in">cd</span> my-project</span><br><span class="line">../HarnessXP/bin/init \</span><br><span class="line">  --name my-project \</span><br><span class="line">  --repo backend:../backend:service:node \</span><br><span class="line">  --repo web:../web:web:react \</span><br><span class="line">  --repo mobile:../mobile:app:flutter</span><br><span class="line"><span class="comment"># 3. 把你的共享契约放进 orchestrator 的 shared/</span></span><br><span class="line"><span class="built_in">cd</span> orchestrator</span><br><span class="line"><span class="comment"># （把 openapi.yaml / types.ts / config.schema.json 丢进 .openspec/shared/）</span></span><br><span class="line"><span class="comment"># 4. 同步契约到所有业务仓</span></span><br><span class="line">bash .openspec/swarm/sync-shared.sh all</span><br><span class="line"><span class="comment"># 5. 启动 spec-driven workflow</span></span><br><span class="line">claude</span><br><span class="line">&gt; /spec USER_AUTH</span><br><span class="line">&gt; /plan USER_AUTH</span><br><span class="line">&gt; /swarm USER_AUTH</span><br><span class="line">&gt; /merge USER_AUTH</span><br></pre></td></tr></table></figure>
 
 <h2 id="蓝图"><a href="#蓝图" class="headerlink" title="蓝图"></a>蓝图</h2><p>Harness Engineering ← 方法论</p>
 <p>HarnessXP ← 开源框架</p>
@@ -160,10 +158,7 @@
 <p>但下次部署，CI 跑的是旧代码。仔细看 <code>git log main</code>，发现这条 commit 在 main 上的位置比某个 feature 分支还老 —— 它根本不在 main 的 head 链上。</p>
 <p>常见原因：rebase 出错、cherry-pick 错乱、force push 覆盖。<code>git merge</code> 的退出码 0 只能告诉你”本地操作没出错”，**不能告诉你”这次合并真的进了 main 的 head”**。</p>
 <p>HarnessXP 的解法是 4 行 bash：</p>
-<h2 id="-10"><a href="#-10" class="headerlink" title="- "></a>- </h2><h2 id="-11"><a href="#-11" class="headerlink" title="- "></a>- </h2><h2 id="-12"><a href="#-12" class="headerlink" title="- "></a>- </h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch origin mainif git merge-base --is-ancestor &quot;$BRANCH_TIP&quot; origin/main; then  echo &quot;OK: tip is in main&quot;else  echo &quot;FAIL: phantom merge detected&quot;fi</span><br></pre></td></tr></table></figure>
-
-
-
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git fetch origin main</span><br><span class="line"><span class="keyword">if</span> git merge-base --is-ancestor <span class="string">&quot;<span class="variable">$BRANCH_TIP</span>&quot;</span> origin/main; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;OK: tip is in main&quot;</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;FAIL: phantom merge detected&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
 
 
 <p><code>git merge-base --is-ancestor</code> 做的事就是：检查 <code>$BRANCH_TIP</code> 是不是在 <code>origin/main</code> 的祖先链上。如果不是 —— 合并看起来成功但 tip 没真进 main —— 就是幽灵合并。</p>
@@ -185,7 +180,7 @@
 <h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>HarnessXP 是 MIT 协议，bash 3.2 兼容，macOS 开箱即用。仓库：</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/mebusw/HarnessXP">https://github.com/mebusw/HarnessXP</a></p>
 <p>如果你也在跨多仓跑 AI agent，欢迎试用、提 issue、扔 PR。</p>
-<p>如果有企业咨询辅导和定制化培训，请联系 <a href="mailto:&#106;&#x61;&#99;&#107;&#121;&#115;&#104;&#x65;&#x6e;&#64;&#117;&#x70;&#101;&#114;&#102;&#x6f;&#x72;&#109;&#x2e;&#99;&#110;">&#106;&#x61;&#99;&#107;&#121;&#115;&#104;&#x65;&#x6e;&#64;&#117;&#x70;&#101;&#114;&#102;&#x6f;&#x72;&#109;&#x2e;&#99;&#110;</a></p>
+<p>如果有企业咨询辅导和定制化培训，请联系 <a href="mailto:&#106;&#x61;&#x63;&#x6b;&#x79;&#115;&#x68;&#101;&#110;&#64;&#x75;&#112;&#x65;&#114;&#x66;&#x6f;&#114;&#109;&#46;&#x63;&#x6e;">&#106;&#x61;&#x63;&#x6b;&#x79;&#115;&#x68;&#101;&#110;&#64;&#x75;&#112;&#x65;&#114;&#x66;&#x6f;&#114;&#109;&#46;&#x63;&#x6e;</a></p>
 
       
     </div>

@@ -111,73 +111,11 @@
 <p>他说：”用了。但 <code>git merge</code> 退出码是 0，分支 tip 就是没进 main。下次部署就是旧代码。”</p>
 <p>这其实是所有跨 2 个以上仓库跑 AI agent 的团队都会撞上的三面墙。今天介绍一个工具 HarnessXP，三面墙一起拆。</p>
 <p> 项目作者是XP多年实践者，一开始是为了迁移和统一自己的已有的3个项目代码（小程序、后端服务、管理员网站）。后来越搞越大，最后相当于自己弄出来一套openspec commands。一开始确实是想直接用openspec的，后来发现他跨不了仓，然后就在chatGPT和ClaudeCode的帮忙下，自己搞出来一套跨仓的SDD框架。改业务代码过程中，就碰到各种bug，一边儿改代码儿，一边儿修这些命令，就弄出了这么个项目，剥离了业务代码，开源给社区供大家学习和参考。地址：<a target="_blank" rel="noopener" href="https://github.com/mebusw/HarnessXP">https://github.com/mebusw/HarnessXP</a></p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/AxSfDycXFQmuEAibH026vF40B9RgvCibtpLdL8rKViaQQRgWobenKiaWVOibs7R9GibTaKzB2GxEoJeqCW185m20Bg2FrrZZmuuUJUzydTibRNQSrg/640?from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=0" alt="Image"></p>
-<h2 id="5分钟上手"><a href="#5分钟上手" class="headerlink" title="5分钟上手"></a>5分钟上手</h2><h2 id=""><a href="#" class="headerlink" title="- "></a>- </h2><h2 id="-1"><a href="#-1" class="headerlink" title="- "></a>- </h2><h2 id="-2"><a href="#-2" class="headerlink" title="- "></a>- </h2><h2 id="-3"><a href="#-3" class="headerlink" title="- "></a>- </h2><h2 id="-4"><a href="#-4" class="headerlink" title="- "></a>- </h2><h2 id="-5"><a href="#-5" class="headerlink" title="- "></a>- </h2><h2 id="-6"><a href="#-6" class="headerlink" title="- "></a>- </h2><h2 id="-7"><a href="#-7" class="headerlink" title="- "></a>- </h2><h2 id="-8"><a href="#-8" class="headerlink" title="- "></a>- </h2><h2 id="-9"><a href="#-9" class="headerlink" title="- "></a>- </h2><p>- </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># 1. 拉框架git clone https://github.com/mebusw/HarnessXP.gitcd HarnessXP# 2. 初始化新项目（在干净父目录）mkdir my-project &amp;&amp; cd my-project../HarnessXP/bin/init \  --name my-project \  --repo backend:../backend:service:node \  --repo web:../web:web:react \  --repo mobile:../mobile:app:flutter# 3. 把你的共享契约放进 orchestrator 的 shared/cd orchestrator# （把 openapi.yaml / types.ts / config.schema.json 丢进 .openspec/shared/）# 4. 同步契约到所有业务仓bash .openspec/swarm/sync-shared.sh all# 5. 启动 spec-driven workflowclaude&gt; /spec USER_AUTH&gt; /plan USER_AUTH&gt; /swarm USER_AUTH&gt; /merge USER_AUTH</span><br></pre></td></tr></table></figure>
-
-<h2 id="蓝图"><a href="#蓝图" class="headerlink" title="蓝图"></a>蓝图</h2><p>Harness Engineering ← 方法论</p>
-<p>HarnessXP ← 开源框架</p>
-<p>Specification Gravity ← 核心理论</p>
-<p>AI-Native Harness Engineering for Polyrepo &amp; Polyglot Development ← 愿景</p>
-<h2 id="跨仓开发的几个典型踩坑"><a href="#跨仓开发的几个典型踩坑" class="headerlink" title="跨仓开发的几个典型踩坑"></a>跨仓开发的几个典型踩坑</h2><h3 id="坑一：合约漂移-——-后端改了字段，前端到生产才挂"><a href="#坑一：合约漂移-——-后端改了字段，前端到生产才挂" class="headerlink" title="坑一：合约漂移 —— 后端改了字段，前端到生产才挂"></a>坑一：合约漂移 —— 后端改了字段，前端到生产才挂</h3><p>想象一下这个场景：</p>
-<p>后端 agent 收到指令：”把 <code>/api/users</code> 的 <code>email</code> 字段改成 <code>contact_email</code>。” 它很快把后端代码改了，单元测试通过，提 PR，merge。</p>
-<p>前端 agent 同时在另一个仓库登录页面。它不知道 <code>email</code> 改名了，照样发 <code>email</code>。联调在 staging 没跑过（前端的 spec 没同步），部署到生产，挂了。</p>
-<p>合约漂移的本质：<strong>spec 和代码在不同的仓，改 spec 的 agent 和改代码的 agent 不沟通。</strong></p>
-<p>HarnessXP 的解法很直接 —— 把 spec 和共享合约集中到一个 orchestrator 仓。N 个业务仓持有代码，但所有”跨仓接口”必须在 orchestrator 仓里登记。M 个 agent 开工前先读 orchestrator，改完接口必须同步更新 orchestrator 仓。</p>
-<p>💡 <strong>核心思路：</strong> 让”接口是什么”这件事只有一个真理来源。Agent 之间通过共享合约沟通，不通过 git commit 历史沟通。</p>
-<h3 id="坑二：状态无人负责-——-“特性-X-做到哪了？”"><a href="#坑二：状态无人负责-——-“特性-X-做到哪了？”" class="headerlink" title="坑二：状态无人负责 —— “特性 X 做到哪了？”"></a>坑二：状态无人负责 —— “特性 X 做到哪了？”</h3><p>你问 PM，PM 说：”我以为前端在做。”</p>
-<p>你问前端，前端说：”我看 PR 在后端那边挂着。”</p>
-<p>你问后端，后端说：”我 merge 了呀。”</p>
-<p>规格在仓 1，代码在仓 2，评审在仓 3，状态在某个人的脑子里。这是多仓 AI 协作最常见的死法 —— <strong>状态没有归属，问谁都是”以为在别人那里”。</strong></p>
-<p>HarnessXP 用一个 4 态状态机解决：PROPOSED → IN_PROGRESS → REVIEWED → MERGED。每个跃迁由且仅由一个工具负责：</p>
-<ul>
-<li><p>PROPOSED</p>
-<p>：spec 在 orchestrator 仓登记完毕</p>
-</li>
-<li><p>IN_PROGRESS</p>
-<p>：某个 agent 拿到这个 spec，开始改</p>
-</li>
-<li><p>REVIEWED</p>
-<p>：CI + 跨仓合约校验通过</p>
-</li>
-<li><p>MERGED</p>
-<p>：<code>merge-all.sh</code> 二次校验成功</p>
-</li>
-</ul>
-<p>任何时刻问”特性 X 的状态”，工具直接告诉你。不需要去问 PM、前端、后端。</p>
-<p>💡 <strong>核心思路：</strong> 不要让人去维护状态，让工具去维护。状态机的价值不是机器本身，是”每个跃迁有且只有一个负责人”。</p>
-<h3 id="坑三：幽灵合并-——-git-merge-退出码-0，但-tip-没进-main"><a href="#坑三：幽灵合并-——-git-merge-退出码-0，但-tip-没进-main" class="headerlink" title="坑三：幽灵合并 —— git merge 退出码 0，但 tip 没进 main"></a>坑三：幽灵合并 —— git merge 退出码 0，但 tip 没进 main</h3><p>这是最阴险的一个。</p>
-<p>CI 全绿。PR 合并按钮显示 “merged”。<code>git log main</code> 也有这条 commit。看起来一切都好。</p>
-<p>但下次部署，CI 跑的是旧代码。仔细看 <code>git log main</code>，发现这条 commit 在 main 上的位置比某个 feature 分支还老 —— 它根本不在 main 的 head 链上。</p>
-<p>常见原因：rebase 出错、cherry-pick 错乱、force push 覆盖。<code>git merge</code> 的退出码 0 只能告诉你”本地操作没出错”，**不能告诉你”这次合并真的进了 main 的 head”**。</p>
-<p>HarnessXP 的解法是 4 行 bash：</p>
-<h2 id="-10"><a href="#-10" class="headerlink" title="- "></a>- </h2><h2 id="-11"><a href="#-11" class="headerlink" title="- "></a>- </h2><h2 id="-12"><a href="#-12" class="headerlink" title="- "></a>- </h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch origin mainif git merge-base --is-ancestor &quot;$BRANCH_TIP&quot; origin/main; then  echo &quot;OK: tip is in main&quot;else  echo &quot;FAIL: phantom merge detected&quot;fi</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p><code>git merge-base --is-ancestor</code> 做的事就是：检查 <code>$BRANCH_TIP</code> 是不是在 <code>origin/main</code> 的祖先链上。如果不是 —— 合并看起来成功但 tip 没真进 main —— 就是幽灵合并。</p>
-<p>每次 <code>merge-all.sh</code> 跑都对每个 PR 做这个二次校验。</p>
-<p>💡 <strong>核心思路：</strong> 不要相信退出码，相信祖先链。CI 验证的是”代码能不能编译”，<code>merge-base</code> 验证的是”代码有没有真的进 main”。</p>
-<h2 id="架构：1-orchestrator-N-业务仓-M-agent"><a href="#架构：1-orchestrator-N-业务仓-M-agent" class="headerlink" title="架构：1 orchestrator + N 业务仓 + M agent"></a>架构：1 orchestrator + N 业务仓 + M agent</h2><p>HarnessXP 整体架构极薄，由三部分组成：</p>
-<ul>
-<li><p>1 个 orchestrator 仓</p>
-<p>：所有 spec、共享合约、状态机记录都在这里</p>
-</li>
-<li><p>N 个业务仓</p>
-<p>：每个仓独立 git 仓库，代码在这里</p>
-</li>
-<li><p>M 个 Claude Code agent</p>
-<p>：每个 agent 有严格的”允许修改的文件”边界，跨边界读写需要走 orchestrator</p>
-</li>
-</ul>
-<p>agent 之间通过共享合约沟通，不通过 git commit 历史沟通。这避免了”我看你昨天改了什么”这种脆弱的协调方式 —— 后者只在单仓有效，跨仓立刻失效。</p>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>HarnessXP 是 MIT 协议，bash 3.2 兼容，macOS 开箱即用。仓库：</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/mebusw/HarnessXP">https://github.com/mebusw/HarnessXP</a></p>
-<p>如果你也在跨多仓跑 AI agent，欢迎试用、提 issue、扔 PR。</p>
-<p>如果有企业咨询辅导和定制化培训，请联系 <a href="mailto:&#106;&#x61;&#99;&#107;&#121;&#115;&#104;&#x65;&#x6e;&#64;&#117;&#x70;&#101;&#114;&#102;&#x6f;&#x72;&#109;&#x2e;&#99;&#110;">&#106;&#x61;&#99;&#107;&#121;&#115;&#104;&#x65;&#x6e;&#64;&#117;&#x70;&#101;&#114;&#102;&#x6f;&#x72;&#109;&#x2e;&#99;&#110;</a></p>
-
+        
+          <p class="article-more-link">
+            <a href="/2026/06/28/open-source-harnessxp-framework-migrating-legacy-ai-native-enterprise-code/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
