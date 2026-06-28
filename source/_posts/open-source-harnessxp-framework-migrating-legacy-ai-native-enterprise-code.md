@@ -29,38 +29,37 @@ categories:
 
  项目作者是XP多年实践者，一开始是为了迁移和统一自己的已有的3个项目代码（小程序、后端服务、管理员网站）。后来越搞越大，最后相当于自己弄出来一套openspec commands。一开始确实是想直接用openspec的，后来发现他跨不了仓，然后就在chatGPT和ClaudeCode的帮忙下，自己搞出来一套跨仓的SDD框架。改业务代码过程中，就碰到各种bug，一边儿改代码儿，一边儿修这些命令，就弄出了这么个项目，剥离了业务代码，开源给社区供大家学习和参考。地址：https://github.com/mebusw/HarnessXP
 
-![Image](https://mmbiz.qpic.cn/mmbiz_png/AxSfDycXFQmuEAibH026vF40B9RgvCibtpLdL8rKViaQQRgWobenKiaWVOibs7R9GibTaKzB2GxEoJeqCW185m20Bg2FrrZZmuuUJUzydTibRNQSrg/640?from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=0)
+<!-- more -->
 
 ## 5分钟上手
 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
 
-```
-# 1. 拉框架git clone https://github.com/mebusw/HarnessXP.gitcd HarnessXP# 2. 初始化新项目（在干净父目录）mkdir my-project && cd my-project../HarnessXP/bin/init \  --name my-project \  --repo backend:../backend:service:node \  --repo web:../web:web:react \  --repo mobile:../mobile:app:flutter# 3. 把你的共享契约放进 orchestrator 的 shared/cd orchestrator# （把 openapi.yaml / types.ts / config.schema.json 丢进 .openspec/shared/）# 4. 同步契约到所有业务仓bash .openspec/swarm/sync-shared.sh all# 5. 启动 spec-driven workflowclaude> /spec USER_AUTH> /plan USER_AUTH> /swarm USER_AUTH> /merge USER_AUTH
+```bash
+
+# 1. 拉框架
+git clone https://github.com/mebusw/HarnessXP.git
+cd HarnessXP
+# 2. 初始化新项目（在干净父目录）
+mkdir my-project && cd my-project
+../HarnessXP/bin/init \
+  --name my-project \
+  --repo backend:../backend:service:node \
+  --repo web:../web:web:react \
+  --repo mobile:../mobile:app:flutter
+# 3. 把你的共享契约放进 orchestrator 的 shared/
+cd orchestrator
+# （把 openapi.yaml / types.ts / config.schema.json 丢进 .openspec/shared/）
+# 4. 同步契约到所有业务仓
+bash .openspec/swarm/sync-shared.sh all
+# 5. 启动 spec-driven workflow
+claude
+> /spec USER_AUTH
+> /plan USER_AUTH
+> /swarm USER_AUTH
+> /merge USER_AUTH
 ```
 
 ## 蓝图
-
 
 
 Harness Engineering ← 方法论
@@ -133,19 +132,14 @@ CI 全绿。PR 合并按钮显示 "merged"。`git log main` 也有这条 commit�
 
 HarnessXP 的解法是 4 行 bash：
 
-- 
-- 
-- 
-- 
-- 
-- 
-
+```bash
+git fetch origin main
+if git merge-base --is-ancestor "$BRANCH_TIP" origin/main; then
+  echo "OK: tip is in main"
+else
+  echo "FAIL: phantom merge detected"
+fi
 ```
-git fetch origin mainif git merge-base --is-ancestor "$BRANCH_TIP" origin/main; then  echo "OK: tip is in main"else  echo "FAIL: phantom merge detected"fi
-```
-
-
-
 
 
 `git merge-base --is-ancestor` 做的事就是：检查 `$BRANCH_TIP` 是不是在 `origin/main` 的祖先链上。如果不是 —— 合并看起来成功但 tip 没真进 main —— 就是幽灵合并。
