@@ -1,3 +1,4 @@
+https://www.jackyshen.com/2026/06/28/open-source-harnessxp-framework-migrating-legacy-ai-native-enterprise-code/
 https://www.jackyshen.com/2026/06/26/cross-3-repo-legacy-coding-with-orchastrator-agents/
 https://www.jackyshen.com/2026/02/09/openspec-or-superpower-10x-Scrum-in-AI/
 https://www.jackyshen.com/2014/08/24/backlog-refinement-with-scope-question-assumption/
@@ -484,3 +485,4 @@ https://www.jackyshen.com/categories/programming/python/functional/
 https://www.jackyshen.com/categories/agile/management30/
 https://www.jackyshen.com/categories/ai/
 https://www.jackyshen.com/categories/ai/coding/
+https://www.jackyshen.com/categories/ai-coding/
